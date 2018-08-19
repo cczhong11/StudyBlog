@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Minimal</title>
-    <link>http://example.com/tags/</link>
+    <link>http://study.tczhong.com/tags/</link>
     <description>Recent content in Tags on Minimal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 28 Jul 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://study.tczhong.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Documentation</title>
-      <link>http://example.com/tags/documentation/</link>
+      <link>http://study.tczhong.com/tags/documentation/</link>
       <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/tags/documentation/</guid>
+      <guid>http://study.tczhong.com/tags/documentation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Food</title>
-      <link>http://example.com/tags/food/</link>
+      <link>http://study.tczhong.com/tags/food/</link>
       <pubDate>Thu, 28 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/tags/food/</guid>
+      <guid>http://study.tczhong.com/tags/food/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Health</title>
-      <link>http://example.com/tags/health/</link>
+      <link>http://study.tczhong.com/tags/health/</link>
       <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/tags/health/</guid>
+      <guid>http://study.tczhong.com/tags/health/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Study</title>
-      <link>http://example.com/tags/study/</link>
+      <link>http://study.tczhong.com/tags/study/</link>
       <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/tags/study/</guid>
+      <guid>http://study.tczhong.com/tags/study/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Time</title>
-      <link>http://example.com/tags/time/</link>
+      <link>http://study.tczhong.com/tags/time/</link>
       <pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/tags/time/</guid>
+      <guid>http://study.tczhong.com/tags/time/</guid>
       <description></description>
     </item>
     
