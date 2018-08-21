@@ -6,10 +6,22 @@
     <description>Recent content on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://study.tczhong.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>树形算法题的思考</title>
+      <link>http://study.tczhong.com/post/algo/tree/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/algo/tree/</guid>
+      <description>树形算法题的思考 树形是一大题型，这类题目相对来说比较简单，在我看来掌握树形的最大要点就是递归的思想，这可以说用在了这类题目中的方方面面。主要涉及这些题型： - 构建树（数组，链表） - 遍历，判断是合理的树 - 找节点（LCA） - 树的基本属性（高度），找路径
+构建树 这类题目的基本思路就是先找到根结点（root），然后把整个数组或者链表分成左右两个部分。之后，这个根节点的左子树就是递归调用数组的右半部分。右半边子树就是递归调用，这个函数的右半部分。总体还是比较简单的，题目可以参看 - 108.Convert Sorted Array to Binary Search Tree - 109.Convert Sorted List to Binary Search Tree
+这里有一道题，关于如何利用链表来构造。其中有一点，它可以使用一个固定的prev linked list node。在每次递归结束的时候都会调用next，这样我们就不需要每次遍历找到中心结点，而是利用之前的结果来找到中间的那个节点。也就是说，在这里我们并不需要一开始就把父节点找到，而是可以先存好左子树，之后再到root。
+private ListNode list; private TreeNode sortedListToBST(int start, int end) { if (start &amp;gt; end) return null; int mid = (start + end+1) / 2; TreeNode leftChild = sortedListToBST(start, mid-1); TreeNode parent = new TreeNode(list.val); parent.left = leftChild; list = list.</description>
+    </item>
     
     <item>
       <title>学习</title>
@@ -95,15 +107,6 @@ a. 为了我的目标， 我要怎么安排训练项目？ b. 训练强度， �
       
       <guid>http://study.tczhong.com/post/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%86%99%E4%BD%9C/</guid>
       <description>技术文档写作 1. 思想的组织 1.1 金字塔原理  结论先行：一篇文章只支持一个中心思想，这个中心思想将概括各级各组的所有观点，必须放在文章最开头。 以上统下： 上一层级的观点必须是对下一层级观点的概括，下一层级的观点是对上一层级观点的解释、支持。 归类分组：把具有共同点的观点归类分组，同一组中的观点都必须属于同一个范畴。 逻辑递进：每组中的观点都必须按照逻辑顺序进行组织。  1.2 序言 1.2.1 SQAC  S:背景 介绍读者熟悉的某些“背景” Q:疑问 由此引发读者最初的“疑问” A:回答 针对该“疑问”给出的“答案”，也就是文章的中心思想 C:冲突 说明发生的“冲突”  1.2.2 TOPS  Target to Audiences 有的放矢 内容面向读者，抓住读者的注意力 Overarching 贯穿整体 能够全面概括后面的内容 Powerful 掷地有声 有见解 Supportable 言之有据 有论点可以支撑  1.3 自上而下构建  提出中心思想 设想读者最初提问 写序言 与读者进行疑问、回答式对话  1.4 自下而上构建  列出想表达的所有观点 找出各观点之间的逻辑关系 概括总结，得出结论  1.5 归类分组  相互独立（ Mutually Exclusive）：同一组的各个观点之间必须相互独立、相互排斥，没有重叠。 完全穷尽（ Collectively Exhaustive ）：同一组的所有观点完全穷尽，没有遗漏。  1.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://study.tczhong.com/post/readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://study.tczhong.com/post/readme/</guid>
-      <description>这份repository是我的个人知识总结。当今社会碎片化的知识太多，需要我们去把这些知识融入自己的知识体系之中。于是我就决定利用github总结自己阅读的收获和体会，也是一种分享的方式。</description>
     </item>
     
   </channel>
