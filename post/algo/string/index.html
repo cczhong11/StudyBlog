@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>String算法题的思考</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://study.tczhong.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.47" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120924697-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-120924697-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">String算法题的思考</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/tags/leetcode/">Leetcode</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/username/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/algo/string/">String算法题的思考</a></h4>
+    <h5>August 22, 2018</h5>
+    
+    <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
+    
+    <a href="http://study.tczhong.com/tags/string"><kbd class="item-tag">string</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="string-算法思考">String 算法思考</h1>
+
+<p>String 类型的题目算是leetcode里第二多的题型，其实这个和array的使用方法差不太多，只不过其中有一些特定的使用场景。我在这里会将string分为几类问题，可能不能包括所有的类别，尽量使用较为统一的思路解释遇到的题目。</p>
+
+<h2 id="数据类型">数据类型</h2>
+
+<p>首先要说清楚一点，在java中String是immutable的，也就是当你创建一个string后是不能修改的，如果你需要给他加内容，java会重新创一个新的实例。这样的问题就是如果使用<code>s+=a</code>,这样时间复杂度是O(n),在java中会重新复制一遍string再给你创建。</p>
+
+<p>解决办法就是使用StringBuilder，这个的时间复杂度对于增加就是O(1).其中内部实现就是一个char[]</p>
+
+<ul>
+<li>sb.append(String str)</li>
+<li>sb.toString()</li>
+</ul>
+
+<h2 id="组合问题">组合问题</h2>
+
+<p>这类问题就是需要得到某个字符串中包含的所有子集,或者是permutation.这类题日非常相似，需要找出符合条件的所有组合。基本思路是样的，可以使用DFS与backtrack实现。例如
+Combination Sum,可以把这题变成一个子问题选择了数字n后，求解sum-n的子问题的解答。所以可以先排序选择第一个元素，然后在函数中记录以下这些：</p>
+
+<ul>
+<li>结果列表</li>
+<li>当前路径存入的值，</li>
+<li>所有可能的值</li>
+<li>剩余的Sum</li>
+<li>当前选择的位置,深度</li>
+</ul>
+
+<p>在执行递归前将数字存入，在执行后从数组中删去。如果是计算permutation, 在参种增加一个数组用来判断当前数字是否访过。类似的题目有以下这些：</p>
+
+<ul>
+<li><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number">17. Letter Combinations of a Phone Number</a></li>
+<li><a href="https://leetcode.com/problems/expression-add-operators">282. Expression Add Operators</a></li>
+<li><a href="https://leetcode.com/problems/combination-sum">39. Combination Sum</a></li>
+<li><a href="https://leetcode.com/problems/combination-sum-ii">40. Combination Sum II</a></li>
+<li><a href="https://leetcode.com/problems/subsets">78. Subsets</a></li>
+<li><a href="https://leetcode.com/problems/word-search">79. Word Search</a></li>
+<li><a href="https://leetcode.com/problems/permutations">46. Permutations</a></li>
+<li><a href="https://leetcode.com/problems/permutations-ii">47. Permutations II</a></li>
+<li><a href="https://leetcode.com/problems/palindrome-permutation">266. Palindrome Permutation</a></li>
+<li><a href="https://leetcode.com/problems/palindrome-permutation-ii">267. Palindrome Permutation II</a></li>
+<li><a href="https://leetcode.com/problems/target-sum">494. Target Sum</a></li>
+<li><a href="https://leetcode.com/problems/24-game">679. 24 Game</a></li>
+</ul>
+
+<p>一个注意点是：如果是用list的话，当加入结果的时候，每次需要重新构造一个新的：
+<code>rs.add(new ArrayList&lt;&gt;(cur));</code></p>
+
+<p>如果题目中存在重复的数字该如何处理呢？首先需要sort，然后就可以在遍历的时候首先看是不是前面两个一致，如果一致的话如果前面的没visited过就跳过。例如<code>1,1,2</code>, 第一个1遍历完了之后，第二个1就不需要作为首位了，所以这时就可以跳过第二个1作为首位的遍历。对于Palindrome的要求可以选定好中间，然后再从两边扩展。</p>
+
+<p>还有一类题目就是和数学搭配，比如使用列表中的数计算24，可以使用各类运算.基本的思路是相似的，需要我们穷举所有可能的组合，唯一需要注意的就是乘法和除法，需要记录上一个数值的结果，把乘法的结果看作一个整体，一起计算。而算24点的话，首先选两个数，然后进行四则运算，把结果和剩下的数（3个）放到一个数组里，之后就可以递归对这3个数算24点。</p>
+
+<h2 id="括号问题">括号问题</h2>
+
+<p>这也是string类的题目中一大类型，题目有判断是否是valid，可以使用stack的思想，只要是出现&rdquo;(&ldquo;之后的反方向括号一定是&rdquo;)&ldquo;。生成所有括号的思路和上面的dfs差不多，有两个参数记录剩下的括号数量，同时保证左括号比右括号少就可以了。</p>
+
+<p>找出最长合理括号则可以使用DP来解决，可以把这个问题分成两大类：
+- ()()
+- (())</p>
+
+<pre><code class="language-java">if(s.charAt(i) == ')') {
+    if(s.charAt(i - 1) == '(') {
+        dp[i] = 2 + (i &gt;= 2 ? dp[i-2] : 0);
+    } 
+    // s.charAt(i - 1) == )
+    else if(i - dp[i-1] &gt; 0 &amp;&amp; s.charAt(i-dp[i-1]-1) == '(') { 
+        dp[i] = 2 + dp[i-1] + ((i - dp[i-1]) &gt;= 2 ? dp[i-dp[i-1]-2] : 0);
+    }
+    max = Math.max(max, dp[i]);
+}
+</code></pre>
+
+<p>在数字中加括号的题目则是分治算法的典型代表，可以将所有的运算符的地方作为分界点，然后分别计算左右两边所有可能的值，之后再合并，得到最后所有的答案。括号是一个将数学表达式分开最合适的方法。301题最简单的思路就是尝试所有的可能性，当出现不合理的情况时就直接舍弃。在尝试的时候测试使用括号和不使用括号两种可能性。</p>
+
+<p>对于678，则可以使用贪心的思想，计算最小开放的括号以及最多开放的括号，如果不等于&rdquo;)&ldquo;的个数小于&rdquo;)&ldquo;的话，那么就不可能是合理的。思路想清楚了不难，出现*这种就思考最多和最少的情况。</p>
+
+<ul>
+<li><a href="https://leetcode.com/problems/valid-parentheses">20. Valid Parentheses</a></li>
+<li><a href="https://leetcode.com/problems/generate-parentheses">22. Generate Parentheses</a></li>
+<li><a href="https://leetcode.com/problems/longest-valid-parentheses">32. Longest Valid Parentheses</a></li>
+<li><a href="https://leetcode.com/problems/different-ways-to-add-parentheses">241. Different Ways to Add Parentheses</a></li>
+<li><a href="https://leetcode.com/problems/remove-invalid-parentheses">301. Remove Invalid Parentheses</a></li>
+<li><a href="https://leetcode.com/problems/valid-parenthesis-string">678. Valid Parenthesis String</a></li>
+<li><a href="https://leetcode.com/problems/score-of-parentheses">856. Score of Parentheses</a></li>
+</ul>
+
+<p>总体来说，stack的题目比较经典，因为这个模型非常简单易懂，也容易和其他的东西结合起来。</p>
+
+<h2 id="transform">transform</h2>
+
+<p>这类题目指的是如何将一类的string改成其他的，比如罗马数字，英文,数字等等。这类题目就是看你的细心程度，根据规则一步一步推即可得到正确的答案。这类题目的难点一般在于有很多奇怪的输入需要思考，要不然很容易系统出错。</p>
+
+<p>大部分都比较easy，比较有意思的就是find and replace 那道题，因为可能输入是没有序的，所以可以先用一个数组存在下需要match的index，然后再换就可以避免无序的问题。</p>
+
+<ul>
+<li><a href="https://leetcode.com/problems/string-to-integer-atoi">8. String to Integer (atoi)</a></li>
+<li><a href="https://leetcode.com/problems/integer-to-english-words">273. Integer to English Words</a></li>
+<li><a href="https://leetcode.com/problems/integer-to-roman">12. Integer to Roman</a></li>
+<li><a href="https://leetcode.com/problems/roman-to-integer">13. Roman to Integer</a></li>
+<li><a href="https://leetcode.com/problems/remove-comments">722. Remove Comments</a></li>
+<li><a href="https://leetcode.com/problems/bold-words-in-string">758. Bold Words in String</a></li>
+<li><a href="https://leetcode.com/problems/goat-latin">824. Goat Latin</a></li>
+<li><a href="https://leetcode.com/problems/find-and-replace-in-string">833. Find And Replace in String</a></li>
+<li><a href="https://leetcode.com/problems/excel-sheet-column-title">168. Excel Sheet Column Title</a></li>
+</ul>
+
+<h2 id="substring">Substring</h2>
+
+<p>这类题目一般就是双指针，以及使用一个数组记录所有出现过的值，比较要求。比如说第三题，要求求出最长没有重复字符的题目，我们可以用一个数组记录出现的字符，如果出现重复了，那么起始位置就增加，直到到上次出现的这个字符。</p>
+
+<p>判断是否重复的题目只需要取可以整除长度的内容的substring，然后重复几遍，然后比较是否一致即可。对于回文数就是确定中心，往两边扫这种简单的思路。中心可能是一个字符也有可能是两个相同的字符。还有的题目只需一步一步来就好。</p>
+
+<ul>
+<li><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters">3. Longest Substring Without Repeating Characters</a></li>
+<li><a href="https://leetcode.com/problems/longest-palindromic-substring">5. Longest Palindromic Substring</a></li>
+<li><a href="https://leetcode.com/problems/minimum-window-substring">76. Minimum Window Substring</a></li>
+<li><a href="https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters">159. Longest Substring with At Most Two Distinct Characters</a></li>
+<li><a href="https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters">340. Longest Substring with At Most K Distinct Characters</a></li>
+<li><a href="https://leetcode.com/problems/repeated-substring-pattern">459. Repeated Substring Pattern</a></li>
+<li><a href="https://leetcode.com/problems/palindromic-substrings">647. Palindromic Substrings</a></li>
+<li><a href="https://leetcode.com/problems/count-binary-substrings">696. Count Binary Substrings</a></li>
+</ul>
+
+<h2 id="trie">Trie</h2>
+
+<p>Trie是一种特别的数据类型，主要是使用一个树来代表string的前缀。一般的构造如下：</p>
+
+<pre><code class="language-java">static class TrieNode
+    {
+        TrieNode[] children = new TrieNode[ALPHABET_SIZE];
+      
+        // isEndOfWord is true if the node represents
+        // end of a word
+        boolean isEndOfWord;
+         
+        TrieNode(){
+            isEndOfWord = false;
+            for (int i = 0; i &lt; ALPHABET_SIZE; i++)
+                children[i] = null;
+        }
+    };
+</code></pre>
+
+<p>在插入的时候，只需要在数组里新建下一个的TreeNode.在string的搜索上很有帮助。在每个节点都有一个变量来判断是不是一个单词的结束。</p>
+
+<p>TODO:
+ - <a href="https://leetcode.com/problems/longest-common-prefix">14. Longest Common Prefix</a>
+ - <a href="https://leetcode.com/problems/implement-trie-prefix-tree">208. Implement Trie (Prefix Tree)</a>
+ - <a href="https://leetcode.com/problems/add-and-search-word-data-structure-design">211. Add and Search Word - Data structure design</a>
+ - <a href="https://leetcode.com/problems/word-search-ii">212. Word Search II</a>
+ - <a href="https://leetcode.com/problems/palindrome-pairs">336. Palindrome Pairs</a>
+ - <a href="https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array">421. Maximum XOR of Two Numbers in an Array</a>
+ - <a href="https://leetcode.com/problems/word-squares">425. Word Squares</a>
+ - <a href="https://leetcode.com/problems/concatenated-words">472. Concatenated Words</a>
+ - <a href="https://leetcode.com/problems/design-search-autocomplete-system">642. Design Search Autocomplete System</a>
+ - <a href="https://leetcode.com/problems/replace-words">648. Replace Words</a>
+ - <a href="https://leetcode.com/problems/implement-magic-dictionary">676. Implement Magic Dictionary</a>
+ - <a href="https://leetcode.com/problems/map-sum-pairs">677. Map Sum Pairs</a>
+ - <a href="https://leetcode.com/problems/top-k-frequent-words">692. Top K Frequent Words</a>
+ - <a href="https://leetcode.com/problems/longest-word-in-dictionary">720. Longest Word in Dictionary</a>
+ - <a href="https://leetcode.com/problems/prefix-and-suffix-search">745. Prefix and Suffix Search</a></p>
+
+<h2 id="compare">Compare</h2>
+
+<p>还有一些题目就是需要来比较一些单词的，相似程度，比如说比较两个单词的距离，以及用一些东西来匹配这些字符串等。判断修改距离的题目。我们可以分成增加，删除以及修改三个层面进行讨论。判断那个字符之后其他字符的情况。而判断匹配的题目则可以使用动态规划的思路来做。也分成几个情况，一是完全匹配，还有就是匹配零个，三是匹配多个。</p>
+
+<p>这类题目不是很好归纳，总之在比较字符串的时候需要用<code>equals</code></p>
+
+<ul>
+<li><a href="https://leetcode.com/problems/one-edit-distance">161. One Edit Distance</a></li>
+<li><a href="https://leetcode.com/problems/group-anagrams">49. Group Anagrams</a></li>
+<li><a href="https://leetcode.com/problems/wildcard-matching">44. Wildcard Matching</a></li>
+<li><a href="https://leetcode.com/problems/regular-expression-matching">10. Regular Expression Matching</a></li>
+<li><a href="https://leetcode.com/problems/repeated-string-match">686. Repeated String Match</a></li>
+</ul>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/algo/tree/">树形算法题的思考</a></h4>
+    <h5>August 21, 2018</h5>
+    
+    <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
+    
+    <a href="http://study.tczhong.com/tags/tree"><kbd class="item-tag">tree</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

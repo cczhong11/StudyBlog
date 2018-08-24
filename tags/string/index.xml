@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Leetcode on Learn More</title>
-    <link>http://study.tczhong.com/tags/leetcode/</link>
-    <description>Recent content in Leetcode on Learn More</description>
+    <title>String on Learn More</title>
+    <link>http://study.tczhong.com/tags/string/</link>
+    <description>Recent content in String on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://study.tczhong.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://study.tczhong.com/tags/string/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,18 +23,6 @@
  sb.append(String str) sb.toString()  组合问题 这类问题就是需要得到某个字符串中包含的所有子集,或者是permutation.这类题日非常相似，需要找出符合条件的所有组合。基本思路是样的，可以使用DFS与backtrack实现。例如 Combination Sum,可以把这题变成一个子问题选择了数字n后，求解sum-n的子问题的解答。所以可以先排序选择第一个元素，然后在函数中记录以下这些：
  结果列表 当前路径存入的值， 所有可能的值 剩余的Sum 当前选择的位置,深度  在执行递归前将数字存入，在执行后从数组中删去。如果是计算permutation, 在参种增加一个数组用来判断当前数字是否访过。类似的题目有以下这些：
  17. Letter Combinations of a Phone Number 282. Expression Add Operators 39. Combination Sum 40. Combination Sum II 78. Subsets 79. Word Search 46. Permutations 47. Permutations II 266. Palindrome Permutation 267. Palindrome Permutation II 494. Target Sum 679. 24 Game  一个注意点是：如果是用list的话，当加入结果的时候，每次需要重新构造一个新的： rs.</description>
-    </item>
-    
-    <item>
-      <title>树形算法题的思考</title>
-      <link>http://study.tczhong.com/post/algo/tree/</link>
-      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://study.tczhong.com/post/algo/tree/</guid>
-      <description>树形算法题的思考 树形是一大题型，这类题目相对来说比较简单，在我看来掌握树形的最大要点就是递归的思想，这可以说用在了这类题目中的方方面面。主要涉及这些题型：
- 构建树（数组，链表） 遍历，判断是合理的树 找节点（LCA） 树的基本属性（高度），找路径  构建树 这类题目的基本思路就是先找到根结点（root），然后把整个数组或者链表分成左右两个部分。之后，这个根节点的左子树就是递归调用数组的右半部分。右半边子树就是递归调用，这个函数的右半部分。总体还是比较简单的，题目可以参看
- 108.Convert Sorted Array to Binary Search Tree 109.Convert Sorted List to Binary Search Tree  这里有一道题，关于如何利用链表来构造。其中有一点，它可以使用一个固定的prev linked list node。在每次递归结束的时候都会调用next，这样我们就不需要每次遍历找到中心结点，而是利用之前的结果来找到中间的那个节点。也就是说，在这里我们并不需要一开始就把父节点找到，而是可以先存好左子树，之后再到root。
-private ListNode list; private TreeNode sortedListToBST(int start, int end) { if (start &amp;gt; end) return null; int mid = (start + end+1) / 2; TreeNode leftChild = sortedListToBST(start, mid-1); TreeNode parent = new TreeNode(list.val); parent.left = leftChild; list = list.</description>
     </item>
     
   </channel>
