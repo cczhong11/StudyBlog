@@ -107,6 +107,8 @@
                             
                                 <li><a href="/">Home</a></li>
                             
+                                <li><a href="/tags/leetcode/">Leetcode</a></li>
+                            
                                 <li><a href="/post/">Posts</a></li>
                             
                         </ul>
@@ -173,16 +175,13 @@
 <p>这类题目的基本思路就是先找到根结点（root），然后把整个数组或者链表分成左右两个部分。之后，这个根节点的左子树就是递归调用数组的右半部分。右半边子树就是递归调用，这个函数的右半部分。总体还是比较简单的，题目可以参看</p>
 
 <ul>
-<li><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/">108.Convert Sorted Array to Binary Search Tree</a>
-
-<ul>
+<li><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/">108.Convert Sorted Array to Binary Search Tree</a></li>
 <li><a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/">109.Convert Sorted List to Binary Search Tree</a></li>
-</ul></li>
 </ul>
 
 <p>这里有一道题，关于如何利用链表来构造。其中有一点，它可以使用一个固定的prev linked list node。在每次递归结束的时候都会调用next，这样我们就不需要每次遍历找到中心结点，而是利用之前的结果来找到中间的那个节点。也就是说，在这里我们并不需要一开始就把父节点找到，而是可以先存好左子树，之后再到root。</p>
 
-<pre><code class="language-java">		private ListNode list;
+<pre><code class="language-java">	private ListNode list;
     private TreeNode sortedListToBST(int start, int end) {
         if (start &gt; end) return null;
         int mid = (start + end+1) / 2;
@@ -229,6 +228,7 @@
 <li><a href="https://leetcode.com/problems/same-tree/">100.Same Tree</a></li>
 <li><a href="https://leetcode.com/problems/symmetric-tree/">101.Symmetric Tree</a></li>
 <li><a href="https://leetcode.com/problems/invert-binary-tree/">226.Invert Binary Tree</a></li>
+<li><a href="https://leetcode.com/problems/subtree-of-another-tree/">572.Subtree of Another Tree</a></li>
 </ul>
 
 <h2 id="找节点">找节点</h2>
@@ -285,23 +285,38 @@
 <li><a href="https://leetcode.com/problems/convert-bst-to-greater-tree/">538.Convert BST to Greater Tree</a></li>
 <li><a href="https://leetcode.com/problems/boundary-of-binary-tree/">545.Boundary of Binary Tree</a></li>
 <li><a href="https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii/">549.Binary Tree Longest Consecutive Sequence II</a></li>
-<li><a href="https://leetcode.com/problems/binary-tree-tilt/">563.Binary Tree Tilt</a></li>
-<li><a href="https://leetcode.com/problems/subtree-of-another-tree/">572.Subtree of Another Tree</a></li>
-<li><a href="https://leetcode.com/problems/tree-node/">608.Tree Node</a></li>
-<li><a href="https://leetcode.com/problems/merge-two-binary-trees/">617.Merge Two Binary Trees</a></li>
-<li><a href="https://leetcode.com/problems/add-one-row-to-tree/">623.Add One Row to Tree</a></li>
-<li><a href="https://leetcode.com/problems/average-of-levels-in-binary-tree/">637.Average of Levels in Binary Tree</a></li>
-<li><a href="https://leetcode.com/problems/find-duplicate-subtrees/">652.Find Duplicate Subtrees</a></li>
-<li><a href="https://leetcode.com/problems/maximum-binary-tree/">654.Maximum Binary Tree</a></li>
-<li><a href="https://leetcode.com/problems/print-binary-tree/">655.Print Binary Tree</a></li>
-<li><a href="https://leetcode.com/problems/maximum-width-of-binary-tree/">662.Maximum Width of Binary Tree</a></li>
-<li><a href="https://leetcode.com/problems/equal-tree-partition/">663.Equal Tree Partition</a></li>
-<li><a href="https://leetcode.com/problems/trim-a-binary-search-tree/">669.Trim a Binary Search Tree</a></li>
-<li><a href="https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/">671.Second Minimum Node In a Binary Tree</a></li>
-<li><a href="https://leetcode.com/problems/cut-off-trees-for-golf-event/">675.Cut Off Trees for Golf Event</a></li>
-<li><a href="https://leetcode.com/problems/binary-tree-pruning/">814.Binary Tree Pruning</a></li>
-<li><a href="https://leetcode.com/problems/binary-trees-with-factors/">823.Binary Trees With Factors</a></li>
-<li><a href="https://leetcode.com/problems/sum-of-distances-in-tree/">834.Sum of Distances in Tree</a></li>
+
+<li><p><a href="https://leetcode.com/problems/binary-tree-tilt/">563.Binary Tree Tilt</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/tree-node/">608.Tree Node</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/merge-two-binary-trees/">617.Merge Two Binary Trees</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/add-one-row-to-tree/">623.Add One Row to Tree</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/average-of-levels-in-binary-tree/">637.Average of Levels in Binary Tree</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/find-duplicate-subtrees/">652.Find Duplicate Subtrees</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/maximum-binary-tree/">654.Maximum Binary Tree</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/print-binary-tree/">655.Print Binary Tree</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/maximum-width-of-binary-tree/">662.Maximum Width of Binary Tree</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/equal-tree-partition/">663.Equal Tree Partition</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/trim-a-binary-search-tree/">669.Trim a Binary Search Tree</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/">671.Second Minimum Node In a Binary Tree</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/cut-off-trees-for-golf-event/">675.Cut Off Trees for Golf Event</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/binary-tree-pruning/">814.Binary Tree Pruning</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/binary-trees-with-factors/">823.Binary Trees With Factors</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/sum-of-distances-in-tree/">834.Sum of Distances in Tree</a></p></li>
 </ul>
 </div>
 
