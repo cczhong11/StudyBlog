@@ -4,7 +4,7 @@
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Leetcode</title>
+        <title>Graph算法题的思考</title>
         
         <style>
 
@@ -61,9 +61,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.47" />
         
-        <link href="http://study.tczhong.com/tags/leetcode/index.xml" rel="alternate" type="application/rss+xml" title="Learn More" />
-        <link href="http://study.tczhong.com/tags/leetcode/index.xml" rel="feed" type="application/rss+xml" title="Learn More" />
-        
 
         
         
@@ -93,7 +90,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Leetcode</a>
+                    <a class="navbar-brand visible-xs" href="#">Graph算法题的思考</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -140,9 +137,7 @@
 
 <main>
 
-    <h2>Leetcode</h2>
-
-     <div class="item">
+    <div class="item">
 
     
     
@@ -160,7 +155,81 @@
     
 
 </div>
-  <div class="item">
+
+
+    <br> <div class="text-justify">
+
+<h1 id="graph-算法题目思考">graph 算法题目思考</h1>
+
+<p>Graph算是非常常见的题目，一般会给你一个2d array或一个数组代表联系，你可以使用这个输入来转换成一个图表示的数据结构，之后在图里做搜索。常见的算法：</p>
+
+<ul>
+<li>BFS，DFS</li>
+<li>union find</li>
+<li>A*</li>
+<li>Floyd and dijkstra</li>
+</ul>
+
+<p>Leetcode里的题目的话主要都是dfs, bfs就可以解决，有些需要思考几个之间的关系的题目可以使用union find来做。少部分计算路径的题目需要使用一些基本的最短路径算法。</p>
+
+<h2 id="bfs-and-dfs">BFS and DFS</h2>
+
+<p>BFS就是使用一个queue,每次在遍历一个点的时候就把这个点放到queue里，是一个FIFO的结构。一层一层的遍历，基本应用是在tree level 遍历。这种方法找最短路径比较好，问题是一次要走很多。相对来说，BFS和DFS都可以解决一道题目，区别只是遍历的顺序不同。 DFS需要使用stack来解决，或者递归。</p>
+
+<ul>
+<li><a href="https://leetcode.com/problems/word-ladder">127. Word Ladder</a></li>
+<li><a href="https://leetcode.com/problems/surrounded-regions">130. Surrounded Regions</a></li>
+<li><a href="https://leetcode.com/problems/clone-graph">133. Clone Graph</a></li>
+</ul>
+
+<p>对于找所有东西是不是一类的题目，经典题目就是看有几个岛的题目，利用dfs可以很方便的写出来。如果是无向图的话，从区域里的任意一点应该是可以到这个区域里任意一点的。所以只要有这个就可以找到所有是一类的点。</p>
+
+<ul>
+<li><a href="https://leetcode.com/problems/number-of-islands">200. Number of Islands</a></li>
+<li><a href="https://leetcode.com/problems/walls-and-gates">286. Walls and Gates</a></li>
+</ul>
+
+<h2 id="union-find">Union find</h2>
+
+<p>这类题目一般都是存在多个点属于一个类别的题目，之后可以通过图的关系把这些点合并到一个类别里面。基本算法如下：</p>
+
+<pre><code class="language-java">class DSU {
+    int[] parent;
+    public DSU(int N) {
+        parent = new int[N];
+        for (int i = 0; i &lt; N; ++i)
+            parent[i] = i;
+    }
+    public int find(int x) {
+        if (parent[x] != x) parent[x] = find(parent[x]);
+        return parent[x];
+    }
+    public void union(int x, int y) {
+        parent[find(x)] = find(y);
+    }
+}
+</code></pre>
+
+<p>其实也不需要每次写个类，只需要把function 定义好即可。</p>
+
+<ul>
+<li><a href="https://leetcode.com/problems/friend-circles">547. Friend Circles</a></li>
+<li><a href="https://leetcode.com/problems/redundant-connection">684. Redundant Connection</a></li>
+<li><a href="https://leetcode.com/problems/redundant-connection-ii">685. Redundant Connection II</a></li>
+<li><a href="https://leetcode.com/problems/sentence-similarity-ii">737. Sentence Similarity II</a></li>
+<li><a href="https://leetcode.com/problems/couples-holding-hands">765. Couples Holding Hands</a></li>
+<li><a href="https://leetcode.com/problems/similar-string-groups">839. Similar String Groups</a></li>
+</ul>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
 
     
     
@@ -216,9 +285,36 @@
 </div>
  
 
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
 </main>
-
-
 
         <footer>
 
