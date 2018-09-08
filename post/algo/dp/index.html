@@ -4,7 +4,7 @@
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Graph算法题的思考</title>
+        <title>DP算法题的思考</title>
         
         <style>
 
@@ -90,7 +90,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Graph算法题的思考</a>
+                    <a class="navbar-brand visible-xs" href="#">DP算法题的思考</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -146,12 +146,12 @@
     
     
 
-    <h4><a href="/post/algo/graph/">Graph算法题的思考</a></h4>
-    <h5>August 28, 2018</h5>
+    <h4><a href="/post/algo/dp/">DP算法题的思考</a></h4>
+    <h5>September 4, 2018</h5>
     
     <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
     
-    <a href="http://study.tczhong.com/tags/graph"><kbd class="item-tag">graph</kbd></a>
+    <a href="http://study.tczhong.com/tags/dp"><kbd class="item-tag">dp</kbd></a>
     
 
 </div>
@@ -159,107 +159,108 @@
 
     <br> <div class="text-justify">
 
-<h1 id="graph-算法题目思考">graph 算法题目思考</h1>
+<h1 id="dp-算法题目的思考">DP 算法题目的思考</h1>
 
-<p>Graph算是非常常见的题目，一般会给你一个2d array或一个数组代表联系，你可以使用这个输入来转换成一个图表示的数据结构，之后在图里做搜索。常见的算法：</p>
+<p>dp全称是动态规划，是一类被人又喜欢又讨厌的题目。喜欢是因为找到递推关系之后题目就变得简单了，讨厌的原因是这类题目常常很难想到递推关系。</p>
 
-<ul>
-<li>BFS，DFS</li>
-<li>union find</li>
-<li>A*</li>
-<li>Floyd and dijkstra</li>
-</ul>
+<p>dp的核心思想就是把一个复杂的问题分解成简单的子问题，并且可以利用递推的方式来解决。所有dp题目的核心是：
+1. 递推公式 deduction formula
+2. 初始化 initialization
+3. 空间优化 space improvement</p>
 
-<p>Leetcode里的题目的话主要都是dfs, bfs就可以解决，有些需要思考几个之间的关系的题目可以使用union find来做。少部分计算路径的题目需要使用一些基本的最短路径算法。</p>
+<h2 id="路径数量">路径数量</h2>
 
-<h2 id="bfs-and-dfs">BFS and DFS</h2>
+<p>这类题目就是看有几种方式可以到这个点，然后把这几种方式的路径加起来就可以。这是自下而上的思想，对于青蛙跳的那道题也可以自上而下利用递归的思路解题。只要可以跳到，就可以变成一个子问题，把这个点当做起点来进行。</p>
 
-<p>BFS就是使用一个queue,每次在遍历一个点的时候就把这个点放到queue里，是一个FIFO的结构。一层一层的遍历，基本应用是在tree level 遍历。这种方法找最短路径比较好，问题是一次要走很多。相对来说，BFS和DFS都可以解决一道题目，区别只是遍历的顺序不同。 DFS需要使用stack来解决，或者递归。</p>
+<p>word break 这类题目就可以使用相同的思想。思路是判断前i个是否可以组成，之后就判断这从i到j是否是一个单词。如果要记录下来所有的组成可能的话就可以使用dfs了。</p>
 
 <ul>
-<li><a href="https://leetcode.com/problems/word-ladder">127. Word Ladder</a></li>
-<li><a href="https://leetcode.com/problems/surrounded-regions">130. Surrounded Regions</a></li>
-<li><a href="https://leetcode.com/problems/clone-graph">133. Clone Graph</a></li>
+<li><a href="https://leetcode.com/problems/unique-paths">62. Unique Paths</a></li>
+<li><a href="https://leetcode.com/problems/unique-paths-ii">63. Unique Paths II</a></li>
+<li><a href="https://leetcode.com/problems/minimum-path-sum">64. Minimum Path Sum</a></li>
+<li><a href="https://leetcode.com/problems/climbing-stairs">70. Climbing Stairs</a></li>
+<li><a href="https://leetcode.com/problems/decode-ways">91. Decode Ways</a></li>
+<li><a href="https://leetcode.com/problems/word-break">139. Word Break</a></li>
+<li><a href="https://leetcode.com/problems/house-robber">198. House Robber</a></li>
+<li><a href="https://leetcode.com/problems/house-robber-ii">213. House Robber II</a></li>
+<li><a href="https://leetcode.com/problems/counting-bits">338. Counting Bits</a></li>
+<li><a href="https://leetcode.com/problems/count-numbers-with-unique-digits">357. Count Numbers with Unique Digits</a></li>
+<li><a href="https://leetcode.com/problems/frog-jump">403. Frog Jump</a></li>
+<li><a href="https://leetcode.com/problems/coin-change-2">518. Coin Change 2</a></li>
+<li><a href="https://leetcode.com/problems/min-cost-climbing-stairs">746. Min Cost Climbing Stairs</a></li>
+<li><a href="https://leetcode.com/problems/arithmetic-slices">413. Arithmetic Slices</a></li>
+<li><a href="https://leetcode.com/problems/arithmetic-slices-ii-subsequence">446. Arithmetic Slices II - Subsequence</a></li>
+<li><a href="https://leetcode.com/problems/soup-servings">808. Soup Servings</a></li>
 </ul>
 
-<p>对于找所有东西是不是一类的题目，经典题目就是看有几个岛的题目，利用dfs可以很方便的写出来。如果是无向图的话，从区域里的任意一点应该是可以到这个区域里任意一点的。所以只要有这个就可以找到所有是一类的点。</p>
+<h2 id="股票问题">股票问题</h2>
+
+<p>这类问题存在多种的转态转移方程，有的时候不太容易搞清楚。方法就是从基础的情况开始想，然后思考之间的关系。</p>
+
+<p>For each of them we make an array, buy[n], sell[n] and rest[n].</p>
+
+<p>buy[i] means before day i what is the maxProfit for any sequence end with buy.</p>
+
+<p>sell[i] means before day i what is the maxProfit for any sequence end with sell.</p>
+
+<p>rest[i] means before day i what is the maxProfit for any sequence end with rest.</p>
+
+<p>Then we want to deduce the transition functions for buy sell and rest. By definition we have:</p>
+
+<p>buy[i]  = max(rest[i-1]-price, buy[i-1])
+sell[i] = max(buy[i-1]+price, sell[i-1])
+rest[i] = max(sell[i-1], buy[i-1], rest[i-1])
+Where price is the price of day i. All of these are very straightforward. They simply represents :</p>
+
+<p>(1) We have to <code>rest</code> before we <code>buy</code> and
+(2) we have to <code>buy</code> before we <code>sell</code></p>
+
+<p>One tricky point is how do you make sure you sell before you buy, since from the equations it seems that [buy, rest, buy] is entirely possible.</p>
+
+<p>Well, the answer lies within the fact that buy[i] &lt;= rest[i] which means rest[i] = max(sell[i-1], rest[i-1]). That made sure [buy, rest, buy] is never occurred.</p>
+
+<p>A further observation is that and rest[i] &lt;= sell[i] is also true therefore</p>
+
+<p>rest[i] = sell[i-1]
+Substitute this in to buy[i] we now have 2 functions instead of 3:</p>
+
+<p>buy[i] = max(sell[i-2]-price, buy[i-1])
+sell[i] = max(buy[i-1]+price, sell[i-1])</p>
 
 <ul>
-<li><a href="https://leetcode.com/problems/number-of-islands">200. Number of Islands</a></li>
-<li><a href="https://leetcode.com/problems/walls-and-gates">286. Walls and Gates</a></li>
+<li><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown">309. Best Time to Buy and Sell Stock with Cooldown</a></li>
 </ul>
 
-<p>Dfs也可以用来实现有向图找环的策略，基本思路就是把图中的点标为白色（unvisited）,灰色(visiting)，黑色(visited)。如果在访问途中遇到灰色的节点，就说明这个点被访问过了，图中有环。</p>
+<p>take[i] = skip[i-1] + values[i];</p>
 
-<h2 id="union-find">Union find</h2>
+<p>skip[i] = Math.max(skip[i-1], take[i-1]);</p>
 
-<p>这类题目一般都是存在多个点属于一个类别的题目，之后可以通过图的关系把这些点合并到一个类别里面。union find 可以用来找无向图中是否有环。基本算法如下：</p>
-
-<pre><code class="language-java">class DSU {
-    int[] parent;
-    public DSU(int N) {
-        parent = new int[N];
-        for (int i = 0; i &lt; N; ++i)
-            parent[i] = i;
-    }
-    public int find(int x) {
-        if (parent[x] != x) parent[x] = find(parent[x]);
-        return parent[x];
-    }
-    public void union(int x, int y) {
-        parent[find(x)] = find(y);
-    }
-}
-</code></pre>
-
-<p>其实也不需要每次写个类，只需要把function 定义好即可。</p>
+<p>基本思路就是想全公式。</p>
 
 <ul>
-<li><a href="https://leetcode.com/problems/friend-circles">547. Friend Circles</a></li>
-<li><a href="https://leetcode.com/problems/redundant-connection">684. Redundant Connection</a></li>
-<li><a href="https://leetcode.com/problems/redundant-connection-ii">685. Redundant Connection II</a></li>
-<li><a href="https://leetcode.com/problems/sentence-similarity-ii">737. Sentence Similarity II</a></li>
-<li><a href="https://leetcode.com/problems/couples-holding-hands">765. Couples Holding Hands</a></li>
-<li><a href="https://leetcode.com/problems/similar-string-groups">839. Similar String Groups</a></li>
+<li><a href="https://leetcode.com/problems/delete-and-earn">740. Delete and Earn</a></li>
 </ul>
 
-<h2 id="最短路径算法">最短路径算法</h2>
+<h2 id="数组-string比较">数组/string比较</h2>
 
-<p>单点最短路径算法： bellman-ford 算法，基本思路就是每次更新从起点到v的距离，如果起点到u再到v的路程短，那么就更新。</p>
+<p>这类题目的代表就是regex，可以分情况讨论分情况决定下一个是否是符合的。基本思想都是使用一个二维数组，i和j分别代表第一个数组第i个以及第二个数组第j个。如果数组dp[i][j]=1，说明这是符合要求的。</p>
 
-<pre><code> for i from 1 to size(vertices)-1:
-       for each edge (u, v) with weight w in edges:
-           if distance[u] + w &lt; distance[v]:
-               distance[v] := distance[u] + w
-</code></pre>
+<p>另外一个相关的问题是<a href="https://en.wikipedia.org/wiki/Longest_common_subsequence_problem">最长公共序列</a>的经典dp问题,这个题目的思想和regex几乎相同，把问题分成两类，第一类是<code>a[i]!=b[j]</code>,第二类是<code>a[i]=b[j]</code>。如果两边相等的话，就可以使用之前<code>dp[i-1][j-1]+1</code>的结果，如果不等的话则是max(dp[i-1][j],dp[i][j-1])。题目可以用递归+memorization解决。</p>
 
-<p>之所以要重复n遍，因为最长的最短路径可能经过所有的节点，所以需要全部走一遍。</p>
+<p>相似的题目还有edit distance经典题型，思路是相同的。利用二维数组表示，如果相同，和之前dp[i-1][j-1]相同，如果不同则是1+min(dp[i-1][j-1],dp[i-1][j],dp[i][j-1])。这里是就增加，删除，替换三种可能。</p>
 
-<p>多点最短路径算法： Floyd 算法。基本思路是每个节点都做中间的节点，之后再尝试两边，更新距离。</p>
+<ul>
+<li><a href="https://leetcode.com/problems/regular-expression-matching">10. Regular Expression Matching</a></li>
+<li><a href="https://leetcode.com/problems/edit-distance">72. Edit Distance</a></li>
+</ul>
 
-<pre><code>for k from 1 to |V|
-   for i from 1 to |V|
-      for j from 1 to |V|
-         if dist[i][j] &gt; dist[i][k] + dist[k][j] 
-            dist[i][j] ← dist[i][k] + dist[k][j]
-</code></pre>
+<h2 id="背包问题">背包问题</h2>
 
-<p>Dijkstra&rsquo;s 算法，这也是单点最短路径算法，基本思路是每次从q中取最小的节点，之后更新从该点到其他的点的距离。</p>
+<p>这是dp另一类经典题目，在一个条件被限制的情况下如何获得最大。原始的背包问题是这样的，背包有限制大小，每个物品有大小和价值，在大小限制的情况下如何做到最多的价值。解法包括自顶向下和自下而上。本质上都是穷举可能的的大小，之后得到最大的价值。这个方法把指数次的时间复杂度降到O(nS)。dp[n][S]表示记录第n个物品时在S的情况下的最大价值。</p>
 
-<pre><code>  function Dijkstra(G, w, s)
-    for each vertex v in V[G]        // 初始化
-           d[v] := infinity           // 將各點的已知最短距離先設成無窮大
-    d[s] := 0                        // 因为出发点到出发点间不需移动任何距离，所以可以直接将s到s的最小距离设为0
-     S := empty set
-     Q := set of all vertices
-     while Q is not an empty set      // Dijkstra演算法主體
-           u := Extract_Min(Q)
-           S.append(u)
-          for each edge outgoing from u as (u,v)
-               if d[v] &gt; d[u] + w(u,v)  // 拓展边（u,v）。w(u,v)为从u到v的路径长度。
-                   d[v] := d[u] + w(u,v)  // 更新路径长度到更小的那个和值。
-
-</code></pre>
+<ul>
+<li><a href="https://leetcode.com/problems/guess-number-higher-or-lower-ii">375. Guess Number Higher or Lower II</a></li>
+</ul>
 </div>
 
     
@@ -278,12 +279,12 @@
     
     
 
-    <h4><a href="/post/algo/dp/">DP算法题的思考</a></h4>
-    <h5>September 4, 2018</h5>
+    <h4><a href="/post/algo/graph/">Graph算法题的思考</a></h4>
+    <h5>August 28, 2018</h5>
     
     <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
     
-    <a href="http://study.tczhong.com/tags/dp"><kbd class="item-tag">dp</kbd></a>
+    <a href="http://study.tczhong.com/tags/graph"><kbd class="item-tag">graph</kbd></a>
     
 
 </div>
