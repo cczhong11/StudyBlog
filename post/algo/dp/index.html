@@ -163,10 +163,13 @@
 
 <p>dp全称是动态规划，是一类被人又喜欢又讨厌的题目。喜欢是因为找到递推关系之后题目就变得简单了，讨厌的原因是这类题目常常很难想到递推关系。</p>
 
-<p>dp的核心思想就是把一个复杂的问题分解成简单的子问题，并且可以利用递推的方式来解决。所有dp题目的核心是：
-1. 递推公式 deduction formula
-2. 初始化 initialization
-3. 空间优化 space improvement</p>
+<p>dp的核心思想就是把一个复杂的问题分解成简单的子问题，并且可以利用递推的方式来解决。所有dp题目的核心是：</p>
+
+<ol>
+<li>递推公式 deduction formula</li>
+<li>初始化 initialization</li>
+<li>空间优化 space improvement</li>
+</ol>
 
 <h2 id="路径数量">路径数量</h2>
 
@@ -193,6 +196,17 @@
 <li><a href="https://leetcode.com/problems/soup-servings">808. Soup Servings</a></li>
 </ul>
 
+<h2 id="最长问题">最长问题</h2>
+
+<p>Dp和二分查找也可以结合，例如找最长递增子序列的题目。在array那里已经提到了这道题，dp的思想在这里是这样的，<strong>我们先建立一个数组ends</strong>，把首元素放进去，然后比较之后的元素，如果遍历到的新元素比ends数组中的首元素小的话，替换首元素为此新元素，如果遍历到的新元素比ends数组中的末尾元素还大的话，将此新元素添加到ends数组末尾(注意不覆盖原末尾元素)。如果遍历到的新元素比ends数组首元素大，比尾元素小时，此时用二分查找法找到第一个不小于此新元素的位置，覆盖掉位置的原来的数字，以此类推直至遍历完整个nums数组，此时ends数组的长度就是我们要求的LIS的长度，特别注意的是ends数组的值可能不是一个真实的LIS，比如若输入数组nums为{4, 2， 4， 5， 3， 7}，那么算完后的ends数组为{2， 3， 5， 7}，可以发现它不是一个原数组的LIS，只是长度相等而已。</p>
+
+<p>可以把相同的思路放在二维数组上解决Russian envelopes的问题。信封的宽度还是从小到大排，但是宽度相等时，我们让高度大的在前面。那么现在问题就简化了成了找高度数字中的LIS，完全就和之前那道Longest Increasing Subsequence一样了。把高度放前面为了防止相同宽度的互套。</p>
+
+<ul>
+<li><a href="https://leetcode.com/problems/longest-increasing-subsequence">300. Longest Increasing Subsequence</a></li>
+<li><a href="https://leetcode.com/problems/russian-doll-envelopes">354. Russian Doll Envelopes</a></li>
+</ul>
+
 <h2 id="股票问题">股票问题</h2>
 
 <p>这类问题存在多种的转态转移方程，有的时候不太容易搞清楚。方法就是从基础的情况开始想，然后思考之间的关系。</p>
@@ -207,10 +221,13 @@
 
 <p>Then we want to deduce the transition functions for buy sell and rest. By definition we have:</p>
 
-<p>buy[i]  = max(rest[i-1]-price, buy[i-1])
-sell[i] = max(buy[i-1]+price, sell[i-1])
-rest[i] = max(sell[i-1], buy[i-1], rest[i-1])
-Where price is the price of day i. All of these are very straightforward. They simply represents :</p>
+<ul>
+<li>buy[i]  = max(rest[i-1]-price, buy[i-1])</li>
+<li>sell[i] = max(buy[i-1]+price, sell[i-1])</li>
+<li>rest[i] = max(sell[i-1], buy[i-1], rest[i-1])</li>
+</ul>
+
+<p>Where price is the price of day i. All of these are very straightforward. They simply represents :</p>
 
 <p>(1) We have to <code>rest</code> before we <code>buy</code> and
 (2) we have to <code>buy</code> before we <code>sell</code></p>
@@ -228,12 +245,12 @@ Substitute this in to buy[i] we now have 2 functions instead of 3:</p>
 sell[i] = max(buy[i-1]+price, sell[i-1])</p>
 
 <ul>
-<li><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown">309. Best Time to Buy and Sell Stock with Cooldown</a></li>
+<li><p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown">309. Best Time to Buy and Sell Stock with Cooldown</a></p></li>
+
+<li><p>take[i] = skip[i-1] + values[i];</p></li>
+
+<li><p>skip[i] = Math.max(skip[i-1], take[i-1]);</p></li>
 </ul>
-
-<p>take[i] = skip[i-1] + values[i];</p>
-
-<p>skip[i] = Math.max(skip[i-1], take[i-1]);</p>
 
 <p>基本思路就是想全公式。</p>
 
@@ -261,6 +278,22 @@ sell[i] = max(buy[i-1]+price, sell[i-1])</p>
 <ul>
 <li><a href="https://leetcode.com/problems/guess-number-higher-or-lower-ii">375. Guess Number Higher or Lower II</a></li>
 </ul>
+
+<h2 id="全局最优">全局最优</h2>
+
+<p>经典dp，m个城市k个邮局怎么可以达到全局最短。基本思路就是从放一个邮局的角度开始思考。如果从第i个城市到第j个城市之间增加一个邮局该怎么放。这时候就需要知道从第i到第j的最短整体距离是多少。得到这个递推公式。</p>
+
+<p>sum[i][j]:在第i个村庄到第j个村庄中建立1个邮局的最小耗费, 村庄的坐标已知分别为p1,p2,p3,p4,p5,p6;那么，如果要求sum[1][4]的话邮局需要建立在2或者3处,放在2处的消耗为p4-p2+p3-p2+p2-p1=p4-p2+p3-p1 放在3处的结果为p4-p3+p3-p2+p3-p1=p4+p3-p2-p1，可见，将邮局建在2处或3处是一样的. 所以可以使用这个公式。</p>
+
+<pre><code>sum[i][j] = sum[i][j-1] + p[j] -p[(i+j)/2]
+</code></pre>
+
+<p>dp[i][j]:在前i个村庄中建立j个邮局的最小耗费</p>
+
+<pre><code>j&lt;k&lt;=i
+
+dp[i][j] =min(dp[i][j],dp[k][j-1]+sum[k+1][i])  
+</code></pre>
 </div>
 
     
@@ -279,12 +312,12 @@ sell[i] = max(buy[i-1]+price, sell[i-1])</p>
     
     
 
-    <h4><a href="/post/algo/graph/">Graph算法题的思考</a></h4>
-    <h5>August 28, 2018</h5>
+    <h4><a href="/post/algo/bit/">Bit算法题的思考</a></h4>
+    <h5>September 21, 2018</h5>
     
     <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
     
-    <a href="http://study.tczhong.com/tags/graph"><kbd class="item-tag">graph</kbd></a>
+    <a href="http://study.tczhong.com/tags/bit"><kbd class="item-tag">bit</kbd></a>
     
 
 </div>
@@ -297,12 +330,10 @@ sell[i] = max(buy[i-1]+price, sell[i-1])</p>
     
     
 
-    <h4><a href="/post/algo/array/">Array算法题的思考</a></h4>
-    <h5>August 24, 2018</h5>
+    <h4><a href="/post/algo/linkedlist/">Linkedlist算法题的思考</a></h4>
+    <h5>September 10, 2018</h5>
     
     <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
-    
-    <a href="http://study.tczhong.com/tags/array"><kbd class="item-tag">array</kbd></a>
     
 
 </div>
@@ -315,12 +346,10 @@ sell[i] = max(buy[i-1]+price, sell[i-1])</p>
     
     
 
-    <h4><a href="/post/algo/string/">String算法题的思考</a></h4>
-    <h5>August 22, 2018</h5>
+    <h4><a href="/post/algo/interval/">DP算法题的思考</a></h4>
+    <h5>September 8, 2018</h5>
     
     <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
-    
-    <a href="http://study.tczhong.com/tags/string"><kbd class="item-tag">string</kbd></a>
     
 
 </div>

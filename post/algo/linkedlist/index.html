@@ -4,7 +4,7 @@
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Leetcode</title>
+        <title>Linkedlist算法题的思考</title>
         
         <style>
 
@@ -61,9 +61,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.47" />
         
-        <link href="http://study.tczhong.com/tags/leetcode/index.xml" rel="alternate" type="application/rss+xml" title="Learn More" />
-        <link href="http://study.tczhong.com/tags/leetcode/index.xml" rel="feed" type="application/rss+xml" title="Learn More" />
-        
 
         
         
@@ -93,7 +90,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Leetcode</a>
+                    <a class="navbar-brand visible-xs" href="#">Linkedlist算法题的思考</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -140,9 +137,89 @@
 
 <main>
 
-    <h2>Leetcode</h2>
+    <div class="item">
 
-     <div class="item">
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/algo/linkedlist/">Linkedlist算法题的思考</a></h4>
+    <h5>September 10, 2018</h5>
+    
+    <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="链表题目的思考">链表题目的思考</h1>
+
+<p>链表是一个比较常见的数据结构，但是leetcode里的题目相对来说不多，题目也不是很难。最重要的思想就是递归的思路。对于每一个节点，都可以看作一个链表的起点。</p>
+
+<h2 id="merge">merge</h2>
+
+<p>这类题目就是用一个递归函数，参数是两个头指针，得到新的指针之后，其中一个向后，然后再递归调用就可以。sort list就是一个merge sort的思想</p>
+
+<ul>
+<li><a href="https://leetcode.com/problems/add-two-numbers">2. Add Two Numbers</a></li>
+<li><a href="https://leetcode.com/problems/merge-two-sorted-lists">21. Merge Two Sorted Lists</a></li>
+<li><a href="https://leetcode.com/problems/merge-k-sorted-lists">23. Merge k Sorted Lists</a></li>
+<li><a href="https://leetcode.com/problems/sort-list">148. Sort List</a></li>
+</ul>
+
+<h2 id="cycle-two-pointers">cycle, two pointers</h2>
+
+<p>判断有没有环的题目可以使用快慢指针，当两个指针重新相遇的时候可以判断出现环。</p>
+
+<p>删掉倒数节点可以使用两个指针，一个先走k个，之后两个一起走，快的那个到结尾的时候就说明慢指针指向那个节点是需要删除的。</p>
+
+<p>找交点的题目也是两个节点，其实和找环的思路一样，不过是两个指针走到底了从另一边重新开始，基本思路就是两边走的路程一致。</p>
+
+<ul>
+<li><a href="https://leetcode.com/problems/linked-list-cycle">141. Linked List Cycle</a></li>
+<li><a href="https://leetcode.com/problems/linked-list-cycle-ii">142. Linked List Cycle II</a></li>
+<li><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list">19. Remove Nth Node From End of List</a></li>
+<li><a href="https://leetcode.com/problems/middle-of-the-linked-list">876. Middle of the Linked List</a></li>
+<li><a href="https://leetcode.com/problems/intersection-of-two-linked-lists">160. Intersection of Two Linked Lists</a></li>
+</ul>
+
+<h2 id="reverse">reverse</h2>
+
+<p>Reverse 的思想也比较简单，就是记得保存当前的下一个节点。反转链表的思路就是每次把最后一个节点放到表头。分组reverse的话就是链表的思路叠加，先找出前k个，后面的点就是同样的子问题，做完reverse之后就可以接上后面的点。</p>
+
+<p>如果只是print，可以用stack的递归思想，可以做到不使用任何空间。看palindrome可以把一半reverse来比较。</p>
+
+<ul>
+<li><a href="https://leetcode.com/problems/swap-nodes-in-pairs">24. Swap Nodes in Pairs</a></li>
+<li><a href="https://leetcode.com/problems/reverse-nodes-in-k-group">25. Reverse Nodes in k-Group</a></li>
+<li><a href="https://leetcode.com/problems/reverse-linked-list">206. Reverse Linked List</a></li>
+<li><a href="https://leetcode.com/problems/palindrome-linked-list">234. Palindrome Linked List</a></li>
+</ul>
+
+<h2 id="other-questions">other questions</h2>
+
+<ul>
+<li><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii">82. Remove Duplicates from Sorted List II</a></li>
+<li><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list">83. Remove Duplicates from Sorted List</a></li>
+<li><a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree">109. Convert Sorted List to Binary Search Tree</a></li>
+<li><a href="https://leetcode.com/problems/copy-list-with-random-pointer">138. Copy List with Random Pointer</a></li>
+<li><a href="https://leetcode.com/problems/delete-node-in-a-linked-list">237. Delete Node in a Linked List</a></li>
+</ul>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
 
     
     
@@ -157,22 +234,6 @@
     <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
     
     <a href="http://study.tczhong.com/tags/bit"><kbd class="item-tag">bit</kbd></a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/algo/linkedlist/">Linkedlist算法题的思考</a></h4>
-    <h5>September 10, 2018</h5>
-    
-    <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
     
 
 </div>
@@ -201,24 +262,6 @@
     
     
 
-    <h4><a href="/post/algo/dp/">DP算法题的思考</a></h4>
-    <h5>September 4, 2018</h5>
-    
-    <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
-    
-    <a href="http://study.tczhong.com/tags/dp"><kbd class="item-tag">dp</kbd></a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
     <h4><a href="/post/algo/stack/">Stack算法题的思考</a></h4>
     <h5>September 4, 2018</h5>
     
@@ -230,21 +273,36 @@
 </div>
  
 
-</main>
-
-
-
-<div class="pages">
-
-     
-    <a class="icon pages-icon" href="/tags/leetcode/page/2/" rel="next">
-        <i class="fa fa-arrow-right"></i>
-    </a>
     
 
-</div>
+    
 
+        <h4 class="page-header">Comments</h4>
 
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
 
         <footer>
 

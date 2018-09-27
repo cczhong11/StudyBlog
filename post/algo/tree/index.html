@@ -200,7 +200,10 @@
 <li><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">105. Construct Binary Tree from Preorder and Inorder Traversal</a></li>
 <li><a href="https://leetcode.com/problems/construct-string-from-binary-tree/">606.Construct String from Binary Tree</a></li>
 <li><a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/">297.Serialize and Deserialize Binary Tree</a></li>
+<li><a href="https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree">428. Serialize and Deserialize N-ary Tree</a></li>
 </ul>
+
+<p>序列化反序列化树的做法很多，我的做法是当出现null的时候写X, 对于n节点的就在最后一个子节点后面加X。</p>
 
 <h2 id="遍历">遍历</h2>
 
@@ -240,7 +243,9 @@
 <li><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/">236.Lowest Common Ancestor of a Binary Tree</a></li>
 </ul>
 
-<p>还有就是根据这大小来在二叉搜索树中，找最近节点的题目，这个题目还是非常简单的，只要存一个目前的节点，每次和之前存的和target的比较，如果小的话就把它存好，之后就看着当前的值和它的大小，如果比较大的话就走左边，小的话就走右子树。如果要存k个的话，先走左边，需要利用一个list来存，当list大小为k时，如果发现root的比list第一个更接近，就把第一个删掉，把root加进去。然后走右边。</p>
+<p>还有就是根据这大小来在二叉搜索树中，找最近节点的题目，这个题目还是非常简单的，只要存一个目前的节点，每次和之前存的和target的比较，如果小的话就把它存好，之后就看着当前的值和它的大小，如果比较大的话就走左边，小的话就走右子树。</p>
+
+<p>如果要存k个的话，先走左边，需要利用一个list来存，当list大小为k时，如果发现root的比list第一个更接近，就把第一个删掉，把root加进去。然后走右边。其实就是一个inorder的遍历，只不过加一个提前终止条件。每次发现新的比较接近就把最前面的扔掉</p>
 
 <ul>
 <li><a href="https://leetcode.com/problems/closest-binary-search-tree-value/">270.Closest Binary Search Tree Value</a></li>
@@ -336,12 +341,12 @@
     
     
 
-    <h4><a href="/post/algo/dp/">DP算法题的思考</a></h4>
-    <h5>September 4, 2018</h5>
+    <h4><a href="/post/algo/bit/">Bit算法题的思考</a></h4>
+    <h5>September 21, 2018</h5>
     
     <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
     
-    <a href="http://study.tczhong.com/tags/dp"><kbd class="item-tag">dp</kbd></a>
+    <a href="http://study.tczhong.com/tags/bit"><kbd class="item-tag">bit</kbd></a>
     
 
 </div>
@@ -354,12 +359,10 @@
     
     
 
-    <h4><a href="/post/algo/graph/">Graph算法题的思考</a></h4>
-    <h5>August 28, 2018</h5>
+    <h4><a href="/post/algo/linkedlist/">Linkedlist算法题的思考</a></h4>
+    <h5>September 10, 2018</h5>
     
     <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
-    
-    <a href="http://study.tczhong.com/tags/graph"><kbd class="item-tag">graph</kbd></a>
     
 
 </div>
@@ -372,12 +375,10 @@
     
     
 
-    <h4><a href="/post/algo/array/">Array算法题的思考</a></h4>
-    <h5>August 24, 2018</h5>
+    <h4><a href="/post/algo/interval/">DP算法题的思考</a></h4>
+    <h5>September 8, 2018</h5>
     
     <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
-    
-    <a href="http://study.tczhong.com/tags/array"><kbd class="item-tag">array</kbd></a>
     
 
 </div>

@@ -205,6 +205,20 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
 <li><a href="https://leetcode.com/problems/increasing-subsequences">491. Increasing Subsequences</a></li>
 </ul>
 
+<p>对于subset的题目，可以用以下的思路.原因是只有这样才可能遍历所有的，第一dfs可以一直到底，之后再一个个增加。</p>
+
+<pre><code class="language-java">dfs(){
+    if(index ==length){
+        rs.add(tmp);
+        return;
+    }
+    dfs(index+1,tmp);
+    newtmp = new ArrayList&lt;&gt;(tmp);
+    newtmp.add(arr[index]);
+    dfs(index+1,tmp);
+}
+</code></pre>
+
 <p>一个注意点是：如果是用list的话，当加入结果的时候，每次需要重新构造一个新的：
 <code>rs.add(new ArrayList&lt;&gt;(cur));</code></p>
 
@@ -232,7 +246,22 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
 }
 </code></pre>
 
-<p>在数字中加括号的题目则是分治算法的典型代表，可以将所有的运算符的地方作为分界点，然后分别计算左右两边所有可能的值，之后再合并，得到最后所有的答案。括号是一个将数学表达式分开最合适的方法。301题最简单的思路就是尝试所有的可能性，当出现不合理的情况时就直接舍弃。在尝试的时候测试使用括号和不使用括号两种可能性。</p>
+<p>在数字中加括号的题目则是分治算法的典型代表，可以将所有的运算符的地方作为分界点，然后分别计算左右两边所有可能的值，之后再合并，得到最后所有的答案。括号是一个将数学表达式分开最合适的方法。</p>
+
+<p>301题最简单的思路就是尝试所有的可能性，当出现不合理的情况时就直接舍弃。在尝试的时候测试使用括号和不使用括号两种可能性。</p>
+
+<pre><code class="language-java">if (c == '(') {
+        dfs(s, i + 1, res, sb, rmL - 1, rmR, open);		    // not use (
+    	dfs(s, i + 1, res, sb.append(c), rmL, rmR, open + 1);       // use (
+
+    } else if (c == ')') {
+        dfs(s, i + 1, res, sb, rmL, rmR - 1, open);	            // not use  )
+    	dfs(s, i + 1, res, sb.append(c), rmL, rmR, open - 1);  	    // use )
+
+    } else {
+        dfs(s, i + 1, res, sb.append(c), rmL, rmR, open);	
+    }
+</code></pre>
 
 <p>对于678，则可以使用贪心的思想，计算最小开放的括号以及最多开放的括号，如果不等于&rdquo;)&ldquo;的个数小于&rdquo;)&ldquo;的话，那么就不可能是合理的。思路想清楚了不难，出现*这种就思考最多和最少的情况。</p>
 
@@ -335,6 +364,8 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
 <li><a href="https://leetcode.com/problems/regular-expression-matching">10. Regular Expression Matching</a></li>
 <li><a href="https://leetcode.com/problems/repeated-string-match">686. Repeated String Match</a></li>
 </ul>
+
+<p>模糊匹配的题目可以用一个map存这个单词最基本的情况，比如所有可以改变都变成a，新来的单词也把所有可以改变的变成a就可以了。</p>
 
 <h1 id="other">other</h1>
 
@@ -531,12 +562,12 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
     
     
 
-    <h4><a href="/post/algo/dp/">DP算法题的思考</a></h4>
-    <h5>September 4, 2018</h5>
+    <h4><a href="/post/algo/bit/">Bit算法题的思考</a></h4>
+    <h5>September 21, 2018</h5>
     
     <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
     
-    <a href="http://study.tczhong.com/tags/dp"><kbd class="item-tag">dp</kbd></a>
+    <a href="http://study.tczhong.com/tags/bit"><kbd class="item-tag">bit</kbd></a>
     
 
 </div>
@@ -549,12 +580,10 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
     
     
 
-    <h4><a href="/post/algo/graph/">Graph算法题的思考</a></h4>
-    <h5>August 28, 2018</h5>
+    <h4><a href="/post/algo/linkedlist/">Linkedlist算法题的思考</a></h4>
+    <h5>September 10, 2018</h5>
     
     <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
-    
-    <a href="http://study.tczhong.com/tags/graph"><kbd class="item-tag">graph</kbd></a>
     
 
 </div>
@@ -567,12 +596,10 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
     
     
 
-    <h4><a href="/post/algo/array/">Array算法题的思考</a></h4>
-    <h5>August 24, 2018</h5>
+    <h4><a href="/post/algo/interval/">DP算法题的思考</a></h4>
+    <h5>September 8, 2018</h5>
     
     <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
-    
-    <a href="http://study.tczhong.com/tags/array"><kbd class="item-tag">array</kbd></a>
     
 
 </div>
