@@ -6,10 +6,31 @@
     <description>Recent content on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://study.tczhong.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Root红米手机以及获取微信聊天记录</title>
+      <link>http://study.tczhong.com/post/tech/wechathistory/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/tech/wechathistory/</guid>
+      <description>本文记录了自己在root已停止支持的红米手机以及破解加密微信聊天记录数据库的一些心得和体会。
+root 手机 Root小米手机分为以下几步：
+ 刷miui的开发者版本 解锁小米手机 开启root权限  我手里有一部红米3的手机，而小米官方对于这款手机已经停止了维护，所以在miui官网上已经找不到相应的卡刷包。解决办法就是上论坛下以往的，我找到的在这里。
+我先下载了卡刷包，之后把zip包直接放到sd卡里。在系统更新页面点击右上角，选择使用本地文件进行更新。注意这里会抹掉所有手机的应用，在漫长的等待之后就把自己miui版本变成了开发版。
+接下来首先打开开发者模式，运许usb调试，打开fastboot刷机模式。另外在授权管理里面找root授权管理，把自己的手机与mi account绑定，准备解锁。
+解锁手机这步在root小米手机还是很重要的，具体是解锁BootLoader，有不少教程都没有写这步，这应该是小米在近几年才加的。具体步骤也不难，就是从这里点击进去，下载相关的工具包，之后安装里面的驱动，让手机进入fastboot模式，运行软件解锁，然后手机会自动重启。
+一开始我并不知道这一步的重要性，尝试了很久的线刷，结果总是显示 ”FAILED (remote: device is locked. Cannot flash images)“。最后才明白是这个问题。另外这个工具没有mac版，所以我的解决办法是运行windows虚拟机，在里面完成了解锁。
+最后一步就比较简单了，直接到授权管理里开启root权限。之后在adb shell里面运行su就是root user了。
+获得聊天记录 聊天记录存在的位置是 /data/data/com.tencent.mm/MicroMsg/xxxxxxx/EnMicroMsg.db。这里的xxxxx是对&amp;rdquo;mm[uin]&amp;ldquo;进行md5的值。uin的获得可以使用这个命令，cat /data/data/com.tencent.mm/shared_prefs/*.xml | grep uin，记录其中的default_uin。如果是1234567，那么就对mm1234567进行md5操作，之后就可以获得文件下的名字。
+利用以下命令把内容拷贝出来。
+cp EnMicroMsg.db /mnt/sdcard/ exit adb pull /mnt/sdcard/EnMicroMsg.db .  接下来就是要解密这个数据库。密码是手机的imei+uin，利用以下命令可以获得到：
+echo -n $imei$uin | md5 | cut -c -7  打开这个加密的数据库我卡了很久，理论上利用sqlcipher就可以解锁了，但是我尝试了很多办法，结果都是&amp;rdquo;File is not a database&amp;rdquo;。说明你在解锁数据库用的方法错了，并不代表你的密码不对，在mac下利用brew install sqlcipher安装之后，利用以下命令即可。
+sqlcipher EnMicroMsg.db &#39;PRAGMA key = &amp;quot;key&amp;quot;; PRAGMA cipher_migrate; ATTACH DATABASE &amp;quot;decrypted_database.</description>
+    </item>
     
     <item>
       <title>Bit算法题的思考</title>
@@ -33,9 +54,7 @@ merge 这类题目就是用一个递归函数，参数是两个头指针，得�
  2. Add Two Numbers 21. Merge Two Sorted Lists 23. Merge k Sorted Lists 148. Sort List  cycle, two pointers 判断有没有环的题目可以使用快慢指针，当两个指针重新相遇的时候可以判断出现环。
 删掉倒数节点可以使用两个指针，一个先走k个，之后两个一起走，快的那个到结尾的时候就说明慢指针指向那个节点是需要删除的。
 找交点的题目也是两个节点，其实和找环的思路一样，不过是两个指针走到底了从另一边重新开始，基本思路就是两边走的路程一致。
- 141. Linked List Cycle 142. Linked List Cycle II 19. Remove Nth Node From End of List 876. Middle of the Linked List 160. Intersection of Two Linked Lists  reverse Reverse 的思想也比较简单，就是记得保存当前的下一个节点。反转链表的思路就是每次把最后一个节点放到表头。分组reverse的话就是链表的思路叠加，先找出前k个，后面的点就是同样的子问题，做完reverse之后就可以接上后面的点。
-如果只是print，可以用stack的递归思想，可以做到不使用任何空间。看palindrome可以把一半reverse来比较。
- 24. Swap Nodes in Pairs 25.</description>
+ 141. Linked List Cycle 142. Linked List Cycle II 19. Remove Nth Node From End of List 876. Middle of the Linked List 160. Intersection of Two Linked Lists 287. Find the Duplicate Number  reverse Reverse 的思想也比较简单，就是记得保存当前的下一个节点。反转链表的思路就是每次把最后一个节点放到表头。分组reverse的话就是链表的思路叠加，先找出前k个，后面的点就是同样的子问题，做完reverse之后就可以接上后面的点。</description>
     </item>
     
     <item>
@@ -217,6 +236,24 @@ a. 为了我的目标， 我要怎么安排训练项目？ b. 训练强度， �
       
       <guid>http://study.tczhong.com/post/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%86%99%E4%BD%9C/</guid>
       <description>技术文档写作 1. 思想的组织 1.1 金字塔原理  结论先行：一篇文章只支持一个中心思想，这个中心思想将概括各级各组的所有观点，必须放在文章最开头。 以上统下： 上一层级的观点必须是对下一层级观点的概括，下一层级的观点是对上一层级观点的解释、支持。 归类分组：把具有共同点的观点归类分组，同一组中的观点都必须属于同一个范畴。 逻辑递进：每组中的观点都必须按照逻辑顺序进行组织。  1.2 序言 1.2.1 SQAC  S:背景 介绍读者熟悉的某些“背景” Q:疑问 由此引发读者最初的“疑问” A:回答 针对该“疑问”给出的“答案”，也就是文章的中心思想 C:冲突 说明发生的“冲突”  1.2.2 TOPS  Target to Audiences 有的放矢 内容面向读者，抓住读者的注意力 Overarching 贯穿整体 能够全面概括后面的内容 Powerful 掷地有声 有见解 Supportable 言之有据 有论点可以支撑  1.3 自上而下构建  提出中心思想 设想读者最初提问 写序言 与读者进行疑问、回答式对话  1.4 自下而上构建  列出想表达的所有观点 找出各观点之间的逻辑关系 概括总结，得出结论  1.5 归类分组  相互独立（ Mutually Exclusive）：同一组的各个观点之间必须相互独立、相互排斥，没有重叠。 完全穷尽（ Collectively Exhaustive ）：同一组的所有观点完全穷尽，没有遗漏。  1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://study.tczhong.com/post/machinelearning/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/machinelearning/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://study.tczhong.com/post/machinelearning/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/machinelearning/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
     </item>
     
   </channel>

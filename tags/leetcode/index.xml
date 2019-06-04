@@ -33,9 +33,7 @@ merge 这类题目就是用一个递归函数，参数是两个头指针，得�
  2. Add Two Numbers 21. Merge Two Sorted Lists 23. Merge k Sorted Lists 148. Sort List  cycle, two pointers 判断有没有环的题目可以使用快慢指针，当两个指针重新相遇的时候可以判断出现环。
 删掉倒数节点可以使用两个指针，一个先走k个，之后两个一起走，快的那个到结尾的时候就说明慢指针指向那个节点是需要删除的。
 找交点的题目也是两个节点，其实和找环的思路一样，不过是两个指针走到底了从另一边重新开始，基本思路就是两边走的路程一致。
- 141. Linked List Cycle 142. Linked List Cycle II 19. Remove Nth Node From End of List 876. Middle of the Linked List 160. Intersection of Two Linked Lists  reverse Reverse 的思想也比较简单，就是记得保存当前的下一个节点。反转链表的思路就是每次把最后一个节点放到表头。分组reverse的话就是链表的思路叠加，先找出前k个，后面的点就是同样的子问题，做完reverse之后就可以接上后面的点。
-如果只是print，可以用stack的递归思想，可以做到不使用任何空间。看palindrome可以把一半reverse来比较。
- 24. Swap Nodes in Pairs 25.</description>
+ 141. Linked List Cycle 142. Linked List Cycle II 19. Remove Nth Node From End of List 876. Middle of the Linked List 160. Intersection of Two Linked Lists 287. Find the Duplicate Number  reverse Reverse 的思想也比较简单，就是记得保存当前的下一个节点。反转链表的思路就是每次把最后一个节点放到表头。分组reverse的话就是链表的思路叠加，先找出前k个，后面的点就是同样的子问题，做完reverse之后就可以接上后面的点。</description>
     </item>
     
     <item>

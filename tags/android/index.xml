@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Learn More</title>
+    <link>http://study.tczhong.com/tags/android/</link>
+    <description>Recent content in Android on Learn More</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://study.tczhong.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Root红米手机以及获取微信聊天记录</title>
+      <link>http://study.tczhong.com/post/tech/wechathistory/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/tech/wechathistory/</guid>
+      <description>本文记录了自己在root已停止支持的红米手机以及破解加密微信聊天记录数据库的一些心得和体会。
+root 手机 Root小米手机分为以下几步：
+ 刷miui的开发者版本 解锁小米手机 开启root权限  我手里有一部红米3的手机，而小米官方对于这款手机已经停止了维护，所以在miui官网上已经找不到相应的卡刷包。解决办法就是上论坛下以往的，我找到的在这里。
+我先下载了卡刷包，之后把zip包直接放到sd卡里。在系统更新页面点击右上角，选择使用本地文件进行更新。注意这里会抹掉所有手机的应用，在漫长的等待之后就把自己miui版本变成了开发版。
+接下来首先打开开发者模式，运许usb调试，打开fastboot刷机模式。另外在授权管理里面找root授权管理，把自己的手机与mi account绑定，准备解锁。
+解锁手机这步在root小米手机还是很重要的，具体是解锁BootLoader，有不少教程都没有写这步，这应该是小米在近几年才加的。具体步骤也不难，就是从这里点击进去，下载相关的工具包，之后安装里面的驱动，让手机进入fastboot模式，运行软件解锁，然后手机会自动重启。
+一开始我并不知道这一步的重要性，尝试了很久的线刷，结果总是显示 ”FAILED (remote: device is locked. Cannot flash images)“。最后才明白是这个问题。另外这个工具没有mac版，所以我的解决办法是运行windows虚拟机，在里面完成了解锁。
+最后一步就比较简单了，直接到授权管理里开启root权限。之后在adb shell里面运行su就是root user了。
+获得聊天记录 聊天记录存在的位置是 /data/data/com.tencent.mm/MicroMsg/xxxxxxx/EnMicroMsg.db。这里的xxxxx是对&amp;rdquo;mm[uin]&amp;ldquo;进行md5的值。uin的获得可以使用这个命令，cat /data/data/com.tencent.mm/shared_prefs/*.xml | grep uin，记录其中的default_uin。如果是1234567，那么就对mm1234567进行md5操作，之后就可以获得文件下的名字。
+利用以下命令把内容拷贝出来。
+cp EnMicroMsg.db /mnt/sdcard/ exit adb pull /mnt/sdcard/EnMicroMsg.db .  接下来就是要解密这个数据库。密码是手机的imei+uin，利用以下命令可以获得到：
+echo -n $imei$uin | md5 | cut -c -7  打开这个加密的数据库我卡了很久，理论上利用sqlcipher就可以解锁了，但是我尝试了很多办法，结果都是&amp;rdquo;File is not a database&amp;rdquo;。说明你在解锁数据库用的方法错了，并不代表你的密码不对，在mac下利用brew install sqlcipher安装之后，利用以下命令即可。
+sqlcipher EnMicroMsg.db &#39;PRAGMA key = &amp;quot;key&amp;quot;; PRAGMA cipher_migrate; ATTACH DATABASE &amp;quot;decrypted_database.</description>
+    </item>
+    
+  </channel>
+</rss>

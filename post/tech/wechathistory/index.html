@@ -4,7 +4,7 @@
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Stack算法题的思考</title>
+        <title>Root红米手机以及获取微信聊天记录</title>
         
         <style>
 
@@ -90,7 +90,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Stack算法题的思考</a>
+                    <a class="navbar-brand visible-xs" href="#">Root红米手机以及获取微信聊天记录</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -146,12 +146,12 @@
     
     
 
-    <h4><a href="/post/algo/stack/">Stack算法题的思考</a></h4>
-    <h5>September 4, 2018</h5>
+    <h4><a href="/post/tech/wechathistory/">Root红米手机以及获取微信聊天记录</a></h4>
+    <h5>June 4, 2019</h5>
     
-    <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
+    <a href="http://study.tczhong.com/tags/wechat"><kbd class="item-tag">wechat</kbd></a>
     
-    <a href="http://study.tczhong.com/tags/stack"><kbd class="item-tag">stack</kbd></a>
+    <a href="http://study.tczhong.com/tags/android"><kbd class="item-tag">Android</kbd></a>
     
 
 </div>
@@ -159,116 +159,62 @@
 
     <br> <div class="text-justify">
 
-<h1 id="stack-算法题的思考">Stack 算法题的思考</h1>
+<p>本文记录了自己在root已停止支持的红米手机以及破解加密微信聊天记录数据库的一些心得和体会。</p>
 
-<p>这类题目也是比较多的，一般比较繁琐。思路类似DFS，不过可以不使用递归实现。</p>
+<h1 id="root-手机">root 手机</h1>
 
-<h2 id="string-解析类">String 解析类</h2>
+<p>Root小米手机分为以下几步：</p>
 
-<p>这类比较多的就是计算器，以及分析括号里的内容。例如解析 <code>3[a]2[bc]</code>,这时候就可以在遇到<code>[</code>的时候把之前的东西都压到栈里，之后当遇到<code>]</code>的时候把内容再pop出来。</p>
+<ol>
+<li>刷miui的开发者版本</li>
+<li>解锁小米手机</li>
+<li>开启root权限</li>
+</ol>
 
-<p>对于计算器，如果是后缀表达式的话，可以把结果都压到栈里，遇到运算符再pop出运算。有括号的话还是按括号的方法，主要要注意加法和乘法的区别。</p>
+<p>我手里有一部红米3的手机，而小米官方对于这款手机已经停止了维护，所以在<a href="http://www.miui.com/download.html">miui</a>官网上已经找不到相应的卡刷包。解决办法就是上论坛下以往的，我找到的在<a href="https://www.miui.com/thread-16771441-1-1.html">这里</a>。</p>
 
-<p>计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如<code>(1+2)+(3+4)</code>, +可以看作是是后一个括号的符号。对于1*2 + <sup>6</sup>&frasl;<sub>3</sub>,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。</p>
+<p>我先下载了卡刷包，之后把zip包直接放到sd卡里。在系统更新页面点击右上角，选择使用本地文件进行更新。注意这里会抹掉所有手机的应用，在漫长的等待之后就把自己miui版本变成了开发版。</p>
 
-<ul>
-<li><a href="https://leetcode.com/problems/evaluate-reverse-polish-notation">150. Evaluate Reverse Polish Notation</a></li>
-<li><a href="https://leetcode.com/problems/mini-parser">385. Mini Parser</a></li>
-<li><a href="https://leetcode.com/problems/decode-string">394. Decode String</a></li>
-<li><a href="https://leetcode.com/problems/number-of-atoms">726. Number of Atoms</a></li>
-<li><a href="https://leetcode.com/problems/basic-calculator">224. Basic Calculator</a></li>
-<li><a href="https://leetcode.com/problems/basic-calculator-ii">227. Basic Calculator II</a></li>
-<li><a href="https://leetcode.com/problems/basic-calculator-iv">770. Basic Calculator IV</a></li>
-<li><a href="https://leetcode.com/problems/basic-calculator-iii">772. Basic Calculator III</a></li>
-</ul>
+<p>接下来首先打开开发者模式，运许usb调试，打开fastboot刷机模式。另外在授权管理里面找root授权管理，把自己的手机与mi account绑定，准备解锁。</p>
 
-<h2 id="大小差距">大小差距</h2>
+<p>解锁手机这步在root小米手机还是很重要的，具体是解锁BootLoader，有不少教程都没有写这步，这应该是小米在近几年才加的。具体步骤也不难，就是从<a href="https://www.miui.com/unlock/">这里</a>点击进去，下载相关的工具包，之后安装里面的驱动，让手机进入fastboot模式，运行软件解锁，然后手机会自动重启。</p>
 
-<p>还有一类题目就是问下一个比自己大的数还有多远，可以使用栈。栈里面存的都是比栈顶小的数，遇到比栈顶大的数n就可以弹出栈里的数j，因为这时我们可以知道比之前那个数j大的数在n了，更新之前那个数j的结果。</p>
+<p><img src="https://www.androidexplained.com/wp-content/uploads/2018/05/Redmi-Note-5-Fastboot-Mode-Full.jpg" alt="" /></p>
 
-<p>栈的作用存一个至今遇到的大值。栈底是最大的值，栈顶是至今遇到的大值里最小的。</p>
+<p>一开始我并不知道这一步的重要性，尝试了很久的线刷，结果总是显示 ”FAILED (remote: device is locked. Cannot flash images)“。最后才明白是这个问题。另外这个工具没有mac版，所以我的解决办法是运行windows虚拟机，在里面完成了解锁。</p>
 
-<pre><code class="language-java">for (int i = 0; i &lt; n; i++) {
-    while (!stack.isEmpty() &amp;&amp; temperatures[i] &gt; temperatures[stack.peek()]) {
-        int idx = stack.pop();
-        res[idx] = i - idx;
-    }
-        stack.push(i);
-}
-//保存自己是最低的边界 
-for (int i = 0; i &lt; N; ++i) {
-    while (!stack.isEmpty() &amp;&amp; A[i] &lt;= A[stack.peek()])
-                stack.pop();
-    prev[i] = stack.isEmpty() ? -1 : stack.peek();
-    stack.push(i);
-    }
+<p>最后一步就比较简单了，直接到授权管理里开启root权限。之后在<code>adb shell</code>里面运行<code>su</code>就是root user了。</p>
+
+<h1 id="获得聊天记录">获得聊天记录</h1>
+
+<p>聊天记录存在的位置是 <code>/data/data/com.tencent.mm/MicroMsg/xxxxxxx/EnMicroMsg.db</code>。这里的<code>xxxxx</code>是对&rdquo;mm[uin]&ldquo;进行md5的值。uin的获得可以使用这个命令，<code>cat /data/data/com.tencent.mm/shared_prefs/*.xml | grep uin</code>，记录其中的<code>default_uin</code>。如果是1234567，那么就对<code>mm1234567</code>进行md5操作，之后就可以获得文件下的名字。</p>
+
+<p>利用以下命令把内容拷贝出来。</p>
+
+<pre><code class="language-bash">cp EnMicroMsg.db /mnt/sdcard/
+exit
+adb pull /mnt/sdcard/EnMicroMsg.db .
 </code></pre>
 
-<ul>
-<li><a href="https://leetcode.com/problems/remove-k-digits">402. Remove K Digits</a></li>
-<li><a href="https://leetcode.com/problems/daily-temperatures">739. Daily Temperatures</a></li>
-<li><a href="https://leetcode.com/problems/sum-of-subarray-minimums">907. Sum of Subarray Minimums</a></li>
-</ul>
+<p>接下来就是要解密这个数据库。密码是手机的imei+uin，利用以下命令可以获得到：</p>
+
+<pre><code class="language-bash">echo -n $imei$uin | md5 | cut -c -7
+</code></pre>
+
+<p>打开这个加密的数据库我卡了很久，理论上利用<code>sqlcipher</code>就可以解锁了，但是我尝试了很多办法，结果都是&rdquo;File is not a database&rdquo;。说明你在解锁数据库用的方法错了，并不代表你的密码不对，在mac下利用<code>brew install sqlcipher</code>安装之后，利用以下命令即可。</p>
+
+<pre><code class="language-bash">sqlcipher EnMicroMsg.db 'PRAGMA key = &quot;key&quot;; PRAGMA cipher_migrate; ATTACH DATABASE &quot;decrypted_database.db&quot; AS decrypted_database KEY &quot;&quot;;SELECT sqlcipher_export(&quot;decrypted_database&quot;);DETACH DATABASE decrypted_database;'
+</code></pre>
+
+<p>之后可以直接看<code>decrypted_database.db</code>里面的内容。具体内容在<code>message</code>表格里面。</p>
+
+<p>逆向微信的过程可以参看以下的博文</p>
+
+<p><a href="https://www.xukele.com/blog/?p=435">如何破解微信聊天数据库</a></p>
 </div>
 
     
     
-
-    
-
-        <h4 class="page-header">Related</h4>
-
-         <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/algo/bit/">Bit算法题的思考</a></h4>
-    <h5>September 21, 2018</h5>
-    
-    <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
-    
-    <a href="http://study.tczhong.com/tags/bit"><kbd class="item-tag">bit</kbd></a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/algo/linkedlist/">Linkedlist算法题的思考</a></h4>
-    <h5>September 10, 2018</h5>
-    
-    <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/algo/interval/">Interval算法题的思考</a></h4>
-    <h5>September 8, 2018</h5>
-    
-    <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
-    
-
-</div>
- 
 
     
 
