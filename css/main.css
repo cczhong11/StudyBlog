@@ -84,7 +84,9 @@ a:hover {
     font-size: 125%;
     display: inline-block !important;
 }
-
+.text-justify{
+    font-size: 24pt;
+}
 /*coloured borders at top and bottom of the page*/
 
 .navbar.navbar-default {
