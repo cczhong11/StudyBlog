@@ -7,6 +7,7 @@ body {
     display: flex;
     text-align: center;
     flex-direction: column;
+    font-size: 20px;
 }
 
 main {
@@ -84,9 +85,7 @@ a:hover {
     font-size: 125%;
     display: inline-block !important;
 }
-.text-justify{
-    font-size: 24pt;
-}
+
 /*coloured borders at top and bottom of the page*/
 
 .navbar.navbar-default {
