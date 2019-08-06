@@ -7,7 +7,6 @@ body {
     display: flex;
     text-align: center;
     flex-direction: column;
-    font-size: 18px;
 }
 
 main {
@@ -26,17 +25,17 @@ main {
 /*home page*/
 
 .intro {
-    transform: translateY(30vh);
+    transform: translateY(22vh);
 }
 
 .intro > h1 {
     color: #212121;
-    font-size: 24vh;
+    font-size: 12vh;
 }
 
 .intro > h2 {
     color: #757575;
-    font-size: 6vmin;
+    font-size: 3vmin;
 }
 
 .intro > .profile {
