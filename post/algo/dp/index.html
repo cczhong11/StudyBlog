@@ -301,7 +301,21 @@ dp[i][j] =min(dp[i][j],dp[k][j-1]+sum[k+1][i])  
 
 <p>股票可以进行K次交易的问题，我们也可以使用相似的思路， 一个是到目前为止最好的结果信息（全局最优）， 另一个必须包含新加进来的元素的最好的结果信息（局部最优）。global[i][j]是一个是当前到达第i天可以最多进行j次交易，最好的利润是多少，local[i][j]是当前到达第i天，最多可进行j次交易，并且最后一次交易在当天卖出的最好的利润是多少。<code>global[i][j]=max(local[i][j],global[i-1][j])</code>，而局部是<code>local[i][j]=max(global[i-1][j-1]+max(diff,0),local[i-1][j]+diff)</code>，diff是今日的变化。根据定义可以知道，直接+diff是不会改变交易次数的。</p>
 </div>
-
+    <aside>
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#dp-算法题目的思考">DP 算法题目的思考</a>
+<ul>
+<li><a href="#路径数量">路径数量</a></li>
+<li><a href="#最长问题">最长问题</a></li>
+<li><a href="#股票问题">股票问题</a></li>
+<li><a href="#数组-string比较">数组/string比较</a></li>
+<li><a href="#背包问题">背包问题</a></li>
+<li><a href="#全局最优-local-最优">全局最优,local 最优</a></li>
+</ul></li>
+</ul>
+</nav>
+    </aside>
     
     
 
@@ -389,21 +403,7 @@ dp[i][j] =min(dp[i][j],dp[k][j-1]+sum[k+1][i])  
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     
-    <aside>
-        <nav id="TableOfContents">
-<ul>
-<li><a href="#dp-算法题目的思考">DP 算法题目的思考</a>
-<ul>
-<li><a href="#路径数量">路径数量</a></li>
-<li><a href="#最长问题">最长问题</a></li>
-<li><a href="#股票问题">股票问题</a></li>
-<li><a href="#数组-string比较">数组/string比较</a></li>
-<li><a href="#背包问题">背包问题</a></li>
-<li><a href="#全局最优-local-最优">全局最优,local 最优</a></li>
-</ul></li>
-</ul>
-</nav>
-    </aside>
+    
 
 </main>
 
