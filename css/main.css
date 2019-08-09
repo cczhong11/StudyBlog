@@ -32,7 +32,10 @@ main {
         font-size: 5vmin;
     }
 }
-
+#sidebar {
+    width: 300px;
+    float: left;
+}
 
 .intro > h1 {
     color: #212121;
