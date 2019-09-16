@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>每周分享第 15 期</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://study.tczhong.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.56.3" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120924697-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-120924697-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">每周分享第 15 期</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/tags/leetcode/">Leetcode</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/tags/weekly/">每周分享</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/7112540/tc-zhong"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/sharing/sharing_15/">每周分享第 15 期</a></h4>
+    <h5>September 15, 2019</h5>
+    
+    <a href="http://study.tczhong.com/tags/weekly"><kbd class="item-tag">weekly</kbd></a>
+    
+
+</div>
+
+    
+
+    <br> 
+    
+            <div id="sidebar">
+    
+                    <aside>
+                        <nav id="TableOfContents">
+<ul>
+<li><a href="#每周分享第-15-期-2019-week-37">每周分享第 15 期  2019 week 37</a>
+<ul>
+<li><a href="#国内新闻">国内新闻</a></li>
+<li><a href="#国际大事">国际大事</a></li>
+<li><a href="#科技新闻">科技新闻</a></li>
+<li><a href="#优秀的项目">优秀的项目</a></li>
+<li><a href="#好文章">好文章</a></li>
+<li><a href="#有趣的事情">有趣的事情</a></li>
+<li><a href="#言论">言论</a></li>
+</ul></li>
+</ul>
+</nav>
+                    </aside>
+                </div>
+    <div class="text-justify">
+
+<h1 id="每周分享第-15-期-2019-week-37">每周分享第 15 期  2019 week 37</h1>
+
+<p>你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。</p>
+
+<p><img src="https://my-news-counter.herokuapp.com/total.svg?repo_id=cczhong11.sharing_15" alt="Total visitor" />
+<img src="https://my-news-counter.herokuapp.com/today.svg?repo_id=cczhong11.sharing_15" alt="Visitors in today" /></p>
+
+<h2 id="国内新闻">国内新闻</h2>
+
+<p>【1】中国进行6月份来最大的美大豆采购交易</p>
+
+<p>有交易商称，中国进口商周四（12日）至少购买了10船美国大豆，为6月份以来最大规模的采购。据路透社独家报道，两名了解交易情况的交易员称，这些采购的大豆总计至少60万吨，计划从10月至12月从美国西北太平洋出口码头发货。芝加哥期货交易所指标大豆期货周四跳升至一个月高位。路透社评论称，这些采购是中美之间的贸易紧张关系可能正在缓和的一个迹象。上个月，由于美国总统特朗普威胁要对中国商品征收更多关税，中国暂停了对美国所有农产品的采购，导致中美之间的贸易关系降至低点。在这场的争端中，美国对中国的大豆出口大幅下滑，供应增加导致大豆价格跌至近10年来的低点，美国农民也难以盈利。</p>
+
+<p>姆努钦：在执行领域与中国达成概念性共识</p>
+
+<p>美国财政部长努姆钦周一表示，美国在如果达成协议如何执行的问题上与中国达成了“概念性”共识，强调贸易谈判已取得积极进展。“我认为，我们至少在执行领域达成了概念性共识，”姆努钦对福克斯新闻说。随着美中贸易谈判在未来几周展开，姆努钦表示，美国官员仍然希望与北京方面“达成一项好协议。”姆努钦表示，特朗普政府“尚未看到任何与贸易战有关的对美国经济的影响，”并预计“今年将有一个非常强劲的结尾”。他还说，尽管“在某些情况下，企业遇到了困难”，但美国贸易代表莱特希泽“在逐案处理豁免上做得非常出色。”</p>
+
+<p>中国拟将对<strong>大豆猪肉</strong>等美农产品从加征关税清单中排除</p>
+
+<p>新华社在13日中秋节发布消息称，鉴于美国方面已经决定拟于10月1日实施的中国输美商品加征关税措施做出调整，中国方面支持相关企业按照市场化原则和WTO原则，从即日起采购一定数量的美国大豆、猪肉等农产品。新华社说，中国国务院关税税则委员会将对上述采购予以加征关税排除。此前，中国商务部发言人高峰12日在例行记者会上说，中国企业已经就采购猪肉、大豆等美国农产品进行询价。高峰在当天的记者会上还说，中方对于美国总统特朗普表态原定10月1日加征的关税推迟到10月15日这一善举表示欢迎。</p>
+
+<p>【2】Bloomberg近日发布了一则有关中国房价的报道，内容真实，但还是觉得惊人。</p>
+
+<p>厦门的套均总价已经直逼伦敦，后面几位的二线城市相比伦敦也差距不大（图1）；不少城市的房价收入比远超伦敦的13.3倍，其中深圳36.1倍，三亚30倍（图2）。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/d2e8f6fd3edf4780b4d82454a6828cef.jpg" alt="" /></p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/6681946dc7ae4ab7921afb8233db3b5b.jpg" alt="" /></p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/7326e621b3e84802a36589423e6f28b8.jpg" alt="" /></p>
+
+<p>另外，该报道还指出，近年来拥有房产在中国已经成为了一个国民痴狂（National Obsession），因为大家都寄希望于买房增值，过去有无数人因此致富（至少是纸面上），因此天量住宅也被空置，业主坐等升值（图3）</p>
+
+<p>【3】河北：个人出租住房，按租金5%-10%核定所得税</p>
+
+<p>河北出台新规，对个人出租住房不能提供成本费用的，按租金收入的5%-10%征收所得税。省税务局解读称，此举是为了进一步规范个人出租住房的个人所得税征收管理，深入贯彻落实“减税降费“工作的总体要求。新规定自2019年10月1日起施行。业内人士指出，个人出租住房从法律角度的确应该交税，但约定俗成的当下市场，交税比例非常低，不足全国市场的1%。这种情况下，引导纳税应该是长期过程。</p>
+
+<p>【4】习近平会见贺一诚：“一国两制”完全行得通</p>
+
+<p>习近平11日下午在北京人民大会堂接见澳门候任行政长官贺一诚。习近平表示，今年是澳门回归祖国20周年。20年来，在何厚铧、崔世安两位行政长官带领下，澳门特别行政区政府团结社会各界人士，全面准确理解和贯彻“一国两制”方针，坚定维护宪法和基本法权威，传承爱国爱澳的核心价值观，促进澳门经济快速增长、民生持续改善、社会稳定和谐，向世界展示了具有澳门特色的“一国两制”成功实践。对此，习近平强调，“事实证明，‘一国两制’是完全行得通、办得到、得人心的！”</p>
+
+<p>【5】中国农业农村部公布2019年8月份400个监测县生猪存栏信息</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/bb448a39d5dc484d8c228905b087f051.jpg" alt="" /></p>
+
+<p>@曹山石：从农业部今晚披露信息来看，非洲猪瘟的态势并没有缓解。下半年到明年上半年，未来一年猪肉缺口达1000万吨。全国冻猪肉储备量在百万吨，且不可能全都抛出来；全球一年猪肉贸易只有800万吨，进口难解问题。生猪繁育-养殖特定周期，复产一般需13个月左右才能提供商品肉猪，复产对短期供应也无实质性影响。</p>
+
+<p>全国生猪存栏少了1/3，最严重省份死掉2/3。今年国内产肉量会下跌超20%，全国猪肉缺口1000万吨。但全球一年猪肉贸易只有800万吨，中国今年也许能进口200万吨——剩下的就只能用价格杠杠让大家少吃一点了。价格高位可能会维持到2021年。</p>
+
+<p>【6】官媒一同发声直指香港社会深层次矛盾：住房问题</p>
+
+<p>9月8日，香港富豪李嘉诚就香港局势再发声，称年轻人应该体谅大局，政府也应该对“未来的主人翁”网开一面，引来网友争议。12日至13日，中央政法委长安剑、人民日报、新华社等官媒接连发文，直指香港修例风波背后亟待解决的香港社会深层次矛盾——住房问题，并呼吁各界将私人利益、局部利益放一放，恳请地产商释放最大善意，真正对年轻人“网开一面”，共同建设香港的未来。</p>
+
+<p>人民日报：如为公共利益计，为解决民生计，地产商是时候释放最大善意，而不应只打自己算盘、囤地居奇、赚尽最后一个铜板。什么才是对香港未来负责？什么才是对年轻人“网开一面”？这才是。 </p>
+
+<p>港警拒绝民阵星期天游行集会申请</p>
+
+<p>警方解释，过去三个月大部分和平理性的公众活动都被暴力示威者骑劫，因此为了维护社会治安和公众安全，警方必须作出负责任的决定。 </p>
+
+<h2 id="国际大事">国际大事</h2>
+
+<p>【1】约翰逊提前大选动议再遭英国下议院否决</p>
+
+<p>据卫报9日报道，英国首相约翰逊再次提出提前大选动议，未能获得下议院超过2/3支持。在投票议员中，293人支持提前大选动议，46人反对，还有大量议员弃权未投票。同一天，#英国女王批准阻止无协议脱欧法案# 。</p>
+
+<p>【英国议会正式开始休会至10月14日】据英媒报道，当地时间9日晚，在结束晚间议程后，#英国议会正式休会至10月14日#。当晚，英国议会就约翰逊第二次提出的提前大选动议进行投票，该动议未得到2/3议员支持，再遭否决。8月末，约翰逊提出议会休会请求，得到女王伊丽莎白二世批准，并计划于10月14日女王在议会发表讲话后恢复运行。</p>
+
+<p>【好惨一首相：6天输6场议会投票 约翰逊创下全败记录】当地时间9日，#英国下议院再次否决提前大选动议#，这意味着约翰逊又一次在议会投票落败。约翰逊7月24日就任首相以来，尚未在议会投票中获得过成功。而在9日同一天，下议院还要求公开“黄鹀行动”文件，即英国政府预测无协议脱欧风险和应对计划的文件，议会以311票赞成、302票反对要求政府公开相关内容。而9月4日和阻止无协议脱欧相关的数次投票中，约翰逊均落败。此外，约翰逊第一次提出的提前大选动议也遭议会否决。</p>
+
+<p>英国法院裁定下议院休会违法且无效</p>
+
+<p>英国苏格兰高等法院11日裁定，英国首相约翰逊近日要求国会下议院休会的举措违法。约翰逊政府随后表示，将向英国最高法院提出上诉。依照约翰逊的要求，下议院自9月10日起进入为期五周的休会期，至10月14日休会结束。约翰逊称这是新政府上台的正常做法。下议院70多名议员上月联合向苏格兰高等法院起诉，要求法院裁定约翰逊此举违法。法院8月30日将起诉驳回，当时给出的理由是：首相请求女王批准下议院休会的决定属于政治决策，因此不该由法院裁决。9月初，议员团再次向法院提出上诉，法院复审部三名法官11日更改了裁决。法官认为约翰逊此举基于两个目的：为阻止或阻碍下议院让行政部门履责和对英国脱欧进行立法；为允许行政部门在没有下议院干预的情况下采取“无协议脱欧”政策。法院据此裁定，要求下议院休会的做法违法且无效。</p>
+
+<p>【2】特朗普称将10月调高中国商品关税措施推迟两周</p>
+
+<p>大统领推文宣布：“应刘副总理要求，以及:cn:10.1国庆，我们同意，作为善意的一种姿态，把原本10月1号上调对2500亿美元的中国商品关税（25％到30％），推迟到10月15号。”</p>
+
+<p>【3】加拿大总理：若胜选连任将推行“外国人购屋税”</p>
+
+<p>在加拿大2019年大选选战正式打响的第二天，谋求连任总理的特鲁多表示，自由党一旦胜选，将在加拿大全国推行“外国人购屋税”以平抑房价。特鲁多承认，房价趋升、房屋数量不足，令加拿大年轻一代压力增加。他认为，近年来外国购房者对房市的投机行为已对市场构成重大挑战。特鲁多的竞选承诺包括，<strong>面向首次购房的加拿大公民推行激励措施，可提供最高10%的购房优惠</strong>；在多伦多、温哥华及维多利亚地区提升首次买房的贷款额度；在全国范围向非加拿大公民或非加拿大居民的购房者征收俗称“外国人购屋税”的投机及空置税。特鲁多对媒体表示，计划中的“外国人购屋税”税率为每年1%。目前温哥华所在的卑诗省和多伦多所在的安大略省已分别实施20%和15%的房地产“外国买家税”。</p>
+
+<p>【4】民主党候选人杨安泽宣布启动基本收入实验</p>
+
+<p>美国民主党候选人杨安泽（Andrew Yang)宣布他的竞选团队将使用从支持者筹集到的资金开展基本收入的试点。杨安泽在民主党竞争中异军突起，他的一个主要主张就是给美国每个成年人每个月发 1 千美元或每年发 1.2 万美元现金，不附带任何条件，作为应对大规模失业的缓冲。他认为，由于人工智能和自动化，大规模失业正在到来。这项计划被称为 Freedom Dividend Pilot Program，他的竞选团队称已有三个家庭得到了一千美元不带任何条件的资助，能用于从改善住房到修理汽车和照顾家人。</p>
+
+<p>【5】沙特阿美石油设施遭无人机袭击 沙特王储：有能力进行回应</p>
+
+<p>周六，沙特阿美位于沙特东部的石油设施遭无人机袭击并引发大火，胡塞武装之后宣布对事件负责。沙特媒体报道，沙特王储和特朗普通电话谈论此事，王储表示：沙特有能力且愿意对抗这种恐怖分子的入侵。特朗普也在电话中对沙特表示了支持。《华尔街日报》援引消息人士的话说，<strong>沙特将因攻击事件削减一半石油生产</strong>。</p>
+
+<p>【胡塞武装宣布负责后 #蓬佩奥声称沙特阿美遭袭是伊朗所为#】当地时间14日，沙特国有石油企业两处主要石油设施遭遇无人机攻击，引发大火，美国国务卿蓬佩奥指责伊朗“对世界能源供给进行史无前例的袭击”。在袭击发生后，也门胡塞武装已宣布对其负责，但蓬佩奥称，“没有证据表明是也门进行的袭击”。他指责伊朗在鲁哈尼和扎里夫假装参加外交的同时对沙特发动了近100次袭击。蓬佩奥还敦促各国公开谴责伊朗的袭击，追究其侵略责任。</p>
+
+<p>【6】英媒：价值百万英镑的艺术品“纯金马桶”被盗</p>
+
+<p>英媒14日消息，警方证实，位于丘吉尔出生地布莱尼姆宫的纯金马桶艺术品被盗，案件正在调查中。据悉，这件艺术品出自意大利概念艺术家Maurizio Cattelan之手，名为“美国”，价值一百万英镑。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/6a3a9bba0b604f71b02082a6c72753f2.jpg" alt="" /></p>
+
+<h2 id="科技新闻">科技新闻</h2>
+
+<p>【1】马云今天正式卸任阿里董事局主席</p>
+
+<p>阿里巴巴集团创始人马云今天将正式退休。马云退休的消息早在一年前的今天就已正式确认——2018年的9月10日，马云以“教师节快乐”为题发布一篇公开信宣布：一年后的9月10日，他将不再担任阿里巴巴集团董事局主席，这一职务由现任集团CEO张勇接任。马云当时表示，除了继续担任阿里巴巴合伙人和为合伙人组织机制做努力和贡献外，“我想回归教育，做我热爱的事情会让我无比兴奋和幸福”。马云卸任后还将继续担任集团董事会成员，直至2020年阿里巴巴年度股东大会。之后，他还将继续担任“阿里巴巴永久合伙人”。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/6f568635043f4dfd92559510e1cf3dc1.jpg" alt="" /></p>
+
+<p>【2】苹果发布会，推出 iPhone 11 等新品</p>
+
+<p>苹果（Apple）公司10日举行发布会，推出了新一代的手机（iPhone 11、iPhone 11 Pro 和 iPhone 11 Pro Max）、iPad 和 Apple Watch 5 等产品。对于手机这一重头产品，苹果首次将“Pro”用于 iPhone 的名称中，以凸显其性能优势。新一代 iPhone 使用 A13 芯片，增加了防水功能，提高了电池续航能力。此外，摄影性能的提高是新 iPhone 的突出亮点。iPhone 11 Pro 和 iPhone 11 Pro Max 均搭载三个后置镜头，可大幅提高拍照和录影的清晰度，以及对不同光线条件的适应能力，其软件系统也将支持多镜头分屏同步录影等功能。三款手机售价分别为699美元、999美元和1099美元起。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/63d10bf998e24a3a996325c4e00f409e.jpg" alt="" /></p>
+
+<p>Apple Watch 5 系列增加了新的安全功能，包括可识别用户摔倒及自动拨打紧急呼叫等，起售价为399美元。第7代基本款 iPad 配置了10.2英吋的视网膜显示屏（Retina display），内置 A10 Fusion 芯片，搭载最新的 iPad OS 系统，支持 Apple Pencil 适配，并设有一个智能接口用于连接全尺寸键盘，售价为329美元。此外，苹果还推出了游戏订阅服务 Arcade，每月4.99美元，将于9月19日上线。苹果还宣布将于11月1日起上线 Apple TV+ 原创剧，每月订阅费用也为4.99美元。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/ed1fdee7b54e41cf8bee1f045ea45789.jpg" alt="" /></p>
+
+<p>【3】科学家在系外行星大气层中首次发现水</p>
+
+<p>法新社报道，11日，科学家们在《自然天文学》杂志上发表研究，称在一颗系外行星的大气层中首次发现了水。研究称，该系外行星温度与地球相似，足以维持生命的存在。名为K2-18b这颗系外行星，质量是地球的8倍，体积是地球的两倍，位于母恒星周围的适居带内，科学家称水可以以液体形式存在。</p>
+
+<p>【4】#全国青少年信息学奥赛联赛停办# </p>
+
+<p>8月16日，中国计算机学会称，由于某种原因，由其主办的全国青少年信息学奥林匹克联赛NOIP(普及组及提高组)从2019年起暂停。之后，CCF发布通知称，《关于CSP-S/J的报名通知》中明确，将于11月分别举行的两项认证CSP-J和CSP-S，无年龄限制，任何人可报名。</p>
+
+<p>【5】Google 同意向法国支付近10亿欧元的罚款和税金</p>
+
+<p>据路透社报导，Google 公司周四表示，已与法国税务部门就长达四年的调查达成协议，同意支付将近10亿欧元款项，包括5亿欧元的罚款和4.65亿欧元的调整后税金。这项调查主要针对 Google 是否将其在法国获得的利润转移到税率更低的爱尔兰。法国官员表示，这项协议对于法国的公共财政来说具有历史意义。Google 公司技术团队的一位发言人称，仍然相信国际税收制度的协调改革是为全球公司提供明确框架的最佳方式。Google 方的律师表示，该协议可以一次性解决双方过去的所有纠纷。此前，Google 曾于2016年1月与英国政府达成协议，同意补缴近10年税款，约为1.3亿英镑。2017年5月，Google 又与意大利政府达成协议，同意补缴3.06亿欧元税款，以解决2002年至2015年间的税收争议问题。</p>
+
+<p>【6】美国加州通过方案要将网约车司机变成正式员工，Uber反对</p>
+
+<p>美国时间9月11日，加州立法者批准了一项就业法案。该法案可能会将一些合同工划分为正式员工，要求公司将其当成正式员工对待，以帮助数十万独立从业者成为雇员，并获得最低工资，加班费和其他福利。同时，州议会也签署了该协议，目前正在等待州长加文•纽瑟姆的最终批准。如果该法案得到了州长的批准，预计将于明年1月正式生效。受影响最大的出行公司Uber、Lyft，外卖服务公司DoorDash和生鲜杂货代购公司Instacart等“零工经济公司”表示，他们将继续与之抗争。</p>
+
+<p>【7】德、法将抵制Facebook旗下Libra：私营实体不能掌握货币权</p>
+
+<p>路透社报道，法国财政部周五表示，法国和德国已经同意抵制Facebook旗下的Libra加密货币。两国政府在一份联合声明中确认“没有任何私营实体能够掌握货币权，这是国家主权所固有的”。</p>
+
+<p>【8】拍照比“剪刀手”要注意了！网络安全专家称会泄露指纹信息</p>
+
+<p>15日上午，2019年国家网络安全宣传周全民体验日活动在上海举行。<strong>记者了解到，拍照时如果镜头距离够近，“剪刀手”照片经照片放大技术和人工智能增强技术处理，其中人物的指纹信息就能被还原出来</strong>。专家介绍，“基本上1.5米内拍摄的剪刀手照片就能100%还原出被摄者的指纹，在1.5米-3米的距离内拍摄的照片能还原出50%的指纹，只有超过3米拍摄的照片才难以提取指纹。”而指纹被提取后通过专业材料制作成指纹膜，可被不法分子用于各种通过指纹技术来识别身份的渠道，比如指纹门锁、指纹支付等。</p>
+
+<h2 id="优秀的项目">优秀的项目</h2>
+
+<p>【1】<a href="https://www.detoxify.app/">fake app</a></p>
+
+<p>Generate a fake app to replace any addictive app</p>
+
+<p>【2】<a href="https://github.com/viraptor/reverse-interview">reverse-interview</a></p>
+
+<p>问面试官问题集合</p>
+
+<p>【3】<a href="https://github.com/kingname/GeneralNewsExtractor">新闻文本提取器</a></p>
+
+<h2 id="好文章">好文章</h2>
+
+<p>【1】<a href="https://news.ifeng.com/c/7pu0qORs48C">这年头，不排队就能买到的奶茶不是好奶茶</a></p>
+
+<p>【2】<a href="https://mp.weixin.qq.com/s?__biz=MzU2MDEwMTIwMg==&amp;mid=2247491325&amp;idx=1&amp;sn=bb39a05ca1874a76d62edffd407b59f8&amp;chksm=fc0c7cc0cb7bf5d6bb7d4a852ac1d8bec9fca07f848dc64ce6d49507e6f441777d9eb0c15e9b&amp;token=1554082633&amp;lang=zh_CN&amp;scene=21#wechat_redirect">消失的恋人：大都市女青年的爱情骗局 | 谷雨</a></p>
+
+<p>【3】<a href="https://mp.weixin.qq.com/s/d2Sv6Y5Vwa_ScDjbqop8Kg">北大清华毕业的海淀家长：孩子哪能比我差 | 谷雨</a></p>
+
+<h2 id="有趣的事情">有趣的事情</h2>
+
+<p>【1】</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/19890f6d527940b4bb95d6fee557c6b0.jpg" alt="" /></p>
+
+<p>【2】</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/073ae93b87e1473ea049eb2468f04531.jpg" alt="" /></p>
+
+<p>【3】</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/ff4ef5de30434f5180b665c335ad965d.jpg" alt="" /></p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/a151b103bbb54a11a1a08c5d362e0a55.jpg" alt="" /></p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/ff31beaa66de48beb13ce0d270005e80.jpg" alt="" /></p>
+
+<p>【4】当大闸蟹玩起“证券化” 网友：套路比阳澄湖还深
+不少人听过这样一个段子，经销商印刷2000张面值500元的蟹券，400元卖给企业采购人员，企业采购人员拿去送礼，收礼者以250元的价格卖给回收者，回收者再以300元的价格卖给经销商，经销商回购螃蟹券每张赚100元，轻松赚到20万元。螃蟹经销商以虚高价格发行螃蟹券，而这些礼券在社会上空转一圈，商家不需要卖螃蟹，甚至根本没有实物保障，就可以躺着赚钱。“几乎所有的东西都能够资产证券化，但最关键的是有的商品证券化最终可能会导致一种不良的结果。例如商家不用饲养螃蟹、不用生产月饼，通过金融手段就可以赚取大量资金。”经济学家宋清辉认为，这样操作带来的恶果就是商家不再重视产品本身，而最终买单的只能是普通的消费者。</p>
+
+<p>【5】</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/ebb0ab3674a1452e914ab6db5109e5c2.jpg" alt="" /></p>
+
+<p>【6】10日，据福克斯新闻报道，出差约炮猝死的法国已婚男性工程师M. Xavier被判定为“因公死亡”，其雇主需付出高额赔偿。M. Xavier的家属将得到高达M. Xavier原工资80%的补偿，领取期限按照M. Xavier的退休年龄来算，且雇主还需补偿给家属M. Xavier的养老金。2013年，工程师M. Xavier在法国出差时与一名陌生女性发生关系，事后被发现陈尸于河畔小屋，死因是心脏病突发。公司一度对判决不服，认为M. Xavier虽然是出差，但死亡原因属个人行为，与工作内容无关。但法院认为，性接触是日常生活行为，如洗澡、吃饭一样，因此员工只要是出差期间出事，雇主就有责任。</p>
+
+<p>【7】2018年不同城市单身率排行榜</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/e77fdbf9f5e44f04b88c7888e5bf47d9.jpg" alt="" /></p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2019/37/c436cb1f6f8e4da8874aee7b68400d2f.jpg" alt="" /></p>
+
+<h2 id="言论">言论</h2>
+
+<p>【1】我一向认为两个人相处，这是他们的最高职责：保护对方的孤独。（里尔克《给青年诗人的信》）</p>
+
+<p>【2】人类天性就是喜欢表达自己的想法，多于尝试理解他人。我们总是说话太多，聆听太少，结果害这个世界充满噪音和杂讯。（陈浩基《网内人》 ）</p>
+
+<p>【3】“结婚仿佛金漆的鸟笼，笼子外面的鸟想住进去，笼内的鸟想飞出来;所以结而离，离而结，没有了局。”或者这句更流行：婚姻象围城，“城外的人想冲进去，城里的人想逃出来”。 &ndash; 《围城》</p>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScD7u3k02r_3z6e9c_HFrvxkcTCBKGW1DLMPxXVgyOu1E7TSA/viewform?embedded=true" width="100%" height="1084" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+</div>
+   
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/sharing/sharing_14/">每周分享第 14 期</a></h4>
+    <h5>September 8, 2019</h5>
+    
+    <a href="http://study.tczhong.com/tags/weekly"><kbd class="item-tag">weekly</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/sharing/sharing_13/">每周分享第 13 期</a></h4>
+    <h5>September 1, 2019</h5>
+    
+    <a href="http://study.tczhong.com/tags/weekly"><kbd class="item-tag">weekly</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/sharing/sharing_12/">每周分享第 12 期</a></h4>
+    <h5>August 25, 2019</h5>
+    
+    <a href="http://study.tczhong.com/tags/weekly"><kbd class="item-tag">weekly</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+
