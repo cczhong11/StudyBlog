@@ -4,26 +4,27 @@
   
   <url>
     <loc>http://study.tczhong.com/</loc>
-    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://study.tczhong.com/post/</loc>
-    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://study.tczhong.com/tags/</loc>
-    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://study.tczhong.com/tags/weekly/</loc>
-    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/post/sharing/sharing_18/</loc>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -114,7 +115,6 @@
   <url>
     <loc>http://study.tczhong.com/tags/android/</loc>
     <lastmod>2019-06-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -125,7 +125,11 @@
   <url>
     <loc>http://study.tczhong.com/tags/wechat/</loc>
     <lastmod>2019-06-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/tags/bit/</loc>
+    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -134,15 +138,8 @@
   </url>
   
   <url>
-    <loc>http://study.tczhong.com/tags/bit/</loc>
-    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://study.tczhong.com/tags/leetcode/</loc>
     <lastmod>2018-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -156,7 +153,17 @@
   </url>
   
   <url>
+    <loc>http://study.tczhong.com/tags/dp/</loc>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://study.tczhong.com/post/algo/dp/</loc>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/tags/stack/</loc>
     <lastmod>2018-09-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -166,15 +173,8 @@
   </url>
   
   <url>
-    <loc>http://study.tczhong.com/tags/dp/</loc>
-    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://study.tczhong.com/tags/stack/</loc>
-    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>http://study.tczhong.com/tags/graph/</loc>
+    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -183,9 +183,8 @@
   </url>
   
   <url>
-    <loc>http://study.tczhong.com/tags/graph/</loc>
-    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>http://study.tczhong.com/tags/array/</loc>
+    <lastmod>2018-08-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -194,9 +193,8 @@
   </url>
   
   <url>
-    <loc>http://study.tczhong.com/tags/array/</loc>
-    <lastmod>2018-08-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>http://study.tczhong.com/tags/string/</loc>
+    <lastmod>2018-08-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -205,15 +203,8 @@
   </url>
   
   <url>
-    <loc>http://study.tczhong.com/tags/string/</loc>
-    <lastmod>2018-08-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://study.tczhong.com/tags/tree/</loc>
     <lastmod>2018-08-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -224,13 +215,11 @@
   <url>
     <loc>http://study.tczhong.com/tags/health/</loc>
     <lastmod>2017-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://study.tczhong.com/tags/study/</loc>
     <lastmod>2017-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -246,7 +235,6 @@
   <url>
     <loc>http://study.tczhong.com/tags/time/</loc>
     <lastmod>2016-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -257,7 +245,6 @@
   <url>
     <loc>http://study.tczhong.com/tags/food/</loc>
     <lastmod>2016-04-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -268,7 +255,6 @@
   <url>
     <loc>http://study.tczhong.com/tags/documentation/</loc>
     <lastmod>2015-07-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -288,7 +274,6 @@
   
   <url>
     <loc>http://study.tczhong.com/categories/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
