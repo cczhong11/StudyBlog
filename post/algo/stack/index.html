@@ -59,7 +59,7 @@
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.58.3" />
+ <meta name="generator" content="Hugo 0.61.0" />
         
 
         
@@ -168,30 +168,19 @@
     
                     <aside>
                         <nav id="TableOfContents">
-<ul>
-<li><a href="#stack-算法题的思考">Stack 算法题的思考</a>
-<ul>
-<li><a href="#string-解析类">String 解析类</a></li>
-<li><a href="#大小差距">大小差距</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#string-">String 解析类</a></li>
+    <li><a href="#heading">大小差距</a></li>
+  </ul>
 </nav>
                     </aside>
                 </div>
-    <div class="text-justify">
-
-<h1 id="stack-算法题的思考">Stack 算法题的思考</h1>
-
+    <div class="text-justify"><h1 id="stack-">Stack 算法题的思考</h1>
 <p>这类题目也是比较多的，一般比较繁琐。思路类似DFS，不过可以不使用递归实现。</p>
-
-<h2 id="string-解析类">String 解析类</h2>
-
+<h2 id="string-">String 解析类</h2>
 <p>这类比较多的就是计算器，以及分析括号里的内容。例如解析 <code>3[a]2[bc]</code>,这时候就可以在遇到<code>[</code>的时候把之前的东西都压到栈里，之后当遇到<code>]</code>的时候把内容再pop出来。</p>
-
 <p>对于计算器，如果是后缀表达式的话，可以把结果都压到栈里，遇到运算符再pop出运算。有括号的话还是按括号的方法，主要要注意加法和乘法的区别。</p>
-
-<p>计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如<code>(1+2)+(3+4)</code>, +可以看作是是后一个括号的符号。对于1*2 + <sup>6</sup>&frasl;<sub>3</sub>,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。</p>
-
+<p>计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如<code>(1+2)+(3+4)</code>, +可以看作是是后一个括号的符号。对于1*2 + 6/3,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。</p>
 <ul>
 <li><a href="https://leetcode.com/problems/evaluate-reverse-polish-notation">150. Evaluate Reverse Polish Notation</a></li>
 <li><a href="https://leetcode.com/problems/mini-parser">385. Mini Parser</a></li>
@@ -202,30 +191,24 @@
 <li><a href="https://leetcode.com/problems/basic-calculator-iv">770. Basic Calculator IV</a></li>
 <li><a href="https://leetcode.com/problems/basic-calculator-iii">772. Basic Calculator III</a></li>
 </ul>
-
-<h2 id="大小差距">大小差距</h2>
-
+<h2 id="heading">大小差距</h2>
 <p>还有一类题目就是问下一个比自己大的数还有多远，可以使用栈。栈里面存的都是比栈顶小的数，遇到比栈顶大的数n就可以弹出栈里的数j，因为这时我们可以知道比之前那个数j大的数在n了，更新之前那个数j的结果。</p>
-
 <p>栈的作用存一个至今遇到的大值。栈底是最大的值，栈顶是至今遇到的大值里最小的。</p>
-
-<pre><code class="language-java">for (int i = 0; i &lt; n; i++) {
-    while (!stack.isEmpty() &amp;&amp; temperatures[i] &gt; temperatures[stack.peek()]) {
-        int idx = stack.pop();
-        res[idx] = i - idx;
-    }
-        stack.push(i);
-}
-//保存自己是最低的边界 
-for (int i = 0; i &lt; N; ++i) {
-    while (!stack.isEmpty() &amp;&amp; A[i] &lt;= A[stack.peek()])
-                stack.pop();
-    prev[i] = stack.isEmpty() ? -1 : stack.peek();
-    stack.push(i);
-    }
-</code></pre>
-
-<ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> temperatures<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> temperatures<span style="color:#f92672">[</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> idx <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        res<span style="color:#f92672">[</span>idx<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> idx<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+        stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>i<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//保存自己是最低的边界 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">;</span> <span style="color:#f92672">+</span><span style="color:#f92672">+</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> A<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> A<span style="color:#f92672">[</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">]</span><span style="color:#f92672">)</span>
+                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    prev<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">?</span> <span style="color:#f92672">-</span>1 <span style="color:#f92672">:</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>i<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><ul>
 <li><a href="https://leetcode.com/problems/remove-k-digits">402. Remove K Digits</a></li>
 <li><a href="https://leetcode.com/problems/daily-temperatures">739. Daily Temperatures</a></li>
 <li><a href="https://leetcode.com/problems/sum-of-subarray-minimums">907. Sum of Subarray Minimums</a></li>
@@ -325,7 +308,7 @@ for (int i = 0; i &lt; N; ++i) {
 
         <footer>
 
-            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
 
         </footer>
        
