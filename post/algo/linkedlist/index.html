@@ -59,7 +59,7 @@
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.61.0" />
+ <meta name="generator" content="Hugo 0.58.3" />
         
 
         
@@ -166,29 +166,43 @@
     
                     <aside>
                         <nav id="TableOfContents">
-  <ul>
-    <li><a href="#merge">merge</a></li>
-    <li><a href="#cycle-two-pointers">cycle, two pointers</a></li>
-    <li><a href="#reverse">reverse</a></li>
-    <li><a href="#other-questions">other questions</a></li>
-  </ul>
+<ul>
+<li><a href="#链表题目的思考">链表题目的思考</a>
+<ul>
+<li><a href="#merge">merge</a></li>
+<li><a href="#cycle-two-pointers">cycle, two pointers</a></li>
+<li><a href="#reverse">reverse</a></li>
+<li><a href="#other-questions">other questions</a></li>
+</ul></li>
+</ul>
 </nav>
                     </aside>
                 </div>
-    <div class="text-justify"><h1 id="heading">链表题目的思考</h1>
+    <div class="text-justify">
+
+<h1 id="链表题目的思考">链表题目的思考</h1>
+
 <p>链表是一个比较常见的数据结构，但是leetcode里的题目相对来说不多，题目也不是很难。最重要的思想就是递归的思路。对于每一个节点，都可以看作一个链表的起点。</p>
+
 <h2 id="merge">merge</h2>
+
 <p>这类题目就是用一个递归函数，参数是两个头指针，得到新的指针之后，其中一个向后，然后再递归调用就可以。sort list就是一个merge sort的思想</p>
+
 <ul>
 <li><a href="https://leetcode.com/problems/add-two-numbers">2. Add Two Numbers</a></li>
 <li><a href="https://leetcode.com/problems/merge-two-sorted-lists">21. Merge Two Sorted Lists</a></li>
 <li><a href="https://leetcode.com/problems/merge-k-sorted-lists">23. Merge k Sorted Lists</a></li>
 <li><a href="https://leetcode.com/problems/sort-list">148. Sort List</a></li>
 </ul>
+
 <h2 id="cycle-two-pointers">cycle, two pointers</h2>
+
 <p>判断有没有环的题目可以使用快慢指针，当两个指针重新相遇的时候可以判断出现环。</p>
+
 <p>删掉倒数节点可以使用两个指针，一个先走k个，之后两个一起走，快的那个到结尾的时候就说明慢指针指向那个节点是需要删除的。</p>
+
 <p>找交点的题目也是两个节点，其实和找环的思路一样，不过是两个指针走到底了从另一边重新开始，基本思路就是两边走的路程一致。</p>
+
 <ul>
 <li><a href="https://leetcode.com/problems/linked-list-cycle">141. Linked List Cycle</a></li>
 <li><a href="https://leetcode.com/problems/linked-list-cycle-ii">142. Linked List Cycle II</a></li>
@@ -197,16 +211,22 @@
 <li><a href="https://leetcode.com/problems/intersection-of-two-linked-lists">160. Intersection of Two Linked Lists</a></li>
 <li><a href="https://leetcode.com/problems/find-the-duplicate-number">287. Find the Duplicate Number</a></li>
 </ul>
+
 <h2 id="reverse">reverse</h2>
+
 <p>Reverse 的思想也比较简单，就是记得保存当前的下一个节点。反转链表的思路就是每次把最后一个节点放到表头。分组reverse的话就是链表的思路叠加，先找出前k个，后面的点就是同样的子问题，做完reverse之后就可以接上后面的点。</p>
+
 <p>如果只是print，可以用stack的递归思想，可以做到不使用任何空间。看palindrome可以把一半reverse来比较。</p>
+
 <ul>
 <li><a href="https://leetcode.com/problems/swap-nodes-in-pairs">24. Swap Nodes in Pairs</a></li>
 <li><a href="https://leetcode.com/problems/reverse-nodes-in-k-group">25. Reverse Nodes in k-Group</a></li>
 <li><a href="https://leetcode.com/problems/reverse-linked-list">206. Reverse Linked List</a></li>
 <li><a href="https://leetcode.com/problems/palindrome-linked-list">234. Palindrome Linked List</a></li>
 </ul>
+
 <h2 id="other-questions">other questions</h2>
+
 <ul>
 <li><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii">82. Remove Duplicates from Sorted List II</a></li>
 <li><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list">83. Remove Duplicates from Sorted List</a></li>
@@ -311,7 +331,7 @@
 
         <footer>
 
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
 
         </footer>
        

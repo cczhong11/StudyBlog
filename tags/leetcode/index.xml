@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>leetcode on Learn More</title>
@@ -19,7 +19,7 @@
       <guid>http://study.tczhong.com/post/algo/bit/</guid>
       <description>bit操作题目思考 说实话这类题目比较考验智商，如果之前没有见过的话做出来的难度比较大。基本思路很多都是利用XOR解题
 find bit parity 这题就是找奇偶校验位的值，有奇数个1就是1，有偶数个1就是0。在513 datalab出现过，现在在思考感觉没那么难了。基本思路就是把所有的1进行XOR，看最后是1还是0.
-x ^= x &amp;gt;&amp;gt; 16 x ^= x &amp;gt;&amp;gt; 8 x ^= x &amp;gt;&amp;gt; 4 x ^= x &amp;gt;&amp;gt; 2 x ^= x &amp;gt;&amp;gt; 1 x &amp;amp;= 1; 找出2个只出现一次的数值 这个题目可以全部XOR，得到x XOR y。之后取其中一位，然后把数组分成2部分，一半有这位，一半没有，然后用前两题的思路。</description>
+x ^= x &amp;gt;&amp;gt; 16 x ^= x &amp;gt;&amp;gt; 8 x ^= x &amp;gt;&amp;gt; 4 x ^= x &amp;gt;&amp;gt; 2 x ^= x &amp;gt;&amp;gt; 1 x &amp;amp;= 1;  找出2个只出现一次的数值 这个题目可以全部XOR，得到x XOR y。之后取其中一位，然后把数组分成2部分，一半有这位，一半没有，然后用前两题的思路。</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ merge 这类题目就是用一个递归函数，参数是两个头指针，得�
       <pubDate>Sat, 08 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>http://study.tczhong.com/post/algo/interval/</guid>
-      <description>INTERVAL 算法题目的思考 这类题目还是比较常见的。就是给你一些区间，需要你判断重叠之类的。相对来说不难，一些常见的方法是用按start的大小排序，之后end1&amp;lt;start2 就代表有重叠。
+      <description> INTERVAL 算法题目的思考 这类题目还是比较常见的。就是给你一些区间，需要你判断重叠之类的。相对来说不难，一些常见的方法是用按start的大小排序，之后end1&amp;lt;start2 就代表有重叠。
  56. Merge Intervals 57. Insert Interval 436. Find Right Interval 729. My Calendar I 731. My Calendar II 732. My Calendar III 253. Meeting Rooms II  </description>
     </item>
     
@@ -68,7 +68,7 @@ word break 这类题目就可以使用相同的思想。思路是判断前i个�
       <description>Stack 算法题的思考 这类题目也是比较多的，一般比较繁琐。思路类似DFS，不过可以不使用递归实现。
 String 解析类 这类比较多的就是计算器，以及分析括号里的内容。例如解析 3[a]2[bc],这时候就可以在遇到[的时候把之前的东西都压到栈里，之后当遇到]的时候把内容再pop出来。
 对于计算器，如果是后缀表达式的话，可以把结果都压到栈里，遇到运算符再pop出运算。有括号的话还是按括号的方法，主要要注意加法和乘法的区别。
-计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如(1+2)+(3+4), +可以看作是是后一个括号的符号。对于1*2 + 6/3,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。
+计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如(1+2)+(3+4), +可以看作是是后一个括号的符号。对于1*2 + 6&amp;frasl;3,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。
  150. Evaluate Reverse Polish Notation 385. Mini Parser 394. Decode String 726. Number of Atoms 224. Basic Calculator 227. Basic Calculator II 770. Basic Calculator IV 772. Basic Calculator III  大小差距 还有一类题目就是问下一个比自己大的数还有多远，可以使用栈。栈里面存的都是比栈顶小的数，遇到比栈顶大的数n就可以弹出栈里的数j，因为这时我们可以知道比之前那个数j大的数在n了，更新之前那个数j的结果。
 栈的作用存一个至今遇到的大值。栈底是最大的值，栈顶是至今遇到的大值里最小的。
 for (int i = 0; i &amp;lt; n; i++) { while (!stack.isEmpty() &amp;amp;&amp;amp; temperatures[i] &amp;gt; temperatures[stack.peek()]) { int idx = stack.pop(); res[idx] = i - idx; } stack.</description>
@@ -102,7 +102,7 @@ SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说
 另外一种常见的思路就是记录从零开始到现在的子序列的和。然后，用当前的和减去目标值，然后看这个值是否在我们存好的hashmap里，如果在的话就说明存在这么个序列，我们就可以返回这个值。这类题目需要先判断有没有，再加入map，避免0的问题。当限制subarray长度时也可以用两个数字代表，不使用hashtable。
 对于求max average的题目，可以使用binary search找这个最大的average，思路不是很直接。就是直接找这个值，然后看存不存在符合的subarray.
 其中一个有趣的地方是可以用加法代替乘法，换成log。
- 53. Maximum Subarray 325. Maximum Size Subarray Sum Equals k 209. Minimum Size Subarray Sum 560. Subarray Sum Equals K 643. Maximum Average Subarray I 644. Maximum Average Subarray II 713. Subarray Product Less Than K  对于subarray个数的题目可以一般有这个思路：</description>
+ 53. Maximum Subarray 325. Maximum Size Subarray Sum Equals k 209. Minimum Size Subarray Sum 560. Subarray Sum Equals K 643. Maximum Average Subarray I 644. Maximum Average Subarray II 713. Subarray Product Less Than K  对于subarray个数的题目可以一般有这个思路： - 1，2 中subarray个数为[1],[2],[1,2] - 1,2,3 中subarray个数为[1],[2],[1,2],[1,3],[2,3],[1,2,3]</description>
     </item>
     
     <item>
@@ -128,7 +128,7 @@ SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说
       <description>树形算法题的思考 树形是一大题型，这类题目相对来说比较简单，在我看来掌握树形的最大要点就是递归的思想，这可以说用在了这类题目中的方方面面。主要涉及这些题型：
  构建树（数组，链表） 遍历，判断是合理的树 找节点（LCA） 树的基本属性（高度），找路径  构建树 这类题目的基本思路就是先找到根结点（root），然后把整个数组或者链表分成左右两个部分。之后，这个根节点的左子树就是递归调用数组的右半部分。右半边子树就是递归调用，这个函数的右半部分。总体还是比较简单的，题目可以参看
  108.Convert Sorted Array to Binary Search Tree 109.Convert Sorted List to Binary Search Tree  这里有一道题，关于如何利用链表来构造。其中有一点，它可以使用一个固定的prev linked list node。在每次递归结束的时候都会调用next，这样我们就不需要每次遍历找到中心结点，而是利用之前的结果来找到中间的那个节点。也就是说，在这里我们并不需要一开始就把父节点找到，而是可以先存好左子树，之后再到root。
-private ListNode list; private TreeNode sortedListToBST(int start, int end) { if (start &amp;gt; end) return null; int mid = (start + end+1) / 2; TreeNode leftChild = sortedListToBST(start, mid-1); TreeNode parent = new TreeNode(list.val); parent.left = leftChild; list = list.next; parent.</description>
+private ListNode list; private TreeNode sortedListToBST(int start, int end) { if (start &amp;gt; end) return null; int mid = (start + end+1) / 2; TreeNode leftChild = sortedListToBST(start, mid-1); TreeNode parent = new TreeNode(list.val); parent.left = leftChild; list = list.</description>
     </item>
     
   </channel>

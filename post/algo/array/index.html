@@ -59,7 +59,7 @@
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.61.0" />
+ <meta name="generator" content="Hugo 0.58.3" />
         
 
         
@@ -168,34 +168,50 @@
     
                     <aside>
                         <nav id="TableOfContents">
-  <ul>
-    <li><a href="#swap">SWAP</a></li>
-    <li><a href="#subarray">subarray</a></li>
-    <li><a href="#binary-search">binary search</a></li>
-    <li><a href="#sequence">sequence</a></li>
-    <li><a href="#sum">sum</a></li>
-    <li><a href="#heading">连续出现</a></li>
-    <li><a href="#other-array-question">other array question&hellip;.</a></li>
-  </ul>
+<ul>
+<li><a href="#array-算法题的思考">Array 算法题的思考</a>
+<ul>
+<li><a href="#swap">SWAP</a></li>
+<li><a href="#subarray">subarray</a></li>
+<li><a href="#binary-search">binary search</a></li>
+<li><a href="#sequence">sequence</a></li>
+<li><a href="#sum">sum</a></li>
+<li><a href="#连续出现">连续出现</a></li>
+<li><a href="#other-array-question">other array question&hellip;.</a></li>
+</ul></li>
+</ul>
 </nav>
                     </aside>
                 </div>
-    <div class="text-justify"><h1 id="array-">Array 算法题的思考</h1>
+    <div class="text-justify">
+
+<h1 id="array-算法题的思考">Array 算法题的思考</h1>
+
 <p>数组类的算法是在我做的题目中是最多的，相对来说也是最好理解的它也可以包罗万象，使用各种各样的算法。用数组可以实现很多基本的数据结构。比如heap。所以这部分需要好好掌握。</p>
+
 <h2 id="swap">SWAP</h2>
+
 <p>需要应用到数组元素交换是一类非常常见的题目，比如说求最大的K个数，这种题目一般都是使用基本的快速排序思想。也就是说，我们把这个数组分成两部分，一部分是比当前这个数字大的，另外一部分是比这个当前数字小的，这样我们可以快速的把一个array分成两部分，然后再分别对这两部分进行处理。</p>
+
 <p>如果只是需要移动一些数字，比如说移动零或者整个数组只有三个数，那么可以用一些更简单思想，比如说记录下所有非0的数，或者记录下这些数字的个数，然后把前面全换成这些非0数，后面换成零。这样做的好处就是不需要交换。或者一个记录非0的地方，另外一个记录当前位置，如果这个不是零，那么就遇上一个非0的东西交换。所以总体思路都是双指针的思想，一个记录当前遍历的位置，另外一个记录上一次符合条件的位置。</p>
+
 <ul>
 <li><a href="https://leetcode.com/problems/remove-element">27. Remove Element</a></li>
 <li><a href="https://leetcode.com/problems/sort-colors">75. Sort Colors</a></li>
 <li><a href="https://leetcode.com/problems/move-zeroes">283. Move Zeroes</a></li>
 <li><a href="https://leetcode.com/problems/kth-largest-element-in-an-array">215. Kth Largest Element in an Array</a></li>
 </ul>
+
 <h2 id="subarray">subarray</h2>
+
 <p>这又是一大类数组常遇到的题目，比如说求子数组的和，或者判断这个子数组是否符合某些规律等等。与字符串处理substring有异曲同工之妙，一般也都是双指针，如果发现和大于某个值的时候，那么就把起始值增大。</p>
+
 <p>另外一种常见的思路就是记录从零开始到现在的子序列的和。然后，用当前的和减去目标值，然后看这个值是否在我们存好的hashmap里，如果在的话就说明存在这么个序列，我们就可以返回这个值。这类题目需要先判断有没有，再加入map，避免0的问题。当限制subarray长度时也可以用两个数字代表，不使用hashtable。</p>
+
 <p>对于求max average的题目，可以使用binary search找这个最大的average，思路不是很直接。就是直接找这个值，然后看存不存在符合的subarray.</p>
+
 <p>其中一个有趣的地方是可以用加法代替乘法，换成log。</p>
+
 <ul>
 <li><a href="https://leetcode.com/problems/maximum-subarray">53. Maximum Subarray</a></li>
 <li><a href="https://leetcode.com/problems/maximum-size-subarray-sum-equals-k">325. Maximum Size Subarray Sum Equals k</a></li>
@@ -205,27 +221,35 @@
 <li><a href="https://leetcode.com/problems/maximum-average-subarray-ii">644. Maximum Average Subarray II</a></li>
 <li><a href="https://leetcode.com/problems/subarray-product-less-than-k">713. Subarray Product Less Than K</a></li>
 </ul>
-<p>对于subarray个数的题目可以一般有这个思路：</p>
-<ul>
-<li>1，2 中subarray个数为[1],[2],[1,2]</li>
-<li>1,2,3 中subarray个数为[1],[2],[1,2],[1,3],[2,3],[1,2,3]</li>
-</ul>
+
+<p>对于subarray个数的题目可以一般有这个思路：
+ - 1，2 中subarray个数为[1],[2],[1,2]
+ - 1,2,3 中subarray个数为[1],[2],[1,2],[1,3],[2,3],[1,2,3]</p>
+
 <p>所以个数+=连续的个数。</p>
+
 <ul>
 <li><a href="https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum">795. Number of Subarrays with Bounded Maximum</a></li>
 </ul>
+
 <p>对于数组是否排序的判断题目，重点就是弄清楚子数组最小值和最大值。如果出现小值在后，说明整块需要排序。可以从右往左看最小值，这样就可以知道这一位后面最小的值是什么。</p>
+
 <ul>
 <li><a href="https://leetcode.com/problems/shortest-unsorted-continuous-subarray">581. Shortest Unsorted Continuous Subarray</a></li>
 <li><a href="https://leetcode.com/problems/max-chunks-to-make-sorted-ii">768. Max Chunks To Make Sorted II</a></li>
 <li><a href="https://leetcode.com/problems/max-chunks-to-make-sorted">769. Max Chunks To Make Sorted</a></li>
 </ul>
+
 <p>这个是sliding window求其中的最大，可以使用一个queue存目前最大的，然后pop掉所有比这个小的，以及超出window的，只存目前最大的。queue里面放的是index。</p>
+
 <ul>
-<li><a href="https://leetcode.com/problems/sliding-window-maximum">239. Sliding Window Maximum</a></li>
+<li><p><a href="https://leetcode.com/problems/sliding-window-maximum">239. Sliding Window Maximum</a></p>
+
+<h2 id="binary-search">binary search</h2></li>
 </ul>
-<h2 id="binary-search">binary search</h2>
+
 <p>这也是一大类型，可以用在排好序（或者满足一定关系）的数组上，也可以用来找特定的值。在rotated sorted array中找值就是可以看左右两边数字的关系，可以用来判断分界点。找范围的题目可以使用两次binary search来确定左右边界。区别就是在判断条件上不同，等号的方向不同。如果包含重复，那么就意味着存在一种全部判断数值都可能的可能性，这时候可以去减小左右端的范围。</p>
+
 <ul>
 <li><a href="https://leetcode.com/problems/search-in-rotated-sorted-array">33. Search in Rotated Sorted Array</a></li>
 <li><a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array">34. Find First and Last Position of Element in Sorted Array</a></li>
@@ -234,14 +258,15 @@
 <li><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array">153. Find Minimum in Rotated Sorted Array</a></li>
 <li><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii">154. Find Minimum in Rotated Sorted Array II</a></li>
 </ul>
+
 <h2 id="sequence">sequence</h2>
-<p>这类题目获得的是序列，而不是连续的子数组。</p>
-<ol>
-<li>有的题目在解决的时候可以无视先后顺序，可以用hashtable来思考问题。比如128，找连续的话可以首先找到最小的那个，然后往后看在不在table里。</li>
-<li>如果还需要注意顺序的话，可以走o(n^2)，一种dp思想，存这个之前比当前小的数的个数。所以每次出现新的大的数，看之前比自己小的就行。还可以可以使用binary search思考，首先有序的序列从哪里来的呢，其实可以想象一个只保存遇到的小数的序列，每次用binarysearch看新的数应该插入哪里,插在里面的话就替换原来的数，说明比这个小，插在后面的话就可以搜索的长度增加。也就是说当数字比目前已知的数大的话，搜索的范围就增大，长度加一，结果加一。所以题目的重点是在于如何构建这个有序的数组，这个数组就是可行的序列。</li>
-<li>还有要找出所有可能sequence的题目，就是使用dfs，可以参看string那里的组合问题。看有没有sequence组成指定和的题目也是这样，可以用相同的思路。</li>
-<li>Dp 背包问题是另一种思考方式，解决序列和是否可以到一定的值。就是从大到小遍历所有可能的sum，看dp[s-num[i]]是否存在。所以是O(ns)复杂度。</li>
-</ol>
+
+<p>这类题目获得的是序列，而不是连续的子数组。
+1. 有的题目在解决的时候可以无视先后顺序，可以用hashtable来思考问题。比如128，找连续的话可以首先找到最小的那个，然后往后看在不在table里。
+2. 如果还需要注意顺序的话，可以走o(n^2)，一种dp思想，存这个之前比当前小的数的个数。所以每次出现新的大的数，看之前比自己小的就行。还可以可以使用binary search思考，首先有序的序列从哪里来的呢，其实可以想象一个只保存遇到的小数的序列，每次用binarysearch看新的数应该插入哪里,插在里面的话就替换原来的数，说明比这个小，插在后面的话就可以搜索的长度增加。也就是说当数字比目前已知的数大的话，搜索的范围就增大，长度加一，结果加一。所以题目的重点是在于如何构建这个有序的数组，这个数组就是可行的序列。
+3. 还有要找出所有可能sequence的题目，就是使用dfs，可以参看string那里的组合问题。看有没有sequence组成指定和的题目也是这样，可以用相同的思路。
+4. Dp 背包问题是另一种思考方式，解决序列和是否可以到一定的值。就是从大到小遍历所有可能的sum，看dp[s-num[i]]是否存在。所以是O(ns)复杂度。</p>
+
 <ul>
 <li><a href="https://leetcode.com/problems/longest-consecutive-sequence">128. Longest Consecutive Sequence</a></li>
 <li><a href="https://leetcode.com/problems/longest-increasing-subsequence">300. Longest Increasing Subsequence</a></li>
@@ -249,8 +274,11 @@
 <li><a href="https://leetcode.com/problems/partition-equal-subset-sum">416. Partition Equal Subset Sum</a></li>
 <li><a href="https://leetcode.com/problems/partition-to-k-equal-sum-subsets">698. Partition to K Equal Sum Subsets</a></li>
 </ul>
+
 <h2 id="sum">sum</h2>
+
 <p>求和是一大问题，一般是找array里有哪些可以组成指定的值，这里主要是n sum 类型的题目，其他有一些sub array， sequence在以上的部分已经提出了。这部分其实基本是确定一点或两点，之后双指针得到最后的结果。</p>
+
 <ul>
 <li><a href="https://leetcode.com/problems/two-sum">1. Two Sum</a></li>
 <li><a href="https://leetcode.com/problems/3sum">15. 3Sum</a></li>
@@ -259,8 +287,11 @@
 <li><a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted">167. Two Sum II - Input array is sorted</a></li>
 <li><a href="https://leetcode.com/problems/two-sum-iii-data-structure-design">170. Two Sum III - Data structure design</a></li>
 </ul>
-<h2 id="heading">连续出现</h2>
+
+<h2 id="连续出现">连续出现</h2>
+
 <p>这类题目一般都很简单，都是最基本的扫一遍，遇到重复的数量增加，遇到不重复的就输出，重新开始计算，需要注意最后一个的输出。感觉这是基本的word count的思路，所以反复出现。</p>
+
 <ul>
 <li><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array">26. Remove Duplicates from Sorted Array</a></li>
 <li><a href="https://leetcode.com/problems/count-and-say">38. Count and Say</a></li>
@@ -268,338 +299,229 @@
 <li><a href="https://leetcode.com/problems/remove-comments">722. Remove Comments</a></li>
 <li><a href="https://leetcode.com/problems/summary-ranges">228. Summary Ranges</a></li>
 </ul>
+
 <h2 id="other-array-question">other array question&hellip;.</h2>
+
 <ul>
-<li>
-<p><a href="https://leetcode.com/problems/median-of-two-sorted-arrays">4. Median of Two Sorted Arrays</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/container-with-most-water">11. Container With Most Water</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/first-missing-positive">41. First Missing Positive</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/trapping-rain-water">42. Trapping Rain Water</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/jump-game-ii">45. Jump Game II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/rotate-image">48. Rotate Image</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/maximum-subarray">53. Maximum Subarray</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/spiral-matrix">54. Spiral Matrix</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/jump-game">55. Jump Game</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/merge-intervals">56. Merge Intervals</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/insert-interval">57. Insert Interval</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/spiral-matrix-ii">59. Spiral Matrix II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/unique-paths">62. Unique Paths</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/unique-paths-ii">63. Unique Paths II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/set-matrix-zeroes">73. Set Matrix Zeroes</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/word-search">79. Word Search</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii">80. Remove Duplicates from Sorted Array II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array-ii">81. Search in Rotated Sorted Array II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/largest-rectangle-in-histogram">84. Largest Rectangle in Histogram</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/maximal-rectangle">85. Maximal Rectangle</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/merge-sorted-array">88. Merge Sorted Array</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/triangle">120. Triangle</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock">121. Best Time to Buy and Sell Stock</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii">122. Best Time to Buy and Sell Stock II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii">123. Best Time to Buy and Sell Stock III</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/word-ladder-ii">126. Word Ladder II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/longest-consecutive-sequence">128. Longest Consecutive Sequence</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/maximum-product-subarray">152. Maximum Product Subarray</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array">153. Find Minimum in Rotated Sorted Array</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii">154. Find Minimum in Rotated Sorted Array II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/find-peak-element">162. Find Peak Element</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/missing-ranges">163. Missing Ranges</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/majority-element">169. Majority Element</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/rotate-array">189. Rotate Array</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/contains-duplicate">217. Contains Duplicate</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/contains-duplicate-ii">219. Contains Duplicate II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/majority-element-ii">229. Majority Element II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/product-of-array-except-self">238. Product of Array Except Self</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/shortest-word-distance">243. Shortest Word Distance</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/shortest-word-distance-iii">245. Shortest Word Distance III</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/3sum-smaller">259. 3Sum Smaller</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/missing-number">268. Missing Number</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/find-the-celebrity">277. Find the Celebrity</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/wiggle-sort">280. Wiggle Sort</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/move-zeroes">283. Move Zeroes</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/find-the-duplicate-number">287. Find the Duplicate Number</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/game-of-life">289. Game of Life</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/range-addition">370. Range Addition</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/insert-delete-getrandom-o1">380. Insert Delete GetRandom O(1)</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed">381. Insert Delete GetRandom O(1) - Duplicates allowed</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/third-maximum-number">414. Third Maximum Number</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/find-all-duplicates-in-an-array">442. Find All Duplicates in an Array</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array">448. Find All Numbers Disappeared in an Array</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/max-consecutive-ones">485. Max Consecutive Ones</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/teemo-attacking">495. Teemo Attacking</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/lonely-pixel-i">531. Lonely Pixel I</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/k-diff-pairs-in-an-array">532. K-diff Pairs in an Array</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/lonely-pixel-ii">533. Lonely Pixel II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/split-array-with-equal-sum">548. Split Array with Equal Sum</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/subarray-sum-equals-k">560. Subarray Sum Equals K</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/array-partition-i">561. Array Partition I</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/longest-line-of-consecutive-one-in-matrix">562. Longest Line of Consecutive One in Matrix</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/array-nesting">565. Array Nesting</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/reshape-the-matrix">566. Reshape the Matrix</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/shortest-unsorted-continuous-subarray">581. Shortest Unsorted Continuous Subarray</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/can-place-flowers">605. Can Place Flowers</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/valid-triangle-number">611. Valid Triangle Number</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/task-scheduler">621. Task Scheduler</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/maximum-distance-in-arrays">624. Maximum Distance in Arrays</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/maximum-product-of-three-numbers">628. Maximum Product of Three Numbers</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/image-smoother">661. Image Smoother</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/non-decreasing-array">665. Non-decreasing Array</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/beautiful-arrangement-ii">667. Beautiful Arrangement II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/maximum-swap">670. Maximum Swap</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/longest-continuous-increasing-subsequence">674. Longest Continuous Increasing Subsequence</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/k-empty-slots">683. K Empty Slots</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays">689. Maximum Sum of 3 Non-Overlapping Subarrays</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/max-area-of-island">695. Max Area of Island</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/degree-of-an-array">697. Degree of an Array</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/subarray-product-less-than-k">713. Subarray Product Less Than K</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee">714. Best Time to Buy and Sell Stock with Transaction Fee</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/range-module">715. Range Module</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/1-bit-and-2-bit-characters">717. 1-bit and 2-bit Characters</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/maximum-length-of-repeated-subarray">718. Maximum Length of Repeated Subarray</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/find-k-th-smallest-pair-distance">719. Find K-th Smallest Pair Distance</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/candy-crush">723. Candy Crush</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/find-pivot-index">724. Find Pivot Index</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/my-calendar-i">729. My Calendar I</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/my-calendar-ii">731. My Calendar II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/min-cost-climbing-stairs">746. Min Cost Climbing Stairs</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/largest-number-at-least-twice-of-others">747. Largest Number At Least Twice of Others</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/pour-water">755. Pour Water</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/toeplitz-matrix">766. Toeplitz Matrix</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/max-chunks-to-make-sorted-ii">768. Max Chunks To Make Sorted II</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/max-chunks-to-make-sorted">769. Max Chunks To Make Sorted</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/global-and-local-inversions">775. Global and Local Inversions</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/transform-to-chessboard">782. Transform to Chessboard</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/number-of-matching-subsequences">792. Number of Matching Subsequences</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum">795. Number of Subarrays with Bounded Maximum</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/friends-of-appropriate-ages">825. Friends Of Appropriate Ages</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/positions-of-large-groups">830. Positions of Large Groups</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/flipping-an-image">832. Flipping an Image</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/image-overlap">835. Image Overlap</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/magic-squares-in-grid">840. Magic Squares In Grid</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/maximize-distance-to-closest-person">849. Maximize Distance to Closest Person</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/transpose-matrix">867. Transpose Matrix</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/advantage-shuffle">870. Advantage Shuffle</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/length-of-longest-fibonacci-subsequence">873. Length of Longest Fibonacci Subsequence</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/fair-candy-swap">888. Fair Candy Swap</a></p>
-</li>
-<li>
-<p><a href="https://leetcode.com/problems/sum-of-subsequence-widths">891. Sum of Subsequence Widths</a></p>
-</li>
+<li><a href="https://leetcode.com/problems/median-of-two-sorted-arrays">4. Median of Two Sorted Arrays</a></li>
+
+<li><p><a href="https://leetcode.com/problems/container-with-most-water">11. Container With Most Water</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/first-missing-positive">41. First Missing Positive</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/trapping-rain-water">42. Trapping Rain Water</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/jump-game-ii">45. Jump Game II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/rotate-image">48. Rotate Image</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/maximum-subarray">53. Maximum Subarray</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/spiral-matrix">54. Spiral Matrix</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/jump-game">55. Jump Game</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/merge-intervals">56. Merge Intervals</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/insert-interval">57. Insert Interval</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/spiral-matrix-ii">59. Spiral Matrix II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/unique-paths">62. Unique Paths</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/unique-paths-ii">63. Unique Paths II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/set-matrix-zeroes">73. Set Matrix Zeroes</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/word-search">79. Word Search</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii">80. Remove Duplicates from Sorted Array II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array-ii">81. Search in Rotated Sorted Array II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/largest-rectangle-in-histogram">84. Largest Rectangle in Histogram</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/maximal-rectangle">85. Maximal Rectangle</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/merge-sorted-array">88. Merge Sorted Array</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/triangle">120. Triangle</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock">121. Best Time to Buy and Sell Stock</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii">122. Best Time to Buy and Sell Stock II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii">123. Best Time to Buy and Sell Stock III</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/word-ladder-ii">126. Word Ladder II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/longest-consecutive-sequence">128. Longest Consecutive Sequence</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/maximum-product-subarray">152. Maximum Product Subarray</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array">153. Find Minimum in Rotated Sorted Array</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii">154. Find Minimum in Rotated Sorted Array II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/find-peak-element">162. Find Peak Element</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/missing-ranges">163. Missing Ranges</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/majority-element">169. Majority Element</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/rotate-array">189. Rotate Array</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/contains-duplicate">217. Contains Duplicate</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/contains-duplicate-ii">219. Contains Duplicate II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/majority-element-ii">229. Majority Element II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/product-of-array-except-self">238. Product of Array Except Self</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/shortest-word-distance">243. Shortest Word Distance</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/shortest-word-distance-iii">245. Shortest Word Distance III</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/3sum-smaller">259. 3Sum Smaller</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/missing-number">268. Missing Number</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/find-the-celebrity">277. Find the Celebrity</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/wiggle-sort">280. Wiggle Sort</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/move-zeroes">283. Move Zeroes</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/find-the-duplicate-number">287. Find the Duplicate Number</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/game-of-life">289. Game of Life</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/range-addition">370. Range Addition</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/insert-delete-getrandom-o1">380. Insert Delete GetRandom O(1)</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed">381. Insert Delete GetRandom O(1) - Duplicates allowed</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/third-maximum-number">414. Third Maximum Number</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/find-all-duplicates-in-an-array">442. Find All Duplicates in an Array</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array">448. Find All Numbers Disappeared in an Array</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/max-consecutive-ones">485. Max Consecutive Ones</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/teemo-attacking">495. Teemo Attacking</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/lonely-pixel-i">531. Lonely Pixel I</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/k-diff-pairs-in-an-array">532. K-diff Pairs in an Array</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/lonely-pixel-ii">533. Lonely Pixel II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/split-array-with-equal-sum">548. Split Array with Equal Sum</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/subarray-sum-equals-k">560. Subarray Sum Equals K</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/array-partition-i">561. Array Partition I</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/longest-line-of-consecutive-one-in-matrix">562. Longest Line of Consecutive One in Matrix</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/array-nesting">565. Array Nesting</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/reshape-the-matrix">566. Reshape the Matrix</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/shortest-unsorted-continuous-subarray">581. Shortest Unsorted Continuous Subarray</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/can-place-flowers">605. Can Place Flowers</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/valid-triangle-number">611. Valid Triangle Number</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/task-scheduler">621. Task Scheduler</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/maximum-distance-in-arrays">624. Maximum Distance in Arrays</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/maximum-product-of-three-numbers">628. Maximum Product of Three Numbers</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/image-smoother">661. Image Smoother</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/non-decreasing-array">665. Non-decreasing Array</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/beautiful-arrangement-ii">667. Beautiful Arrangement II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/maximum-swap">670. Maximum Swap</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/longest-continuous-increasing-subsequence">674. Longest Continuous Increasing Subsequence</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/k-empty-slots">683. K Empty Slots</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays">689. Maximum Sum of 3 Non-Overlapping Subarrays</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/max-area-of-island">695. Max Area of Island</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/degree-of-an-array">697. Degree of an Array</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/subarray-product-less-than-k">713. Subarray Product Less Than K</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee">714. Best Time to Buy and Sell Stock with Transaction Fee</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/range-module">715. Range Module</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/1-bit-and-2-bit-characters">717. 1-bit and 2-bit Characters</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/maximum-length-of-repeated-subarray">718. Maximum Length of Repeated Subarray</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/find-k-th-smallest-pair-distance">719. Find K-th Smallest Pair Distance</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/candy-crush">723. Candy Crush</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/find-pivot-index">724. Find Pivot Index</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/my-calendar-i">729. My Calendar I</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/my-calendar-ii">731. My Calendar II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/min-cost-climbing-stairs">746. Min Cost Climbing Stairs</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/largest-number-at-least-twice-of-others">747. Largest Number At Least Twice of Others</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/pour-water">755. Pour Water</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/toeplitz-matrix">766. Toeplitz Matrix</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/max-chunks-to-make-sorted-ii">768. Max Chunks To Make Sorted II</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/max-chunks-to-make-sorted">769. Max Chunks To Make Sorted</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/global-and-local-inversions">775. Global and Local Inversions</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/transform-to-chessboard">782. Transform to Chessboard</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/number-of-matching-subsequences">792. Number of Matching Subsequences</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum">795. Number of Subarrays with Bounded Maximum</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/friends-of-appropriate-ages">825. Friends Of Appropriate Ages</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/positions-of-large-groups">830. Positions of Large Groups</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/flipping-an-image">832. Flipping an Image</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/image-overlap">835. Image Overlap</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/magic-squares-in-grid">840. Magic Squares In Grid</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/maximize-distance-to-closest-person">849. Maximize Distance to Closest Person</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/transpose-matrix">867. Transpose Matrix</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/advantage-shuffle">870. Advantage Shuffle</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/length-of-longest-fibonacci-subsequence">873. Length of Longest Fibonacci Subsequence</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/fair-candy-swap">888. Fair Candy Swap</a></p></li>
+
+<li><p><a href="https://leetcode.com/problems/sum-of-subsequence-widths">891. Sum of Subsequence Widths</a></p></li>
 </ul>
 </div>
    
@@ -696,7 +618,7 @@
 
         <footer>
 
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
 
         </footer>
        
