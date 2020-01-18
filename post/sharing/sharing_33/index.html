@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>每周分享第 33 期</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Noto Sans SC', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://study.tczhong.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto%20Sans%20SC">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.58.3" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120924697-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-120924697-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">每周分享第 33 期</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/tags/leetcode/">Leetcode</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/tags/love/">亲密关系</a></li>
+                            
+                                <li><a href="/tags/weekly/">每周分享</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/7112540/tc-zhong"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/sharing/sharing_33/">每周分享第 33 期</a></h4>
+    <h5>January 18, 2020</h5>
+    
+    <a href="http://study.tczhong.com/tags/weekly"><kbd class="item-tag">weekly</kbd></a>
+    
+
+</div>
+
+    
+
+    
+    <div class="text-justify">
+
+<h1 id="每周分享第-33-期-2020-week-3">每周分享第 33 期  2020 week 3</h1>
+
+<p>你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。欢迎大家提供自己想分享的内容，可以发送至 news@tczhong.com</p>
+
+<p><img src="https://my-news-counter.herokuapp.com/total.svg?repo_id=cczhong11.sharing_33" alt="Total visitor" />
+<img src="https://my-news-counter.herokuapp.com/today.svg?repo_id=cczhong11.sharing_33" alt="Visitors in today" /></p>
+
+<h2 id="国内新闻">国内新闻</h2>
+
+<h3 id="武汉肺炎">武汉肺炎</h3>
+
+<p>【1】日本出现首个武汉肺炎病例</p>
+
+<p>日本出现首宗武汉新型冠状病毒肺炎病例。共同社报道，日本厚生劳动省称，日本国内首次确认的新型肺炎感染者是居住在神奈川县的30多岁中国籍男性。他于本月6日从武汉市回到日本，10日住院，15日康复后出院。日本当局目前正在与各部门协议，开展防疫工作。中国以及世界卫生组织此前判定，该病毒属于新型冠状病毒，与2002-2003年爆发的沙斯（SAR，taS）以及中东呼吸综合症（MERS）属相同体系的病毒。</p>
+
+<p>【2】武汉肺炎新增死亡病例一例</p>
+
+<p>武汉市卫健委16日晚间通报，该市新增新型冠状病毒感染死亡病例一例。 </p>
+
+<p>据武汉市卫健委网站通报，死者熊某某，男，69岁，2019年12月31日发病，2020年1月4日病情加重，转入武汉市金银潭医院救治，入院时患有严重心肌炎（心肌酶达到正常值20倍，心电异常）；肾功能异常；多脏器功能受损严重；胸部CT提示肺纤维病灶及胸水、胸膜增厚，考虑有肺结核、胸膜结核疾病，于1月15日00:45因抢救无效死亡。 
+截至目前，武汉市累计报告新型冠状病毒感染的肺炎病例41例，已治愈出院12例，在治重症5例，死亡2例，其余患者病情稳定，患者均在武汉市定点医疗机构接受隔离治疗。累计追踪密切接触者763人，已解除医学观察644人，尚在接受医学观察119人，密切接触者中，没有发现相关病例。</p>
+
+<p>【3】1月17日，泰国公共卫生部在其官网公布，已发现第二例2019-nCoV确诊病例，患者是一名74岁中国籍女子。这也是在中国境外发现的第三例新型冠状病毒确诊病例。目前，两名确诊患者在负气压隔离病房中接受治疗，两人之间发病并无相关性。</p>
+
+<p>【4】武汉同济医院，发热门诊二级防控了，但是病人们似乎都没有安全意识，口罩都不带。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/e1d2fed02e8448679ffceacc14ddec80.jpg" alt="" /></p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/91be886c806641b4a2d0518c3b1a5c52.jpg" alt="" /></p>
+
+<p>【5】【美国三个机场将对武汉旅客进行入境检查】美国疾病控制与预防中心（CDC）17日宣布，即日起美国的三个机场将对从中国武汉直飞或转机前往美国的旅客进行入境检查，以检测旅客是否存在发烧等新型冠状病毒的相关症状。据报道，这三个机场分别是旧金山国际机场、纽约肯尼迪国际机场和洛杉矶国际机场。CDC正在向这些机场增派约100名检疫人员。中国农历新年即将到来，CDC预计在接下来的几周内，这三个机场可能会迎来多达5000人。CDC表示，根据目前的信息，这种新型冠状病毒对美国公众所构成的的风险是很低的。尽管如此，CDC也正在采取积极的预防措施。</p>
+
+<p>Three U.S. Airports to Check Passengers for a Deadly Chinese Coronavirus</p>
+
+<p>Airports in New York, San Francisco and Los Angeles will begin screening passengers arriving from Wuhan, China, for infection with a mysterious respiratory virus that has killed two people and sickened at least 45 overseas, the Centers for Disease Control and Prevention announced on Friday.</p>
+
+<p>Most people with the infection are believed to have contracted it through exposure to animals at a market that sells seafood and meat in Wuhan. It is not certain that the virus spreads from person to person.</p>
+
+<p>【6】截至目前，武汉市累计报告新型冠状病毒感染的肺炎病例45例，已治愈出院15例，在治重症五例，死亡两例，其余患者病情稳定。累计追踪密切接触者763人，已解除医学观察665人，尚在接受医学观察98人，密切接触者中，没有发现相关病例。</p>
+
+<h3 id="国内经济">国内经济</h3>
+
+<p>【1】中美签署第一阶段经贸协议，中国承诺扩大进口2000亿美元美国商品</p>
+
+<p>当地15日中午，美国总统特朗普与中国副总理刘鹤在白宫签署了两国第一阶段经贸协议，意味中美两个世界最大经济体持续长达一年半的贸易战暂时停火。特朗普形容协议一改过去错误，为美国工人、农民和家庭带来了经济正义和安全未来；又称协议会对美国经济造成“彻底改善“，也标志国际贸易的“根本性变化“。特朗普再次称习近平为“好朋友“，并表示不久将访问中国。中方指协议实现了“互利共赢“，是建立在平等和互相尊重的基础上。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/131d56fb149d46e2a1e0671b2862159c.jpg" alt="" /></p>
+
+<p><a href="http://www.mofcom.gov.cn/article/ae/ai/202001/20200102930845.shtml">关于发布中美第一阶段经贸协议的公告</a></p>
+
+<p>内附协议全文</p>
+
+<p>协议内容显示，在贸易方面，中国承诺未来两年增加进口总价值2000亿美元的美国产品和服务，包括近500亿美元农产品，以及能源、制造业产品等。贸易战前，中国年进口1300亿美元美国产品和560亿美元美国服务。</p>
+
+<p>在金融及货币方面，协议要求中国将向美国企业打开金融市场，包括银行、保险、资产管理等；协议还要求中国承诺不得以竞价目的将货币贬值，否则美国将继续加征关税。协议签署两天前，美国刚刚将中国从汇率操纵国列表中移除。</p>
+
+<p>【路透社：美中协议令中国改革派如愿引入华尔街竞争】路透社16日的一篇分析称，随着美中两国第一阶段贸易协议的签署，中国的改革派现在应对华尔街或将打入中国市场倍感欣慰。分析文章说，虽然中国的大银行和证券公司规模庞大，但他们视野狭窄、经验不足，几乎从未涉足海外市场。为了让效率低下、早已落后的工业继续维持生存，很多中国银行贷款仍在发放实际上是政府补贴的贷款，另一些银行则热衷于贷款给地产市场上炒作的投机商。考虑到现在美国的金融机构可以在中国自由地开设网上银行，可以自主控制合资企业，文章的作者指出，美国金融机构现在有可能比人们预计的更具竞争力。路透社的文章说，中国的经济自由派人士，如副总理刘鹤和中国人民银行党委书记、银保监会主席郭树清等长期以来希望引入国外竞争，以鞭策中国机构提供效率，减少风险。现在，他们可能如愿以偿了。</p>
+
+<p>【2】调查：重庆、成都、西安为中国返乡置业热门城市</p>
+
+<p>58同城、安居客14日发布的《2019-2020年返乡置业调查报告》显示，在新一线城市中，重庆连续三年蝉联返乡置业热门城市第一位，成都、西安今年位列第二、三位，排名上升。其他二线城市中，徐州位列返乡置业热门城市首位，南通、合肥等城市的热度也相对靠前。调查报告显示，与去年相比，2020年返乡置业人群存在“意愿人群占比有所上升、意向房源总价范围提升、越来越多人倾向线上购房”三大趋势变化。返乡置业热门城市多在川渝、江浙地区。报告显示，每年春节，在外工作人群返乡带来一定的安居置业需求，形成了返乡置业这一极具中国特色的过年现象。这份报告显示，有68.6%的受访者倾向于选择回乡置业，而想在工作城市（非家乡城市及家乡省会城市）置业的人群占比为29.8%。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/c2151f0fb94246fb8ac92d7a6b470bc0.jpg" alt="" /></p>
+
+<p>【3】中国2019年GDP同比增长6.1%</p>
+
+<p>据国家统计局最新发布的消息，根据初步核算，全年国内生产总值990865亿元，按可比价格计算，比上年增长6.1%，符合6%-6.5%的预期目标。分季度看，一季度同比增长6.4%，二季度增长6.2%，三季度增长6.0%，四季度增长6.0%。分产业看，第一产业增加值70467亿元，比上年增长3.1%；第二产业增加值386165亿元，增长5.7%；第三产业增加值534233亿元，增长6.9%。</p>
+
+<p>【4】大陆总人口超14亿 人口出生率再创新低</p>
+
+<p>据国家统计局今天公布的数据，截至2019年末，中国大陆总人口140005万人，比上年末增加467万人。全年出生人口1465万人，人口出生率为10.48‰；死亡人口998万人，人口死亡率为7.14‰；人口自然增长率为3.34‰。另据路透社报道，中国去年出生率为1949年以来的最低水平，去年出生的婴儿数量下降了58万至1465万。与此同时，离婚率屡创新高。中国民政部的数据显示，去年前三季度，约有310万对夫妻申请离婚，而同期结婚的夫妻有710万对。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/6c93e4b318c74587ab685ebc8940f7d7.jpg" alt="" /></p>
+
+<p>China’s Birthrate Hits Historic Low, in Looming Crisis for Beijing</p>
+
+<p>In a country where most older adults rely heavily on their families, the continuing drop in births could have a seismic[n. 巨大的] effect in the decades to come.</p>
+
+<p>The number of babies born in China last year fell to a nearly six-decade low, exacerbating[v. 使恶化] a looming demographic crisis that is set to reshape the world’s most populous nation and threaten its economic vitality.</p>
+
+<p>About 14.6 million babies were born in China in 2019, according to the National Bureau of Statistics. That was a nearly 4 percent fall from the previous year, and the lowest official number of births in China since 1961, the last year of a widespread famine in which millions of people starved to death. That year, only 11.8 million babies were born.</p>
+
+<p>【5】2019年全年猪肉产量4255万吨 下降21.3%</p>
+
+<p>1月17日，国家统计局网站发布2019年中国国民经济数据。其中农业相关数据显示：2019年全年全国粮食总产量66384万吨，比上年增长0.9%，增产594万吨，连续5年保持在65000万吨以上。全年猪牛羊禽肉产量7649万吨，比上年下降10.2%。猪肉产量4255万吨，下降21.3%。</p>
+
+<p>【6】调查：北京29万快递员月入6000人民币</p>
+
+<p>共青团北京市委员会自2018年年底起，历时三个月，对1710名年龄在16岁至35岁的在京“快递小哥“进行了问卷调查，并对其中50名进行了深度访谈，用81个问题全方位了解他们的生活状况、技能与就业前景、社会参与度等。《北京市“快递小哥“群体调查报告》显示，快递从业人员中，并不都是“小哥“，有一成系女青年。一个值得关注的数据是，受访的快递员近六成已婚育，这意味着超过半数的在京快递员需要为家庭奋斗。至于收入，受访人数中月薪过万元的只占3.09%。受访者平均月收入为6000元，较同年北京市职工月平均工资低1800元。在职业发展上，快递人员呈现出“跳槽频繁，但向上流动有限“的特点。虽工作更换频繁，但快递业成为不少新农民工群体进入城市的首份工作。</p>
+
+<h3 id="国内教育">国内教育</h3>
+
+<p>【1】教育部：今年起取消高校自主招生</p>
+
+<p>教育部近日印发《教育部关于在部分高校开展基础学科招生改革试点工作的意见》。《意见》指出，决定自2020年起，在部分高校开展基础学科招生改革试点（也称强基计划）。同时，在部分“一流大学“建设高校范围内遴选高校开展试点。教育部将按照“一校一策“的原则，研究确定强基计划招生高校、专业和规模。2020年起，不再组织开展高校自主招生工作。</p>
+
+<h3 id="其他">其他</h3>
+
+<p>【1】西宁路面塌陷已致9人遇难</p>
+
+<p>1月13日，西宁市红十字公交站地面坍塌突发事件，致使正在行驶的一辆17路公交车（青A60015）陷入坑内，造成10人失联。目前已发现9名遇难群众遗体。中国城市规划协会地下管线专业委员会常务秘书长刘会忠分析认为，视频中的水管是供水管道，管线老化、泄漏引起土壤流失并形成空洞，或为造成此次西宁路面塌陷事故的主要原因。</p>
+
+<p>【西宁市区六年发生至少14起路面塌陷事故】</p>
+
+<p>公开资料和媒体报道显示，2014年至今，西宁市至少发生14起地面塌陷事故，其中2014年至2017年间就有六起发生在公交车站附近的地陷事故。这些事故是否和最近这起塌陷事故有关联，目前尚未得到西宁市委宣传部回复。值得注意的是，上述事件中有四起发生在公交车站附近，分别位于共和路东侧省医院公交车站、昆仑西路西山一巷巷口公交车站右侧，以及果洛路公交车站、青海大学路的岔路口公交车站处。2014年7月8日，昆仑西路西山一巷巷口公交车站右侧发生的路面塌陷，还导致抢险车辆被困。</p>
+
+<p>【2】央视主持人赵忠祥今早因病去世
+央视主持人赵忠祥今天早上7时30分因病在京去世，享年78岁。赵忠祥儿子赵方今早在济南时报官微发布了该则消息。赵方表示，父亲于2019年底感到身体不适，就医检查，发现身患癌症，已经扩散。为了不影响家人的心情，父亲一直乐观而积极地配合治疗。他非常尊敬医护人员，多次向他们表示感谢。住院期间，母亲一直陪伴在身边，尽心照顾，直到父亲安详离去。 同时，赵方也感谢父亲住院期间，有关领导、亲友前来探视。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/47aeccc4f1e54954adc0e26c3eab0c80.jpg" alt="" /></p>
+
+<p>【3】民政部回应吴花燕募捐质疑：已约谈儿慈会</p>
+
+<p>民政部官方微博昨晚发布消息，针对媒体对有关机构为贵州女大学生吴花燕募捐提出质疑一事，民政部已经约谈了中华少年儿童慈善救助基金会。民政部回应称，近日，有媒体对中华少年儿童慈善救助基金会9958儿童紧急救助中心为贵州女大学生吴花燕募捐一事提出质疑。民政部已经注意到社会各界对此事的关注和反映，并约谈了中华少年儿童慈善救助基金会，督促其向社会公布募捐和善款使用的情况。民政部将对中华少年儿童慈善救助基金会此项募捐活动作进一步调查了解，并根据情况依法依规采取必要措施。</p>
+
+<p>【4】李克强：中国将继续开展大规模制度性减税</p>
+
+<p>国务院总理李克强17日表示，今年中国将继续深化改革，继续开展大规模制度性减税，政府也将大力压减一般性行政开支。据路透社报道，李克强说，“我们有信心、有能力应对风险和挑战，保持经济运行在合理区间。“央视新闻联播援引他在与外国专家代表举行的座谈会上的发言并指出，中国将持续扩大教育、科技等领域的开放，同国际社会的合作只会扩大、不会缩减。</p>
+
+<p>【5】交通部回应ETC出口不显示收费金额：相关设备设施正在研发</p>
+
+<p>针对有车主反映通行一次高速公路会多次收到扣费短信，但出口无法获知全程收费金额的现象，交通运输部17日回应称，目前，车辆通过ETC出口的时候，系统还在计算车辆行走路线，所以无法在出口显示全程费用的情况。交通运输部将在全国范围内落实短信通知账单和APP查询。同时，正在研究出口显示收费的金额。目前，相关设备设施正在研发，将在部分收费站试点在出口显示收费金额。</p>
+
+<p>【6】女子开大奔进故宫“撒欢儿” 故宫道歉</p>
+
+<p>昨日下午14时56分，一位名为“露小宝LL”的用户通过微博发布一组照片并配文，“赶着周一闭馆，躲开人流，去故宫撒欢儿“。四张配图背景均为太和门广场，三张图片上有一辆黑色奔驰车出现，出镜的两位女士均着便服，没有佩戴任何故宫工作人员证件。事件很快引发关注，网友纷纷跑到故宫博物院官微下发评论质疑。至晚上约21点，故宫博物院回应称，“针对今日有网民发布周一开车进入故宫事件，经核查属实。故宫博物院对此深表痛心并向公众诚恳致歉。今后，我院将严格管理，杜绝此类现象。感谢社会各界对故宫博物院的关爱与监督。”</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/8ef09f18739a49bc8622ae28c9af6101.jpg" alt="" /></p>
+
+<p>闭馆日大奔开进故宫，谁给的特权？</p>
+
+<p>临近过年，故宫反倒闹出不少“幺蛾子“。6888的角楼年夜饭刚被叫停，又闹出周一闭馆日有人开大奔驰骋紫禁城。如果前者涉及文物品牌商业开发的底线尚可以讨论，后者则是明显无视文物保护规则，任意妄为了。
+故宫不许机动车进入，这是对世界文化遗产的基本保护和尊重。2013年，时任法国总统奥朗德参观故宫时，就在午门前下车步行进入。今天这位炫照的女士，之所以敢违反规则，还堂而皇之公开秀，仗的就是特权养成的无知无畏。
+故宫已经道歉，承认疏于管理。但岛叔也想给故宫递几句话。一百多年过去了，故宫早已不是封建帝王的私产，任何围绕故宫的开发经营和活动都不能忘记故宫的“人民性“。600年的世界文化遗产，需要保持自己的文化尊严，怎能在钱和权面前歪了身子？</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/d0e383692fec4519a48cf686374cca29.jpg" alt="" /></p>
+
+<p>The photos prompted outrage almost as soon as they were posted.
+They showed two women inside one of China’s most sacred spaces, the Forbidden City in Beijing, smiling as they showed off a glistening Mercedes-Benz sport utility vehicle.</p>
+
+<p>On Weibo, a Twitterlike site, one of the women bragged[v. 吹嘘] about getting exclusive access to the palace, a notoriously congested tourist site, saying she had gone there to “run wild.”
+The photos, which were posted on Friday, have set off debate in China about the privileges enjoyed by wealthy families, at a time when President Xi Jinping is trying to persuade the public that he is working to eliminate corruption and to reduce the gap between rich and poor.</p>
+
+<p>Many people denounced the woman, who had frequently boasted about her wealth on social media, as being out of touch. They said she had desecrated the Forbidden City, the former home of emperors, which Mr. Xi has sought to turn into a global symbol of Chinese cultural heritage.</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/a740638f05c645609cb2a4667406f7e8.jpg" alt="" /></p>
+
+<h2 id="国际新闻">国际新闻</h2>
+
+<h3 id="澳洲山火">澳洲山火</h3>
+
+<p>【1】澳大利亚总理莫里森首次承认处理山火不力</p>
+
+<p>澳大利亚山火持续，且导致多一名消防员殉职，令死亡人数增至28人。最新民调显示，总理莫里森的满意度跌至上任以来最低，他首次承认处理山火不力。莫里森于12日表示会向内阁提案，推动成立皇家委员会以对全国山火展开调查，包括检讨危机管理手法、气候变化影响等。另外，他宣布担款7600万澳元，用于为消防及救援人员、受灾社区居民等提供心理及健康辅导。澳大利亚山火自去年9月开始，至今焚烧面积已超过1100万公顷，重灾区新南威尔士州仍有过百处火头。然而，莫里森近月不顾灾情，期间曾与家人前往夏威夷渡假，亦曾支持悉尼如期举办大除夕烟花汇演，惹来民众愤怒。</p>
+
+<p>澳大利亚政府13日宣布，要播出5000万澳元拯救野生动物，并称澳洲面临的这场林火危机为“生态灾难“，威胁了包括树熊和岩袋鼠属等在内的动物品种</p>
+
+<p>【2】美国宇航局（NASA）说，澳大利亚燃烧多月的林火所产生的烟雾，预计将会“绕着地球飘一圈“，最终再回到澳洲上空。彭博社报道，NASA根据卫星追踪图像指出，澳洲林火的烟雾漩涡持续往东，朝南美洲的方向移动。据NASA网站提供的信息，截至1月8日，澳洲林火烟雾“已经绕过了半个地球，烟雾使南美的天空变得朦胧不清，那里的朝阳和夕阳则变得色彩缤纷。“另据该机构1月10日发布的公告，NASA卫星观测到澳洲林火把巨量的烟雾投放到大气中，并指烟雾后来向东面扩散。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/7f42bffb77144ac2bd37d2cf2db495cd.jpg" alt="" /></p>
+
+<h3 id="俄罗斯修宪">俄罗斯修宪</h3>
+
+<p>【1】普京发表国情咨文：俄罗斯的命运取决于人口</p>
+
+<p>当地时间15日，俄罗斯总统普京向联邦会议发表年度国情咨文，他以俄罗斯的命运和历史前景取决于人口开启了本次演讲。普京称，对俄罗斯人口的悲观预测让人警觉，应当在下个十年中期之前保证出生率增长。2019年俄罗斯总和生育率为1.5，这对俄罗斯来说太低。1943年的生育率为1.4。普京建议自2020年1月1日起为每个3至7岁的孩子每月发放钱款</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/ff9e7862a9d94d0e97bf35d09ef5f305.jpg" alt="" /></p>
+
+<p>【2】普京提议修宪，梅德韦杰夫带领政府集体辞职</p>
+
+<p>俄罗斯总统普京15日下午在杜马发表国情咨文演讲，提出一系列修宪措施，称将交由国民投票表决。数小时后，总理梅德韦杰夫宣布俄政府集体辞职，以方便总统采取一切必要措施。普京接受了梅德韦杰夫辞职，但要求他与内阁继续履职，直至新政府产生。当天稍晚，普京又提议由俄联邦税务局局长米哈伊尔·米舒斯金出任新一任政府总理，后者已同意接任。议会将于16日讨论米舒斯金的任命问题。米舒斯金现年53岁，拥有经济学博士学位，长期担任政府职务，自2010年起出任联邦税务局局长。</p>
+
+<p>【3】【修宪：总理由议会选出，总统制不变】普京在修宪措施中提出，拟加强议会在政府组建过程中的作用，但不改变当前的总统制框架。根据当前规则，俄罗斯总理人选由总统提出，经杜马表决通过。新措施拟由杜马来选出总理，总统必须任命杜马提出的人选。不过目前俄罗斯议会两院均由亲普京力量把控。新宪法不会改变当前的总统制框架，总统仍然有权解除政府成员的职权，以及任命所有安全机构负责人。此外，修宪提议还包括，要求总统参选人在选前25年必须生活在俄罗斯境内；禁止政府成员及法官拥有外国居住权等。</p>
+
+<p>【4】【梅德韦杰夫：辞职方便总统采取一切必要措施】梅德韦杰夫评价普京提出的修宪措施，不仅将对宪法作出“重大改变“，而且将对俄罗斯“权力的平衡和行政、立法、司法领域造成重大影响“。梅德韦杰夫表示，“在这种情况下，我们作为俄罗斯联邦政府，显然应该给总统作出一切必要决定的机会。根据宪法第117条，我认为俄罗斯政府应该辞职“。普京在内阁会议中感谢梅德韦杰夫政府的工作，对其工作结果表示“满意“。普京在国情咨文演讲中还宣布增设俄联邦国家安全委员会副主席一职，并将提议梅德韦杰夫出任该职务；普京本人为委员会主席。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/860ef9c3fd01412e875b5d6a1a9bfae7.jpg" alt="" /></p>
+
+<p>【5】普京提名米舒斯京出任新总理在俄杜马通过，0票反对</p>
+
+<p>俄罗斯国家杜马（议会下院）16日高票通过总统普京提名联邦税务局局长米哈伊尔·米舒斯金（Mikhail Mishustin）出任新一任政府总理，投票结果为383票支持、41票弃权、0票反对。普京已签署命令，正式任命米舒斯金为总理。普京同时还签署总统令，增设俄联邦安全会议副主席一职，并任命刚刚辞职卸任总理的梅德韦杰夫担任此职。此外，梅德韦杰夫还将继续担任统一俄罗斯党主席。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/ac121287e0c74db78caa7f79897b6e9b.jpg" alt="" /></p>
+
+<p>【6】普京：修宪不影响俄宪法基础</p>
+
+<p>俄罗斯总统普京表示，该国修改宪法将不会影响宪法基础，俄仍将是总统共和制国家。据报道，继俄罗斯总统普京星期三（15日）签署命令成立修宪工作组后，他16日在莫斯科州会见了工作者成员并做出上述表述。他说，修宪的目的在于确保俄进一步成为法治国家，提高国家机构运作效率，加强民间团体和政党的作用。普京说，修宪后俄仍将是总统共和制国家，但会变得更加开放。他还说，联邦国务委员会地位应在宪法中明确。普京说，起草宪法修正案是一项系统的、责任重大的工作，修正案应在形式和意义上都准确无误，最终（是否能通过）将由民众决定。据报道，普京在15日发表的国情咨文中提议修改宪法，其中包括扩大议会权限、强化联邦国务委员会地位等。</p>
+
+<h3 id="美伊争端">美伊争端</h3>
+
+<p>【1】美国制裁继续运输伊朗石油的中国公司</p>
+
+<p>美国财政部长姆努钦星期天接受媒体采访时表示，总统特朗普下令对伊朗实施更加严格的经济制裁后，美国已经采取了相关制裁行动，被制裁的经济实体包括美国甄别出的一些中国公司。南华早报14日说，被制裁的中国公司包括中国远洋运输公司（COSCO）。不过，姆努钦同时表示，中国已经停止其全部国有公司购买伊朗石油，美国正在同中方密切合作，确保中国停止所有新的石油活动。</p>
+
+<p>【2】伊朗逮捕数名与击落客机有关人员 鲁哈尼：击落客机不可原谅</p>
+
+<p>伊朗总统鲁哈尼说，乌克兰客机遭击落事件是不可原谅的错误，因此必须彻查此事。他说，伊朗军方承认误击客机是“很好的第一步“，但此事的责任不应由任何一方单独承担。据路透社报道，鲁哈尼认为，伊朗人民应该避免此事重演。他说，涉及此事者将遭严惩。伊朗司法部发言人艾斯迈里14日表示，伊朗已逮捕了数名与击落乌克兰客机有关的人员。</p>
+
+<p>【3】美国承认上周伊朗袭击有至少11军人受伤
+美国中央司令部发言人16日发表声明说，1月8日伊朗对伊拉克境内艾因·阿萨德空军基地（A发动袭击，至少11名美军在爆炸发生后出现脑震荡症状。目前，这些人员正在接受医疗评估。袭击当天，派驻艾因·阿萨德空军基地的1500名美军事前接已到预警通知，大部分军人都藏身在碉堡中。</p>
+
+<p>【4】伊朗：别把乌克兰坠机事件变成政治问题
+伊朗外交部发言人表示，所有受乌克兰国际航空坠机事件影响的国家都应避免将其事件变成政治问题。路透社报道，伊朗上周错误击落一架载有五个不同国籍乘客的乌克兰国际航空客机。五个不同国家周四（16日）发出联合声明表示，德黑兰应向遇难者家属赔偿，并警告世界在关注它的反应。加拿大、乌克兰、瑞典、阿富汗和英国在伦敦星期四与官员举行会议后发表一份声明中说，伊朗应举行“向悲伤国家公开彻底、独立和透明的国际调查“。伊朗外交部发言人穆萨维（Abbas Mousavi）表示，所有受影响的国家都应避免将这起事件变成政治问题。</p>
+
+<h3 id="其他-1">其他</h3>
+
+<p>【1】约翰逊：反对华为者必须提出替代方案</p>
+
+<p>英国首相约翰逊说，反对英国在5G网络使用中国华为设备者，必须说明英国应该使用何种科技取代华为。美国政府正全力施压英国避免使用华为设备。据报道，美国官员周一把华为设备风险的新证据交给英国部长后，在记者会把英国使用华为技术形容为“疯狂行为“。不过约翰逊周二接受BBC电视访问时说：“英国民众有权使用最好的科技。若有人反对任何品牌，他们必须将替代方案告诉我们，对吧？“他说：“另一方面，实话实说吧。我身为英国首相，我不要任何可能损害我们国家安全，或损害我们与五眼情报伙伴国合作的基础设施。“英国预计本月将决定如何在5G网络中使用华为设备。</p>
+
+<p>【2】美国参议院启动特朗普弹劾案审讯</p>
+
+<p>16日，美国国会参议院正式启动对总统特朗普的弹劾审讯。联邦最高法院首席大法官罗伯特（John Roberts）作为弹劾案的法官主持宣誓仪式。罗伯特与担任“弹劾聆讯代理人“的七名众议员一同入场。他率先宣誓，承诺在审理过程中依据宪法做到“公平正义“。接着罗伯特率领在弹劾案中充当陪审团角色的全体100名参议员集体宣誓。所有参议员承诺“我愿意“依据宪法和法律做出公正裁决，并逐一在宣誓书上签字。参议院多数派领袖、共和党人麦康奈尔随后宣布，弹劾案审讯将于下周二（1月21日）正式开始。</p>
+
+<p>【3】芬兰政坛“五巨头”</p>
+
+<p>16日，芬兰总理马林与联合政府其他四党党首开会议政。该国联合执政五党党首都是女性，4人80后，均任内阁要职。分别为34岁总理马林（左二），32岁经济部长库尔穆尼（中），34岁内政部长奥希萨洛（右二），32岁教育部长安德森（右一）和55岁司法部长亨利克森 （左一）。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/a3ed11293957460ea2ce8bf0eefe6e4e.jpg" alt="" /></p>
+
+<h2 id="科技新闻">科技新闻</h2>
+
+<p>【1】苹果安卓充电器或将统一，欧盟拟强推通用手机充电器</p>
+
+<p>外媒报道，欧洲议会目前正在讨论是否要对所有新手机强制采用通用充电器，这意味着iPhone可能弃用现在的闪电接口充电器。欧盟表示：“为了减少电子浪费并方便消费者的生活，欧洲议会议员们希望对充电器采取约束措施，使其适合所有移动电话和其他便携式设备。“一旦通过投票，苹果很可能会在全球范围内进行改变。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/9395f772c79b4ea2975e00de47291521.jpg" alt="" /></p>
+
+<p>【2】：谷歌今天也达到万亿美金市值了。美国第四家突破万亿美元市值的公司。</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/93281084e7144490962cc1da794d6c57.jpg" alt="" /></p>
+
+<p>【3】网飞是真有钱啊！Variety报道，网飞今年在影视内容方面的投资预计将达到173亿美元！差不多1200亿人民币，接近于去年中国电影总票房的两倍。而到2028年，网飞内容方面的投入可能会达到260亿美元！大约1800亿人民币…</p>
+
+<p>【4】中科院计算所发布国产编程语言“木兰“！</p>
+
+<p>中国科学院计算技术研究所计算机体系结构国家重点实验室宣布，由该实验室编译组主导研发的国产编程语言“木兰“正式发布。据介绍，“木兰“编程语言体系具有易学、易教、强兼容、支持人工智能和物联网开发等四个技术创新特点，同时支持跨平台操作，兼容Android、iOS、Linux、Windows系统，并支持龙芯、寒武纪等多类型中国国产处理器。“木兰“编程语言体系当前正以人工智能教育行业为切入点，通过教材研发、教学装备、科普公益等进行应用推广，以逐步实现整个产业生态的发展和构建。</p>
+
+<p>有网友反编译了一下，发现这个国产编程语言竟然就是python，实在是太伟大了，把python给国有了</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/585c246cfab84fd7b4217d3f9da7d6fc.jpg" alt="" /></p>
+
+<h2 id="优秀的项目">优秀的项目</h2>
+
+<p>【1】<a href="https://github.com/zcor/githubjobs">zcor/githubjobs</a></p>
+
+<p>【2】<a href="https://github.com/ColinEspinas/darken">ColinEspinas/darken</a></p>
+
+<h2 id="优秀的文章">优秀的文章</h2>
+
+<p>【1】<a href="https://www.huxiu.com/article/336603.html">网易云音乐与B站，可能是唯二的两个意外</a></p>
+
+<p>网易云音乐与B站构建的是类似的社区氛围：尊重用户，无论这位用户的喜爱有多么“与众不同”。网易云音乐和B站，就仿佛是秘密的“树洞”。在网易云音乐最新的7.0版本上，我们尤能窥见“音乐+社交”的内涵。</p>
+
+<p>【2】<a href="https://www.huxiu.com/article/336457.html">如何让每一天过得更充实、更快乐？</a></p>
+
+<p>最首要的，就是思考：如何把更多的琐事压缩成“自动化加工”，减少它们对大脑的占用？</p>
+
+<p>【3】<a href="https://blog.samaltman.com/how-to-invest-in-startups">How To Invest In Startups - Sam Altman</a></p>
+
+<h2 id="有趣的事情">有趣的事情</h2>
+
+<p>【1】朋友圈吐槽“奶奶的腿“被拘 如此执法早该反思</p>
+
+<p>1月10日，苏州交警发“男子因违法停车被贴罚单，在社交网络发图并配‘奶奶的腿’被行拘“一事引发关注。近年来，网民因在网络发文辱骂交警被拘留的案例已发生多起，一些执法行动的必要性、正当性一直存在争议。1月13日，亳州公安局称已成立联合调查组，如存执法不当问题，将依法依规处理。</p>
+
+<p>“奶奶的腿“是不是骂人的脏话？执法虽是一项专业活，但语言是大家的。奶奶的腿，直观含义肯定不是脏话，它表达的是一种不满的情绪，与其说是辱骂，不如说是吐槽。每个人对语言的理解不同，对负面语言的容忍程度不同。但一个共同体对语言的使用与禁忌还是有基本共识的。执法应该尊重这一共识，不能望文生义、肆意延伸。</p>
+
+<p>比如有语言洁癖的人可能对“他妈的“”他妈“”妈的“”特么的“这些词都无法容忍，但电视剧里李云龙那句经典台词“整个晋西北全他妈乱成一锅粥了“，总不能被解读为寻衅滋事。
+执法者一旦认定“奶奶的腿“是不拘留不足以维护法律尊严的脏话，还得考虑这么做的示范效果。因为法律面前人人平等，从此以后是不是每一个骂了“奶奶的腿“的人都要被抓起来，每一个被骂“奶奶的腿“的人都有权要求抓人？不知道当地派出所有没有考虑过这些。但既然联合调查组已经成立，就一定要给“奶奶的腿“一个明确的定性。</p>
+
+<p>【2】韩国瑜返回高雄市政府上班，为请假竞选总统致歉</p>
+
+<p>台湾总统选举落幕，败选的国民党参选人韩国瑜返回高雄市政府上班。韩国瑜为此前三个月请假竞选总统致歉，强调现阶段完全无计划参选国民党主席。韩国瑜自去年10月中请假竞选，被批评还未兑现市长选举承诺、便已离弃高雄市民。事隔三个月，未能当选总统的韩国瑜今早返回高雄市政府凤山行政中心，以继续履行市长职务；他表示农历新年将至，市政府当前首务是维护高雄市容及治安，让市民平安过年。就预计最快于5月举行的罢免市长投票，韩国瑜表示其团队会坦然面对，同时强调目前没有打算出选国民党主席。中央选举委员会正根据《公职人员选举罢免法》，核查针对韩国瑜高雄市长职位的罢免提案的提议人数目，以确认人数是否达到门槛、即高雄约229万选民当中的1%；假如达标，罢免提案将进入第二阶段。</p>
+
+<p>【3】</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/f81b73db2663486ab2db6e397e4177c6.jpg" alt="" /></p>
+
+<p>【4】两洞两洞太刺激了：第一个星期干掉苏莱曼尼，第二个星期打掉乌克兰客机，第三个星期俄国政府全体辞职，第四个星期咱们该过年了。</p>
+
+<p>【5】<a href="https://hot.cnbeta.com/articles/funny/932851.htm">一对男女同坐驾驶位系一条安全带上路走红网络 领到300元罚单 - 奇葩趣闻 - cnBeta.COM</a></p>
+
+<p>广东深圳一辆行驶中的车辆出现奇景，一对男女同坐驾驶位上，同系一条安全带，过程中女子依偎在男子身上持手机自拍。</p>
+
+<p>【6】今天NASA宣布新晋亚裔宇航员 Johnny Kim，前Seal Team海豹队员，UCSD数学学士，哈佛医学博士，是第一位韩裔宇航员。他将被送往国际空间站，参Artemis登月任务，并“非常可能“登上火星。</p>
+
+<p>下面大家纷纷评论：我感觉他爸妈仍然不是十分满意</p>
+
+<p>亚裔家庭父母望子成龙，对孩子的期望很高，相关的亚裔自嘲一直是热门。
+不过能加入海豹部队，哈佛医学院毕业，说明这人真正是尖子里的尖子，智力，综合体能，意志力拔尖的</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/aa3c192a72af4cd3b5f5e3adf18b8ae4.jpg" alt="" /></p>
+
+<p>【7】成语新解：门可罗雀，意指因为中国队被牢牢压制，导致伊朗队后场十分空旷，引来6只麻雀在草皮上觅食</p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/4a428009b6634bd0b8de2390ca740f5f.jpg" alt="" /></p>
+
+<p><img src="https://tczimg.s3.amazonaws.com/2020/3/aa31d809ed114ffdb6f7a81c009086ce.gif" alt="" /></p>
+
+<h2 id="言论">言论</h2>
+
+<p>【1】后来才知道，好朋友不是通过努力争取来的，而是在各自的道路上奔跑时遇见的。—— 刘同《向着光亮那方》</p>
+
+<p>【2】我不喜欢工作——没有人喜欢——可是我喜欢工作里所包含的内容，那个让你发现自我的机会。发现你自己的真实——对自己来说，而不是对别人来说的真实——发现任何别的人永远也无法知道的东西。（约瑟夫·康拉德《黑暗的心》 ）</p>
+
+<p>【3】真相就在那里，我们每撒一个慌，就欠真理一条债，而这债，迟早是要还的。——《切尔诺贝利》</p>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScD7u3k02r_3z6e9c_HFrvxkcTCBKGW1DLMPxXVgyOu1E7TSA/viewform?embedded=true" width="100%" height="1084" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+</div>
+   
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/sharing/sharing_32/">每周分享第 32 期</a></h4>
+    <h5>January 12, 2020</h5>
+    
+    <a href="http://study.tczhong.com/tags/weekly"><kbd class="item-tag">weekly</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/sharing/sharing_31/">每周分享第 31 期</a></h4>
+    <h5>January 5, 2020</h5>
+    
+    <a href="http://study.tczhong.com/tags/weekly"><kbd class="item-tag">weekly</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/sharing/sharing_30/">每周分享第 30 期</a></h4>
+    <h5>December 29, 2019</h5>
+    
+    <a href="http://study.tczhong.com/tags/weekly"><kbd class="item-tag">weekly</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+
