@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wechat on Learn More</title>
@@ -25,11 +25,11 @@ root 手机 Root小米手机分为以下几步：
 解锁手机这步在root小米手机还是很重要的，具体是解锁BootLoader，有不少教程都没有写这步，这应该是小米在近几年才加的。具体步骤也不难，就是从这里点击进去，下载相关的工具包，之后安装里面的驱动，让手机进入fastboot模式，运行软件解锁，然后手机会自动重启。
 一开始我并不知道这一步的重要性，尝试了很久的线刷，结果总是显示 ”FAILED (remote: device is locked. Cannot flash images)“。最后才明白是这个问题。另外这个工具没有mac版，所以我的解决办法是运行windows虚拟机，在里面完成了解锁。
 最后一步就比较简单了，直接到授权管理里开启root权限。之后在adb shell里面运行su就是root user了。
-获得聊天记录 聊天记录存在的位置是 /data/data/com.tencent.mm/MicroMsg/xxxxxxx/EnMicroMsg.db。这里的xxxxx是对&amp;rdquo;mm[uin]&amp;ldquo;进行md5的值。uin的获得可以使用这个命令，cat /data/data/com.tencent.mm/shared_prefs/*.xml | grep uin，记录其中的default_uin。如果是1234567，那么就对mm1234567进行md5操作，之后就可以获得文件下的名字。
+获得聊天记录 聊天记录存在的位置是 /data/data/com.tencent.mm/MicroMsg/xxxxxxx/EnMicroMsg.db。这里的xxxxx是对&amp;quot;mm[uin]&amp;ldquo;进行md5的值。uin的获得可以使用这个命令，cat /data/data/com.tencent.mm/shared_prefs/*.xml | grep uin，记录其中的default_uin。如果是1234567，那么就对mm1234567进行md5操作，之后就可以获得文件下的名字。
 利用以下命令把内容拷贝出来。
-cp EnMicroMsg.db /mnt/sdcard/ exit adb pull /mnt/sdcard/EnMicroMsg.db .  接下来就是要解密这个数据库。密码是手机的imei+uin，利用以下命令可以获得到：
-echo -n $imei$uin | md5 | cut -c -7  打开这个加密的数据库我卡了很久，理论上利用sqlcipher就可以解锁了，但是我尝试了很多办法，结果都是&amp;rdquo;File is not a database&amp;rdquo;。说明你在解锁数据库用的方法错了，并不代表你的密码不对，在mac下利用brew install sqlcipher安装之后，利用以下命令即可。
-sqlcipher EnMicroMsg.db &#39;PRAGMA key = &amp;quot;key&amp;quot;; PRAGMA cipher_migrate; ATTACH DATABASE &amp;quot;decrypted_database.</description>
+cp EnMicroMsg.db /mnt/sdcard/ exit adb pull /mnt/sdcard/EnMicroMsg.db . 接下来就是要解密这个数据库。密码是手机的imei+uin，利用以下命令可以获得到：
+echo -n $imei$uin | md5 | cut -c -7 打开这个加密的数据库我卡了很久，理论上利用sqlcipher就可以解锁了，但是我尝试了很多办法，结果都是&amp;quot;File is not a database&amp;rdquo;。说明你在解锁数据库用的方法错了，并不代表你的密码不对，在mac下利用brew install sqlcipher安装之后，利用以下命令即可。
+sqlcipher EnMicroMsg.db &amp;#39;PRAGMA key = &amp;#34;key&amp;#34;; PRAGMA cipher_migrate; ATTACH DATABASE &amp;#34;decrypted_database.db&amp;#34; AS decrypted_database KEY &amp;#34;&amp;#34;;SELECT sqlcipher_export(&amp;#34;decrypted_database&amp;#34;);DETACH DATABASE decrypted_database;&amp;#39; 之后可以直接看decrypted_database.</description>
     </item>
     
   </channel>

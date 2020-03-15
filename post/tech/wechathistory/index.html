@@ -59,7 +59,7 @@
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.58.3" />
+ <meta name="generator" content="Hugo 0.67.0" />
         
         
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120924697-1"></script>
@@ -161,59 +161,33 @@
     
 
     
-    <div class="text-justify">
-
-<p>本文记录了自己在root已停止支持的红米手机以及破解加密微信聊天记录数据库的一些心得和体会。</p>
-
+    <div class="text-justify"><p>本文记录了自己在root已停止支持的红米手机以及破解加密微信聊天记录数据库的一些心得和体会。</p>
 <h1 id="root-手机">root 手机</h1>
-
 <p>Root小米手机分为以下几步：</p>
-
 <ol>
 <li>刷miui的开发者版本</li>
 <li>解锁小米手机</li>
 <li>开启root权限</li>
 </ol>
-
 <p>我手里有一部红米3的手机，而小米官方对于这款手机已经停止了维护，所以在<a href="http://www.miui.com/download.html">miui</a>官网上已经找不到相应的卡刷包。解决办法就是上论坛下以往的，我找到的在<a href="https://www.miui.com/thread-16771441-1-1.html">这里</a>。</p>
-
 <p>我先下载了卡刷包，之后把zip包直接放到sd卡里。在系统更新页面点击右上角，选择使用本地文件进行更新。注意这里会抹掉所有手机的应用，在漫长的等待之后就把自己miui版本变成了开发版。</p>
-
 <p>接下来首先打开开发者模式，运许usb调试，打开fastboot刷机模式。另外在授权管理里面找root授权管理，把自己的手机与mi account绑定，准备解锁。</p>
-
 <p>解锁手机这步在root小米手机还是很重要的，具体是解锁BootLoader，有不少教程都没有写这步，这应该是小米在近几年才加的。具体步骤也不难，就是从<a href="https://www.miui.com/unlock/">这里</a>点击进去，下载相关的工具包，之后安装里面的驱动，让手机进入fastboot模式，运行软件解锁，然后手机会自动重启。</p>
-
-<p><img src="https://www.androidexplained.com/wp-content/uploads/2018/05/Redmi-Note-5-Fastboot-Mode-Full.jpg" alt="" /></p>
-
+<p><img src="https://www.androidexplained.com/wp-content/uploads/2018/05/Redmi-Note-5-Fastboot-Mode-Full.jpg" alt=""></p>
 <p>一开始我并不知道这一步的重要性，尝试了很久的线刷，结果总是显示 ”FAILED (remote: device is locked. Cannot flash images)“。最后才明白是这个问题。另外这个工具没有mac版，所以我的解决办法是运行windows虚拟机，在里面完成了解锁。</p>
-
 <p>最后一步就比较简单了，直接到授权管理里开启root权限。之后在<code>adb shell</code>里面运行<code>su</code>就是root user了。</p>
-
 <h1 id="获得聊天记录">获得聊天记录</h1>
-
-<p>聊天记录存在的位置是 <code>/data/data/com.tencent.mm/MicroMsg/xxxxxxx/EnMicroMsg.db</code>。这里的<code>xxxxx</code>是对&rdquo;mm[uin]&ldquo;进行md5的值。uin的获得可以使用这个命令，<code>cat /data/data/com.tencent.mm/shared_prefs/*.xml | grep uin</code>，记录其中的<code>default_uin</code>。如果是1234567，那么就对<code>mm1234567</code>进行md5操作，之后就可以获得文件下的名字。</p>
-
+<p>聊天记录存在的位置是 <code>/data/data/com.tencent.mm/MicroMsg/xxxxxxx/EnMicroMsg.db</code>。这里的<code>xxxxx</code>是对&quot;mm[uin]&ldquo;进行md5的值。uin的获得可以使用这个命令，<code>cat /data/data/com.tencent.mm/shared_prefs/*.xml | grep uin</code>，记录其中的<code>default_uin</code>。如果是1234567，那么就对<code>mm1234567</code>进行md5操作，之后就可以获得文件下的名字。</p>
 <p>利用以下命令把内容拷贝出来。</p>
-
-<pre><code class="language-bash">cp EnMicroMsg.db /mnt/sdcard/
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp EnMicroMsg.db /mnt/sdcard/
 exit
 adb pull /mnt/sdcard/EnMicroMsg.db .
-</code></pre>
-
-<p>接下来就是要解密这个数据库。密码是手机的imei+uin，利用以下命令可以获得到：</p>
-
-<pre><code class="language-bash">echo -n $imei$uin | md5 | cut -c -7
-</code></pre>
-
-<p>打开这个加密的数据库我卡了很久，理论上利用<code>sqlcipher</code>就可以解锁了，但是我尝试了很多办法，结果都是&rdquo;File is not a database&rdquo;。说明你在解锁数据库用的方法错了，并不代表你的密码不对，在mac下利用<code>brew install sqlcipher</code>安装之后，利用以下命令即可。</p>
-
-<pre><code class="language-bash">sqlcipher EnMicroMsg.db 'PRAGMA key = &quot;key&quot;; PRAGMA cipher_migrate; ATTACH DATABASE &quot;decrypted_database.db&quot; AS decrypted_database KEY &quot;&quot;;SELECT sqlcipher_export(&quot;decrypted_database&quot;);DETACH DATABASE decrypted_database;'
-</code></pre>
-
-<p>之后可以直接看<code>decrypted_database.db</code>里面的内容。具体内容在<code>message</code>表格里面。</p>
-
+</code></pre></div><p>接下来就是要解密这个数据库。密码是手机的imei+uin，利用以下命令可以获得到：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo -n $imei$uin | md5 | cut -c -7
+</code></pre></div><p>打开这个加密的数据库我卡了很久，理论上利用<code>sqlcipher</code>就可以解锁了，但是我尝试了很多办法，结果都是&quot;File is not a database&rdquo;。说明你在解锁数据库用的方法错了，并不代表你的密码不对，在mac下利用<code>brew install sqlcipher</code>安装之后，利用以下命令即可。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sqlcipher EnMicroMsg.db <span style="color:#e6db74">&#39;PRAGMA key = &#34;key&#34;; PRAGMA cipher_migrate; ATTACH DATABASE &#34;decrypted_database.db&#34; AS decrypted_database KEY &#34;&#34;;SELECT sqlcipher_export(&#34;decrypted_database&#34;);DETACH DATABASE decrypted_database;&#39;</span>
+</code></pre></div><p>之后可以直接看<code>decrypted_database.db</code>里面的内容。具体内容在<code>message</code>表格里面。</p>
 <p>逆向微信的过程可以参看以下的博文</p>
-
 <p><a href="https://www.xukele.com/blog/?p=435">如何破解微信聊天数据库</a></p>
 </div>
    
@@ -254,7 +228,7 @@ adb pull /mnt/sdcard/EnMicroMsg.db .
 
         <footer>
 
-            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
 
         </footer>
        

@@ -59,7 +59,7 @@
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.58.3" />
+ <meta name="generator" content="Hugo 0.67.0" />
         
         
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120924697-1"></script>
@@ -161,62 +161,44 @@
     
 
     
-    <div class="text-justify">
-
-<h1 id="树形算法题的思考">树形算法题的思考</h1>
-
+    <div class="text-justify"><h1 id="树形算法题的思考">树形算法题的思考</h1>
 <p>树形是一大题型，这类题目相对来说比较简单，在我看来掌握树形的最大要点就是递归的思想，这可以说用在了这类题目中的方方面面。主要涉及这些题型：</p>
-
 <ul>
 <li>构建树（数组，链表）</li>
 <li>遍历，判断是合理的树</li>
 <li>找节点（LCA）</li>
 <li>树的基本属性（高度），找路径</li>
 </ul>
-
 <h2 id="构建树">构建树</h2>
-
 <p>这类题目的基本思路就是先找到根结点（root），然后把整个数组或者链表分成左右两个部分。之后，这个根节点的左子树就是递归调用数组的右半部分。右半边子树就是递归调用，这个函数的右半部分。总体还是比较简单的，题目可以参看</p>
-
 <ul>
 <li><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/">108.Convert Sorted Array to Binary Search Tree</a></li>
 <li><a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/">109.Convert Sorted List to Binary Search Tree</a></li>
 </ul>
-
 <p>这里有一道题，关于如何利用链表来构造。其中有一点，它可以使用一个固定的prev linked list node。在每次递归结束的时候都会调用next，这样我们就不需要每次遍历找到中心结点，而是利用之前的结果来找到中间的那个节点。也就是说，在这里我们并不需要一开始就把父节点找到，而是可以先存好左子树，之后再到root。</p>
-
-<pre><code class="language-java">	private ListNode list;
-    private TreeNode sortedListToBST(int start, int end) {
-        if (start &gt; end) return null;
-        int mid = (start + end+1) / 2;
-        TreeNode leftChild = sortedListToBST(start, mid-1);
-        TreeNode parent = new TreeNode(list.val);
-        parent.left = leftChild;
-        list = list.next;
-        parent.right = sortedListToBST(mid+1, end);
-        return parent;
-}
-</code></pre>
-
-<p>其他的一些，比如说利用前序遍历和中序遍历来构建。思路是差不多的，因为我们可以知道，前序遍历的第一个必定是根节点，而中续遍历的中间某一个必定是根节点，然后，根据这个就可以确定左右子树的范围，之后递归调用就可以了。</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">	<span style="color:#66d9ef">private</span> ListNode list<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> TreeNode <span style="color:#a6e22e">sortedListToBST</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> start<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> end<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>start <span style="color:#f92672">&gt;</span> end<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>start <span style="color:#f92672">+</span> end<span style="color:#f92672">+</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span>
+        TreeNode leftChild <span style="color:#f92672">=</span> sortedListToBST<span style="color:#f92672">(</span>start<span style="color:#f92672">,</span> mid<span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
+        TreeNode parent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeNode<span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+        parent<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> leftChild<span style="color:#f92672">;</span>
+        list <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        parent<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> sortedListToBST<span style="color:#f92672">(</span>mid<span style="color:#f92672">+</span>1<span style="color:#f92672">,</span> end<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> parent<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>其他的一些，比如说利用前序遍历和中序遍历来构建。思路是差不多的，因为我们可以知道，前序遍历的第一个必定是根节点，而中续遍历的中间某一个必定是根节点，然后，根据这个就可以确定左右子树的范围，之后递归调用就可以了。</p>
 <ul>
 <li><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">105. Construct Binary Tree from Preorder and Inorder Traversal</a></li>
 <li><a href="https://leetcode.com/problems/construct-string-from-binary-tree/">606.Construct String from Binary Tree</a></li>
 <li><a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/">297.Serialize and Deserialize Binary Tree</a></li>
 <li><a href="https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree">428. Serialize and Deserialize N-ary Tree</a></li>
 </ul>
-
 <p>序列化反序列化树的做法很多，我的做法是当出现null的时候写X, 对于n节点的就在最后一个子节点后面加X。</p>
-
 <h2 id="遍历">遍历</h2>
-
 <p>在刷题中，比较常见的题目就是通过一层一层，来遍历树，还有那种垂直遍历树。这种思路基本上差不多的，基本上都是BFS。每次遍历完一层之后，记住队列中的大小，然后遍历所有队列中的节点，再将下一行的内容都加到队列里，这样就可以实现一层一层的便利。如果需要翻过来输出，只需要每次加在开头就可以了。</p>
-
-<p>如果需要垂直输出的话，我们只需要建立一个HashMap<Integer, List<Integer>&gt;，然后往里面根据列来放节点，列的获得是根据上一个节点，他左节点的话列-1，右节点，列数+1。我们还需要放这个节点与它的列数的对应。</p>
-
+<p>如果需要垂直输出的话，我们只需要建立一个HashMap&lt;Integer, List<!-- raw HTML omitted -->&gt;，然后往里面根据列来放节点，列的获得是根据上一个节点，他左节点的话列-1，右节点，列数+1。我们还需要放这个节点与它的列数的对应。</p>
 <p>其他的遍历方法还可以使用stack来进行遍历，将root的左节点放到放到stack里，一直到最左边，之后可以看栈顶的节点是否有用右节点，如果有的话，将这个pop出来之后，再一直从右节点开始遍历，直到最左边。这样就可以完成一个先序的遍历方法。</p>
-
 <ul>
 <li><a href="https://leetcode.com/problems/binary-tree-level-order-traversal/">102.Binary Tree Level Order Traversal</a></li>
 <li><a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/">103.Binary Tree Zigzag Level Order Traversal</a></li>
@@ -226,106 +208,140 @@
 <li><a href="https://leetcode.com/problems/find-largest-value-in-each-tree-row/">515.Find Largest Value in Each Tree Row</a></li>
 <li><a href="https://leetcode.com/problems/binary-search-tree-iterator/">173.Binary Search Tree Iterator</a></li>
 </ul>
-
 <p>还有一些其他的题目，比如把<a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/">二叉树变成链表</a>，找到左子树的最右边，把右子树接上，然后就可以把左子树放到右边，删掉左子树。这个思路比较奇特，也可以使用递归的思路，把左右都flat好了之后就可以按上面的做法了。还有就是<a href="https://leetcode.com/problems/binary-tree-upside-down/">把树颠倒</a>,就是一直到左，然后把父节点的右节点作为左节点，父节点是右节点。</p>
-
 <p>另外一大类就是判断这个数是否符合条件，比如说是否相等，是否对称等的关系。这些也都是使用递归的思路就可以解决。比如说判断相等，只要判断根节点是否相等，然后再来判断左右子树是否相等，如果都是的话，那么就是true，要不然就是false。判断是否对称就是看左子树是否和右子树相等。还有一道类似的题目就是交换二叉树，方法就是把左子树先交换，然后再交换右子树，然后把两个颠倒就可以了。你也可以先存好一个节点，类似在数组中交换位置。</p>
-
 <ul>
 <li><a href="https://leetcode.com/problems/same-tree/">100.Same Tree</a></li>
 <li><a href="https://leetcode.com/problems/symmetric-tree/">101.Symmetric Tree</a></li>
 <li><a href="https://leetcode.com/problems/invert-binary-tree/">226.Invert Binary Tree</a></li>
 <li><a href="https://leetcode.com/problems/subtree-of-another-tree/">572.Subtree of Another Tree</a></li>
 </ul>
-
 <h2 id="找节点">找节点</h2>
-
 <p>这种题目最经典的就是找公共最低祖先。方法就是看左子树和右子树有没有，如果没有的话那就返回null，如果其中有一个不是null的话就返回那个节点，如果两个节点都有的话，那么就返回根节点。如果是BST的话，可以直接根据节点的大小来判断位置。</p>
-
 <ul>
 <li><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/">235.Lowest Common Ancestor of a Binary Search Tree</a></li>
 <li><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/">236.Lowest Common Ancestor of a Binary Tree</a></li>
 </ul>
-
 <p>还有就是根据这大小来在二叉搜索树中，找最近节点的题目，这个题目还是非常简单的，只要存一个目前的节点，每次和之前存的和target的比较，如果小的话就把它存好，之后就看着当前的值和它的大小，如果比较大的话就走左边，小的话就走右子树。</p>
-
 <p>如果要存k个的话，先走左边，需要利用一个list来存，当list大小为k时，如果发现root的比list第一个更接近，就把第一个删掉，把root加进去。然后走右边。其实就是一个inorder的遍历，只不过加一个提前终止条件。每次发现新的比较接近就把最前面的扔掉</p>
-
 <ul>
 <li><a href="https://leetcode.com/problems/closest-binary-search-tree-value/">270.Closest Binary Search Tree Value</a></li>
 <li><a href="https://leetcode.com/problems/closest-binary-search-tree-value-ii/">272.Closest Binary Search Tree Value II</a></li>
 <li><a href="https://leetcode.com/problems/closest-leaf-in-a-binary-tree/">742.Closest Leaf in a Binary Tree</a></li>
 </ul>
-
-<h2 id="树的基本属性-找路径">树的基本属性，找路径</h2>
-
+<h2 id="树的基本属性找路径">树的基本属性，找路径</h2>
 <p>这两种类型解法基本是相同的，如果是纯列出所有路径的题目，那么可以直接使用dfs+backtrack解决。如果是需要计算路径sum之类的话，那么就可以按照计算height的套路。</p>
-
 <ul>
 <li><a href="https://leetcode.com/problems/binary-tree-paths/">257.Binary Tree Paths</a></li>
 </ul>
-
 <p>计算height的套路就是看左边的长度和右边的长度，之后选个最大的+1. 如果是计算diameter，就是左右相加以及+1。其他一些题对路径有一定的限定，可以在遍历时加上一个参数记录此时的值。</p>
-
 <ul>
 <li><a href="https://leetcode.com/problems/minimum-depth-of-binary-tree/">111.Minimum Depth of Binary Tree</a></li>
 <li><a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/">104.Maximum Depth of Binary Tree</a></li>
 <li><a href="https://leetcode.com/problems/diameter-of-binary-tree/">543.Diameter of Binary Tree</a></li>
 <li><a href="https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/">298.Binary Tree Longest Consecutive Sequence</a></li>
 </ul>
-
 <h3 id="other">other</h3>
-
 <ul>
-<li><a href="https://leetcode.com/problems/balanced-binary-tree/">110.Balanced Binary Tree</a></li>
-<li><a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/">124.Binary Tree Maximum Path Sum</a></li>
-<li><a href="https://leetcode.com/problems/binary-tree-right-side-view/">199.Binary Tree Right Side View</a></li>
-<li><a href="https://leetcode.com/problems/implement-trie-prefix-tree/">208.Implement Trie (Prefix Tree)</a></li>
-<li><a href="https://leetcode.com/problems/count-complete-tree-nodes/">222.Count Complete Tree Nodes</a></li>
-<li><a href="https://leetcode.com/problems/count-univalue-subtrees/">250.Count Univalue Subtrees</a></li>
-<li><a href="https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/">255.Verify Preorder Sequence in Binary Search Tree</a></li>
-<li><a href="https://leetcode.com/problems/graph-valid-tree/">261.Graph Valid Tree</a></li>
-<li><a href="https://leetcode.com/problems/minimum-height-trees/">310.Minimum Height Trees</a></li>
-<li><a href="https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/">331.Verify Preorder Serialization of a Binary Tree</a></li>
-<li><a href="https://leetcode.com/problems/largest-bst-subtree/">333.Largest BST Subtree</a></li>
-<li><a href="https://leetcode.com/problems/find-leaves-of-binary-tree/">366.Find Leaves of Binary Tree</a></li>
-<li><a href="https://leetcode.com/problems/find-mode-in-binary-search-tree/">501.Find Mode in Binary Search Tree</a></li>
-<li><a href="https://leetcode.com/problems/most-frequent-subtree-sum/">508.Most Frequent Subtree Sum</a></li>
-<li><a href="https://leetcode.com/problems/convert-bst-to-greater-tree/">538.Convert BST to Greater Tree</a></li>
-<li><a href="https://leetcode.com/problems/boundary-of-binary-tree/">545.Boundary of Binary Tree</a></li>
-<li><a href="https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii/">549.Binary Tree Longest Consecutive Sequence II</a></li>
-
-<li><p><a href="https://leetcode.com/problems/binary-tree-tilt/">563.Binary Tree Tilt</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/tree-node/">608.Tree Node</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/merge-two-binary-trees/">617.Merge Two Binary Trees</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/add-one-row-to-tree/">623.Add One Row to Tree</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/average-of-levels-in-binary-tree/">637.Average of Levels in Binary Tree</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/find-duplicate-subtrees/">652.Find Duplicate Subtrees</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/maximum-binary-tree/">654.Maximum Binary Tree</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/print-binary-tree/">655.Print Binary Tree</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/maximum-width-of-binary-tree/">662.Maximum Width of Binary Tree</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/equal-tree-partition/">663.Equal Tree Partition</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/trim-a-binary-search-tree/">669.Trim a Binary Search Tree</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/">671.Second Minimum Node In a Binary Tree</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/cut-off-trees-for-golf-event/">675.Cut Off Trees for Golf Event</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/binary-tree-pruning/">814.Binary Tree Pruning</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/binary-trees-with-factors/">823.Binary Trees With Factors</a></p></li>
-
-<li><p><a href="https://leetcode.com/problems/sum-of-distances-in-tree/">834.Sum of Distances in Tree</a></p></li>
+<li>
+<p><a href="https://leetcode.com/problems/balanced-binary-tree/">110.Balanced Binary Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/">124.Binary Tree Maximum Path Sum</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/binary-tree-right-side-view/">199.Binary Tree Right Side View</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/implement-trie-prefix-tree/">208.Implement Trie (Prefix Tree)</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/count-complete-tree-nodes/">222.Count Complete Tree Nodes</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/count-univalue-subtrees/">250.Count Univalue Subtrees</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/">255.Verify Preorder Sequence in Binary Search Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/graph-valid-tree/">261.Graph Valid Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/minimum-height-trees/">310.Minimum Height Trees</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/">331.Verify Preorder Serialization of a Binary Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/largest-bst-subtree/">333.Largest BST Subtree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/find-leaves-of-binary-tree/">366.Find Leaves of Binary Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/find-mode-in-binary-search-tree/">501.Find Mode in Binary Search Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/most-frequent-subtree-sum/">508.Most Frequent Subtree Sum</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/convert-bst-to-greater-tree/">538.Convert BST to Greater Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/boundary-of-binary-tree/">545.Boundary of Binary Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii/">549.Binary Tree Longest Consecutive Sequence II</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/binary-tree-tilt/">563.Binary Tree Tilt</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/tree-node/">608.Tree Node</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/merge-two-binary-trees/">617.Merge Two Binary Trees</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/add-one-row-to-tree/">623.Add One Row to Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/average-of-levels-in-binary-tree/">637.Average of Levels in Binary Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/find-duplicate-subtrees/">652.Find Duplicate Subtrees</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/maximum-binary-tree/">654.Maximum Binary Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/print-binary-tree/">655.Print Binary Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/maximum-width-of-binary-tree/">662.Maximum Width of Binary Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/equal-tree-partition/">663.Equal Tree Partition</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/trim-a-binary-search-tree/">669.Trim a Binary Search Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/">671.Second Minimum Node In a Binary Tree</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/cut-off-trees-for-golf-event/">675.Cut Off Trees for Golf Event</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/binary-tree-pruning/">814.Binary Tree Pruning</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/binary-trees-with-factors/">823.Binary Trees With Factors</a></p>
+</li>
+<li>
+<p><a href="https://leetcode.com/problems/sum-of-distances-in-tree/">834.Sum of Distances in Tree</a></p>
+</li>
 </ul>
 </div>
    
@@ -422,7 +438,7 @@
 
         <footer>
 
-            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
 
         </footer>
        
