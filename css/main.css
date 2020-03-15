@@ -59,7 +59,9 @@ main {
 a:link, a:visited {
     color: var(--accent);
 }
-
+.well {
+    text-align: left;
+}
 a.icon:hover {
     text-decoration: none;
 }
