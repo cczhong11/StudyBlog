@@ -904,6 +904,20 @@ img.alignright {
     display: block;
 }
 
+
+.navbar-icon {
+    font-size: 125%;
+    display: inline-block !important;
+}
+
+
+/*coloured borders at top and bottom of the page*/
+
+.navbar.navbar-default {
+    border-top: var(--border-width) solid var(--accent);
+    text-align: right;
+}
+
 /* for archive page starts*/
 .post-archive {
     font-size: 15px;
