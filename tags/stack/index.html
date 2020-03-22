@@ -47,15 +47,13 @@
                 <nav id="nav-menu" class="clearfix">
                     <a class="" href="http://study.tczhong.com/">首页</a>
                     
-                    <a  href="http://study.tczhong.com/" title="Home">Home</a>
+                    <a  href="http://study.tczhong.com/post/" title="Posts">Posts</a>
                     
-                    <a  href="http://study.tczhong.com/tags/leetcode/" title="Leetcode">Leetcode</a>
-                    
-                    <a  href="http://study.tczhong.com/pos/" title="Posts">Posts</a>
+                    <a  href="http://study.tczhong.com/tags/weekly/" title="每周分享">每周分享</a>
                     
                     <a  href="http://study.tczhong.com/tags/love/" title="亲密关系">亲密关系</a>
                     
-                    <a  href="http://study.tczhong.com/tags/weekly/" title="每周分享">每周分享</a>
+                    <a  href="http://study.tczhong.com/tags/leetcode/" title="Leetcode">Leetcode</a>
                     
                 </nav>
             </div>
@@ -96,7 +94,7 @@ String 解析类 这类比较多的就是计算器，以及分析括号里的内
 计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如(1+2)+(3+4), +可以看作是是后一个括号的符号。对于1*2 + 6/3,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。
  150. Evaluate Reverse Polish Notation 385. Mini Parser 394. Decode String 726. Number of Atoms 224. Basic Calculator 227. Basic Calculator II 770. Basic Calculator IV 772. Basic Calculator III  大小差距 还有一类题目就是问下一个比自己大的数还有多远，可以使用栈。栈里面存的都是比栈顶小的数，遇到比栈顶大的数n就可以弹出栈里的数j，因为这时我们可以知道比之前那个数j大的数在n了，更新之前那个数j的结果。
 栈的作用存一个至今遇到的大值。栈底是最大的值，栈顶是至今遇到的大值里最小的。
-for (int i = 0; i &lt; n; i++) { while (!stack.isEmpty() &amp;&amp; temperatures[i] &gt; temperatures[stack.peek()]) { int idx = stack.pop(); res[idx] = i - idx; } stack.……
+for (int i = 0; i &lt; n; i++) { while (!……
             <p class="readmore"><a href="http://study.tczhong.com/post/algo/stack/">阅读全文</a></p>
         </div>
     </article>

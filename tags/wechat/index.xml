@@ -28,8 +28,7 @@ root 手机 Root小米手机分为以下几步：
 获得聊天记录 聊天记录存在的位置是 /data/data/com.tencent.mm/MicroMsg/xxxxxxx/EnMicroMsg.db。这里的xxxxx是对&amp;quot;mm[uin]&amp;ldquo;进行md5的值。uin的获得可以使用这个命令，cat /data/data/com.tencent.mm/shared_prefs/*.xml | grep uin，记录其中的default_uin。如果是1234567，那么就对mm1234567进行md5操作，之后就可以获得文件下的名字。
 利用以下命令把内容拷贝出来。
 cp EnMicroMsg.db /mnt/sdcard/ exit adb pull /mnt/sdcard/EnMicroMsg.db . 接下来就是要解密这个数据库。密码是手机的imei+uin，利用以下命令可以获得到：
-echo -n $imei$uin | md5 | cut -c -7 打开这个加密的数据库我卡了很久，理论上利用sqlcipher就可以解锁了，但是我尝试了很多办法，结果都是&amp;quot;File is not a database&amp;rdquo;。说明你在解锁数据库用的方法错了，并不代表你的密码不对，在mac下利用brew install sqlcipher安装之后，利用以下命令即可。
-sqlcipher EnMicroMsg.db &amp;#39;PRAGMA key = &amp;#34;key&amp;#34;; PRAGMA cipher_migrate; ATTACH DATABASE &amp;#34;decrypted_database.db&amp;#34; AS decrypted_database KEY &amp;#34;&amp;#34;;SELECT sqlcipher_export(&amp;#34;decrypted_database&amp;#34;);DETACH DATABASE decrypted_database;&amp;#39; 之后可以直接看decrypted_database.</description>
+echo -n $imei$uin | md5 | cut -c -7 打开这个加密的数据库我卡了很久，理论上利用sqlcipher就可以解锁了，但是我尝试了很多办法，结果都是&amp;quot;File is not a database&amp;rdquo;。说明你在解锁数据库用的方法错了，并不代表你的密码不对，在mac下利用brew install sqlcipher安装之后，利用以下命令即可。</description>
     </item>
     
   </channel>
