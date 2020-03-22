@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>学习 on Learn More</title>
+    <link>http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 学习 on Learn More</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Jul 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>文档写作</title>
+      <link>http://study.tczhong.com/post/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%86%99%E4%BD%9C/</link>
+      <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%86%99%E4%BD%9C/</guid>
+      <description>技术文档写作 1. 思想的组织 1.1 金字塔原理  结论先行：一篇文章只支持一个中心思想，这个中心思想将概括各级各组的所有观点，必须放在文章最开头。 以上统下： 上一层级的观点必须是对下一层级观点的概括，下一层级的观点是对上一层级观点的解释、支持。 归类分组：把具有共同点的观点归类分组，同一组中的观点都必须属于同一个范畴。 逻辑递进：每组中的观点都必须按照逻辑顺序进行组织。  1.</description>
+    </item>
+    
+  </channel>
+</rss>

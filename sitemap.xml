@@ -368,6 +368,11 @@
   </url>
   
   <url>
+    <loc>http://study.tczhong.com/categories/</loc>
+    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://study.tczhong.com/tags/health/</loc>
     <lastmod>2017-09-28T00:00:00+00:00</lastmod>
   </url>
@@ -379,6 +384,11 @@
   
   <url>
     <loc>http://study.tczhong.com/post/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2017-09-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -413,6 +423,11 @@
   </url>
   
   <url>
+    <loc>http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2015-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://study.tczhong.com/post/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%86%99%E4%BD%9C/</loc>
     <lastmod>2015-07-28T00:00:00+00:00</lastmod>
   </url>
@@ -420,18 +435,6 @@
   <url>
     <loc>http://study.tczhong.com/archives/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://study.tczhong.com/post/machinelearning/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</loc>
-  </url>
-  
-  <url>
-    <loc>http://study.tczhong.com/post/machinelearning/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AD%A6%E4%B9%A0/</loc>
-  </url>
-  
-  <url>
-    <loc>http://study.tczhong.com/categories/</loc>
   </url>
   
 </urlset>

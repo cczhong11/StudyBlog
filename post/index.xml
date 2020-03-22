@@ -710,23 +710,5 @@ SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说
       <description>技术文档写作 1. 思想的组织 1.1 金字塔原理  结论先行：一篇文章只支持一个中心思想，这个中心思想将概括各级各组的所有观点，必须放在文章最开头。 以上统下： 上一层级的观点必须是对下一层级观点的概括，下一层级的观点是对上一层级观点的解释、支持。 归类分组：把具有共同点的观点归类分组，同一组中的观点都必须属于同一个范畴。 逻辑递进：每组中的观点都必须按照逻辑顺序进行组织。  1.</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>http://study.tczhong.com/post/machinelearning/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://study.tczhong.com/post/machinelearning/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://study.tczhong.com/post/machinelearning/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AD%A6%E4%B9%A0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://study.tczhong.com/post/machinelearning/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AD%A6%E4%B9%A0/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
