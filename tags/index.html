@@ -1,242 +1,675 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us">
-    <head>
-         
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tags</title>
-        
-        <style>
+<head>
 
-    html body {
-        font-family: 'Noto Sans SC', sans-serif;
-        background-color: white;
-    }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    :root {
-        --accent: red;
-        --border-width:  5px ;
-    }
-
-</style>
-
-
-<link rel="stylesheet" href="http://study.tczhong.com/css/main.css">
-
-
-
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto%20Sans%20SC">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
- 
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script> 
-
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.67.0" />
-        <link rel="alternate" type="application/rss+xml" href="http://study.tczhong.com/tags/index.xml" title="Learn More" />
+    <title>Tags | Learn More</title>
+    <meta property="og:title" content="Tags - Learn More">
+    <meta property="og:type" content="article">
         
         
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120924697-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)};
-          gtag('js', new Date());
-
-          gtag('config', 'UA-120924697-1');
-        </script>
+    <meta name="Keywords" content="">
+    <meta name="description" content="Tags">
         
-    </head>
+    <meta name="author" content="">
+    <meta property="og:url" content="http://study.tczhong.com/tags/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml+xml" href="http://study.tczhong.com/tags/index.xml" title="Learn More" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
 
     
     
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-    
+</head>
 
-    <body>
-         
-        <nav class="navbar navbar-default navbar-fixed-top">
 
-            <div class="container">
-
-                <div class="navbar-header">
-
-                    <a class="navbar-brand visible-xs" href="#">Tags</a>
-
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                </div>
-
-                <div class="collapse navbar-collapse">
-
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="/">Home</a></li>
-                            
-                                <li><a href="/tags/leetcode/">Leetcode</a></li>
-                            
-                                <li><a href="/pos/">Posts</a></li>
-                            
-                                <li><a href="/tags/love/">亲密关系</a></li>
-                            
-                                <li><a href="/tags/weekly/">每周分享</a></li>
-                            
-                        </ul>
-                    
-
-                    
-                        <ul class="nav navbar-nav navbar-right">
-                            
-                                <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="fa fa-envelope-o"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fa fa-github"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fa fa-linkedin"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/7112540/tc-zhong"><i class="fa fa-stack-overflow"></i></a></li>
-                            
-                        </ul>
-                    
-
-                </div>
-
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://study.tczhong.com/">
+                        Learn More
+                    </a>
+                
+                
             </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="" href="http://study.tczhong.com/">首页</a>
+                    
+                    <a  href="http://study.tczhong.com/" title="Home">Home</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/leetcode/" title="Leetcode">Leetcode</a>
+                    
+                    <a  href="http://study.tczhong.com/pos/" title="Posts">Posts</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/love/" title="亲密关系">亲密关系</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/weekly/" title="每周分享">每周分享</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
 
-        </nav>
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
 
-
-<main>
-
-    <h2>Tags</h2>
-
-     <div class="item">
-
+                <div class="col-8" id="main">
+                    
+<header>
     
+        <h1>共有17个标签</h1>
     
+</header>
+<div class="post-archive">
     
-
+    <h2><a href="http://study.tczhong.com/tags/weekly">weekly</a> (42)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2020/03/22</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_42/" title="每周分享第 42 期">每周分享第 42 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2020/03/15</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_41/" title="每周分享第 41 期">每周分享第 41 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2020/03/08</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_40/" title="每周分享第 40 期">每周分享第 40 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2020/03/01</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_39/" title="每周分享第 39 期">每周分享第 39 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2020/02/23</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_38/" title="每周分享第 38 期">每周分享第 38 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2020/02/15</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_37/" title="每周分享第 37 期">每周分享第 37 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2020/02/09</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_36/" title="每周分享第 36 期">每周分享第 36 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2020/02/02</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_35/" title="每周分享第 35 期">每周分享第 35 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2020/01/27</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_34/" title="每周分享第 34 期">每周分享第 34 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2020/01/18</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_33/" title="每周分享第 33 期">每周分享第 33 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2020/01/12</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_32/" title="每周分享第 32 期">每周分享第 32 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2020/01/05</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_31/" title="每周分享第 31 期">每周分享第 31 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/12/29</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_30/" title="每周分享第 30 期">每周分享第 30 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/12/22</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_29/" title="每周分享第 29 期">每周分享第 29 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/12/15</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_28/" title="每周分享第 28 期">每周分享第 28 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/12/08</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_27/" title="每周分享第 27 期">每周分享第 27 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/12/01</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_26/" title="每周分享第 26 期">每周分享第 26 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/11/24</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_25/" title="每周分享第 25 期">每周分享第 25 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/11/17</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_24/" title="每周分享第 24 期">每周分享第 24 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/11/10</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_23/" title="每周分享第 23 期">每周分享第 23 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/11/03</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_22/" title="每周分享第 22 期">每周分享第 22 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/10/27</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_21/" title="每周分享第 21 期">每周分享第 21 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/10/20</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_20/" title="每周分享第 20 期">每周分享第 20 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/10/13</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_19/" title="每周分享第 19 期">每周分享第 19 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/10/06</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_18/" title="每周分享第 18 期">每周分享第 18 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/09/29</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_17/" title="每周分享第 17 期">每周分享第 17 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/09/22</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_16/" title="每周分享第 16 期">每周分享第 16 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/09/15</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_15/" title="每周分享第 15 期">每周分享第 15 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/09/08</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_14/" title="每周分享第 14 期">每周分享第 14 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/09/01</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_13/" title="每周分享第 13 期">每周分享第 13 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/08/25</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_12/" title="每周分享第 12 期">每周分享第 12 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/08/18</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_11/" title="每周分享第 11 期">每周分享第 11 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/08/11</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_10/" title="每周分享第 10 期">每周分享第 10 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/08/04</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_9/" title="每周分享第 9 期">每周分享第 9 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/07/28</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_8/" title="每周分享第 8 期">每周分享第 8 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/07/21</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_7/" title="每周分享第 7 期">每周分享第 7 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/07/14</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_6/" title="每周分享第 6 期">每周分享第 6 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/07/06</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_5/" title="每周分享第 5 期">每周分享第 5 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/06/30</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_4/" title="每周分享第 4 期">每周分享第 4 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/06/23</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_3/" title="每周分享第 3 期">每周分享第 3 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/06/16</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_2/" title="每周分享第 2 期">每周分享第 2 期</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/06/09</span>
+            <a href="http://study.tczhong.com/post/sharing/sharing_1/" title="每周分享第 1 期">每周分享第 1 期</a>
+        </li>
+        
+    </ul>
     
+    <h2><a href="http://study.tczhong.com/tags/leetcode">leetcode</a> (9)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2018/09/21</span>
+            <a href="http://study.tczhong.com/post/algo/bit/" title="Bit算法题的思考">Bit算法题的思考</a>
+        </li>
+        
+        <li>
+            <span class="date">2018/09/10</span>
+            <a href="http://study.tczhong.com/post/algo/linkedlist/" title="Linkedlist算法题的思考">Linkedlist算法题的思考</a>
+        </li>
+        
+        <li>
+            <span class="date">2018/09/08</span>
+            <a href="http://study.tczhong.com/post/algo/interval/" title="Interval算法题的思考">Interval算法题的思考</a>
+        </li>
+        
+        <li>
+            <span class="date">2018/09/04</span>
+            <a href="http://study.tczhong.com/post/algo/dp/" title="DP算法题的思考">DP算法题的思考</a>
+        </li>
+        
+        <li>
+            <span class="date">2018/09/04</span>
+            <a href="http://study.tczhong.com/post/algo/stack/" title="Stack算法题的思考">Stack算法题的思考</a>
+        </li>
+        
+        <li>
+            <span class="date">2018/08/28</span>
+            <a href="http://study.tczhong.com/post/algo/graph/" title="Graph算法题的思考">Graph算法题的思考</a>
+        </li>
+        
+        <li>
+            <span class="date">2018/08/24</span>
+            <a href="http://study.tczhong.com/post/algo/array/" title="Array算法题的思考">Array算法题的思考</a>
+        </li>
+        
+        <li>
+            <span class="date">2018/08/22</span>
+            <a href="http://study.tczhong.com/post/algo/string/" title="String算法题的思考">String算法题的思考</a>
+        </li>
+        
+        <li>
+            <span class="date">2018/08/21</span>
+            <a href="http://study.tczhong.com/post/algo/tree/" title="树形算法题的思考">树形算法题的思考</a>
+        </li>
+        
+    </ul>
     
-
-    <h4><a href="/tags/weekly/">weekly</a></h4>
-    <h5>March 22, 2020</h5>
+    <h2><a href="http://study.tczhong.com/tags/love">love</a> (6)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2019/11/17</span>
+            <a href="http://study.tczhong.com/post/love/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%85%AD%E7%88%B1%E6%83%85/" title="《亲密关系》读书笔记（六） 爱情">《亲密关系》读书笔记（六） 爱情</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/11/10</span>
+            <a href="http://study.tczhong.com/post/love/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%BA%94/" title="《亲密关系》读书笔记（五）友谊">《亲密关系》读书笔记（五）友谊</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/11/03</span>
+            <a href="http://study.tczhong.com/post/love/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%9B%9B%E7%9B%B8%E4%BA%92%E4%BE%9D%E8%B5%96/" title="《亲密关系》读书笔记（四） 相互依赖">《亲密关系》读书笔记（四） 相互依赖</a>
+        </li>
+        
+        <li>
+            <span class="date">2019/10/27</span>
+            <a href="http://study.tczhong.com/post/love/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%B8%89-%E6%B2%9F%E9%80%9A/" title="《亲密关系》读书笔记（三） 沟通 ">《亲密关系》读书笔记（三） 沟通 </a>
+        </li>
+        
+        <li>
+            <span class="date">2019/10/20</span>
+            <a href="http://study.tczhong.com/post/love/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%BA%8C%E7%A4%BE%E4%BC%9A%E8%AE%A4%E7%9F%A5/" title="《亲密关系》读书笔记（二） 社会认知 ">《亲密关系》读书笔记（二） 社会认知 </a>
+        </li>
+        
+        <li>
+            <span class="date">2019/10/13</span>
+            <a href="http://study.tczhong.com/post/love/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E5%90%B8%E5%BC%95%E5%8A%9B/" title="《亲密关系》读书笔记（一） 吸引力 ">《亲密关系》读书笔记（一） 吸引力 </a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/android">android</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2019/06/04</span>
+            <a href="http://study.tczhong.com/post/tech/wechathistory/" title="Root红米手机以及获取微信聊天记录">Root红米手机以及获取微信聊天记录</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/array">array</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2018/08/24</span>
+            <a href="http://study.tczhong.com/post/algo/array/" title="Array算法题的思考">Array算法题的思考</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/bit">bit</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2018/09/21</span>
+            <a href="http://study.tczhong.com/post/algo/bit/" title="Bit算法题的思考">Bit算法题的思考</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/documentation">documentation</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2015/07/28</span>
+            <a href="http://study.tczhong.com/post/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%86%99%E4%BD%9C/" title="文档写作">文档写作</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/dp">dp</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2018/09/04</span>
+            <a href="http://study.tczhong.com/post/algo/dp/" title="DP算法题的思考">DP算法题的思考</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/food">food</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2016/04/28</span>
+            <a href="http://study.tczhong.com/post/%E8%86%B3%E9%A3%9F%E8%90%A5%E5%85%BB%E6%8C%87%E5%AF%BC/" title="如何吃饭">如何吃饭</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/graph">graph</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2018/08/28</span>
+            <a href="http://study.tczhong.com/post/algo/graph/" title="Graph算法题的思考">Graph算法题的思考</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/health">health</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2017/09/28</span>
+            <a href="http://study.tczhong.com/post/%E8%BF%90%E5%8A%A8/" title="运动">运动</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/stack">stack</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2018/09/04</span>
+            <a href="http://study.tczhong.com/post/algo/stack/" title="Stack算法题的思考">Stack算法题的思考</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/string">string</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2018/08/22</span>
+            <a href="http://study.tczhong.com/post/algo/string/" title="String算法题的思考">String算法题的思考</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/study">study</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2017/09/28</span>
+            <a href="http://study.tczhong.com/post/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" title="学习">学习</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/time">time</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2016/09/28</span>
+            <a href="http://study.tczhong.com/post/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/" title="时间管理">时间管理</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/tree">tree</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2018/08/21</span>
+            <a href="http://study.tczhong.com/post/algo/tree/" title="树形算法题的思考">树形算法题的思考</a>
+        </li>
+        
+    </ul>
+    
+    <h2><a href="http://study.tczhong.com/tags/wechat">wechat</a> (1)</h2>
+    <ul class="listing">
+        
+        <li>
+            <span class="date">2019/06/04</span>
+            <a href="http://study.tczhong.com/post/tech/wechathistory/" title="Root红米手机以及获取微信聊天记录">Root红米手机以及获取微信聊天记录</a>
+        </li>
+        
+    </ul>
     
 
 </div>
-  <div class="item">
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://study.tczhong.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_42/" title="每周分享第 42 期">每周分享第 42 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_41/" title="每周分享第 41 期">每周分享第 41 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_40/" title="每周分享第 40 期">每周分享第 40 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_39/" title="每周分享第 39 期">每周分享第 39 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_38/" title="每周分享第 38 期">每周分享第 38 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_37/" title="每周分享第 37 期">每周分享第 37 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_36/" title="每周分享第 36 期">每周分享第 36 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_35/" title="每周分享第 35 期">每周分享第 35 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_34/" title="每周分享第 34 期">每周分享第 34 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_33/" title="每周分享第 33 期">每周分享第 33 期</a>
+    </li>
+    
+</ul>
+    </section>
 
     
-    
-    
 
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
     
-    
+</ul>
+    </section>
 
-    <h4><a href="/tags/love/">love</a></h4>
-    <h5>November 17, 2019</h5>
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
     
-
+    <a href="http://study.tczhong.com/tags/android/">Android</a>
+    
+    <a href="http://study.tczhong.com/tags/array/">array</a>
+    
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
+    
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
+    
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
+    
+    <a href="http://study.tczhong.com/tags/food/">food</a>
+    
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
+    
+    <a href="http://study.tczhong.com/tags/health/">health</a>
+    
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
+    
+    <a href="http://study.tczhong.com/tags/love/">love</a>
+    
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
+    
+    <a href="http://study.tczhong.com/tags/string/">string</a>
+    
+    <a href="http://study.tczhong.com/tags/study/">study</a>
+    
+    <a href="http://study.tczhong.com/tags/time/">time</a>
+    
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
+    
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
+    
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
+    
 </div>
-  <div class="item">
+    </section>
 
     
-    
-    
 
-    
-    
-
-    <h4><a href="/tags/android/">Android</a></h4>
-    <h5>June 4, 2019</h5>
-    
-
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://study.tczhong.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
 </div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/wechat/">wechat</a></h4>
-    <h5>June 4, 2019</h5>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/bit/">bit</a></h4>
-    <h5>September 21, 2018</h5>
-    
-
-</div>
- 
-
-</main>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="http://study.tczhong.com/">Learn More By </a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
 
 
 
-<div class="pages">
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
 
-     
-    <a class="icon pages-icon" href="/tags/page/2/" rel="next">
-        <i class="fa fa-arrow-right"></i>
-    </a>
-    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-120924697-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
-</div>
 
 
 
-        <footer>
 
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
 
-        </footer>
-       
-    </body>
+</body>
 
 </html>
-

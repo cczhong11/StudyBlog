@@ -1,178 +1,266 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us">
-    <head>
-         
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>stack</title>
-        
-        <style>
+<head>
 
-    html body {
-        font-family: 'Noto Sans SC', sans-serif;
-        background-color: white;
-    }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    :root {
-        --accent: red;
-        --border-width:  5px ;
-    }
-
-</style>
-
-
-<link rel="stylesheet" href="http://study.tczhong.com/css/main.css">
-
-
-
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto%20Sans%20SC">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
- 
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script> 
-
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.67.0" />
-        <link rel="alternate" type="application/rss+xml" href="http://study.tczhong.com/tags/stack/index.xml" title="Learn More" />
+    <title>stack | Learn More</title>
+    <meta property="og:title" content="stack - Learn More">
+    <meta property="og:type" content="article">
         
         
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120924697-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)};
-          gtag('js', new Date());
-
-          gtag('config', 'UA-120924697-1');
-        </script>
+    <meta name="Keywords" content="">
+    <meta name="description" content="stack">
         
-    </head>
+    <meta name="author" content="">
+    <meta property="og:url" content="http://study.tczhong.com/tags/stack/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml+xml" href="http://study.tczhong.com/tags/stack/index.xml" title="Learn More" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
 
     
     
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-    
+</head>
 
-    <body>
-         
-        <nav class="navbar navbar-default navbar-fixed-top">
 
-            <div class="container">
-
-                <div class="navbar-header">
-
-                    <a class="navbar-brand visible-xs" href="#">stack</a>
-
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                </div>
-
-                <div class="collapse navbar-collapse">
-
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="/">Home</a></li>
-                            
-                                <li><a href="/tags/leetcode/">Leetcode</a></li>
-                            
-                                <li><a href="/pos/">Posts</a></li>
-                            
-                                <li><a href="/tags/love/">亲密关系</a></li>
-                            
-                                <li><a href="/tags/weekly/">每周分享</a></li>
-                            
-                        </ul>
-                    
-
-                    
-                        <ul class="nav navbar-nav navbar-right">
-                            
-                                <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="fa fa-envelope-o"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fa fa-github"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fa fa-linkedin"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/7112540/tc-zhong"><i class="fa fa-stack-overflow"></i></a></li>
-                            
-                        </ul>
-                    
-
-                </div>
-
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://study.tczhong.com/">
+                        Learn More
+                    </a>
+                
+                
             </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="" href="http://study.tczhong.com/">首页</a>
+                    
+                    <a  href="http://study.tczhong.com/" title="Home">Home</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/leetcode/" title="Leetcode">Leetcode</a>
+                    
+                    <a  href="http://study.tczhong.com/pos/" title="Posts">Posts</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/love/" title="亲密关系">亲密关系</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/weekly/" title="每周分享">每周分享</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
 
-        </nav>
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
 
-
-<main>
-
-    <h2>stack</h2>
-
-     <div class="item">
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <h3 class="archive-title">
+        包含标签
+        <span class="keyword">stack</span>
+        的文章
+    </h3>
+    
 
     
-    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/algo/stack/">Stack算法题的思考</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2018年9月4日
+        </date>
+        
+        <div class="post-content">
+            Stack 算法题的思考 这类题目也是比较多的，一般比较繁琐。思路类似DFS，不过可以不使用递归实现。
+String 解析类 这类比较多的就是计算器，以及分析括号里的内容。例如解析 3[a]2[bc],这时候就可以在遇到[的时候把之前的东西都压到栈里，之后当遇到]的时候把内容再pop出来。
+对于计算器，如果是后缀表达式的话，可以把结果都压到栈里，遇到运算符再pop出运算。有括号的话还是按括号的方法，主要要注意加法和乘法的区别。
+计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如(1+2)+(3+4), +可以看作是是后一个括号的符号。对于1*2 + 6/3,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。
+ 150. Evaluate Reverse Polish Notation 385. Mini Parser 394. Decode String 726. Number of Atoms 224. Basic Calculator 227. Basic Calculator II 770. Basic Calculator IV 772. Basic Calculator III  大小差距 还有一类题目就是问下一个比自己大的数还有多远，可以使用栈。栈里面存的都是比栈顶小的数，遇到比栈顶大的数n就可以弹出栈里的数j，因为这时我们可以知道比之前那个数j大的数在n了，更新之前那个数j的结果。
+栈的作用存一个至今遇到的大值。栈底是最大的值，栈顶是至今遇到的大值里最小的。
+for (int i = 0; i &lt; n; i++) { while (!stack.isEmpty() &amp;&amp; temperatures[i] &gt; temperatures[stack.peek()]) { int idx = stack.pop(); res[idx] = i - idx; } stack.……
+            <p class="readmore"><a href="http://study.tczhong.com/post/algo/stack/">阅读全文</a></p>
+        </div>
+    </article>
     
 
     
-    
 
-    <h4><a href="/post/algo/stack/">Stack算法题的思考</a></h4>
-    <h5>September 4, 2018</h5>
-    
-    <a href="http://study.tczhong.com/tags/leetcode"><kbd class="item-tag">leetcode</kbd></a>
-    
-    <a href="http://study.tczhong.com/tags/stack"><kbd class="item-tag">stack</kbd></a>
-    
+
+
+
 
 </div>
- 
 
-</main>
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://study.tczhong.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_42/" title="每周分享第 42 期">每周分享第 42 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_41/" title="每周分享第 41 期">每周分享第 41 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_40/" title="每周分享第 40 期">每周分享第 40 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_39/" title="每周分享第 39 期">每周分享第 39 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_38/" title="每周分享第 38 期">每周分享第 38 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_37/" title="每周分享第 37 期">每周分享第 37 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_36/" title="每周分享第 36 期">每周分享第 36 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_35/" title="每周分享第 35 期">每周分享第 35 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_34/" title="每周分享第 34 期">每周分享第 34 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_33/" title="每周分享第 33 期">每周分享第 33 期</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://study.tczhong.com/tags/android/">Android</a>
+    
+    <a href="http://study.tczhong.com/tags/array/">array</a>
+    
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
+    
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
+    
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
+    
+    <a href="http://study.tczhong.com/tags/food/">food</a>
+    
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
+    
+    <a href="http://study.tczhong.com/tags/health/">health</a>
+    
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
+    
+    <a href="http://study.tczhong.com/tags/love/">love</a>
+    
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
+    
+    <a href="http://study.tczhong.com/tags/string/">string</a>
+    
+    <a href="http://study.tczhong.com/tags/study/">study</a>
+    
+    <a href="http://study.tczhong.com/tags/time/">time</a>
+    
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
+    
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
+    
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://study.tczhong.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="http://study.tczhong.com/">Learn More By </a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
 
 
 
-        <footer>
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
 
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-120924697-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
-        </footer>
-       
-    </body>
+
+
+
+
+
+</body>
 
 </html>
-
