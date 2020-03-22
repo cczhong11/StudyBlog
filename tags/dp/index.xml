@@ -19,9 +19,7 @@
       <guid>http://study.tczhong.com/post/algo/dp/</guid>
       <description>DP 算法题目的思考 dp全称是动态规划，是一类被人又喜欢又讨厌的题目。喜欢是因为找到递推关系之后题目就变得简单了，讨厌的原因是这类题目常常很难想到递推关系。
 dp的核心思想就是把一个复杂的问题分解成简单的子问题，并且可以利用递推的方式来解决。所有dp题目的核心是：
- 递推公式 deduction formula 初始化 initialization 空间优化 space improvement  路径数量 这类题目就是看有几种方式可以到这个点，然后把这几种方式的路径加起来就可以。这是自下而上的思想，对于青蛙跳的那道题也可以自上而下利用递归的思路解题。只要可以跳到，就可以变成一个子问题，把这个点当做起点来进行。
-word break 这类题目就可以使用相同的思想。思路是判断前i个是否可以组成，之后就判断这从i到j是否是一个单词。如果要记录下来所有的组成可能的话就可以使用dfs了。
- 62. Unique Paths 63. Unique Paths II 64. Minimum Path Sum 70. Climbing Stairs 91. Decode Ways 139. Word Break 198. House Robber 213. House Robber II 338. Counting Bits 357.</description>
+ 递推公式 deduction formula 初始化 initialization 空间优化 space improvement  路径数量 这类题目就是看有几种方式可以到这个点，然后把这几种方式的路径加起来就可以。这是自下而上的思想，对于青蛙跳的那道题也可以自上而下利用递归的思路解题。只要可以跳到，就可以变成一个子问题，把这个点当做起点来进行。</description>
     </item>
     
   </channel>

@@ -20,9 +20,7 @@
       <description>String 算法思考 String 类型的题目算是leetcode里第二多的题型，其实这个和array的使用方法差不太多，只不过其中有一些特定的使用场景。我在这里会将string分为几类问题，可能不能包括所有的类别，尽量使用较为统一的思路解释遇到的题目。
 数据类型 首先要说清楚一点，在java中String是immutable的，也就是当你创建一个string后是不能修改的，如果你需要给他加内容，java会重新创一个新的实例。这样的问题就是如果使用s+=a,这样时间复杂度是O(n),在java中会重新复制一遍string再给你创建。
 解决办法就是使用StringBuilder，这个的时间复杂度对于增加就是O(1).其中内部实现就是一个char[]
- sb.append(String str) sb.toString()  组合问题 这类问题就是需要得到某个字符串中包含的所有子集,或者是permutation.这类题日非常相似，需要找出符合条件的所有组合。基本思路是样的，可以使用DFS与backtrack实现。例如 Combination Sum,可以把这题变成一个子问题选择了数字n后，求解sum-n的子问题的解答。所以可以先排序选择第一个元素，然后在函数中记录以下这些：
- 结果列表 当前路径存入的值， 所有可能的值 剩余的Sum 当前选择的位置,深度  在执行递归前将数字存入，在执行后从数组中删去。如果是计算permutation, 在参种增加一个数组用来判断当前数字是否访过。类似的题目有以下这些：
- 17. Letter Combinations of a Phone Number 282. Expression Add Operators 39. Combination Sum 40. Combination Sum II 78. Subsets 79. Word Search 46. Permutations 47.</description>
+ sb.append(String str) sb.</description>
     </item>
     
   </channel>

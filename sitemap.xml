@@ -418,6 +418,11 @@
   </url>
   
   <url>
+    <loc>http://study.tczhong.com/archives/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://study.tczhong.com/post/machinelearning/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</loc>
   </url>
   
@@ -427,6 +432,10 @@
   
   <url>
     <loc>http://study.tczhong.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/search/</loc>
   </url>
   
 </urlset>
