@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Stack算法题的思考 | Learn More</title>
-    <meta property="og:title" content="Stack算法题的思考 - Learn More">
+    <title>模型思维(3)--幂律分布 | Learn More</title>
+    <meta property="og:title" content="模型思维(3)--幂律分布 - Learn More">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2018-09-04T00:00:00&#43;08:00'>
+    <meta property="article:published_time" content='2020-04-22T00:00:00&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2018-09-04T00:00:00&#43;08:00'>
+    <meta property="article:modified_time" content='2020-04-22T00:00:00&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="Stack算法题的思考">
+    <meta name="description" content="模型思维(3)--幂律分布">
         
     <meta name="author" content="">
-    <meta property="og:url" content="http://study.tczhong.com/post/algo/stack/">
+    <meta property="og:url" content="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B43-%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -97,53 +97,56 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">Stack算法题的思考</h1>
+            <h1 class="post-title">模型思维(3)--幂律分布</h1>
         </header>
         <date class="post-meta meta-date">
-            2018年9月4日
+            2020年4月22日
         </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
         
         
         
         <div class="post-content">
-            <h1 id="stack-算法题的思考">Stack 算法题的思考</h1>
-<p>这类题目也是比较多的，一般比较繁琐。思路类似DFS，不过可以不使用递归实现。</p>
-<h2 id="string-解析类">String 解析类</h2>
-<p>这类比较多的就是计算器，以及分析括号里的内容。例如解析 <code>3[a]2[bc]</code>,这时候就可以在遇到<code>[</code>的时候把之前的东西都压到栈里，之后当遇到<code>]</code>的时候把内容再pop出来。</p>
-<p>对于计算器，如果是后缀表达式的话，可以把结果都压到栈里，遇到运算符再pop出运算。有括号的话还是按括号的方法，主要要注意加法和乘法的区别。</p>
-<p>计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如<code>(1+2)+(3+4)</code>, +可以看作是是后一个括号的符号。对于1*2 + 6/3,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。</p>
-<ul>
-<li><a href="https://leetcode.com/problems/evaluate-reverse-polish-notation">150. Evaluate Reverse Polish Notation</a></li>
-<li><a href="https://leetcode.com/problems/mini-parser">385. Mini Parser</a></li>
-<li><a href="https://leetcode.com/problems/decode-string">394. Decode String</a></li>
-<li><a href="https://leetcode.com/problems/number-of-atoms">726. Number of Atoms</a></li>
-<li><a href="https://leetcode.com/problems/basic-calculator">224. Basic Calculator</a></li>
-<li><a href="https://leetcode.com/problems/basic-calculator-ii">227. Basic Calculator II</a></li>
-<li><a href="https://leetcode.com/problems/basic-calculator-iv">770. Basic Calculator IV</a></li>
-<li><a href="https://leetcode.com/problems/basic-calculator-iii">772. Basic Calculator III</a></li>
-</ul>
-<h2 id="大小差距">大小差距</h2>
-<p>还有一类题目就是问下一个比自己大的数还有多远，可以使用栈。栈里面存的都是比栈顶小的数，遇到比栈顶大的数n就可以弹出栈里的数j，因为这时我们可以知道比之前那个数j大的数在n了，更新之前那个数j的结果。</p>
-<p>栈的作用存一个至今遇到的大值。栈底是最大的值，栈顶是至今遇到的大值里最小的。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">&amp;&amp;</span> temperatures<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> temperatures<span style="color:#f92672">[</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">()])</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">int</span> idx <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
-        res<span style="color:#f92672">[</span>idx<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> idx<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-        stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-<span style="color:#75715e">//保存自己是最低的边界 
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">;</span> <span style="color:#f92672">++</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">&amp;&amp;</span> A<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;=</span> A<span style="color:#f92672">[</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">()])</span>
-                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
-    prev<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">?</span> <span style="color:#f92672">-</span>1 <span style="color:#f92672">:</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">();</span>
-    stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><ul>
-<li><a href="https://leetcode.com/problems/remove-k-digits">402. Remove K Digits</a></li>
-<li><a href="https://leetcode.com/problems/daily-temperatures">739. Daily Temperatures</a></li>
-<li><a href="https://leetcode.com/problems/sum-of-subarray-minimums">907. Sum of Subarray Minimums</a></li>
-</ul>
+            <p><img src="https://tczimg.s3.amazonaws.com/book/powerlaw.png" alt=""></p>
+<p>这一篇讨论的是幂律分布(power law distribution)。这个分布在生活中十分常见，如果当我们发现会出现一些极端的情况，视频下载量、书籍销量、学术论文引用数量、战争中的伤亡人数、洪水和地震等等，这就是幂律分布。而这些极端情况就在这长长的尾巴里，也被称为长尾分布。</p>
+<h2 id="幂律分布的定义">幂律分布的定义</h2>
+<p>在正态分布里，我们要求事件是互相独立的，而在幂律分布中，事件则不是互相独立的，而且通常是以正反馈的形式出现的。当一件事情发生之后，也会更频繁地发生类似的事情。</p>
+<p>我们可以用数学公式来定义幂律分布。事件发生的概率与事件大小的负指数成比例。事件越大，发生的可能性越小。</p>
+<p>一个定义在区间 $[x_{min}, \infty]$ 的幂律分布可以写成:</p>
+<p>$$P(x) = C x^{-\alpha}$$</p>
+<p>其中 $\alpha$ &gt; 1决定了尾部的长度， 同时常数项 C = (\alpha -1)x^{\alpha-1}_{min}确保了总概率分布，幂律中的指数决定了大事件的可能性。</p>
+<p>这里需要提到长尾分布和正态分布的区别。正态分布的确也存在一部分长尾，但是在正态分布里的大事件概率可以忽略不计，但是幂律分布里则需要考虑。当我们将两个分布利用<a href="https://zh.wikipedia.org/zh-hans/%E5%8F%8C%E5%AF%B9%E6%95%B0%E5%9D%90%E6%A0%87%E7%B3%BB">双对数坐标</a>画出时（见下图），我们可以发现当值比较大的时候，正态分布的下降要比幂律分布快很多，幂律分布则是以固定的斜率下降的。由此可以看出在数量很大的时候，正态分布中事情发生的概率会比幂律分布小很多。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/book/log-log.png" alt=""></p>
+<p>双对数坐标中的幂律分布（黑色）与正态分布（灰色）</p>
+<h3 id="zipf-law">Zipf law</h3>
+<p>这是幂律分布的特殊形式，最初是从自然语言处理里出现。在自然语言的语料库里，一个单词出现的频率与它在频率表里的排名成反比。所以，频率最高的单词出现的频率大约是出现频率第二位的单词的2倍，而出现频率第二位的单词则是出现频率第四位的单词的2倍。<strong>事件的等级排列序号乘以其概率是常数</strong>。以下的图表表现了英语的情况。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/book/zipflaw.png" alt=""></p>
+<p>这个分布不仅存在自然语言中，同时还出现在城市人口分布中。下图是双对数坐标系，在这条线上说明乘积是常数。可以看出美国几大城市是符合zipf law的。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/book/zipflawcity.png" alt=""></p>
+<p>另一个有趣的应用就是《红楼梦》人物出场次数也符合幂律分布。一些详细的分析可以看<a href="https://www.douban.com/note/63203076/">这里</a></p>
+<h2 id="偏好依附模型">偏好依附模型</h2>
+<p>我们通过偏好依附模型（preferential attachment model）来研究幂律分布产生的原因。</p>
+<blockquote>
+<p>偏好依附模型</p>
+<p>一连串物体（人）一个接一个地到达。第一个到达者创建一个实体。后续每次有人到达时都应用以下规则：在概率p（较小）的情况下，新到达者创造一个新的实体；在概率（1-p）的情况下，新到达者加入现有的某个实体。加入某个特定实体的概率等于该实体的大小除以到目前为止所有到达者的数量</p>
+</blockquote>
+<p><img src="https://tczimg.s3.amazonaws.com/book/preferential_attech_model.png" alt=""></p>
+<p>这里可以以大学新生进入大学加入社团举一个例子。第一个来到学校的学生创建了一个新的社团，第二个到达的学生以较小的概率创建了自己的社团，更有可能的是，他会加入第一个学生创建的社团。前10个到达的学生可能会创建3个社团：一个有7个成员，一个有两个成员，一个有一个成员。（注：上图中第三个社团的人数为1，而不是3）第11个到达的学生只会以极小的概率创建第4个社团，如果不创建新的社团，她就加入现有的社团。如果这样做，那么她有70%的可能性加入已有7个学生的社团，有20%的可能性加入已有两个学生的社团，只有10%的可能性加入只有一个学生的社团。</p>
+<p>这个模型可以解释&rdquo;<strong>马太效应</strong>&quot;: 更多导致更多。一个人的行动会导致更多人选择这个行动，产生幂律分布。在生活中很多事情也可以验证这一点：例如互联网上的视频浏览量，知乎答案的点赞量，有一些答案的点赞数会比其他的答案多很多很多倍。一方面是人们在做选择时会遵循这个模型里所写的，另一方面也是目前推荐算法所产生的结果。这其实也反应出有的时候点赞数量可能并不能反应这个答案的质量，可能只是初始的时候随机因素导致这个答案比别的的多，导致后面的人会选择这个答案。</p>
+<h2 id="自组织临界模型">自组织临界模型</h2>
+<p>这个模型是在系统中各个组件建立了相互依赖的关系，产生了幂律分布，当到达某个临街点状态后，系统状态就会快速变化。这里可以拿沙堆举一个例子，假设有人将沙粒从距桌面几十厘米的地方洒落到桌子上。随着沙粒不断增多，一个沙堆开始形成。最终，沙子的堆积会达到临界状态，此后每加一次沙子都可能导致“沙崩”。在这种临界状态下，多加入的沙子通常要么没有影响，要么最多只会导致一些沙子下滑。这些属于幂律分布中的数量众多的小事件。但有时，只要再加入一粒沙子就会导致大规模的“沙崩”，这就是大事件。同理，雪崩也是同样的道理。</p>
+<p>森林火灾模型（forest fire model）也是自组织临界模型的一种。当树木的密度较低时，由闪电引发的任何火灾的规模都很小，最多只会蔓延到几个格点。当树木密度变得足够高时，再被闪电击中就会导致森林大火。这里的森林密度是存在一个临界点的，当密度低于这个临界点的时候，即使闪电击中任意一棵树，也很难发生整个森林的大火。当超过这个临界点，大火蔓延至整个森林的概率就快速上升。</p>
+<p>利用这个模型也可以解释一部分2008年金融危机。可以把银行看作树木，不同银行因为借贷的关系互相联系精密，当一家因为坏账太多就会牵连他联系紧密的银行，之后就导致整个金融行业的崩溃。</p>
+<p>这个模型告诉我们临界密度的存在，俗称”压倒骆驼的最后一根稻草“。某个重大事情的发生不是因为孤立的事件，而是因为整个系统的状态已经接近崩溃了。</p>
+<h2 id="总结">总结</h2>
+<p>幂律分布还有不少的应用，例如二八法则，做前20%工作占了80%成果，在分布里头部占大多数，尾部虽然很长，但占整体很少。</p>
+<p>在看问题时利用幂律分布的思路可以更好理解极端的大事件的发生原因。</p>
 
         </div>
 
@@ -156,15 +159,9 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/algo/dp/">DP算法题的思考</a></li>
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B42-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/">模型思维（2）-- 正态分布</a></li>
         
-        <li><a href="/post/algo/graph/">Graph算法题的思考</a></li>
-        
-        <li><a href="/post/algo/array/">Array算法题的思考</a></li>
-        
-        <li><a href="/post/algo/string/">String算法题的思考</a></li>
-        
-        <li><a href="/post/algo/tree/">树形算法题的思考</a></li>
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B41-%E5%AF%B9%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%BB%BA%E6%A8%A1/">模型思维（1）--对人类的建模</a></li>
         
     </ul>
 </div>
@@ -174,9 +171,9 @@
             
             <ul class="clearfix">
                 
-                <li><a href='http://study.tczhong.com/tags/leetcode'>leetcode</a></li>
+                <li><a href='http://study.tczhong.com/tags/book'>book</a></li>
                 
-                <li><a href='http://study.tczhong.com/tags/stack'>stack</a></li>
+                <li><a href='http://study.tczhong.com/tags/tech'>tech</a></li>
                 
             </ul>
             

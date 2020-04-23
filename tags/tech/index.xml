@@ -6,10 +6,22 @@
     <description>Recent content in tech on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://study.tczhong.com/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>模型思维(3)--幂律分布</title>
+      <link>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B43-%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B43-%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83/</guid>
+      <description>这一篇讨论的是幂律分布(power law distribution)。这个分布在生活中十分常见，如果当我们发现会出现一些极端的情况，视频下载量、书籍销量、学术论文引用数量、战争中的伤亡人数、洪水和地震等等，这就是幂律分布。而这些极端情况就在这长长的尾巴里，也被称为长尾分布。
+幂律分布的定义 在正态分布里，我们要求事件是互相独立的，而在幂律分布中，事件则不是互相独立的，而且通常是以正反馈的形式出现的。当一件事情发生之后，也会更频繁地发生类似的事情。
+我们可以用数学公式来定义幂律分布。事件发生的概率与事件大小的负指数成比例。事件越大，发生的可能性越小。
+一个定义在区间 $[x_{min}, \infty]$ 的幂律分布可以写成:</description>
+    </item>
     
     <item>
       <title>模型思维（2）-- 正态分布</title>
