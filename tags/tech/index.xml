@@ -6,10 +6,23 @@
     <description>Recent content in tech on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://study.tczhong.com/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>模型思维(4)--线性模型</title>
+      <link>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B44-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B44-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</guid>
+      <description>模型通常是假定变量之间存在特定的函数关系，而线性关系是最简单也是应用最广泛的。
+线性模型 在线性模型里，有自变量和应变量，应变量随着自变量的改变而改变。举一个梨子，假如树木的高度与树木的年龄呈线性关系，那么树木每年生长的高度相同。线性模型用数学语言描述如下:
+在线性模型中，自变量x的变化，会导致因变量y的线性变化，用如下方程表示：
+$$y = mx + b$$
+其中，m等于直线的斜率，b等于截距，即当自变量等于0时的因变量值。</description>
+    </item>
     
     <item>
       <title>读书推荐--《浪潮之巅》</title>
