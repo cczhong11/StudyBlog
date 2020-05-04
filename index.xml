@@ -6,10 +6,21 @@
     <description>Recent content on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://study.tczhong.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>每周分享第 48 期</title>
+      <link>http://study.tczhong.com/post/sharing/sharing_48/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/sharing/sharing_48/</guid>
+      <description>每周分享第 48 期 2020 week 18
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+国内新闻 国内政策 【1】沪上券商五一防疫内部通知：节日期间乘坐公共交通工具跨省、出市的员工，返回后安排居家隔离14天。五一黄金周不黄金。</description>
+    </item>
     
     <item>
       <title>模型思维(4)--线性模型</title>
@@ -18,8 +29,8 @@
       
       <guid>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B44-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</guid>
       <description>模型通常是假定变量之间存在特定的函数关系，而线性关系是最简单也是应用最广泛的。
-线性模型 在线性模型里，有自变量和应变量，应变量随着自变量的改变而改变。举一个梨子，假如树木的高度与树木的年龄呈线性关系，那么树木每年生长的高度相同。线性模型用数学语言描述如下:
-在线性模型中，自变量x的变化，会导致因变量y的线性变化，用如下方程表示：
+线性模型 在线性模型里，有自变量和应变量，应变量随着自变量的改变而改变。举一个例子，假如树木的高度与树木的年龄呈线性关系，那么树木每年生长的高度相同。线性模型用数学语言描述如下:
+在线性模型中，自变量x的变化，会导致因变量y的线性变化：
 $$y = mx + b$$
 其中，m等于直线的斜率，b等于截距，即当自变量等于0时的因变量值。</description>
     </item>
