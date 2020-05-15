@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>如何吃饭 | Learn More</title>
-    <meta property="og:title" content="如何吃饭 - Learn More">
+    <title>模型思维(6)--合作博弈模型 | Learn More</title>
+    <meta property="og:title" content="模型思维(6)--合作博弈模型 - Learn More">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2016-04-28T00:00:00&#43;08:00'>
+    <meta property="article:published_time" content='2020-05-13T00:00:00&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2016-04-28T00:00:00&#43;08:00'>
+    <meta property="article:modified_time" content='2020-05-13T00:00:00&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="如何吃饭">
+    <meta name="description" content="模型思维(6)--合作博弈模型">
         
     <meta name="author" content="">
-    <meta property="og:url" content="http://study.tczhong.com/post/%E8%86%B3%E9%A3%9F%E8%90%A5%E5%85%BB%E6%8C%87%E5%AF%BC/">
+    <meta property="og:url" content="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B46-%E5%90%88%E4%BD%9C%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -97,161 +97,186 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">如何吃饭</h1>
+            <h1 class="post-title">模型思维(6)--合作博弈模型</h1>
         </header>
         <date class="post-meta meta-date">
-            2016年4月28日
+            2020年5月13日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB'>生活</a></span>
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
             
         </div>
         
         
         
         <div class="post-content">
-            <h1 id="营养的种类">营养的种类</h1>
-<h2 id="营养的意义">营养的意义</h2>
-<p>营养素在人体内的功能主要分为3个方面：</p>
-<ol>
-<li>供给能量和维持体温</li>
-<li>作为“建筑”材料构成和修补身体组织</li>
-<li>作为调节物质，维持机体的正常生命活动，如同机器中的润滑油一样</li>
-</ol>
-<h2 id="人体所需能量和营养素">人体所需能量和营养素</h2>
-<h3 id="能量">能量</h3>
-<p>能量是维持人生命活动必不可少的部分，单位一般为千卡或千焦。1kcal=4.184kJ. 能量的消耗主要由以下4个方面</p>
-<ol>
-<li>基础代谢消耗</li>
-<li>食物特殊动力作用，摄取营养而引起的能量消耗。蛋白质最强，其次是碳水化合物，最后是脂肪</li>
-<li>体力活动的消耗</li>
-<li>生长发育消耗的能量</li>
-</ol>
-<p>碳水化合物，脂肪,蛋白质作为人体主要的产能营养素，表现不相同。每克脂肪产能量约为9kcal，每克碳水化合物和蛋白质约4kcal。膳食指南推荐三者比例为6.5:2.5:1</p>
-<h3 id="主要营养素">主要营养素</h3>
+            <p>当人们在进行合作的时候，我们需要对于每个人的贡献进行分析，从而知道哪一个人对于群体的贡献最大，哪一个最小，以此可以作为分配奖励的标准。然而量化分析这个并不容易，因为当不同人组合在一起时，可能就会产生不同的结果。我们通过这篇介绍几个与此相关的概念来解决这个问题。</p>
+<h2 id="合作博弈">合作博弈</h2>
+<p>合作博弈由一组博弈参与者和一个价值函数组成。价值函数是指在一项多人合作的项目中，每个可能的联盟（子集）所产生的价值。</p>
+<p>在合作博弈中，一个参与者的”最后上车者价值“ （last-on-bus-value）是指当他最后一个加入组织所产生的价值。例如，如果一个桌子四个人才能搬动，搬动的价值是10，那么这四个人每个人的最后上车者价值就是10。如果三个人可以搬动，那个第四个人的最后上车者价值就是0。我们可以看出博弈的总价值不是所有参与者的最后上车者价值之和，如果当价值随着参与者增多递减时，最后上车者价值的总和将小于博弈的总价值。</p>
+<p>最后上车者价值并不能很好的刻画每个人的贡献度，夏普利值（Shapley value）则可以。一个博弈参与者的夏普利值，等于他在所有可能加入的联盟的次序下对联盟边际贡献的平均值。对于一个$N$个人参与的博弈,一个有$N!$种可能加入的结果，对于某个参与者$i$, 计算在所有次序中当其加入对于整体的边际贡献的平均值。</p>
+<p>我们可以用3个程序员合作写代码作为一例子，一个项目有500行需要写。以下是一个人单独做，两个人合作，以及三个人合作产生的结果。其中C可以看作程序员鼓励师，当一个做的时候结果不多，但是合作时可以大大提高两人的合作成果。</p>
 <table>
 <thead>
 <tr>
-<th>名称</th>
-<th align="center">作用</th>
-<th align="center">主要来源</th>
-<th align="right">备注</th>
+<th>合作</th>
+<th>价值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>蛋白质</td>
-<td align="center">构成和修补人体组织，构成酶和抗体，供给能量</td>
-<td align="center">肝，蛋，瘦肉，豆制品，奶制品；含量中等的是谷类食物</td>
-<td align="right">蛋白质的消化率不同，动物性食物可达90%，植物性只有80%。</td>
+<td>A</td>
+<td>100</td>
 </tr>
 <tr>
-<td>脂类</td>
-<td align="center">供给能量，构成一些重要的生理物质，供给必需脂肪酸，维持体温保护脏器，脂溶性维生素来源</td>
-<td align="center">烹调油，肥肉，肉类，芝麻松子花生</td>
+<td>B</td>
+<td>125</td>
+</tr>
+<tr>
+<td>C</td>
+<td>50</td>
+</tr>
+<tr>
+<td>AB</td>
+<td>270</td>
+</tr>
+<tr>
+<td>BC</td>
+<td>350</td>
+</tr>
+<tr>
+<td>AC</td>
+<td>375</td>
+</tr>
+<tr>
+<td>ABC</td>
+<td>500</td>
+</tr>
+</tbody>
+</table>
+<p>3个人合作的话有6种可能</p>
+<table>
+<thead>
+<tr>
+<th>顺序</th>
+<th>A的贡献</th>
+<th>B的贡献</th>
+<th>C的贡献</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ABC</td>
+<td>100</td>
+<td>170</td>
+<td>230</td>
 <td></td>
 </tr>
 <tr>
-<td>碳水化合物</td>
-<td align="center">主要能量来源，构成人体重要物质，增强肝脏解毒能力</td>
-<td align="center">谷物，薯类，豆类，坚果类，食糖。蔬菜水果有纤维素和果胶</td>
-<td align="right">淀粉是多糖，需分解为双糖（麦芽糖），再分解为可以直接吸收的单糖（葡萄糖）</td>
-</tr>
-<tr>
-<td>钙</td>
-<td align="center">骨骼和牙齿，以离子形式在血液中</td>
-<td align="center">奶制品，虾皮，海带，豆制品</td>
-<td align="right">吃膳食纤维会不利于吸收</td>
-</tr>
-<tr>
-<td>铁</td>
-<td align="center">血红蛋白，肝脾</td>
-<td align="center">动物肝脏，血，鱼肉</td>
+<td>ACB</td>
+<td>100</td>
+<td>125</td>
+<td>275</td>
 <td></td>
 </tr>
 <tr>
-<td>锌</td>
-<td align="center">促进生长发育，增进食欲，增强对于疾病的抵抗力</td>
-<td align="center">鲜牡蛎，肉蛋类</td>
+<td>BAC</td>
+<td>145</td>
+<td>125</td>
+<td>230</td>
 <td></td>
 </tr>
 <tr>
-<td>碘</td>
-<td align="center">甲状腺素</td>
-<td align="center">海带紫菜海鱼</td>
-<td align="right">甲状腺肿大和甲亢</td>
-</tr>
-<tr>
-<td>维生素A</td>
-<td align="center">视网膜细胞，促进蛋白质合成，加强抵抗力</td>
-<td align="center">动物肝脏，奶油和蛋黄，红黄绿色蔬菜和水果</td>
+<td>BCA</td>
+<td>150</td>
+<td>125</td>
+<td>225</td>
 <td></td>
 </tr>
 <tr>
-<td>维生素D</td>
-<td align="center">促进钙磷在肠道中吸收</td>
-<td align="center">日光，皮肤会产生</td>
+<td>CAB</td>
+<td>325</td>
+<td>125</td>
+<td>50</td>
 <td></td>
 </tr>
 <tr>
-<td>水</td>
-<td align="center">主要生理过程的介质，运输营养素，调节体温，润滑</td>
-<td align="center">水，食物水，代谢水</td>
-<td align="right">健康成人2500ml</td>
-</tr>
-<tr>
-<td>膳食纤维</td>
-<td align="center">促进肠蠕动，防止便秘</td>
-<td align="center">玉米，糙米，全麦粉，燕麦，干豆，蔬菜水果</td>
+<td>CBA</td>
+<td>150</td>
+<td>300</td>
+<td>50</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h1 id="中国居民膳食指南">中国居民膳食指南</h1>
-<ol>
-<li>食物多样，谷物为主</li>
-<li>多吃蔬菜，水果和薯类（土豆，白薯，木薯等）</li>
-<li>常吃奶类（100g），豆类或其制品（50g）</li>
-<li>经常吃适量鱼、禽、蛋、瘦肉，少吃肥肉和荤油</li>
-<li>食粮与体力活动要平衡，以保持适宜体重</li>
-<li>吃清淡少盐的膳食</li>
-<li>如饮酒，应限量</li>
-<li>吃清洁卫生不变质的食物</li>
-</ol>
-<h2 id="膳食宝塔">膳食宝塔</h2>
-<p><img src="../pic/3.jpg" alt="alt text"><!-- raw HTML omitted --></p>
-<h2 id="食物加工和选择注意">食物加工和选择注意</h2>
-<ol>
-<li>淘米会损失维生素b1，洗的水温要低，次数要少</li>
-<li>蒸面食营养损失少，面条营养损失较多</li>
-<li>洗菜在流水中冲洗，不可在水中浸泡</li>
-<li>红烧清炖肉类时，一些水溶性维生素和糖类，蛋白质融入水中，所以需要连汁带汤吃掉。炸食品严重破坏维生素</li>
-</ol>
-<h1 id="其他饮食技巧">其他饮食技巧</h1>
-<h2 id="聚餐减脂方法">聚餐减脂方法</h2>
-<ol>
-<li>聚会前2餐少吃</li>
-<li>聚餐前几小时可增加一次训练</li>
-<li>吃饭前15min喝两杯水</li>
-<li>先吃蔬菜这类纤维含量高的</li>
-<li>多给朋友加菜</li>
-<li>遇油腻拿茶水涮，油的热量高</li>
-<li>餐后大步走，后两餐少摄入</li>
-</ol>
-<h2 id="富有营养的食物">富有营养的食物</h2>
-<h3 id="提升免疫力的">提升免疫力的</h3>
+<p>由此我们可以计算每个人的夏普利值，发现</p>
+<table>
+<thead>
+<tr>
+<th>人</th>
+<th>夏普利值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>970/6</td>
+</tr>
+<tr>
+<td>B</td>
+<td>970/6</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1060/6</td>
+</tr>
+</tbody>
+</table>
+<p>我们可以看出虽然A和B单独一人对于整个项目的贡献是大大多于C的，但是C在合作中对于整体的贡献是多于A和B的，因此应该在奖金分配上比他们俩多。另外我们发现A和B在个人能力上有差别，但是总体对于项目的贡献是一样的。</p>
+<p>在生活中，管理者拿的薪水往往比真正干活的人多。一个优秀的管理者懂得如何带动整个团队完成目标，这部分作用是难以替代的。</p>
+<h2 id="夏普利值的应用">夏普利值的应用</h2>
+<p>如果我们把夏普利值应用在投票里，可以得到夏普利舒比克权力指数，反应出每个人对于投票结果的平均贡献。在投票中，如果其取得了关键性的作用，那么可以体现其权利大。</p>
+<p>这里举一个例子，假设有A，B，C，D四个政党，控制的席位为</p>
+<table>
+<thead>
+<tr>
+<th>政党</th>
+<th>席位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>40</td>
+</tr>
+<tr>
+<td>B</td>
+<td>39</td>
+</tr>
+<tr>
+<td>C</td>
+<td>11</td>
+</tr>
+<tr>
+<td>D</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+<p>这里对于四个政党分别进行讨论</p>
 <ul>
-<li>鸡汤</li>
-<li>酸奶</li>
-<li>鲑鱼，鲔鱼</li>
-<li>大蒜</li>
-<li>姜粉</li>
-<li>含锌的食物</li>
-<li>蔬菜和水果</li>
+<li>如果A第一或最后一个加入，那么当剩下三个组成联盟，他都无法成为决定胜负的政党。如果第二或第三则都可以，所以其权力指数是1/2</li>
+<li>同理，如果B第一或最后一个加入，其也不能增加价值。如果B在第二位加入，只有当第一个是A才能取胜。如果B在第三位加入，只有当A最后加入才能取胜。所以这两种发生的概率和（权力指数）是1/12</li>
+<li>C和D的分析和B相同，其权力指数是1/12</li>
 </ul>
+<p>所以我们可以看出虽然B的席位比C和D多，但是其权力并不比C和D大。拥有少数席位的政党往往拥有与之相比更大的权力来决定最后的结果。</p>
+<h2 id="小结">小结</h2>
+<p>这里我们通过一些对于夏普利值的计算明白了在团队合作中，一个人本身的能力并不能很好反应其对于团队的贡献，通过计算其对于团队的边际贡献才可以更好的表现他对于团队的贡献。</p>
+<p>当一个团队已经组织好的时候，”最后上车价值“就是一个很好的描述一个人对于团队的贡献。因为当一个人威胁离开时，其可以从组织获取的最大利益就是”最后上车价值“。大公司就通过扩大规模，创造一个具有很高的总价值，但是个人的”最后上车价值“有很低的机构。这样就可以使得公司不会因为为了挽留某一个人而付出太大的代价，这样也使得现有成员的”最后上车价值“趋于0。</p>
 
         </div>
 
@@ -260,12 +285,31 @@
 
         
 
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/book/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90-%E4%B8%96%E7%95%8C%E8%A7%82/">读书推荐--《世界观》</a></li>
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B45-%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/">模型思维(5)--非线性模型</a></li>
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B44-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/">模型思维(4)--线性模型</a></li>
+        
+        <li><a href="/post/book/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90-%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/">读书推荐--《浪潮之巅》</a></li>
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B43-%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83/">模型思维(3)--幂律分布</a></li>
+        
+    </ul>
+</div>
+
 
         <div class="post-meta meta-tags">
             
             <ul class="clearfix">
                 
-                <li><a href='http://study.tczhong.com/tags/food'>food</a></li>
+                <li><a href='http://study.tczhong.com/tags/book'>book</a></li>
+                
+                <li><a href='http://study.tczhong.com/tags/tech'>tech</a></li>
                 
             </ul>
             
