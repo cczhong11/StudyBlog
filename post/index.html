@@ -96,6 +96,38 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B47-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="模型思维(7)--网络模型">模型思维(7)--网络模型</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月20日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            生活中处处有网络模型的存在，从传染病的传播到网络中站点连接，都可以抽象成一张张网络，将不同的节点连接起来。这篇将走进网络的基本结构，帮助大家理解一些生活中的现象。
+网络的基本术语 网络是由节点和边组成的。每一个节点都可以通过边的连接到达另一个节点，这两个节点互为邻居。如果从一个节点可以到任意一个节点，我们称之为连接的网络。
+在无向网络中，我们对于每个节点的连接数可以定义为节点的度（degree)。度分布可以告诉我们某个节点是不是比其他的节点连接的更多。
+路径长度是指两个节点中的最短路径长度，与度成反比。当增加边的时候，就缩短了节点之间的平均长度。介数是指通过该节点的最小路径的百分比。在社交网络中，介数得分高的人掌握更多信息并且拥有更多权力。
+最后一个基本术语是聚类系数，这个统计了一个节点的邻居们互相连接的比例。例如，一个人有10个朋友，这些朋友可以组成45个对。如果在这45个对当中，有15个对本身也是朋友，那么这个人的聚类系数就等于1/3。如果所有这45对都是朋友，那么这个人的聚类系数就等于1，这也是最大的聚类系数。整个网络的聚类系数等于各个节点聚类系数的平均值。
+下面用中心辐射网络和地理网络举个例子：
+中心辐射网络是所有节点和中心节点相连，但是都不互相连接。其基本的统计术语也比较好理解。
+地理网络是每个节点都连接到位于它右侧和左侧的两个节点。每个节点具有相同的度，都是4。由于网络是对称的，所以每一个节点的介数也是相同的。这里一共12个节点，可以组成 12*11/2 = 66 个邻居对。其中一个节点是有6对邻居经过其是最短路径，所以介数是1/12。每个节点都有4个邻居，可以构成6个对。在这6个对中，恰好有3对是相互连接的：直接靠着该节点的左右两个节点分别连接到再外一点的节点，并相互连接。因此，聚类系数等于1/2。……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B47-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://study.tczhong.com/post/sharing/sharing_50/" title="每周分享第 50 期">每周分享第 50 期</a>
             </h1>
         </header>
@@ -321,34 +353,6 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B43-%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83/" title="模型思维(3)--幂律分布">模型思维(3)--幂律分布</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月22日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            这一篇讨论的是幂律分布(power law distribution)。这个分布在生活中十分常见，如果当我们发现会出现一些极端的情况，视频下载量、书籍销量、学术论文引用数量、战争中的伤亡人数、洪水和地震等等，这就是幂律分布。而这些极端情况就在这长长的尾巴里，也被称为长尾分布。
-幂律分布的定义 在正态分布里，我们要求事件是互相独立的，而在幂律分布中，事件则不是互相独立的，而且通常是以正反馈的形式出现的。当一件事情发生之后，也会更频繁地发生类似的事情。
-我们可以用数学公式来定义幂律分布。事件发生的概率与事件大小的负指数成比例。事件越大，发生的可能性越小。
-一个定义在区间 $[x_{min}, \infty]$ 的幂律分布可以写成:……
-        </div>
-        <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B43-%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -388,6 +392,10 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
         <a href="http://study.tczhong.com/post/page/8/">8</a>
     </li>
     
+    <li >
+        <a href="http://study.tczhong.com/post/page/9/">9</a>
+    </li>
+    
 
     
     <li class="next">
@@ -415,6 +423,10 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
 <ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B47-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="模型思维(7)--网络模型">模型思维(7)--网络模型</a>
+    </li>
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/sharing_50/" title="每周分享第 50 期">每周分享第 50 期</a>
@@ -452,10 +464,6 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
         <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90-%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/" title="读书推荐--《浪潮之巅》">读书推荐--《浪潮之巅》</a>
     </li>
     
-    <li>
-        <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B43-%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83/" title="模型思维(3)--幂律分布">模型思维(3)--幂律分布</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -467,7 +475,7 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
     
     <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
     
-    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (6)</a></li>
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (7)</a></li>
     
     <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
     
