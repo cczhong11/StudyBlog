@@ -6,10 +6,22 @@
     <description>Recent content in 模型思维 on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>模型思维(9)--熵：对不确定性建模</title>
+      <link>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B49-%E7%86%B5%E5%AF%B9%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%BB%BA%E6%A8%A1/</link>
+      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B49-%E7%86%B5%E5%AF%B9%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%BB%BA%E6%A8%A1/</guid>
+      <description>这一篇我们来讨论“熵”的概念。熵可以用来计算一个系统中的失序现象，即混乱程度。简单来说，一个事件的熵越高，其可能带来的惊喜越大，因为其结果是无序，不可预测的。熵是一个用来描述系统状态的函数，在控制论、概率论、天体物理、生命科学中等领域都有应用。这里我们研究其在信息中的定义和应用。
+信息熵 熵可以度量与结果概率分布相关的不确定性。我们可以利用抛硬币来进行理解，对于抛硬币的结果，只有正反面两种可能，其概率都是1/2，其不确定性较小，无论怎么猜都有50%的概率回答正确。但如果抛三次硬币，其可能出现的序列就有8种，如果我们想猜对的难度就大大增加。
+给定一个概率分布$(p_1, p_2, p_3, p_4 &amp;hellip; P_N)$,其信息熵H等于:
+$$H(p_1, p_2, p_3, p_4 &amp;hellip; P_N) = - \sum ^N_{i=1} p_i log_2(p_i)$$</description>
+    </item>
     
     <item>
       <title>模型思维(8)--广播模型、扩散模型和传染模型</title>

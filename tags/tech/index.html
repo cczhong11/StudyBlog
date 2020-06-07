@@ -103,6 +103,32 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B49-%E7%86%B5%E5%AF%B9%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%BB%BA%E6%A8%A1/">模型思维(9)--熵：对不确定性建模</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月3日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a>
+            
+        </div>
+        
+        <div class="post-content">
+            这一篇我们来讨论“熵”的概念。熵可以用来计算一个系统中的失序现象，即混乱程度。简单来说，一个事件的熵越高，其可能带来的惊喜越大，因为其结果是无序，不可预测的。熵是一个用来描述系统状态的函数，在控制论、概率论、天体物理、生命科学中等领域都有应用。这里我们研究其在信息中的定义和应用。
+信息熵 熵可以度量与结果概率分布相关的不确定性。我们可以利用抛硬币来进行理解，对于抛硬币的结果，只有正反面两种可能，其概率都是1/2，其不确定性较小，无论怎么猜都有50%的概率回答正确。但如果抛三次硬币，其可能出现的序列就有8种，如果我们想猜对的难度就大大增加。
+给定一个概率分布$(p_1, p_2, p_3, p_4 &hellip; P_N)$,其信息熵H等于:
+$$H(p_1, p_2, p_3, p_4 &hellip; P_N) = - \sum ^N_{i=1} p_i log_2(p_i)$$……
+            <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B49-%E7%86%B5%E5%AF%B9%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%BB%BA%E6%A8%A1/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B48-%E5%B9%BF%E6%92%AD%E6%A8%A1%E5%9E%8B%E6%89%A9%E6%95%A3%E6%A8%A1%E5%9E%8B%E5%92%8C%E4%BC%A0%E6%9F%93%E6%A8%A1%E5%9E%8B/">模型思维(8)--广播模型、扩散模型和传染模型</a>
             </h1>
         </header>
@@ -346,37 +372,30 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B41-%E5%AF%B9%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%BB%BA%E6%A8%A1/">模型思维（1）--对人类的建模</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月7日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a>
-            
-        </div>
-        
-        <div class="post-content">
-            本文是对于《模型思维》这本书解读的第一期。这本书通过24种模型对于生活中的各种问题都做了解析。其中有不少数学公式不是很好理解，我希望通过自己的能力对于这本书的一些重要内容进行解读，方便大家的理解运用。
-模型影响到了我们生活中的方方面，比如新冠疫情就可以使用传染模型进行分析，人与人的交流就可以利用网络模型。在对于事情进行建模以后，我们可以方便地识别其中的重要部分，解释发生的现象，对于未来可能发生的事情进行预测。一件事情也可以利用多种模型进行解释，在将他们组合起来的时候，可以从不同角度分析这件事，从而获得新的见解。
-在学习不同的模型之前，我们需要先对其中的关键部分 &ndash; 人，进行建模。在社会中，人是最重要的一部分，但人又是各种各样，很难预测未来的行为。而且人是可以不断学习的，所以当前的预测不代表未来也是一样的，人们会修正自己的行为。这里我们可以通过以下三种方法对人进行建模。
-理性人 最简单的模型就是把人看作是理性的，这种建模方法认为人会对于自己的利益最大化的个体。
-我们可以把一个人对于某事的偏好写成 $F(X)$, 其中X就是不同的因素。我们可以认为理性人的行动依据就是可以达成 $$Max(F(X))$$……
-            <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B41-%E5%AF%B9%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%BB%BA%E6%A8%A1/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
 
+
+<ol class="page-navigator">
+    
+
+    
+    <li  class="current">
+        <a href="http://study.tczhong.com/tags/tech/">1</a>
+    </li>
+    
+    <li >
+        <a href="http://study.tczhong.com/tags/tech/page/2/">2</a>
+    </li>
+    
+
+    
+    <li class="next">
+        <a href="http://study.tczhong.com/tags/tech/page/2/">下一页</a>
+    </li>
+    
+</ol>
 
 
 
@@ -397,6 +416,14 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
 <ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_53/" title="每周分享第 53 期">每周分享第 53 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B49-%E7%86%B5%E5%AF%B9%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%BB%BA%E6%A8%A1/" title="模型思维(9)--熵：对不确定性建模">模型思维(9)--熵：对不确定性建模</a>
+    </li>
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/sharing_52/" title="每周分享第 52 期">每周分享第 52 期</a>
@@ -430,14 +457,6 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
         <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90-%E4%B8%96%E7%95%8C%E8%A7%82/" title="读书推荐--《世界观》">读书推荐--《世界观》</a>
     </li>
     
-    <li>
-        <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B45-%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/" title="模型思维(5)--非线性模型">模型思维(5)--非线性模型</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/sharing_48/" title="每周分享第 48 期">每周分享第 48 期</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -449,7 +468,7 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
     
     <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
     
-    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (8)</a></li>
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (9)</a></li>
     
     <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
     
