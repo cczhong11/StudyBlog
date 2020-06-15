@@ -94,6 +94,44 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/algo/array/" title="Array算法题的思考">Array算法题的思考</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2018年8月24日
+        </date>
+        
+        <div class="post-content">
+            Array 算法题的思考 数组类的算法是在我做的题目中是最多的，相对来说也是最好理解的它也可以包罗万象，使用各种各样的算法。用数组可以实现很多基本的数据结构。比如heap。所以这部分需要好好掌握。
+SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说求最大的K个数，这种题目一般都是使用基本的快速排序思想。也就是说，我们把这个数组分成两部分，一部分是比当前这个数字大的，另外一部分是比这个当前数字小的，这样我们可以快速的把一个array分成两部分，然后再分别对这两部分进行处理。
+如果只是需要移动一些数字，比如说移动零或者整个数组只有三个数，那么可以用一些更简单思想，比如说记录下所有非0的数，或者记录下这些数字的个数，然后把前面全换成这些非0数，后面换成零。这样做的好处就是不需要交换。或者一个记录非0的地方，另外一个记录当前位置，如果这个不是零，那么就遇上一个非0的东西交换。所以总体思路都是双指针的思想，一个记录当前遍历的位置，另外一个记录上一次符合条件的位置。
+ 27. Remove Element 75.……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/algo/array/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/algo/string/" title="String算法题的思考">String算法题的思考</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2018年8月22日
+        </date>
+        
+        <div class="post-content">
+            String 算法思考 String 类型的题目算是leetcode里第二多的题型，其实这个和array的使用方法差不太多，只不过其中有一些特定的使用场景。我在这里会将string分为几类问题，可能不能包括所有的类别，尽量使用较为统一的思路解释遇到的题目。
+数据类型 首先要说清楚一点，在java中String是immutable的，也就是当你创建一个string后是不能修改的，如果你需要给他加内容，java会重新创一个新的实例。这样的问题就是如果使用s+=a,这样时间复杂度是O(n),在java中会重新复制一遍string再给你创建。
+解决办法就是使用StringBuilder，这个的时间复杂度对于增加就是O(1).其中内部实现就是一个char[]
+ sb.append(String str) sb.……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/algo/string/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://study.tczhong.com/post/algo/tree/" title="树形算法题的思考">树形算法题的思考</a>
             </h1>
         </header>
@@ -309,6 +347,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_54/" title="每周分享第 54 期">每周分享第 54 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B410-%E9%9A%8F%E6%9C%BA%E8%B5%B0%E5%8A%A8/" title="模型思维(10)--随机走动">模型思维(10)--随机走动</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/sharing_53/" title="每周分享第 53 期">每周分享第 53 期</a>
     </li>
     
@@ -340,14 +386,6 @@
         <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B46-%E5%90%88%E4%BD%9C%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/" title="模型思维(6)--合作博弈模型">模型思维(6)--合作博弈模型</a>
     </li>
     
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/sharing_49/" title="每周分享第 49 期">每周分享第 49 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90-%E4%B8%96%E7%95%8C%E8%A7%82/" title="读书推荐--《世界观》">读书推荐--《世界观》</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -359,7 +397,7 @@
     
     <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
     
-    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (9)</a></li>
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (10)</a></li>
     
     <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
     
