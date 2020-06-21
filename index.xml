@@ -6,10 +6,35 @@
     <description>Recent content on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://study.tczhong.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>每周分享第 55 期</title>
+      <link>http://study.tczhong.com/post/sharing/sharing_55/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/sharing/sharing_55/</guid>
+      <description>每周分享第 55 期 2020 week 25
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+疫情在全球各国都出现了反复，只要人们一放开隔离，感染率就会上升，真是防不胜防啊。。。
+国内新闻 北京疫情 【1】丰台区副区长周宇清、丰台区花乡党委书记王华被免职，新发地农产品批发市场总经理张月琳被责令免职</description>
+    </item>
+    
+    <item>
+      <title>模型思维(11)--路径依赖</title>
+      <link>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B411-%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B411-%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96/</guid>
+      <description>上一篇我们讲到随机走动，这一篇我们将继续延伸这个话题。如果每次的行动与之前的行为结果相关，我们就可以得到路径依赖模型。在生活中，我们穿的衣服、读的书、看的电影，以及任何需要我们付出时间的活动，都可以应用路径依赖来分析。
+波利亚过程 我们利用波利亚过程来刻画正反馈的效应。这里我们依旧使用从瓮里取白球和灰球的实验。一只瓮里面装着一个白球和一个灰球。每一周期，都随机抽取出一个球并将这个球与和它颜色相同的另一个球一起放回到瓮中。抽取出来的球的颜色表示结果。
+波利亚过程可以用来刻画各种社会和经济现象。一个人选择学习打网球，还是打篮球，可能取决于其他人的选择。如果更多的朋友选择学习打网球，那么这个人就更有可能也选择学习打网球，因为这会增加他找到伙伴打比赛的机会。与此类似，一个人决定购买什么类型的软件、学习哪种语言或购买哪款智能手机，也可能取决于他的朋友以前做出的选择。
+波利亚过程可以得到两个性质：
+ 具有相同数量的白色结果的任何序列都会以相同的概率发生 P(GWWW) = P(WWWG) 白球和灰球的每个分布都以相同的概率发生 P(白球出现1次) = P(白球出现n次)  第二个性质就可以说明极端情况的可能性，白球只出现1%和白球出现50%的可能性是一样的。我们可以通过实验这个结果，初始只有两个球，之后进行100次抽取，统计其中白球的数量。将此实验重复10000次，理论上每一种白球的分布出现次数在100次左右。结果如图，发现每一种可能都是在100次的上下波动。</description>
+    </item>
     
     <item>
       <title>每周分享第 54 期</title>
@@ -28,7 +53,7 @@
       <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B410-%E9%9A%8F%E6%9C%BA%E8%B5%B0%E5%8A%A8/</guid>
-      <description>我们在这篇研究随机走动(random walk)。看似这个过程很简单，却可以利用其结论分析一些时间序列，例如销售额，股票价格等等。随机走动最初是用在研究物理学中液体和气体中粒子的运动，后来发现在生活中的很多现象也符合随机走动。
+      <description>我们在这篇研究随机走动(random walk)。想象有一个点，每次可以随机的前进或退后一步，之后记录其与原点的距离。看似这个过程很简单，却可以利用其结论分析一些时间序列，例如销售额，股票价格等等。随机走动最初是用在研究物理学中液体和气体中粒子的运动，后来发现在生活中的很多现象也符合随机走动。
 伯努利瓮模型 我们这里首先利用伯努利瓮模型研究随机走动。假设有一个装了灰球和白球的瓮，其中灰球有G个，白球W个。每一次从中取出一个球，记录抽取出来球的颜色。在下一次抽取之前，球要放回瓮中。每次抽到灰球的概率是 $P = \frac{G}{G + W}$。在抽取N次的情况下，可以计算出抽取出来的灰球的期望数量是$N_G$, 其标准差是 $\sigma_{N_G}$</description>
     </item>
     

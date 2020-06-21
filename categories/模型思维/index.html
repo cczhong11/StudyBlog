@@ -103,6 +103,33 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B411-%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96/">模型思维(11)--路径依赖</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月18日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a>
+            
+        </div>
+        
+        <div class="post-content">
+            上一篇我们讲到随机走动，这一篇我们将继续延伸这个话题。如果每次的行动与之前的行为结果相关，我们就可以得到路径依赖模型。在生活中，我们穿的衣服、读的书、看的电影，以及任何需要我们付出时间的活动，都可以应用路径依赖来分析。
+波利亚过程 我们利用波利亚过程来刻画正反馈的效应。这里我们依旧使用从瓮里取白球和灰球的实验。一只瓮里面装着一个白球和一个灰球。每一周期，都随机抽取出一个球并将这个球与和它颜色相同的另一个球一起放回到瓮中。抽取出来的球的颜色表示结果。
+波利亚过程可以用来刻画各种社会和经济现象。一个人选择学习打网球，还是打篮球，可能取决于其他人的选择。如果更多的朋友选择学习打网球，那么这个人就更有可能也选择学习打网球，因为这会增加他找到伙伴打比赛的机会。与此类似，一个人决定购买什么类型的软件、学习哪种语言或购买哪款智能手机，也可能取决于他的朋友以前做出的选择。
+波利亚过程可以得到两个性质：
+ 具有相同数量的白色结果的任何序列都会以相同的概率发生 P(GWWW) = P(WWWG) 白球和灰球的每个分布都以相同的概率发生 P(白球出现1次) = P(白球出现n次)  第二个性质就可以说明极端情况的可能性，白球只出现1%和白球出现50%的可能性是一样的。我们可以通过实验这个结果，初始只有两个球，之后进行100次抽取，统计其中白球的数量。将此实验重复10000次，理论上每一种白球的分布出现次数在100次左右。结果如图，发现每一种可能都是在100次的上下波动。……
+            <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B411-%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B410-%E9%9A%8F%E6%9C%BA%E8%B5%B0%E5%8A%A8/">模型思维(10)--随机走动</a>
             </h1>
         </header>
@@ -118,7 +145,7 @@
         </div>
         
         <div class="post-content">
-            我们在这篇研究随机走动(random walk)。看似这个过程很简单，却可以利用其结论分析一些时间序列，例如销售额，股票价格等等。随机走动最初是用在研究物理学中液体和气体中粒子的运动，后来发现在生活中的很多现象也符合随机走动。
+            我们在这篇研究随机走动(random walk)。想象有一个点，每次可以随机的前进或退后一步，之后记录其与原点的距离。看似这个过程很简单，却可以利用其结论分析一些时间序列，例如销售额，股票价格等等。随机走动最初是用在研究物理学中液体和气体中粒子的运动，后来发现在生活中的很多现象也符合随机走动。
 伯努利瓮模型 我们这里首先利用伯努利瓮模型研究随机走动。假设有一个装了灰球和白球的瓮，其中灰球有G个，白球W个。每一次从中取出一个球，记录抽取出来球的颜色。在下一次抽取之前，球要放回瓮中。每次抽到灰球的概率是 $P = \frac{G}{G + W}$。在抽取N次的情况下，可以计算出抽取出来的灰球的期望数量是$N_G$, 其标准差是 $\sigma_{N_G}$……
             <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B410-%E9%9A%8F%E6%9C%BA%E8%B5%B0%E5%8A%A8/">阅读全文</a></p>
         </div>
@@ -339,37 +366,30 @@ $$y = mx + b$$
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B41-%E5%AF%B9%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%BB%BA%E6%A8%A1/">模型思维（1）--对人类的建模</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月7日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a>
-            
-        </div>
-        
-        <div class="post-content">
-            本文是对于《模型思维》这本书解读的第一期。这本书通过24种模型对于生活中的各种问题都做了解析。其中有不少数学公式不是很好理解，我希望通过自己的能力对于这本书的一些重要内容进行解读，方便大家的理解运用。
-模型影响到了我们生活中的方方面，比如新冠疫情就可以使用传染模型进行分析，人与人的交流就可以利用网络模型。在对于事情进行建模以后，我们可以方便地识别其中的重要部分，解释发生的现象，对于未来可能发生的事情进行预测。一件事情也可以利用多种模型进行解释，在将他们组合起来的时候，可以从不同角度分析这件事，从而获得新的见解。
-在学习不同的模型之前，我们需要先对其中的关键部分 &ndash; 人，进行建模。在社会中，人是最重要的一部分，但人又是各种各样，很难预测未来的行为。而且人是可以不断学习的，所以当前的预测不代表未来也是一样的，人们会修正自己的行为。这里我们可以通过以下三种方法对人进行建模。
-理性人 最简单的模型就是把人看作是理性的，这种建模方法认为人会对于自己的利益最大化的个体。
-我们可以把一个人对于某事的偏好写成 $F(X)$, 其中X就是不同的因素。我们可以认为理性人的行动依据就是可以达成 $$Max(F(X))$$……
-            <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B41-%E5%AF%B9%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%BB%BA%E6%A8%A1/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
 
+
+<ol class="page-navigator">
+    
+
+    
+    <li  class="current">
+        <a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">1</a>
+    </li>
+    
+    <li >
+        <a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/page/2/">2</a>
+    </li>
+    
+
+    
+    <li class="next">
+        <a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/page/2/">下一页</a>
+    </li>
+    
+</ol>
 
 
 
@@ -390,6 +410,14 @@ $$y = mx + b$$
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
 <ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_55/" title="每周分享第 55 期">每周分享第 55 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B411-%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96/" title="模型思维(11)--路径依赖">模型思维(11)--路径依赖</a>
+    </li>
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/sharing_54/" title="每周分享第 54 期">每周分享第 54 期</a>
@@ -423,14 +451,6 @@ $$y = mx + b$$
         <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B47-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="模型思维(7)--网络模型">模型思维(7)--网络模型</a>
     </li>
     
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/sharing_50/" title="每周分享第 50 期">每周分享第 50 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B46-%E5%90%88%E4%BD%9C%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/" title="模型思维(6)--合作博弈模型">模型思维(6)--合作博弈模型</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -442,7 +462,7 @@ $$y = mx + b$$
     
     <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
     
-    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (10)</a></li>
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (11)</a></li>
     
     <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
     
