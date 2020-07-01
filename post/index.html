@@ -116,6 +116,38 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B412-%E5%B1%80%E9%83%A8%E4%BA%92%E5%8A%A8%E6%A8%A1%E5%9E%8B/" title="模型思维(12)--局部互动模型">模型思维(12)--局部互动模型</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月25日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            在这一篇我们研究局部和整体相关的模型。当局部一致的时候，整体就会表现出一致吗？我们通过这篇的研究可以对于该问题进行很好的解释。
+局部多数模型 这个模型建立在一个单元格的二维棋盘上，每个单元格有两种状态，0或1。初始时，我们将给每个单元格随机分配初始状态，之后每一个单元格的状态取决于其周围单元格的状态。在一个单元格周围的8个单元格中，有5个及以上的单元格是与之相反的状态时，这个单元格就会改变自己的状态。
+下图展现了一个局部多数模型的均衡状态。虽然均衡状态取决于各个单元格的初始分布，但是对于初始条件并不敏感，改变一个单元格的初始状态导致的最终均衡状态改变的变化很小。
+我们可以利用这个模型来刻画人与人之间的局部协调或一致性。假设每一个单元格都代表一个人的行动。这里的行动可以是任何行为惯例，例如握手或鞠躬，打断或举手。任何一个人都想选择一个与邻居相匹配的行动。棋盘代表社交网络。如果在计算机上对这个模型进行模拟，就会发现它总是能实现斑块状的均衡配置。许多单元格在1的状态下有一些邻居，在0的状态下也有一些邻居。
+在斑块的交界处出现了次优均衡，如果1对应于以握手的方式表示欢迎、0对应于以鞠躬的方式表示欢迎，那么位于“斑块”边界上的人在与他们的邻居互动时可能会碰到一些尴尬的情况：当其他人准备握手时他们却准备鞠躬，或者当其他人准备鞠躬时他们却准备握手。如果每个人都选择了相同的动作，也就是说，如果他们解决了协调博弈问题，那么从整体上看，所有人都会更加开心。由于这种互动只作用于局部，因此出现了次优均衡。如果单元格是根据全局多数原则来匹配的，那么很快所有单元格都会处于相同的状态。这种观点意味着，创建共同行为可能需要影响更加广泛的网络。如果人们只在局部与自己的邻居协调，他们就会创造出各种各样的行为。因此矛盾的是，恰恰与协调产生了多样性。
+生命游戏 这是一个很有意思的模型，有以下的规则：
+方格上的每个单元格都或者是活的（1）或者是死的（0）。每个单元格的邻居由网格上的8个相邻单元格组成。单元格根据如下两个规则同步更新自己的状态：
+ 活的规则：对于一个死单元格，当恰好有三个活的邻居时，这个死单元格就会变活。 死的规则：对一个活单元格，当活的邻居小于两个时或当有三个以上的活邻居死去时，这个活单元格就会死去。  根据这个规则可以得到一个简单的闪光灯均衡状态：……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B412-%E5%B1%80%E9%83%A8%E4%BA%92%E5%8A%A8%E6%A8%A1%E5%9E%8B/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://study.tczhong.com/post/sharing/sharing_55/" title="每周分享第 55 期">每周分享第 55 期</a>
             </h1>
         </header>
@@ -305,26 +337,6 @@ $$ I_{t+1} = I_t + P_{broad} \times S_t$$……
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/sharing/sharing_51/" title="每周分享第 51 期">每周分享第 51 期</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月24日
-        </date>
-        
-        <div class="post-content">
-            每周分享第 51 期 2020 week 21
-你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
-国内新闻 国内政策 【1】全国政协今日开幕……
-        </div>
-        <p class="readmore"><a href="http://study.tczhong.com/post/sharing/sharing_51/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -405,6 +417,10 @@ $$ I_{t+1} = I_t + P_{broad} \times S_t$$……
     </li>
     
     <li>
+        <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B412-%E5%B1%80%E9%83%A8%E4%BA%92%E5%8A%A8%E6%A8%A1%E5%9E%8B/" title="模型思维(12)--局部互动模型">模型思维(12)--局部互动模型</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/sharing_55/" title="每周分享第 55 期">每周分享第 55 期</a>
     </li>
     
@@ -436,10 +452,6 @@ $$ I_{t+1} = I_t + P_{broad} \times S_t$$……
         <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B48-%E5%B9%BF%E6%92%AD%E6%A8%A1%E5%9E%8B%E6%89%A9%E6%95%A3%E6%A8%A1%E5%9E%8B%E5%92%8C%E4%BC%A0%E6%9F%93%E6%A8%A1%E5%9E%8B/" title="模型思维(8)--广播模型、扩散模型和传染模型">模型思维(8)--广播模型、扩散模型和传染模型</a>
     </li>
     
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/sharing_51/" title="每周分享第 51 期">每周分享第 51 期</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -451,7 +463,7 @@ $$ I_{t+1} = I_t + P_{broad} \times S_t$$……
     
     <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
     
-    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (11)</a></li>
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (12)</a></li>
     
     <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
     
