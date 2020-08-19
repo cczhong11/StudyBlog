@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Root红米手机以及获取微信聊天记录 | Learn More</title>
-    <meta property="og:title" content="Root红米手机以及获取微信聊天记录 - Learn More">
+    <title>模型思维(16)--空间竞争模型与享受竞争模型 | Learn More</title>
+    <meta property="og:title" content="模型思维(16)--空间竞争模型与享受竞争模型 - Learn More">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2019-06-04T00:00:00&#43;08:00'>
+    <meta property="article:published_time" content='2020-08-18T00:00:00&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2019-06-04T00:00:00&#43;08:00'>
+    <meta property="article:modified_time" content='2020-08-18T00:00:00&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="Root红米手机以及获取微信聊天记录">
+    <meta name="description" content="模型思维(16)--空间竞争模型与享受竞争模型">
         
     <meta name="author" content="">
-    <meta property="og:url" content="http://study.tczhong.com/post/tech/wechathistory/">
+    <meta property="og:url" content="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B416-%E7%A9%BA%E9%97%B4%E7%AB%9E%E4%BA%89%E6%A8%A1%E5%9E%8B%E4%B8%8E%E4%BA%AB%E5%8F%97%E7%AB%9E%E4%BA%89%E6%A8%A1%E5%9E%8B/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -97,43 +97,41 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">Root红米手机以及获取微信聊天记录</h1>
+            <h1 class="post-title">模型思维(16)--空间竞争模型与享受竞争模型</h1>
         </header>
         <date class="post-meta meta-date">
-            2019年6月4日
+            2020年8月18日
         </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
         
         
         
         <div class="post-content">
-            <p>本文记录了自己在root已停止支持的红米手机以及破解加密微信聊天记录数据库的一些心得和体会。</p>
-<h1 id="root-手机">root 手机</h1>
-<p>Root小米手机分为以下几步：</p>
-<ol>
-<li>刷miui的开发者版本</li>
-<li>解锁小米手机</li>
-<li>开启root权限</li>
-</ol>
-<p>我手里有一部红米3的手机，而小米官方对于这款手机已经停止了维护，所以在<a href="http://www.miui.com/download.html">miui</a>官网上已经找不到相应的卡刷包。解决办法就是上论坛下以往的，我找到的在<a href="https://www.miui.com/thread-16771441-1-1.html">这里</a>。</p>
-<p>我先下载了卡刷包，之后把zip包直接放到sd卡里。在系统更新页面点击右上角，选择使用本地文件进行更新。注意这里会抹掉所有手机的应用，在漫长的等待之后就把自己miui版本变成了开发版。</p>
-<p>接下来首先打开开发者模式，运许usb调试，打开fastboot刷机模式。另外在授权管理里面找root授权管理，把自己的手机与mi account绑定，准备解锁。</p>
-<p>解锁手机这步在root小米手机还是很重要的，具体是解锁BootLoader，有不少教程都没有写这步，这应该是小米在近几年才加的。具体步骤也不难，就是从<a href="https://www.miui.com/unlock/">这里</a>点击进去，下载相关的工具包，之后安装里面的驱动，让手机进入fastboot模式，运行软件解锁，然后手机会自动重启。</p>
-<p><img src="https://www.androidexplained.com/wp-content/uploads/2018/05/Redmi-Note-5-Fastboot-Mode-Full.jpg" alt=""></p>
-<p>一开始我并不知道这一步的重要性，尝试了很久的线刷，结果总是显示 ”FAILED (remote: device is locked. Cannot flash images)“。最后才明白是这个问题。另外这个工具没有mac版，所以我的解决办法是运行windows虚拟机，在里面完成了解锁。</p>
-<p>最后一步就比较简单了，直接到授权管理里开启root权限。之后在<code>adb shell</code>里面运行<code>su</code>就是root user了。</p>
-<h1 id="获得聊天记录">获得聊天记录</h1>
-<p>聊天记录存在的位置是 <code>/data/data/com.tencent.mm/MicroMsg/xxxxxxx/EnMicroMsg.db</code>。这里的<code>xxxxx</code>是对&quot;mm[uin]&ldquo;进行md5的值。uin的获得可以使用这个命令，<code>cat /data/data/com.tencent.mm/shared_prefs/*.xml | grep uin</code>，记录其中的<code>default_uin</code>。如果是1234567，那么就对<code>mm1234567</code>进行md5操作，之后就可以获得文件下的名字。</p>
-<p>利用以下命令把内容拷贝出来。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp EnMicroMsg.db /mnt/sdcard/
-exit
-adb pull /mnt/sdcard/EnMicroMsg.db .
-</code></pre></div><p>接下来就是要解密这个数据库。密码是手机的imei+uin，利用以下命令可以获得到：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo -n $imei$uin | md5 | cut -c -7
-</code></pre></div><p>打开这个加密的数据库我卡了很久，理论上利用<code>sqlcipher</code>就可以解锁了，但是我尝试了很多办法，结果都是&quot;File is not a database&rdquo;。说明你在解锁数据库用的方法错了，并不代表你的密码不对，在mac下利用<code>brew install sqlcipher</code>安装之后，利用以下命令即可。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sqlcipher EnMicroMsg.db <span style="color:#e6db74">&#39;PRAGMA key = &#34;key&#34;; PRAGMA cipher_migrate; ATTACH DATABASE &#34;decrypted_database.db&#34; AS decrypted_database KEY &#34;&#34;;SELECT sqlcipher_export(&#34;decrypted_database&#34;);DETACH DATABASE decrypted_database;&#39;</span>
-</code></pre></div><p>之后可以直接看<code>decrypted_database.db</code>里面的内容。具体内容在<code>message</code>表格里面。</p>
-<p>逆向微信的过程可以参看以下的博文</p>
-<p><a href="https://www.xukele.com/blog/?p=435">如何破解微信聊天数据库</a></p>
+            <p>这两个模型主要可以用来研究人们在做选择的两种模式，可以用来刻画消费者的选择行为。</p>
+<p>我们会将某些属性描述为空间属性，而将其他属性描述为享受属性。空间属性，例如夹克的颜色或一片面包的厚度，没有最优值。每个人都喜欢某种特定“数量”的这类属性：一个购买猪排的消费者有自己喜欢的辣度，一个业余滑雪运动员在滑下斜坡时有自己喜欢的下降角度。产品的属性越接近理想水平，消费者对产品的评价就越高，而且理想水平因人而异：一个人可能比另一个人更喜欢辣一些的猪排。</p>
+<p>在享受属性上，更多（或者在某些情况下更少）总是意味着更好。人们喜欢智能手机的待机时间更长一些，房间的面积更大一些，皮鞋的鞋底更耐磨一些，自己的汽车更省油一些。不过，在现实世界中，大多数选择都是“混合型”的：人们既会考虑空间属性，也会考虑享受属性。</p>
+<h2 id="空间竞争模型">空间竞争模型</h2>
+<p>空间竞争模型假设备选项可以用一组属性来定义，消费者则可以用一系列理想点来定义。假设用户只在一个属性上做选择，可以把用户的兴趣在数轴上做出反应。而提供商品的商家假设只有一个商品，可以满足这个属性的一个值。在下图中a和b可以看作是两个商家，距离a和b越近的用户就会选择他们。所以中间存在一个分界点d，分割不同的用户选择。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/2f40913cc00f4efcafd813897e3e5e32.png" alt=""></p>
+<p>一般的空间竞争模型可以包括任意数量的属性。一个物品总是有不同的属性的，比如，沙发可以通过多个物理维度来描述：长度、宽度和深度，结构类型，以及室内装饰类型。消费者从产品中获得的价值（或效用）取决于产品在各个维度上与理想点的距离。我们可以用实际与用户理想点的距离来表现其竞争力。</p>
+<h3 id="唐斯空间竞争模型">唐斯空间竞争模型</h3>
+<p>接下来，我们应用空间竞争模型来分析政治候选人的意识形态立场“定位”。为了便于讨论，假设候选人都是追求投票最大化，也就是说，他们的首要目标是赢得选举。我们可以从一个简单的例子开始考虑，思考候选人的动机。如下图，候选人之间首先有一定的意见差距，获得其选民的选票。为了获得更多的选票，两个候选人都在往中间靠近为了争抢对方的选民支持。在下图中，可以看到两人的意见其实已经很接近了。这也是在美国大选中双方都需要争抢摇摆州的选票的原因。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/fe25442cb6db44239f245fd246522483.png" alt=""></p>
+<h2 id="享受竞争模型">享受竞争模型</h2>
+<p>在享受竞争模型中，各备选项（通常是各种产品）也是用属性来表示的。但是，在这种模型中，属性包括了质量、效率或价格，而且更多或者更少总是更受欢迎的。为了刻画每个属性的不同，享受竞争模型允许个体给不同维度赋予不同的权重。</p>
+<p>利用线性回归方法，我们可以运用享受竞争模型推断商品属性的隐含价值。在这里可以用房价来举个例子。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/43e585fb890e43309d8c040417c364c5.png" alt=""></p>
+<p>如果假设房子的所有其他属性都完全相同，那么可以运行享受回归。假设得到的回归方程如下： 价格（美元）=100（平方英尺数）+20 000（卧室个数）-2 000（通勤时间）</p>
+<p>换句话说，人们为了住在更接近上班地点的房子里而付出的代价，就“好像”是他们为了免受1小时交通堵塞之苦而付出了30美元一样</p>
+<h2 id="小结">小结</h2>
+<p>空间竞争模型和享受竞争模型在如何表示对各种属性的偏好这一点上有所不同。在空间竞争模型中，每个人对每种属性都有一个更偏好的水平，而且某个备选项在哪些维度上与他的理想点接近，对他来说价值就越大。而在享受竞争模型中，每个属性越多（或越少），人们就越喜欢。</p>
+<p>在这个框架内，我们可以表征不同的产品、政治候选人，甚至是求职者。这些模型可以测量意识形态“位置”、隐含价格属性，并评估潜在的市场进入者。它们提供了很多深刻的洞见，有助于我们理解市场竞争如何产生差异化的激励、政治竞争如何产生建立联盟的激励，以及只具有较少属性的产品的价格竞争为什么会更加激烈。</p>
 
         </div>
 
@@ -142,14 +140,31 @@ adb pull /mnt/sdcard/EnMicroMsg.db .
 
         
 
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B415-%E5%9F%BA%E4%BA%8E%E9%98%88%E5%80%BC%E7%9A%84%E6%A8%A1%E5%9E%8B/">模型思维(15)--基于阈值的模型</a></li>
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B414-%E7%B3%BB%E7%BB%9F%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E5%9E%8B/">模型思维(14)--系统动力学模型</a></li>
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B413-%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E6%A8%A1%E5%9E%8B/">模型思维(13)--马尔可夫模型</a></li>
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B412-%E5%B1%80%E9%83%A8%E4%BA%92%E5%8A%A8%E6%A8%A1%E5%9E%8B/">模型思维(12)--局部互动模型</a></li>
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B411-%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96/">模型思维(11)--路径依赖</a></li>
+        
+    </ul>
+</div>
+
 
         <div class="post-meta meta-tags">
             
             <ul class="clearfix">
                 
-                <li><a href='http://study.tczhong.com/tags/wechat'>wechat</a></li>
+                <li><a href='http://study.tczhong.com/tags/book'>book</a></li>
                 
-                <li><a href='http://study.tczhong.com/tags/android'>Android</a></li>
+                <li><a href='http://study.tczhong.com/tags/tech'>tech</a></li>
                 
             </ul>
             
