@@ -3,27 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://study.tczhong.com/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/post/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/tags/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/tags/weekly/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/post/sharing/sharing_64/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://study.tczhong.com/categories/</loc>
     <lastmod>2020-08-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://study.tczhong.com/tags/development/</loc>
-    <lastmod>2020-08-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://study.tczhong.com/</loc>
-    <lastmod>2020-08-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://study.tczhong.com/post/</loc>
-    <lastmod>2020-08-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://study.tczhong.com/tags/</loc>
     <lastmod>2020-08-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -75,11 +85,6 @@
   <url>
     <loc>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B416-%E7%A9%BA%E9%97%B4%E7%AB%9E%E4%BA%89%E6%A8%A1%E5%9E%8B%E4%B8%8E%E4%BA%AB%E5%8F%97%E7%AB%9E%E4%BA%89%E6%A8%A1%E5%9E%8B/</loc>
     <lastmod>2020-08-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://study.tczhong.com/tags/weekly/</loc>
-    <lastmod>2020-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
