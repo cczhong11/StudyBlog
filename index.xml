@@ -6,10 +6,26 @@
     <description>Recent content on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://study.tczhong.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>模型思维(18)--合作模型</title>
+      <link>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B418-%E5%90%88%E4%BD%9C%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B418-%E5%90%88%E4%BD%9C%E6%A8%A1%E5%9E%8B/</guid>
+      <description>人们通过合作可以实现1+1&amp;gt;2的效果，但并不是所有人在面对选择时都会采取合作，合作背后的机理是什么？在这一篇中我们通过囚徒困境的例子对合作的行为进行建模分析。
+囚徒困境 人们在面对和他人相处时有两个最基本的选择，合作(为了共同的利益)以及背叛(只顾及自己的利益)。
+囚徒困境博弈的名称源于如下故事。有两个人，被控共同犯下了某种罪行。有关当局只掌握了间接证据，因此给他们每个人都提供了认罪减刑的机会。两人因此面临着两难选择：如果两人都不认罪，那么每个人都会（根据现有证据）受到轻微的惩罚；如果只有一人认罪，那么认罪的这个人不会受到惩罚，而另一个人则会受到很严厉的惩罚；如果两人都认罪，那么两人都会受到较严厉的惩罚，但是不会像只有一个人认罪时那么严厉。
+下图将这个故事变成一个双人博弈，合作带来的总体收益最大，但是不能达到个人利益最大化。当一个人背叛另一个人合作，可以使得背叛的人达到最大的利益，但是合作的人则获得最小的收益当两人都背叛，所获得的总体收益最小。
+将其中的数字抽象，并且将两者都背叛的利益都看作0。下面的不等式反映了之间收益的差距。
+维持合作 在讨论维持合作时，我们假设参与博弈的人都采用一种策略：只要一方背叛，另一方将持续背叛。
+对于理性的人，当博弈会重复发生的时候，持续的合作就有可能发生。当博弈以P的概率发生时，当以下条件满足：
+$$P &amp;gt; \frac{(T-R)}{T}$$</description>
+    </item>
     
     <item>
       <title>每周分享第 66 期</title>

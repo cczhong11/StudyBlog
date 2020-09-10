@@ -94,6 +94,25 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/algo/stack/" title="Stack算法题的思考">Stack算法题的思考</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2018年9月4日
+        </date>
+        
+        <div class="post-content">
+            Stack 算法题的思考 这类题目也是比较多的，一般比较繁琐。思路类似DFS，不过可以不使用递归实现。
+String 解析类 这类比较多的就是计算器，以及分析括号里的内容。例如解析 3[a]2[bc],这时候就可以在遇到[的时候把之前的东西都压到栈里，之后当遇到]的时候把内容再pop出来。
+对于计算器，如果是后缀表达式的话，可以把结果都压到栈里，遇到运算符再pop出运算。有括号的话还是按括号的方法，主要要注意加法和乘法的区别。
+计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如(1+2)+(3+4), +可以看作是是后一个括号的符号。对于1*2 + 6/3,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/algo/stack/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://study.tczhong.com/post/algo/graph/" title="Graph算法题的思考">Graph算法题的思考</a>
             </h1>
         </header>
@@ -371,6 +390,10 @@ SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B418-%E5%90%88%E4%BD%9C%E6%A8%A1%E5%9E%8B/" title="模型思维(18)--合作模型">模型思维(18)--合作模型</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/sharing_66/" title="每周分享第 66 期">每周分享第 66 期</a>
     </li>
     
@@ -406,10 +429,6 @@ SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说
         <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B415-%E5%9F%BA%E4%BA%8E%E9%98%88%E5%80%BC%E7%9A%84%E6%A8%A1%E5%9E%8B/" title="模型思维(15)--基于阈值的模型">模型思维(15)--基于阈值的模型</a>
     </li>
     
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/sharing_61/" title="每周分享第 61 期">每周分享第 61 期</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -421,7 +440,7 @@ SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说
     
     <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
     
-    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (17)</a></li>
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (18)</a></li>
     
     <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
     

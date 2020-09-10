@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Graph算法题的思考 | Learn More</title>
-    <meta property="og:title" content="Graph算法题的思考 - Learn More">
+    <title>模型思维(18)--合作模型 | Learn More</title>
+    <meta property="og:title" content="模型思维(18)--合作模型 - Learn More">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2018-08-28T00:00:00&#43;08:00'>
+    <meta property="article:published_time" content='2020-09-07T00:00:00&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2018-08-28T00:00:00&#43;08:00'>
+    <meta property="article:modified_time" content='2020-09-07T00:00:00&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="Graph算法题的思考">
+    <meta name="description" content="模型思维(18)--合作模型">
         
     <meta name="author" content="">
-    <meta property="og:url" content="http://study.tczhong.com/post/algo/graph/">
+    <meta property="og:url" content="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B418-%E5%90%88%E4%BD%9C%E6%A8%A1%E5%9E%8B/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -97,91 +97,63 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">Graph算法题的思考</h1>
+            <h1 class="post-title">模型思维(18)--合作模型</h1>
         </header>
         <date class="post-meta meta-date">
-            2018年8月28日
+            2020年9月7日
         </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
         
         
         
         <div class="post-content">
-            <h1 id="graph-算法题目思考">graph 算法题目思考</h1>
-<p>Graph算是非常常见的题目，一般会给你一个2d array或一个数组代表联系，你可以使用这个输入来转换成一个图表示的数据结构，之后在图里做搜索。常见的算法：</p>
+            <p>人们通过合作可以实现1+1&gt;2的效果，但并不是所有人在面对选择时都会采取合作，合作背后的机理是什么？在这一篇中我们通过囚徒困境的例子对合作的行为进行建模分析。</p>
+<h2 id="囚徒困境">囚徒困境</h2>
+<p>人们在面对和他人相处时有两个最基本的选择，合作(为了共同的利益)以及背叛(只顾及自己的利益)。</p>
+<p>囚徒困境博弈的名称源于如下故事。有两个人，被控共同犯下了某种罪行。有关当局只掌握了间接证据，因此给他们每个人都提供了认罪减刑的机会。两人因此面临着两难选择：如果两人都不认罪，那么每个人都会（根据现有证据）受到轻微的惩罚；如果只有一人认罪，那么认罪的这个人不会受到惩罚，而另一个人则会受到很严厉的惩罚；如果两人都认罪，那么两人都会受到较严厉的惩罚，但是不会像只有一个人认罪时那么严厉。</p>
+<p>下图将这个故事变成一个双人博弈，合作带来的总体收益最大，但是不能达到个人利益最大化。当一个人背叛另一个人合作，可以使得背叛的人达到最大的利益，但是合作的人则获得最小的收益当两人都背叛，所获得的总体收益最小。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/7eb6a8fdcd0d42f4af4b0454fe3270cf.png" alt=""></p>
+<p>将其中的数字抽象，并且将两者都背叛的利益都看作0。下面的不等式反映了之间收益的差距。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/2cd370fb00014929bbaf7b2c25a47850.png" alt=""></p>
+<h2 id="维持合作">维持合作</h2>
+<p>在讨论维持合作时，我们假设参与博弈的人都采用一种策略：只要一方背叛，另一方将持续背叛。</p>
+<p>对于理性的人，当博弈会重复发生的时候，持续的合作就有可能发生。当博弈以P的概率发生时，当以下条件满足：</p>
+<p>$$P &gt; \frac{(T-R)}{T}$$</p>
+<p>换句话说，当人们知道对方在自己背叛一次后将不会再次合作，为了能够拿到持续的收益，将会好好考虑再次出现博弈的概率和自己可能的收益。如果博弈再次发生的概率很小，那么人们就可能为了更大的利益而采取背叛。当T变大或者R变小，人们都更可能选择背叛。</p>
+<p>这个模型还有一个假设，那就是博弈会永远进行下去。如果博弈是有限次数的话，那么博弈的策略就是背叛。因为理性的博弈者在最后一个回合就会采取背叛，来获得最大收益。当双方知道对方会在最后一个回合背叛时，也就会在倒数第二回合背叛以扩大自己的利益。以此类推，这样的唯一策略就是持续背叛。</p>
+<p>另一个可以保证维持合作的模型是声誉模型，当人在一个社群中与其他人进行重复的两两博弈，如果一个人背叛的消息被下一个博弈的人知道，那么别人也将不会和他采用合作的策略。这里假设其被别人知道的概率是$P_D$,那么其也满足之前的不等式。</p>
+<p>$$P_D &gt; \frac{(T-R)}{T}$$</p>
+<p>在这里影响$P_D$因素比较多，例如社群里的网络结构以及信息的传播能力等等。</p>
+<h2 id="行为人的合作">行为人的合作</h2>
+<p>行为人就是指人们会通过指定的策略进行博弈，这里有5种不同的策略</p>
 <ul>
-<li>BFS，DFS</li>
-<li>union find</li>
-<li>A*</li>
-<li>Floyd and dijkstra</li>
+<li>始终合作（C）</li>
+<li>始终背叛（D）</li>
+<li>冷酷触发（GRIM）：冷酷触发策略是一开始选择合作，后面也一直继续合作，直到另一个博弈参与者背叛为止，然后就一直背叛。</li>
+<li>针锋相对（TFT）：针锋相对（或一报还一报）是指在第一次合作，然后每一次都复制另一个博弈参与者在前一次中的行为，两个人都使用针锋相对策略的博弈参与者将永远合作。</li>
+<li>欺负好人（TROLL）：欺负好人策略则剥削始终合作的博弈参与者，更具体地说，这种策略是，在前两次选择背叛，如果另一个博弈参与者在这两次都没有背叛过，那么就选择永远背叛；而如果另一个博弈参与者在前两次已经背叛过了，那么就先转而在接下来的两次选择合作，然后一直采用冷酷触发策略。</li>
 </ul>
-<p>Leetcode里的题目的话主要都是dfs, bfs就可以解决，有些需要思考几个之间的关系的题目可以使用union find来做。少部分计算路径的题目需要使用一些基本的最短路径算法。</p>
-<h2 id="bfs-and-dfs">BFS and DFS</h2>
-<p>BFS就是使用一个queue,每次在遍历一个点的时候就把这个点放到queue里，是一个FIFO的结构。一层一层的遍历，基本应用是在tree level 遍历。这种方法找最短路径比较好，问题是一次要走很多。相对来说，BFS和DFS都可以解决一道题目，区别只是遍历的顺序不同。 DFS需要使用stack来解决，或者递归。</p>
-<ul>
-<li><a href="https://leetcode.com/problems/word-ladder">127. Word Ladder</a></li>
-<li><a href="https://leetcode.com/problems/surrounded-regions">130. Surrounded Regions</a></li>
-<li><a href="https://leetcode.com/problems/clone-graph">133. Clone Graph</a></li>
-</ul>
-<p>对于找所有东西是不是一类的题目，经典题目就是看有几个岛的题目，利用dfs可以很方便的写出来。如果是无向图的话，从区域里的任意一点应该是可以到这个区域里任意一点的。所以只要有这个就可以找到所有是一类的点。</p>
-<ul>
-<li><a href="https://leetcode.com/problems/number-of-islands">200. Number of Islands</a></li>
-<li><a href="https://leetcode.com/problems/walls-and-gates">286. Walls and Gates</a></li>
-</ul>
-<p>Dfs也可以用来实现有向图找环的策略，基本思路就是把图中的点标为白色（unvisited）,灰色(visiting)，黑色(visited)。如果在访问途中遇到灰色的节点，就说明这个点被访问过了，图中有环。</p>
-<h2 id="union-find">Union find</h2>
-<p>这类题目一般都是存在多个点属于一个类别的题目，之后可以通过图的关系把这些点合并到一个类别里面。union find 可以用来找无向图中是否有环。基本算法如下：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DSU</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> parent<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">DSU</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> N<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        parent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>N<span style="color:#f92672">];</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">;</span> <span style="color:#f92672">++</span>i<span style="color:#f92672">)</span>
-            parent<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">find</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> x<span style="color:#f92672">)</span> parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> find<span style="color:#f92672">(</span>parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]);</span>
-        <span style="color:#66d9ef">return</span> parent<span style="color:#f92672">[</span>x<span style="color:#f92672">];</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">union</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> y<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        parent<span style="color:#f92672">[</span>find<span style="color:#f92672">(</span>x<span style="color:#f92672">)]</span> <span style="color:#f92672">=</span> find<span style="color:#f92672">(</span>y<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>其实也不需要每次写个类，只需要把function 定义好即可。</p>
-<ul>
-<li><a href="https://leetcode.com/problems/friend-circles">547. Friend Circles</a></li>
-<li><a href="https://leetcode.com/problems/redundant-connection">684. Redundant Connection</a></li>
-<li><a href="https://leetcode.com/problems/redundant-connection-ii">685. Redundant Connection II</a></li>
-<li><a href="https://leetcode.com/problems/sentence-similarity-ii">737. Sentence Similarity II</a></li>
-<li><a href="https://leetcode.com/problems/couples-holding-hands">765. Couples Holding Hands</a></li>
-<li><a href="https://leetcode.com/problems/similar-string-groups">839. Similar String Groups</a></li>
-</ul>
-<h2 id="最短路径算法">最短路径算法</h2>
-<p>单点最短路径算法： bellman-ford 算法，基本思路就是每次更新从起点到v的距离，如果起点到u再到v的路程短，那么就更新。</p>
-<pre><code> for i from 1 to size(vertices)-1:
-       for each edge (u, v) with weight w in edges:
-           if distance[u] + w &lt; distance[v]:
-               distance[v] := distance[u] + w
-</code></pre><p>之所以要重复n遍，因为最长的最短路径可能经过所有的节点，所以需要全部走一遍。</p>
-<p>多点最短路径算法： Floyd 算法。基本思路是每个节点都做中间的节点，之后再尝试两边，更新距离。</p>
-<pre><code>for k from 1 to |V|
-   for i from 1 to |V|
-      for j from 1 to |V|
-         if dist[i][j] &gt; dist[i][k] + dist[k][j] 
-            dist[i][j] ← dist[i][k] + dist[k][j]
-</code></pre><p>Dijkstra&rsquo;s 算法，这也是单点最短路径算法，基本思路是每次从q中取最小的节点，之后更新从该点到其他的点的距离。</p>
-<pre><code>  function Dijkstra(G, w, s)
-    for each vertex v in V[G]        // 初始化
-           d[v] := infinity           // 將各點的已知最短距離先設成無窮大
-    d[s] := 0                        // 因为出发点到出发点间不需移动任何距离，所以可以直接将s到s的最小距离设为0
-     S := empty set
-     Q := set of all vertices
-     while Q is not an empty set      // Dijkstra演算法主體
-           u := Extract_Min(Q)
-           S.append(u)
-          for each edge outgoing from u as (u,v)
-               if d[v] &gt; d[u] + w(u,v)  // 拓展边（u,v）。w(u,v)为从u到v的路径长度。
-                   d[v] := d[u] + w(u,v)  // 更新路径长度到更小的那个和值。
+<p>我们先计算始终背叛这个策略在面对各种策略时的收益。如果面对的是始终合作这个策略，那么它在每一轮博弈中都可以得到的收益为4。与此对应，在这些博弈中，始终合作所能得到的平均收益则为1。如果始终背叛策略“对阵”的是针锋相对策略或冷酷触发策略，那么它在第一轮博弈中获得的收益为4，之后每一轮博弈中都获得2的收益。如果我们假设博弈会重复多次，那么所有轮次博弈的平均收益将只能略超过2，我们将它记为2+。而如果始终背叛策略与欺负好人策略相遇，前两轮博弈双方都背叛，然后欺负好人策略在第三轮和第四轮博弈中合作，但是此后一直背叛。因而始终背叛策略还是可以获得2+的平均收益；同时欺负好人策略的平均收益则略低于2，我们将它记为2。</p>
+<p>以此类推可以得到这个表格, 其中的数字是博弈者的收益情况。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/62bbf11058994af7b26dce56f280bfcc.png" alt=""></p>
+<p>可以发现，这五种策略中其实有四种是在与自己合作的，因此我们可以将这些策略视为潜在的合作策略。只有针锋相对这一种策略是所有这四种潜在的合作策略都能合作的策略。因此，如果这四种策略的任何一个组合在人口中占了大部分，那么针锋相对策略就能够表现得非常好。合作出现或发展的一个必要条件是，合作带来的收益超过了背叛者能够获得的收益。否则，选择和学习都会导致整个种群趋向背叛。</p>
+<h2 id="群体选择">群体选择</h2>
+<p>在一个群体内部，我们可以假设其中的每个个体都会选择合作或背叛。我们也为每个群体分配一个表现等于这个群体的平均表现。群体选择模型假设选择是在群体与群体之间进行的，表现好的群体将会替代表现差的群体。</p>
+<p>假设一个群体里有10个人，8个人背叛，2个人合作。如果两人合作的话可以得到各得到2点收益，损失1点的成本。一人背叛另一人合作，背叛拿到2点收益，合作者损失1点的成本。两人都背叛则一点收益都没有。每个背叛者可以拿到4点好处，每个合作者的成本是9，收益是2。所有成员的平均绩效是1.8。</p>
+<p>如果另一个群体2人背叛，其他人都合作。背叛者可以拿到16点好处，合作者成本是9，收益是14。所以在这个群体的平均绩效是7.2。</p>
+<p>这些计算结果揭示了一个矛盾：在每个群体内部，背叛者对合作者有优势，但是表现更好的群体却必须包含更多的合作者。这里的张力是非常明显的：个体选择有利于背叛，但是群体选择却有利于合作。</p>
+<p>群体选择拥有促进合作的潜力，这个结论还可以应用到组织内部。大多数组织主要根据个人绩效来分配薪酬。将员工分成若干相互竞争的团队，并根据团队绩效分配奖金和机会，能够诱导合作行为的出现。如果资源流向团队，个人就有动力在这些团队中努力工作，即相互合作。如果合作带来的好处很大，并且团队规模相对于团队数量来说很小，那么这种激励措施应该能够增进团队内部的合作。</p>
+<h2 id="小结">小结</h2>
+<p>生活中处处存在着博弈的情况，在外卖领域，平台和骑手之间就存在着博弈。对此我也利用这章的理论进行了分析，欢迎阅读 <a href="https://www.zhihu.com/question/420025438/answer/1461783105">知乎链接</a></p>
+<p>当博弈会永远进行下去时，在考虑自己的收益情况下，理性的博弈者可能会出现持续的合作。声誉模型也是可以对背叛者的行为进行一定的惩罚，鼓励大家采用合作的方法。</p>
+<p>群体选择发现在群体内部，背叛者获益较大，但是当需要群体总体收益较大时，合作者更多才能达成这个目的。</p>
 
-</code></pre>
         </div>
 
         
@@ -193,11 +165,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/algo/array/">Array算法题的思考</a></li>
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B417-%E5%8D%9A%E5%BC%88%E8%AE%BA%E6%A8%A1%E5%9E%8B/">模型思维(17)--博弈论模型</a></li>
         
-        <li><a href="/post/algo/string/">String算法题的思考</a></li>
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B416-%E7%A9%BA%E9%97%B4%E7%AB%9E%E4%BA%89%E6%A8%A1%E5%9E%8B%E4%B8%8E%E4%BA%AB%E5%8F%97%E7%AB%9E%E4%BA%89%E6%A8%A1%E5%9E%8B/">模型思维(16)--空间竞争模型与享受竞争模型</a></li>
         
-        <li><a href="/post/algo/tree/">树形算法题的思考</a></li>
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B415-%E5%9F%BA%E4%BA%8E%E9%98%88%E5%80%BC%E7%9A%84%E6%A8%A1%E5%9E%8B/">模型思维(15)--基于阈值的模型</a></li>
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B414-%E7%B3%BB%E7%BB%9F%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E5%9E%8B/">模型思维(14)--系统动力学模型</a></li>
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B413-%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E6%A8%A1%E5%9E%8B/">模型思维(13)--马尔可夫模型</a></li>
         
     </ul>
 </div>
@@ -207,9 +183,9 @@
             
             <ul class="clearfix">
                 
-                <li><a href='http://study.tczhong.com/tags/leetcode'>leetcode</a></li>
+                <li><a href='http://study.tczhong.com/tags/book'>book</a></li>
                 
-                <li><a href='http://study.tczhong.com/tags/graph'>graph</a></li>
+                <li><a href='http://study.tczhong.com/tags/tech'>tech</a></li>
                 
             </ul>
             
