@@ -6,10 +6,23 @@
     <description>Recent content in book on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://study.tczhong.com/tags/book/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>模型思维(21)--信号模型</title>
+      <link>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B421-%E4%BF%A1%E5%8F%B7%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B421-%E4%BF%A1%E5%8F%B7%E6%A8%A1%E5%9E%8B/</guid>
+      <description>信号模型就是指人们发送一些成本高的信号来揭示自己所拥有的信息。人们每天都在向外界发出很多信号，尤其是在社交网络诞生后这变得更加容易了。“炫耀性消费”就是对信号模型的一个很好的例子，人们经常会去买一些昂贵但是太多实际价值的东西来表明自己的社会地位，例如豪华跑车，陈年美酒，奢侈品等等。人们购买这些东西，并不是仅仅为了使用，而是发出信号，告诉大家自己的地位。
+离散信号模型 在这种模型中，个体可以选择发送信号或不发送信号；同时，不同的个体发送信号的成本也不相同。要让信号发挥作用，它们就必须是昂贵的（有成本的）或可验证的。模型假设有两种类型的人，强者和弱者。对于同一件事，强者和弱者所需要付出的成本是不同的。例如身体强壮的人，跑马拉松是可能的。而对于身体较弱的人，跑马拉松所付出的代价太大，所以也不会去做。在这个模型里，信号的发出不能半途而废，要么发送，要么不发送。
+模型可能产生三种不同的结果：混同（所有人都发送相同的信号）、分离（每种类型的人发送独特的信号）、部分混同（一些类型区分开来了，其他类型则没有区分开来）。
+一个规模为N的种群由S个强者类型的个体和W个弱者类型的个体组成；这两种类型的个体发送信号的成本分别为c和C，且c &amp;lt; C。种群中所有发送信号的成员平均分配B的收益（B &amp;gt; 0）。这个模型有三种可能的结果：
+ 混同 $C &amp;lt; \frac{B}{N}$ 分离 $c &amp;lt; \frac{B}{S}$ 且 $\frac{B}{S+1} &amp;lt; C$ 只有强者发送信号 部分混同 $c &amp;lt; \frac{B}{N} &amp;lt; C &amp;lt; \frac{B}{S+1}$ 所有强者和部分弱者发送信号  下面用一个例子来解释这个模型，假设在一个10人团队，有5个强者和5个弱者。假设强者完成的成本是2000元，弱者完成的成本是5000元。</description>
+    </item>
     
     <item>
       <title>模型思维(20)--与机制设计有关的模型</title>
