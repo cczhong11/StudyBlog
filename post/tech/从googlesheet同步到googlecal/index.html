@@ -152,7 +152,8 @@
     .<span style="color:#a6e22e">addToUi</span>();
 </code></pre></div><p>点击运行就可以看到如上的效果了。</p>
 <p>但是如果退出再打开这个sheet，发现选项又消失了。这时我们需要新建一个trigger,保证这个脚本在每次这个Google sheet打开的时候都会运行。</p>
-<p>trigger的在<a href="https://script.google.com/home/triggers">这里</a>新建。</p>
+<p>trigger的在<a href="https://script.google.com/home/triggers">这里</a>新建，或者点击app script里edit-&gt;current project&rsquo;s triggers。</p>
+<p>trigger内容如下：</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/e86fdf26f5dd47d7a921261d2f212088.png" alt=""></p>
 <h2 id="踩坑">踩坑</h2>
 <p>在调试时可以使用<code>console.log()</code>,之后在<a href="https://script.google.com/home/executions">这里</a>可以查看结果。</p>
