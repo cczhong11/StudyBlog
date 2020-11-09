@@ -6,10 +6,23 @@
     <description>Recent content in Posts on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://study.tczhong.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>每周分享第 75 期</title>
+      <link>http://study.tczhong.com/post/sharing/sharing_75/</link>
+      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/sharing/sharing_75/</guid>
+      <description>每周分享第 75 期 2020 week 45
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+本周摄影
+漫长的一周过去了，美国大选的结果竟然等了那么久才知晓。接下来4年的政策会如何改变我们将拭目以待。
+国内新闻 【1】央行主管金融时报刊文：大互联网企业开展金融业务更易触发系统性风险</description>
+    </item>
     
     <item>
       <title>从GoogleSheet同步到GoogleCal</title>
