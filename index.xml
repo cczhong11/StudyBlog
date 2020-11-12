@@ -6,10 +6,21 @@
     <description>Recent content on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://study.tczhong.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>模型思维(22)--学习模型</title>
+      <link>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B422-%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B422-%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B/</guid>
+      <description>这一章我们来讨论人们学习的过程，人们是如何在很多选择中做出最优选择。
+个体学习：强化学习模型 在强化学习中，个体要根据各个行动的不同权重来选择行动。权重较大的行动比权重较小的行动更经常被选中。分配给某个行动的权重取决于这个个体在过去采取这个行动时所获得的奖励（收益）。这种高回报收益的强化可以导致个体选择更好的行动。但是这是总是成立的吗？当这个收益是可以用数值计算的，人们很容易选择最优的选项。但如果不是数值形式，如对于餐厅的喜爱程度，往往需要人们的记忆。在强化学习模型中，分配给一个所选备选方案的权重，是根据该备选方案在何种程度上超过了预期，即“渴望水平”来进行调整的。
+在这里我们考虑有N个方案的集合[A, B, C, D, E, .. N]。每个选项的奖励是$\pi(A), \pi(B),\pi(C),\pi(D) .</description>
+    </item>
     
     <item>
       <title>每周分享第 75 期</title>
