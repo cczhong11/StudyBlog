@@ -94,6 +94,25 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/algo/string/" title="String算法题的思考">String算法题的思考</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2018年8月22日
+        </date>
+        
+        <div class="post-content">
+            String 算法思考 String 类型的题目算是leetcode里第二多的题型，其实这个和array的使用方法差不太多，只不过其中有一些特定的使用场景。我在这里会将string分为几类问题，可能不能包括所有的类别，尽量使用较为统一的思路解释遇到的题目。
+数据类型 首先要说清楚一点，在java中String是immutable的，也就是当你创建一个string后是不能修改的，如果你需要给他加内容，java会重新创一个新的实例。这样的问题就是如果使用s+=a,这样时间复杂度是O(n),在java中会重新复制一遍string再给你创建。
+解决办法就是使用StringBuilder，这个的时间复杂度对于增加就是O(1).其中内部实现就是一个char[]
+ sb.append(String str) sb.……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/algo/string/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://study.tczhong.com/post/algo/tree/" title="树形算法题的思考">树形算法题的思考</a>
             </h1>
         </header>
@@ -316,6 +335,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/sharing_82/" title="每周分享第 82 期">每周分享第 82 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/sharing_81/" title="每周分享第 81 期">每周分享第 81 期</a>
     </li>
     
@@ -349,10 +372,6 @@
     
     <li>
         <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B422-%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B/" title="模型思维(22)--学习模型">模型思维(22)--学习模型</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/sharing_75/" title="每周分享第 75 期">每周分享第 75 期</a>
     </li>
     
 </ul>
