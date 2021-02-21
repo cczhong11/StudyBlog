@@ -107,7 +107,7 @@
         
         <div class="post-content">
             <p>本文记录了自己在root已停止支持的红米手机以及破解加密微信聊天记录数据库的一些心得和体会。</p>
-<h1 id="root-手机">root 手机</h1>
+<h1 id="root-">root 手机</h1>
 <p>Root小米手机分为以下几步：</p>
 <ol>
 <li>刷miui的开发者版本</li>
@@ -121,7 +121,7 @@
 <p><img src="https://www.androidexplained.com/wp-content/uploads/2018/05/Redmi-Note-5-Fastboot-Mode-Full.jpg" alt=""></p>
 <p>一开始我并不知道这一步的重要性，尝试了很久的线刷，结果总是显示 ”FAILED (remote: device is locked. Cannot flash images)“。最后才明白是这个问题。另外这个工具没有mac版，所以我的解决办法是运行windows虚拟机，在里面完成了解锁。</p>
 <p>最后一步就比较简单了，直接到授权管理里开启root权限。之后在<code>adb shell</code>里面运行<code>su</code>就是root user了。</p>
-<h1 id="获得聊天记录">获得聊天记录</h1>
+<h1 id="heading">获得聊天记录</h1>
 <p>聊天记录存在的位置是 <code>/data/data/com.tencent.mm/MicroMsg/xxxxxxx/EnMicroMsg.db</code>。这里的<code>xxxxx</code>是对&quot;mm[uin]&ldquo;进行md5的值。uin的获得可以使用这个命令，<code>cat /data/data/com.tencent.mm/shared_prefs/*.xml | grep uin</code>，记录其中的<code>default_uin</code>。如果是1234567，那么就对<code>mm1234567</code>进行md5操作，之后就可以获得文件下的名字。</p>
 <p>利用以下命令把内容拷贝出来。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp EnMicroMsg.db /mnt/sdcard/
@@ -198,6 +198,10 @@ adb pull /mnt/sdcard/EnMicroMsg.db .
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_8/" title="TC分享第 8 期">TC分享第 8 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_7/" title="TC分享第 7 期">TC分享第 7 期</a>
     </li>
     
@@ -231,10 +235,6 @@ adb pull /mnt/sdcard/EnMicroMsg.db .
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_1/" title="TC分享第 1 期">TC分享第 1 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/sharing_82/" title="每周分享第 82 期">每周分享第 82 期</a>
     </li>
     
 </ul>

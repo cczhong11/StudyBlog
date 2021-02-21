@@ -106,7 +106,7 @@
         
         
         <div class="post-content">
-            <h1 id="graph-算法题目思考">graph 算法题目思考</h1>
+            <h1 id="graph-">graph 算法题目思考</h1>
 <p>Graph算是非常常见的题目，一般会给你一个2d array或一个数组代表联系，你可以使用这个输入来转换成一个图表示的数据结构，之后在图里做搜索。常见的算法：</p>
 <ul>
 <li>BFS，DFS</li>
@@ -131,18 +131,18 @@
 <h2 id="union-find">Union find</h2>
 <p>这类题目一般都是存在多个点属于一个类别的题目，之后可以通过图的关系把这些点合并到一个类别里面。union find 可以用来找无向图中是否有环。基本算法如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DSU</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> parent<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> parent<span style="color:#f92672">;</span>
     <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">DSU</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> N<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        parent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>N<span style="color:#f92672">];</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">;</span> <span style="color:#f92672">++</span>i<span style="color:#f92672">)</span>
+        parent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>N<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">;</span> <span style="color:#f92672">+</span><span style="color:#f92672">+</span>i<span style="color:#f92672">)</span>
             parent<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">find</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> x<span style="color:#f92672">)</span> parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> find<span style="color:#f92672">(</span>parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]);</span>
-        <span style="color:#66d9ef">return</span> parent<span style="color:#f92672">[</span>x<span style="color:#f92672">];</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> <span style="color:#f92672">!</span><span style="color:#f92672">=</span> x<span style="color:#f92672">)</span> parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> find<span style="color:#f92672">(</span>parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">union</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> y<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        parent<span style="color:#f92672">[</span>find<span style="color:#f92672">(</span>x<span style="color:#f92672">)]</span> <span style="color:#f92672">=</span> find<span style="color:#f92672">(</span>y<span style="color:#f92672">);</span>
+        parent<span style="color:#f92672">[</span>find<span style="color:#f92672">(</span>x<span style="color:#f92672">)</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> find<span style="color:#f92672">(</span>y<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>其实也不需要每次写个类，只需要把function 定义好即可。</p>
@@ -154,7 +154,7 @@
 <li><a href="https://leetcode.com/problems/couples-holding-hands">765. Couples Holding Hands</a></li>
 <li><a href="https://leetcode.com/problems/similar-string-groups">839. Similar String Groups</a></li>
 </ul>
-<h2 id="最短路径算法">最短路径算法</h2>
+<h2 id="heading">最短路径算法</h2>
 <p>单点最短路径算法： bellman-ford 算法，基本思路就是每次更新从起点到v的距离，如果起点到u再到v的路程短，那么就更新。</p>
 <pre><code> for i from 1 to size(vertices)-1:
        for each edge (u, v) with weight w in edges:
@@ -167,7 +167,7 @@
       for j from 1 to |V|
          if dist[i][j] &gt; dist[i][k] + dist[k][j] 
             dist[i][j] ← dist[i][k] + dist[k][j]
-</code></pre><p>Dijkstra&rsquo;s 算法，这也是单点最短路径算法，基本思路是每次从q中取最小的节点，之后更新从该点到其他的点的距离。</p>
+</code></pre><p>Dijkstra's 算法，这也是单点最短路径算法，基本思路是每次从q中取最小的节点，之后更新从该点到其他的点的距离。</p>
 <pre><code>  function Dijkstra(G, w, s)
     for each vertex v in V[G]        // 初始化
            d[v] := infinity           // 將各點的已知最短距離先設成無窮大
@@ -258,6 +258,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_8/" title="TC分享第 8 期">TC分享第 8 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_7/" title="TC分享第 7 期">TC分享第 7 期</a>
     </li>
     
@@ -291,10 +295,6 @@
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_1/" title="TC分享第 1 期">TC分享第 1 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/sharing_82/" title="每周分享第 82 期">每周分享第 82 期</a>
     </li>
     
 </ul>

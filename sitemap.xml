@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://study.tczhong.com/</loc>
+    <lastmod>2021-02-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/post/</loc>
+    <lastmod>2021-02-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/tags/</loc>
+    <lastmod>2021-02-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/post/sharing/tcsharing_8/</loc>
+    <lastmod>2021-02-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://study.tczhong.com/tags/weekly/</loc>
+    <lastmod>2021-02-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://study.tczhong.com/tags/book/</loc>
     <lastmod>2021-02-14T00:00:00+00:00</lastmod>
   </url>
@@ -13,22 +38,7 @@
   </url>
   
   <url>
-    <loc>http://study.tczhong.com/</loc>
-    <lastmod>2021-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://study.tczhong.com/tags/love/</loc>
-    <lastmod>2021-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://study.tczhong.com/post/</loc>
-    <lastmod>2021-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://study.tczhong.com/tags/</loc>
     <lastmod>2021-02-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -39,11 +49,6 @@
   
   <url>
     <loc>http://study.tczhong.com/tags/tech/</loc>
-    <lastmod>2021-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://study.tczhong.com/tags/weekly/</loc>
     <lastmod>2021-02-14T00:00:00+00:00</lastmod>
   </url>
   

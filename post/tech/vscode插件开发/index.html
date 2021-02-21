@@ -114,7 +114,7 @@
         
         <div class="post-content">
             <p>vscode是我日常所使用的编辑器，包括在写这篇文章的时候。在编辑markdown文档的时候，总会遇到插入图片的问题。所以我就想实现一个简单的vscode插件，在运行时，可以将剪贴板里的图片上传到aws s3上之后把文件的url插入到vscode里。这样在写文章的时候就会提高效率。</p>
-<h2 id="准备工作">准备工作</h2>
+<h2 id="heading">准备工作</h2>
 <p>首先确认自己的环境有nodejs和npm，之后安装</p>
 <ul>
 <li>yeoman
@@ -128,7 +128,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="实现">实现</h2>
+<h2 id="heading-1">实现</h2>
 <p>首先运行,创建一个新的项目, 选择typescript，之后回答几个问题，就会新建一个项目。</p>
 <pre><code>yo code
 </code></pre><p><img src="https://tczimg.s3.amazonaws.com/vscode/d135693c94634394a70f2b730f8ddd20.png" alt=""></p>
@@ -169,7 +169,7 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
         <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">editor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">activeTextEditor</span>;
         <span style="color:#75715e">// 调用js库实现运行脚本
 </span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">child_process</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;child_process&#34;</span>);
-        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">free</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">child_process</span>.<span style="color:#a6e22e">spawnSync</span>(<span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">`/../res/run.sh`</span>, { <span style="color:#a6e22e">shell</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> });
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">free</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">child_process</span>.<span style="color:#a6e22e">spawnSync</span>(<span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">/../res/run.sh</span><span style="color:#e6db74">`</span>, { <span style="color:#a6e22e">shell</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> });
 
         <span style="color:#75715e">//如果有错误 输出
 </span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">free</span>.<span style="color:#a6e22e">stderr</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>) {
@@ -207,18 +207,18 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
     <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">subscriptions</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">disposable</span>);
 }
 </code></pre></div><p>代码比较简单。</p>
-<h2 id="调试">调试</h2>
+<h2 id="heading-2">调试</h2>
 <p>接下来就是调试，可以直接按<code>f5</code>，自动打开一个新的vscode测试环境，这时候打开command palette已经可以看到自己的命令。</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/2b7964ae91ea4c16b48148b25c2754fc.png" alt=""></p>
 <p>接下来可以调用，也可以在自己源代码上断点调试。</p>
-<h2 id="打包">打包</h2>
+<h2 id="heading-3">打包</h2>
 <p>觉得可以打包时，可以安装vsce</p>
 <pre><code>npm install -g vsce
 </code></pre><p>这时候先把<code>package.json</code>里添加<code>&quot;publisher&quot;: &quot;xxxx&quot;</code>,之后运行</p>
 <pre><code>vsce package
 </code></pre><p>这时候就可以生成<code>xxxxx-0.0.1.vsix</code>,可以直接在自己本地vscode里安装</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/56912d13fb0a4eed9b6f66e6448be62d.png" alt=""></p>
-<h2 id="小结">小结</h2>
+<h2 id="heading-4">小结</h2>
 <p>这就是我开发自己第一个vscode插件的经验，希望可以帮助到大家。vscode里还有很多有意思的东西等待着我们去发掘。</p>
 
         </div>
@@ -284,6 +284,10 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_8/" title="TC分享第 8 期">TC分享第 8 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_7/" title="TC分享第 7 期">TC分享第 7 期</a>
     </li>
     
@@ -317,10 +321,6 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_1/" title="TC分享第 1 期">TC分享第 1 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/sharing_82/" title="每周分享第 82 期">每周分享第 82 期</a>
     </li>
     
 </ul>
