@@ -114,22 +114,22 @@
         
         <div class="post-content">
             <p>这篇主要介绍如何Google sheet里批量创建日历项目并同步到Google calendar的方法。</p>
-<h2 id="heading">启发</h2>
+<h2 id="启发">启发</h2>
 <p>在本科的时候我就研究了各种办法希望可以快速的创建各种日程，先后尝试过生成csv上传，使用Python API等等，但都比较麻烦。知道了Google sheet可以运行app script就一直想试试。在看了Google官方的<a href="https://cloud.google.com/blog/products/g-suite/g-suite-pro-tip-how-to-automatically-add-a-schedule-from-google-sheets-into-calendar">博文</a>后，决定实现一下，发现还是比较容易实现的，下面给大家介绍一下。</p>
-<h2 id="step-1">Step 1：新建脚本</h2>
+<h2 id="step-1新建脚本">Step 1：新建脚本</h2>
 <p>初始表格如下：</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/ba9ca4c96d4e403e8fdc5f583e775bcb.png" alt=""></p>
 <p>第一步是从Google sheet 上新建与之配套的脚本，通过tools到script editor点击即可。</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/1e09f042842b4bcc8765b120dd2a6036.png" alt=""></p>
 <p>之后就可以看到如下的编辑页面。</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/c28c70ca880d468c83191ece2eec1732.png" alt=""></p>
-<h2 id="step-2id">Step 2：获得表格和日历id</h2>
+<h2 id="step-2获得表格和日历id">Step 2：获得表格和日历id</h2>
 <p>第二步就是获取当前的表格和要添加的日历。将如下代码放到function里，之后点击运行，会出现提示给这个脚本授权。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">eventCal</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CalendarApp</span>.<span style="color:#a6e22e">getCalendarById</span>(<span style="color:#a6e22e">xxxxxxx</span>);
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">spreadsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSheet</span>();
 </code></pre></div><p>日历id的获取方式如下</p>
 <p><img src="https://storage.googleapis.com/gweb-cloudblog-publish/original_images/image3_AHRutjd.gif" alt=""></p>
-<h2 id="step-3">Step 3：获得表格内的信息</h2>
+<h2 id="step-3获得表格内的信息">Step 3：获得表格内的信息</h2>
 <p>在获得表格之后，我们就可以通过以下的方法获得表格的数值。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#34;C4&#34;</span>).<span style="color:#a6e22e">getValue</span>();
 
@@ -141,10 +141,10 @@
     <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">endTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">shift</span>[<span style="color:#ae81ff">1</span>];
     <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">shift</span>[<span style="color:#ae81ff">2</span>];
 }
-</code></pre></div><h2 id="step-4">Step 4：创建日程</h2>
+</code></pre></div><h2 id="step-4创建日程">Step 4：创建日程</h2>
 <p>在获得数值后就可以使用<a href="https://developers.google.com/apps-script/reference/calendar/calendar-app#createEvent(String,Date,Date)">api</a>创建日历了。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">eventCal</span>.<span style="color:#a6e22e">createEvent</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">startTime</span>, <span style="color:#a6e22e">endTime</span>);
-</code></pre></div><h2 id="step-5ui">Step 5：加入UI</h2>
+</code></pre></div><h2 id="step-5加入ui">Step 5：加入UI</h2>
 <p>接下来如果需要更方便的启动脚本，可以将它加入ui之中。</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/59958da8c23d4639ba110d8b0457b5d7.png" alt=""></p>
 <p>在主function里加入如下的代码即可。这里的<code>schedule</code>就是实际同步日历的function。</p>
@@ -154,17 +154,17 @@
     .<span style="color:#a6e22e">addToUi</span>();
 </code></pre></div><p>点击运行就可以看到如上的效果了。</p>
 <p>但是如果退出再打开这个sheet，发现选项又消失了。这时我们需要新建一个trigger,保证这个脚本在每次这个Google sheet打开的时候都会运行。</p>
-<p>trigger的在<a href="https://script.google.com/home/triggers">这里</a>新建，或者点击app script里edit-&gt;current project's triggers。</p>
+<p>trigger的在<a href="https://script.google.com/home/triggers">这里</a>新建，或者点击app script里edit-&gt;current project&rsquo;s triggers。</p>
 <p>trigger内容如下：</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/e86fdf26f5dd47d7a921261d2f212088.png" alt=""></p>
-<h2 id="heading-1">踩坑</h2>
+<h2 id="踩坑">踩坑</h2>
 <p>在调试时可以使用<code>console.log()</code>,之后在<a href="https://script.google.com/home/executions">这里</a>可以查看结果。</p>
 <p>另一个坑就是app script的时区和Google sheet的时区需要保持一致。</p>
 <p>Google sheet的时区设置：</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/440e219dfe0d48e0b09ce2045b162f6e.png" alt=""></p>
 <p>app script的时区：</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/cd48913656b34db8b87adcb2ba756064.png" alt=""></p>
-<h2 id="heading-2">总结</h2>
+<h2 id="总结">总结</h2>
 <p>这里附上完整可运行的代码：</p>
 <p><a href="https://gist.github.com/cczhong11/b7f59371d826742dffa034242722d8c2">https://gist.github.com/cczhong11/b7f59371d826742dffa034242722d8c2</a></p>
 <p>小小的代码可以自动化很多操作，这也是我喜欢写代码的原因。希望可以帮到大家！</p>
@@ -233,6 +233,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_9/" title="TC分享第 9 期">TC分享第 9 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_8/" title="TC分享第 8 期">TC分享第 8 期</a>
     </li>
     
@@ -266,10 +270,6 @@
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_2/" title="TC分享第 2 期">TC分享第 2 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_1/" title="TC分享第 1 期">TC分享第 1 期</a>
     </li>
     
 </ul>

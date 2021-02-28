@@ -106,7 +106,7 @@
         
         
         <div class="post-content">
-            <h1 id="dp-">DP 算法题目的思考</h1>
+            <h1 id="dp-算法题目的思考">DP 算法题目的思考</h1>
 <p>dp全称是动态规划，是一类被人又喜欢又讨厌的题目。喜欢是因为找到递推关系之后题目就变得简单了，讨厌的原因是这类题目常常很难想到递推关系。</p>
 <p>dp的核心思想就是把一个复杂的问题分解成简单的子问题，并且可以利用递推的方式来解决。所有dp题目的核心是：</p>
 <ol>
@@ -114,7 +114,7 @@
 <li>初始化 initialization</li>
 <li>空间优化 space improvement</li>
 </ol>
-<h2 id="heading">路径数量</h2>
+<h2 id="路径数量">路径数量</h2>
 <p>这类题目就是看有几种方式可以到这个点，然后把这几种方式的路径加起来就可以。这是自下而上的思想，对于青蛙跳的那道题也可以自上而下利用递归的思路解题。只要可以跳到，就可以变成一个子问题，把这个点当做起点来进行。</p>
 <p>word break 这类题目就可以使用相同的思想。思路是判断前i个是否可以组成，之后就判断这从i到j是否是一个单词。如果要记录下来所有的组成可能的话就可以使用dfs了。</p>
 <ul>
@@ -135,7 +135,7 @@
 <li><a href="https://leetcode.com/problems/arithmetic-slices-ii-subsequence">446. Arithmetic Slices II - Subsequence</a></li>
 <li><a href="https://leetcode.com/problems/soup-servings">808. Soup Servings</a></li>
 </ul>
-<h2 id="heading-1">最长问题</h2>
+<h2 id="最长问题">最长问题</h2>
 <p>Dp和二分查找也可以结合，例如找最长递增子序列的题目。在array那里已经提到了这道题，dp的思想在这里是这样的，<strong>我们先建立一个数组ends</strong>，把首元素放进去，然后比较之后的元素，如果遍历到的新元素比ends数组中的首元素小的话，替换首元素为此新元素，如果遍历到的新元素比ends数组中的末尾元素还大的话，将此新元素添加到ends数组末尾(注意不覆盖原末尾元素)。如果遍历到的新元素比ends数组首元素大，比尾元素小时，此时用二分查找法找到第一个不小于此新元素的位置，覆盖掉位置的原来的数字，以此类推直至遍历完整个nums数组，此时ends数组的长度就是我们要求的LIS的长度，特别注意的是ends数组的值可能不是一个真实的LIS，比如若输入数组nums为{4, 2， 4， 5， 3， 7}，那么算完后的ends数组为{2， 3， 5， 7}，可以发现它不是一个原数组的LIS，只是长度相等而已。</p>
 <p>可以把相同的思路放在二维数组上解决Russian envelopes的问题。信封的宽度还是从小到大排，但是宽度相等时，我们让高度大的在前面。那么现在问题就简化了成了找高度数字中的LIS，完全就和之前那道Longest Increasing Subsequence一样了。把高度放前面为了防止相同宽度的互套。</p>
 <ul>
@@ -143,7 +143,7 @@
 <li><a href="https://leetcode.com/problems/russian-doll-envelopes">354. Russian Doll Envelopes</a></li>
 </ul>
 <p>还有一些类似找相同行列的特性的题目，例如找最大十字架和enemy and bomb,可以使用两个方向同时扫的方法(从右和从上、从左和从下)，记录出现的次数，这样可以方便计算。</p>
-<h2 id="heading-2">股票问题</h2>
+<h2 id="股票问题">股票问题</h2>
 <p>这类问题存在多种的转态转移方程，有的时候不太容易搞清楚。方法就是从基础的情况开始想，然后思考之间的关系。</p>
 <p>For each of them we make an array, buy[n], sell[n] and rest[n].</p>
 <p>buy[i] means before day i what is the maxProfit for any sequence end with buy.</p>
@@ -180,7 +180,7 @@ sell[i] = max(buy[i-1]+price, sell[i-1])</p>
 <ul>
 <li><a href="https://leetcode.com/problems/delete-and-earn">740. Delete and Earn</a></li>
 </ul>
-<h2 id="string">数组/string比较</h2>
+<h2 id="数组string比较">数组/string比较</h2>
 <p>这类题目的代表就是regex，可以分情况讨论分情况决定下一个是否是符合的。基本思想都是使用一个二维数组，i和j分别代表第一个数组第i个以及第二个数组第j个。如果数组dp[i][j]=1，说明这是符合要求的。</p>
 <p>另外一个相关的问题是<a href="https://en.wikipedia.org/wiki/Longest_common_subsequence_problem">最长公共序列</a>的经典dp问题,这个题目的思想和regex几乎相同，把问题分成两类，第一类是<code>a[i]!=b[j]</code>,第二类是<code>a[i]=b[j]</code>。如果两边相等的话，就可以使用之前<code>dp[i-1][j-1]+1</code>的结果，如果不等的话则是max(dp[i-1][j],dp[i][j-1])。题目可以用递归+memorization解决。</p>
 <p>相似的题目还有edit distance经典题型，思路是相同的。利用二维数组表示，如果相同，和之前dp[i-1][j-1]相同，如果不同则是1+min(dp[i-1][j-1],dp[i-1][j],dp[i][j-1])。这里是就增加，删除，替换三种可能。</p>
@@ -188,12 +188,12 @@ sell[i] = max(buy[i-1]+price, sell[i-1])</p>
 <li><a href="https://leetcode.com/problems/regular-expression-matching">10. Regular Expression Matching</a></li>
 <li><a href="https://leetcode.com/problems/edit-distance">72. Edit Distance</a></li>
 </ul>
-<h2 id="heading-3">背包问题</h2>
+<h2 id="背包问题">背包问题</h2>
 <p>这是dp另一类经典题目，在一个条件被限制的情况下如何获得最大。原始的背包问题是这样的，背包有限制大小，每个物品有大小和价值，在大小限制的情况下如何做到最多的价值。解法包括自顶向下和自下而上。本质上都是穷举可能的的大小，之后得到最大的价值。这个方法把指数次的时间复杂度降到O(nS)。dp[n][S]表示记录第n个物品时在S的情况下的最大价值。</p>
 <ul>
 <li><a href="https://leetcode.com/problems/guess-number-higher-or-lower-ii">375. Guess Number Higher or Lower II</a></li>
 </ul>
-<h2 id="local-">全局最优,local 最优</h2>
+<h2 id="全局最优local-最优">全局最优,local 最优</h2>
 <p>经典dp，m个城市k个邮局怎么可以达到全局最短。基本思路就是从放一个邮局的角度开始思考。如果从第i个城市到第j个城市之间增加一个邮局该怎么放。这时候就需要知道从第i到第j的最短整体距离是多少。得到这个递推公式。</p>
 <p>sum[i][j]:在第i个村庄到第j个村庄中建立1个邮局的最小耗费, 村庄的坐标已知分别为p1,p2,p3,p4,p5,p6;那么，如果要求sum[1][4]的话邮局需要建立在2或者3处,放在2处的消耗为p4-p2+p3-p2+p2-p1=p4-p2+p3-p1 放在3处的结果为p4-p3+p3-p2+p3-p1=p4+p3-p2-p1，可见，将邮局建在2处或3处是一样的. 所以可以使用这个公式。</p>
 <pre><code>sum[i][j] = sum[i][j-1] + p[j] -p[(i+j)/2]
@@ -283,6 +283,10 @@ dp[i][j] =min(dp[i][j],dp[k][j-1]+sum[k+1][i])  
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_9/" title="TC分享第 9 期">TC分享第 9 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_8/" title="TC分享第 8 期">TC分享第 8 期</a>
     </li>
     
@@ -316,10 +320,6 @@ dp[i][j] =min(dp[i][j],dp[k][j-1]+sum[k+1][i])  
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_2/" title="TC分享第 2 期">TC分享第 2 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_1/" title="TC分享第 1 期">TC分享第 1 期</a>
     </li>
     
 </ul>

@@ -146,34 +146,34 @@ Namespaces are one honking great idea -- let's do more of those!
 <p>其中我最喜欢的一条还是“Simple is better than complex.” 简单总是比复杂好。在python中，我们可以使用较少的语句实现较多的功能。当有什么有意思的想法时，我们也可以利用python快速实现。虽然python与c++相比的确是慢了不少，但是在目前的硬件条件下和个人的应用场景下，这是可以接受的。python之所以可以做到这些一方面是python在设计之初就注意到的简易使用以及模块化的思想，另一方面也是开放的社区吸引众多的人来为其开发各种各样的模块。任何复杂的东西其实都是通过简单的东西搭配起来的，在写代码的时候，把一个函数的内容变得简单明了，更加方便调试以及其他人的理解，也方便后续的维护。</p>
 <p>其中还有两句比较令人费解：&ldquo;Now is better than never. Although never is often better than <em>right</em> now.&rdquo; 中文翻译就是现在总是比永远不做好，然而不假思索还不如不做。一开始看的时候感觉有点矛盾，第一句比较好理解，其实是讲拖延症。现在做一些事情是比一直在思考不动手好的，即使很多事情一开始想着要做，但是后来又有了很多的事情最后就不去完成了，所以做优于不做。后一句不是这么好理解，为什么有的时候不如不做呢？这里可以这么看的，在写代码的时候，你只需要去完成现在是需要的功能，而不需要去实现觉得<strong>可能未来要用上</strong>的功能。因为这可能只是一开始的一厢情愿，花了时间其实并没有花在点子上，有的事情做了还不如不做。三思而后行还是有一定的道理的，但是需要掌握一个平衡，做最重要的事情。</p>
 <p>对于 <code>import this</code> 还有一点有趣的地方就是他的实现方法。一开始我以为就是打印一些字符串，但是当我打开python的源代码时发现并不是这样，文件可以在python的安装目录下查看<code>this.py</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;</span><span style="color:#e6db74">Gur Mra bs Clguba, ol Gvz Crgref</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Ornhgvshy vf orggre guna htyl.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Rkcyvpvg vf orggre guna vzcyvpvg.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Fvzcyr vf orggre guna pbzcyrk.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Pbzcyrk vf orggre guna pbzcyvpngrq.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Syng vf orggre guna arfgrq.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Fcnefr vf orggre guna qrafr.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Ernqnovyvgl pbhagf.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Fcrpvny pnfrf nera</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">g fcrpvny rabhtu gb oernx gur ehyrf.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Nygubhtu cenpgvpnyvgl orngf chevgl.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Reebef fubhyq arire cnff fvyragyl.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Hayrff rkcyvpvgyl fvyraprq.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Va gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Gurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Nygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">er Qhgpu.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Abj vf orggre guna arire.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Nygubhtu arire vf bsgra orggre guna *evtug* abj.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Vs gur vzcyrzragngvba vf uneq gb rkcynva, vg</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">f n onq vqrn.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Vs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">f qb zber bs gubfr!</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;Gur Mra bs Clguba, ol Gvz Crgref
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Ornhgvshy vf orggre guna htyl.
+</span><span style="color:#e6db74">Rkcyvpvg vf orggre guna vzcyvpvg.
+</span><span style="color:#e6db74">Fvzcyr vf orggre guna pbzcyrk.
+</span><span style="color:#e6db74">Pbzcyrk vf orggre guna pbzcyvpngrq.
+</span><span style="color:#e6db74">Syng vf orggre guna arfgrq.
+</span><span style="color:#e6db74">Fcnefr vf orggre guna qrafr.
+</span><span style="color:#e6db74">Ernqnovyvgl pbhagf.
+</span><span style="color:#e6db74">Fcrpvny pnfrf nera&#39;g fcrpvny rabhtu gb oernx gur ehyrf.
+</span><span style="color:#e6db74">Nygubhtu cenpgvpnyvgl orngf chevgl.
+</span><span style="color:#e6db74">Reebef fubhyq arire cnff fvyragyl.
+</span><span style="color:#e6db74">Hayrff rkcyvpvgyl fvyraprq.
+</span><span style="color:#e6db74">Va gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.
+</span><span style="color:#e6db74">Gurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.
+</span><span style="color:#e6db74">Nygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh&#39;er Qhgpu.
+</span><span style="color:#e6db74">Abj vf orggre guna arire.
+</span><span style="color:#e6db74">Nygubhtu arire vf bsgra orggre guna *evtug* abj.
+</span><span style="color:#e6db74">Vs gur vzcyrzragngvba vf uneq gb rkcynva, vg&#39;f n onq vqrn.
+</span><span style="color:#e6db74">Vs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.
+</span><span style="color:#e6db74">Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg&#39;f qb zber bs gubfr!&#34;&#34;&#34;</span>
 
 d <span style="color:#f92672">=</span> {}
 <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> (<span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">97</span>):
     <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">26</span>):
         d[chr(i<span style="color:#f92672">+</span>c)] <span style="color:#f92672">=</span> chr((i<span style="color:#f92672">+</span><span style="color:#ae81ff">13</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">26</span> <span style="color:#f92672">+</span> c)
 
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>join([d<span style="color:#f92672">.</span>get(c, c) <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> s]))
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join([d<span style="color:#f92672">.</span>get(c, c) <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> s]))
 
 
 </code></pre></div><p>这段文字是通过加密的手段的。加密方法本身还是很简单的，他是通过把每个字符移13个位子，例如 <code>a -&gt; n</code>，这么做的原因可能是为了防止大家发现这个彩蛋吧。</p>
@@ -242,6 +242,10 @@ d <span style="color:#f92672">=</span> {}
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_9/" title="TC分享第 9 期">TC分享第 9 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_8/" title="TC分享第 8 期">TC分享第 8 期</a>
     </li>
     
@@ -275,10 +279,6 @@ d <span style="color:#f92672">=</span> {}
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_2/" title="TC分享第 2 期">TC分享第 2 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_1/" title="TC分享第 1 期">TC分享第 1 期</a>
     </li>
     
 </ul>
