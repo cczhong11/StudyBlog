@@ -135,6 +135,7 @@
 <li><a href="https://leetcode.com/problems/arithmetic-slices-ii-subsequence">446. Arithmetic Slices II - Subsequence</a></li>
 <li><a href="https://leetcode.com/problems/soup-servings">808. Soup Servings</a></li>
 </ul>
+<p>当dp会超时时，如果只是问是否可以到，可以利用dfs来greedy的查找。</p>
 <h2 id="最长问题">最长问题</h2>
 <p>Dp和二分查找也可以结合，例如找最长递增子序列的题目。在array那里已经提到了这道题，dp的思想在这里是这样的，<strong>我们先建立一个数组ends</strong>，把首元素放进去，然后比较之后的元素，如果遍历到的新元素比ends数组中的首元素小的话，替换首元素为此新元素，如果遍历到的新元素比ends数组中的末尾元素还大的话，将此新元素添加到ends数组末尾(注意不覆盖原末尾元素)。如果遍历到的新元素比ends数组首元素大，比尾元素小时，此时用二分查找法找到第一个不小于此新元素的位置，覆盖掉位置的原来的数字，以此类推直至遍历完整个nums数组，此时ends数组的长度就是我们要求的LIS的长度，特别注意的是ends数组的值可能不是一个真实的LIS，比如若输入数组nums为{4, 2， 4， 5， 3， 7}，那么算完后的ends数组为{2， 3， 5， 7}，可以发现它不是一个原数组的LIS，只是长度相等而已。</p>
 <p>可以把相同的思路放在二维数组上解决Russian envelopes的问题。信封的宽度还是从小到大排，但是宽度相等时，我们让高度大的在前面。那么现在问题就简化了成了找高度数字中的LIS，完全就和之前那道Longest Increasing Subsequence一样了。把高度放前面为了防止相同宽度的互套。</p>
