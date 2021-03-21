@@ -145,7 +145,8 @@
 </ul>
 <p>还有一些类似找相同行列的特性的题目，例如找最大十字架和enemy and bomb,可以使用两个方向同时扫的方法(从右和从上、从左和从下)，记录出现的次数，这样可以方便计算。</p>
 <h2 id="股票问题">股票问题</h2>
-<p>这类问题存在多种的转态转移方程，有的时候不太容易搞清楚。方法就是从基础的情况开始想，然后思考之间的关系。</p>
+<p>这类问题存在多种的转态转移方程，有的时候不太容易搞清楚。方法就是从基础的情况开始想，然后思考之间的关系。
+可以从数组开始，之后再化简成为单个变量</p>
 <p>For each of them we make an array, buy[n], sell[n] and rest[n].</p>
 <p>buy[i] means before day i what is the maxProfit for any sequence end with buy.</p>
 <p>sell[i] means before day i what is the maxProfit for any sequence end with sell.</p>
@@ -284,6 +285,10 @@ dp[i][j] =min(dp[i][j],dp[k][j-1]+sum[k+1][i])  
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_12/" title="TC分享第 12 期">TC分享第 12 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_11/" title="TC分享第 11 期">TC分享第 11 期</a>
     </li>
     
@@ -317,10 +322,6 @@ dp[i][j] =min(dp[i][j],dp[k][j-1]+sum[k+1][i])  
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_5/" title="TC分享第 5 期">TC分享第 5 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_4/" title="TC分享第 4 期">TC分享第 4 期</a>
     </li>
     
 </ul>
