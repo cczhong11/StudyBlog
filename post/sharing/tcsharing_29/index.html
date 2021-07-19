@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TC分享第 29 期 | Learn More</title>
+    <meta property="og:title" content="TC分享第 29 期 - Learn More">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2021-07-18T00:00:00&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2021-07-18T00:00:00&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="TC分享第 29 期">
+        
+    <meta name="author" content="">
+    <meta property="og:url" content="http://study.tczhong.com/post/sharing/tcsharing_29/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+    
+
+        
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="far fa-envelope"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fab fa-github"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fab fa-linkedin"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://stackoverflow.com/users/7112540/tc-zhong"><i class="fab fa-stack-overflow"></i></a></li>
+                
+            </ul>
+        
+
+  
+
+    </nav>
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://study.tczhong.com/">
+                        Learn More
+                    </a>
+                
+                
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://study.tczhong.com/">首页</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/weekly/" title="每周分享">每周分享</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/love/" title="亲密关系">亲密关系</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/leetcode/" title="Leetcode">Leetcode</a>
+                    
+                    <a  href="http://study.tczhong.com/archives/" title="归档">归档</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#新闻思考">新闻思考</a></li>
+    <li><a href="#科技新闻">科技新闻</a></li>
+    <li><a href="#优秀的项目">优秀的项目</a></li>
+    <li><a href="#优秀的文章">优秀的文章</a></li>
+    <li><a href="#有趣的事情">有趣的事情</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">TC分享第 29 期</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2021年7月18日
+        </date>
+        
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <h1 id="tc分享第-29-期">TC分享第 29 期</h1>
+<p>2021 week 28</p>
+<p>你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。</p>
+<p><img src="https://my-news-counter.herokuapp.com/total.svg?repo_id=cczhong11.manongsharing_29" alt="Total visitor"></p>
+<p>本周摄影</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/5ac5a8225287478597cfca50e48acd89.png" alt=""></p>
+<h2 id="新闻思考">新闻思考</h2>
+<p>新闻分享我也做了两年多了，最近也有一些朋友问我做分享的心得，读了这篇<a href="https://mp.weixin.qq.com/s/PX-z9ym0vIcw_Mrdlf9htg">文章</a>我才知道现在越来越多的人开始做newsletter。</p>
+<p>我做这个分享最早是模仿<a href="https://www.ruanyifeng.com/blog/2021/07/weekly-issue-167.html">阮一峰的科技周报</a>，与他不同的地方在于我包括更多的方面。做新闻分享的初衷我在<a href="../sharing_12">每周分享第 12 期</a>期提到了，主要是这三个原因：</p>
+<ul>
+<li>为大家提供不同的信息渠道</li>
+<li>记录新闻在一周的变化</li>
+<li>对于互联网的个人备份</li>
+</ul>
+<p>现在每个人每天都可以接触海量的信息，如何选择看什么就是一个难题。自从推荐系统和今日头条的出现，机器推荐占到了大部分人获取新闻的方式。这里有一个问题就是很难获得新领域的知识，多样化自己的信息。比如领域A，当你之前很少关注时，推荐系统自然也不会给你推荐，那么你不主动去获取可能永远就不知道了。以前的报纸为了适应所有人的口味会放入各个不同的方面的东西，现在人因为推荐系统的存在，看到的领域会愈发单一和趋同。</p>
+<p>我做新闻分享本质其实就是人工的对于信息进行筛选，呈现给大家，增加一些信息多样性。</p>
+<p>我有的时候又想就算不知道这些新闻对于我们生活会有影响吗？比如欧洲暴雨，巴基斯坦中企巴士爆炸，吴亦凡事件，如果我不炒股的话对于我的生活本身可能影响不大。大部分新闻人们也很快就忘记，而且不少朋友反映篇幅太长了，所以我在今年的分享删去了之前的国内国际新闻。同样的新闻大家可能会有不同的解读，今年我就有针对性的对我感兴趣的新闻进行解读，做了半年下来发现这个是我花时间最多的部分，但对于以后会看来说最有价值的部分了吧。</p>
+<h2 id="科技新闻">科技新闻</h2>
+<p>【1】市场监管总局批准腾讯收购搜狗</p>
+<p>国家市场监管总局公布7月5日-7月12日无条件批准经营者集中案件列表，其中包括腾讯控股有限公司收购搜狗公司股权案件。</p>
+<p>【2】B站崩了</p>
+<p>7月13日晚间，很多人的微博和朋友圈都被一个消息刷屏了：“B站崩了！&ldquo;当日23点左右，不少网友突然发现B站App及网页端都显示“网络出错”.B站服务器崩溃后，很快就引发了全网级别的讨论。晚上23点左右“B站崩了”事件开始发生，23点4分，#b站崩了#话题已经登上了热搜榜，10分钟后，已经跃升热搜榜第一名，并呈现爆炸式传播。很快，不少人的朋友圈和微博已经被B站相关话题刷屏，大V的关注更是引来了更多吃瓜群众的围观。</p>
+<p>B站用户基本是青年群体，这一代有明显思想进步，体现在出现问题都先从自己找问题。重启手机，重启网，重装APP，重新登陆，恢复出厂设置，甚至还有交话费的……尝试过后才得出结论，这玩意儿确实不赖自己</p>
+<p>![](<a href="https://tczimg.s3.amazonaws.com/2021/28/030f05a7be1a4f2bb4">https://tczimg.s3.amazonaws.com/2021/28/030f05a7be1a4f2bb4</a> a255b2f3552d9f.jpg)</p>
+<p>【3】7月14日，有网友爆料称大象公会、回形针PAPERCLIP、黄章晋等在微博、B站等多个平台的账号已被封禁或处于停用状态。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/6f372d241580496b823fd40ef71bde50.jpg" alt=""></p>
+<p>【4】阿里腾讯考虑互相开放生态系统
+阿里的初步举措可能包括将微信支付引入淘宝和天猫；而腾讯可能将允许阿里的电商信息在微信分享，或者允许微信用户通过小程序使用阿里巴巴的一些服务。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/a713e07c201d446aa152040619312782.jpg" alt=""></p>
+<p>【5】国家网信办等七部门进驻滴滴开展网络安全审查
+据网信中国消息，网络安全审查办公室有关负责同志表示，按照网络安全审查工作安排，7月16日，国家网信办会同公安部、国家安全部、自然资源部、交通运输部、税务总局、市场监管总局等部门联合进驻滴滴出行科技有限公司，开展网络安全审查。</p>
+<p>【6】Netflix将进军游戏领域！
+据彭博社，Netflix将在影视领域之外首次作出重大拓展，计划进军电子游戏行业，并且已经聘请前脸书内容副总裁Mike Verdu出任游戏开发副总裁，向 COO Greg Peters汇报工作。Verdu之前在脸书负责与开发者合作将游戏和其他内容引入Oculus虚拟现实眼罩。
+据悉，Netflix希望在一年内通过平台提供电子游戏。这些游戏将作为一种新的节目题材，与目前的内容一同展示，目前还不准备对该内容收费。
+值得一提的是Netflix早已探索过互动节目，比如《黑镜》，所以与真正的电子游戏只有一步之遥。</p>
+<p>【7】亚马逊雨林碳吸收能力到达临界值！产生碳的能力大于吸收能力
+亚马逊热带雨林占据了世界雨林面积的一半，占全球森林面积的20%，是全球最大及物种最多的热带雨林。它不仅能够吸收二氧化碳，产生的氧气更是占全球氧气总量的1/10，因此还被称为“地球之肺”和“绿色心脏”。
+发表在《自然》上的一项新研究指出，亚马逊雨林大部分区域碳吸收能力已经超过临界值，这意味着已经开始排放的二氧化碳量已经超过了吸收的量。
+该研究中指出，在过去的半个世纪里，尽管二氧化碳的排放量增加了50%，但植物和土壤吸收了超过四分之一的二氧化碳排放量。
+但是在过去十年中收集的数百份高空空气样本显示，亚马逊雨林尤其是东南部，已经从一个碳汇（吸收二氧化碳，减少温室气体在大气中浓度的过程）变成了二氧化碳的来源。
+而亚马逊河流域拥有世界上大约一半的热带雨林，该区域的树木和土壤中储存了4500亿吨的二氧化碳，一旦亚马逊河流域成为一个稳定的碳源而不是碳汇，这将使其成为一个“碳弹”，将对全球气候带来更严峻的挑战性。
+此前有研究显示，2021年后，热带雨林的降雨将不足维持自身生存，并开始慢慢退化为干燥的大草原，向大气中释放数十亿吨碳，这将加剧全球变暖。
+让人担忧的是，亚马逊雨林只是气候系统中到达临界值的区域之一。像格陵兰岛和南极洲西部的冰原，以及西伯利亚的永久冻土中都充满了二氧化碳和甲烷，而这些地区也都正在面临着到达临界值的危险。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/4fa1ec1212464de6850f8d3e51d43eca.jpg" alt=""></p>
+<p>【8】中国新式运载器首飞成功
+2021年7月16日，由中国航天科技集团一院研制的亚轨道重复使用演示验证项目运载器在酒泉卫星发射中心准时点火起飞，按照设定程序完成飞行后，平稳水平着陆于阿拉善右旗机场，首飞任务取得圆满成功。发展重复使用天地往返航天运输技术是我国由航天大国迈向航天强国的重要标志，亚轨道重复使用运载器可作为升力式火箭动力重复使用航天运输系统的子级，是航天航空技术的高度融合体。
+该项目的圆满成功，为我国重复使用天地往返航天运输技术发展奠定了坚实基础，为实现领域创新发展和自主可控迈出了坚实的第一步。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/b5914bd4dfb84bef9c5e2cbcb705a2ff.jpg" alt=""></p>
+<p>【9】微软宣布推出云 PC 服务&quot;Windows 365&rdquo;</p>
+<p>8月2日上线。用户可以在浏览器里面，使用 Windows 10，所有状态都保存在云端。
+它的最大好处是，能让你在各种系统上（包括 PC 和手机）都使用Windows，而且使用的是云端的同一台机器。你在办公室中断的工作，回到家可以在停下来的地方接着做。</p>
+<h2 id="优秀的项目">优秀的项目</h2>
+<p>【1】<a href="https://github.com/hartator/wayback-machine-downloader/">hartator/wayback-machine-downloader</a></p>
+<p>Download an entire website from the Wayback Machine.</p>
+<p>【2】<a href="https://github.com/esrlabs/josh">esrlabs/josh</a></p>
+<p>Combine the advantages of a monorepo with those of multirepo setups by leveraging a blazingly-fast, incremental, and reversible implementation of git history filtering.</p>
+<p>【3】<a href="https://github.com/zhenghaoz/gorse">zhenghaoz/gorse</a></p>
+<p>An open source recommender system service written in Go</p>
+<p>【4】<a href="https://github.com/paritytech/substrate">paritytech/substrate</a></p>
+<p>Substrate: The platform for blockchain innovators</p>
+<p>【5】<a href="https://github.com/TheAlgorithms">The Algorithms</a></p>
+<h2 id="优秀的文章">优秀的文章</h2>
+<p>【1】<a href="https://www.alexanderpiano.nz/page/the-alexander-piano">Alexander piano- the longest piano in the world</a></p>
+<p>【2】<a href="https://torrentfreak.com/bittorrent-turns-20-the-file-sharing-revolution-revisited-210702/">BitTorrent Turns 20: The File-Sharing Revolution Revisited * TorrentFreak</a></p>
+<p>bt 20年的历史</p>
+<p>【3】<a href="https://www.practicalnetworking.net/series/packet-traveling/packet-traveling/">Packet Traveling – Practical Networking .net</a></p>
+<p>【4】<a href="https://m.cnbeta.com/view/1153963.htm">一位“华为天才少年”的成长史 - cnBeta.COM 移动版</a></p>
+<p>【5】<a href="https://36kr.com/p/1308851723012742">行业观察 | 2021最火风口，月月融资过亿，一文看懂跨境电商服务图谱_详细解读_最新资讯_热点事件_36氪</a></p>
+<h2 id="有趣的事情">有趣的事情</h2>
+<p>【1】公司一楼有个桌子，每天都是这样摆了很多小鸭子。本来没注意，后来有人发了照片，才发现这里好多故事！</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/bfeb42eeb5074454b1ca0bdc06884d66.jpg" alt=""></p>
+<p>【2】自从我入了中概互联以后</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/d502a19982c34e4593ce337dddb53ca7.jpg" alt=""></p>
+<p>【3】老师这里没有我想要的选项</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/9a690f9ac1ca43288f701cf4318d0826.jpg" alt=""></p>
+<p>【4】打了两针的市民有多骄傲</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/803b3150ec7e4ecd84e887dc346dd557.jpg" alt=""></p>
+<p>【5】很开心和一位朋友迎接清晨
+英国亿万富豪布兰森11日成功搭乘维珍银河太空船“团结号”飞到地球与太空交界。在这历史性时刻发生的数小时前，SpaceX的创始人马斯克凌晨来到布兰森家中，祝他上太空好运。布兰森还在推特分享自己与马斯克的合照，布兰森在推文中说：“很开心和一位朋友迎接清晨。”</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/e21b809bb3204eb29b1c735ee5091583.jpg" alt=""></p>
+<p>【6】这操作有点厉害啊</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/fccbe28b63404670940c124d6c9bead2.jpg" alt=""></p>
+<p>【7】伊朗推出官方批准约会软件，以提高青年人的结婚率
+近日，伊朗推出了一个经由国家批准的约会软件，旨在促进青年人拥有“持久和知情的婚姻”（lasting and informed marriage）。
+据英国《卫报》7月13日报道，这个名为“Hamdam”（波斯语意为“伴侣”）的约会软件，允许用户 “搜索和选择他们的配偶”。
+据伊朗网络警察局长阿里-穆罕默德-拉贾比称，这是唯一一个经伊斯兰共和国批准的约会软件。尽管约会软件在伊朗很受欢迎，但拉贾比称，除了“Hamdam”外，其他软件都是非法的。</p>
+<p>【8】环球时报大乱斗</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/dcfe69f5e7a7417e968ea05cd4475e67.jpg" alt=""></p>
+<p>【9】勤俭持家的大佬～</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/cf91ba2130444887bbd8c69da938074c.jpg" alt=""></p>
+<p>【10】芬兰每年有4000只驯鹿死于交通事故，于是当地开始实验反射型油漆。很赛博朋克！</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/67fbf3eb6cc740078eb8ba17a446c351.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/72d5ee28415543bf93daea23033cd22b.jpg" alt=""></p>
+<p>【11】印度官员开会时将口罩挂脚上
+当地时间15日，一张照片在社交媒体上广泛传播，照片显示印度多名官员在开会时未遵守防疫规定，北阿坎德邦首席部长亚蒂什瓦拉纳德甚至将口罩挂在脚趾上。
+这张照片引起了印度网民们的强烈反应，他们认为，所有的防疫规定也许都是为了让普通民众遵守，而政策制定者们则对这些规定漠不关心，也不遵守。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2021/28/d8da58f12f1a4316a100f56f579bc600.jpg" alt=""></p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/sharing/tcsharing_28/">TC分享第 28 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_27/">TC分享第 27 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_26/">TC分享第 26 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_25/">TC分享第 25 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_24/">TC分享第 24 期</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://study.tczhong.com/tags/weekly'>weekly</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://study.tczhong.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_29/" title="TC分享第 29 期">TC分享第 29 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_28/" title="TC分享第 28 期">TC分享第 28 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_27/" title="TC分享第 27 期">TC分享第 27 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_26/" title="TC分享第 26 期">TC分享第 26 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_25/" title="TC分享第 25 期">TC分享第 25 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_24/" title="TC分享第 24 期">TC分享第 24 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_23/" title="TC分享第 23 期">TC分享第 23 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_22/" title="TC分享第 22 期">TC分享第 22 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_21/" title="TC分享第 21 期">TC分享第 21 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_20/" title="TC分享第 20 期">TC分享第 20 期</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (24)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/">程序员 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90/">读书推荐 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://study.tczhong.com/tags/android/">Android</a>
+    
+    <a href="http://study.tczhong.com/tags/array/">array</a>
+    
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
+    
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
+    
+    <a href="http://study.tczhong.com/tags/book/">book</a>
+    
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
+    
+    <a href="http://study.tczhong.com/tags/development/">development</a>
+    
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
+    
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
+    
+    <a href="http://study.tczhong.com/tags/food/">food</a>
+    
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
+    
+    <a href="http://study.tczhong.com/tags/google/">google</a>
+    
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
+    
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
+    
+    <a href="http://study.tczhong.com/tags/health/">health</a>
+    
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
+    
+    <a href="http://study.tczhong.com/tags/life/">life</a>
+    
+    <a href="http://study.tczhong.com/tags/love/">love</a>
+    
+    <a href="http://study.tczhong.com/tags/python/">python</a>
+    
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
+    
+    <a href="http://study.tczhong.com/tags/string/">string</a>
+    
+    <a href="http://study.tczhong.com/tags/study/">study</a>
+    
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
+    
+    <a href="http://study.tczhong.com/tags/time/">time</a>
+    
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
+    
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
+    
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
+    
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://study.tczhong.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2021 <a href="http://study.tczhong.com/">Learn More By </a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-120924697-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+</body>
+
+</html>
