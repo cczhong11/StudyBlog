@@ -24,6 +24,18 @@
     </item>
     
     <item>
+      <title>TC分享第 34 期</title>
+      <link>http://study.tczhong.com/post/sharing/tcsharing_34/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/sharing/tcsharing_34/</guid>
+      <description>TC分享第 34 期 2021 week 33
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+本周摄影
+新闻思考 最近世界都在关注阿富汗，塔利班夺取了政权，总统跑路，阿富汗人民都想离开自己的国家。这是一个政权的变化，塔利班之前还访问过我国，在互联网上也有一些对此支持的声音，目前来看塔利班的执政和20多年前相比是有一定的变化，未来情况会是怎样还是需要观察。</description>
+    </item>
+    
+    <item>
       <title>TC分享第 33 期</title>
       <link>http://study.tczhong.com/post/sharing/tcsharing_33/</link>
       <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
@@ -2070,16 +2082,6 @@ SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说
       
       <guid>http://study.tczhong.com/post/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%86%99%E4%BD%9C/</guid>
       <description>技术文档写作 1. 思想的组织 1.1 金字塔原理  结论先行：一篇文章只支持一个中心思想，这个中心思想将概括各级各组的所有观点，必须放在文章最开头。 以上统下： 上一层级的观点必须是对下一层级观点的概括，下一层级的观点是对上一层级观点的解释、支持。 归类分组：把具有共同点的观点归类分组，同一组中的观点都必须属于同一个范畴。 逻辑递进：每组中的观点都必须按照逻辑顺序进行组织。  1.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://study.tczhong.com/post/sharing/tcsharing_34/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://study.tczhong.com/post/sharing/tcsharing_34/</guid>
-      <description>#! https://zhuanlan.zhihu.com/p/403416694
- title: &amp;ldquo;TC分享第 34 期&amp;rdquo; date: 2021-08-22 tags: [&amp;ldquo;weekly&amp;rdquo;] draft: false toc: true TC分享第 34 期 2021 week 33</description>
     </item>
     
   </channel>
