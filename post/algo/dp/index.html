@@ -206,9 +206,9 @@ sell[i] = max(buy[i-1]+price, sell[i-1])</p>
 <h2 id="全局最优local-最优">全局最优,local 最优</h2>
 <p>经典dp，m个城市k个邮局怎么可以达到全局最短。基本思路就是从放一个邮局的角度开始思考。如果从第i个城市到第j个城市之间增加一个邮局该怎么放。这时候就需要知道从第i到第j的最短整体距离是多少。得到这个递推公式。</p>
 <p>sum[i][j]:在第i个村庄到第j个村庄中建立1个邮局的最小耗费, 村庄的坐标已知分别为p1,p2,p3,p4,p5,p6;那么，如果要求sum[1][4]的话邮局需要建立在2或者3处,放在2处的消耗为p4-p2+p3-p2+p2-p1=p4-p2+p3-p1 放在3处的结果为p4-p3+p3-p2+p3-p1=p4+p3-p2-p1，可见，将邮局建在2处或3处是一样的. 所以可以使用这个公式。</p>
-<pre><code>sum[i][j] = sum[i][j-1] + p[j] -p[(i+j)/2]
+<pre tabindex="0"><code>sum[i][j] = sum[i][j-1] + p[j] -p[(i+j)/2]
 </code></pre><p>dp[i][j]:在前i个村庄中建立j个邮局的最小耗费</p>
-<pre><code>j&lt;k&lt;=i
+<pre tabindex="0"><code>j&lt;k&lt;=i
 
 dp[i][j] =min(dp[i][j],dp[k][j-1]+sum[k+1][i])  
 </code></pre><p>股票可以进行K次交易的问题，我们也可以使用相似的思路， 一个是到目前为止最好的结果信息（全局最优）， 另一个必须包含新加进来的元素的最好的结果信息（局部最优）。global[i][j]是一个是当前到达第i天可以最多进行j次交易，最好的利润是多少，local[i][j]是当前到达第i天，最多可进行j次交易，并且最后一次交易在当天卖出的最好的利润是多少。<code>global[i][j]=max(local[i][j],global[i-1][j])</code>，而局部是<code>local[i][j]=max(global[i-1][j-1]+max(diff,0),local[i-1][j]+diff)</code>，diff是今日的变化。根据定义可以知道，直接+diff是不会改变交易次数的。</p>
@@ -293,6 +293,10 @@ dp[i][j] =min(dp[i][j],dp[k][j-1]+sum[k+1][i])  
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_41/" title="TC分享第 41 期">TC分享第 41 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_40/" title="TC分享第 40 期">TC分享第 40 期</a>
     </li>
     
@@ -326,10 +330,6 @@ dp[i][j] =min(dp[i][j],dp[k][j-1]+sum[k+1][i])  
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_32/" title="TC分享第 32 期">TC分享第 32 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_31/" title="TC分享第 31 期">TC分享第 31 期</a>
     </li>
     
 </ul>

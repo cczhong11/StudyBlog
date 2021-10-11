@@ -130,10 +130,10 @@
 </ul>
 <h2 id="实现">实现</h2>
 <p>首先运行,创建一个新的项目, 选择typescript，之后回答几个问题，就会新建一个项目。</p>
-<pre><code>yo code
+<pre tabindex="0"><code>yo code
 </code></pre><p><img src="https://tczimg.s3.amazonaws.com/vscode/d135693c94634394a70f2b730f8ddd20.png" alt=""></p>
 <p>这里的文件结构如图:</p>
-<pre><code>➜  paste-to-s3 git:(master) ✗ tree -I node_modules
+<pre tabindex="0"><code>➜  paste-to-s3 git:(master) ✗ tree -I node_modules
 .
 ├── CHANGELOG.md
 ├── README.md
@@ -152,13 +152,13 @@
 3 directories, 10 files
 </code></pre><p>src里是实际的代码，<code>package.json</code>定义了包的信息。</p>
 <p>在这里我们为了简单，将实际上传的逻辑写在脚本里，这里要求在本机有可运行的<code>aws cli</code>。脚本如下，首先通过uuiden生成一个独一无二的文件名，之后利用<code>pngpaste</code> 把mac的剪贴板的内容导出到tmp文件夹里，之后上传到自己的s3 folder里，同时输出网址。将此文件放在根目录下的新建的<code>res</code> folder。</p>
-<pre><code>NAME=&quot;$(uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]')&quot;
+<pre tabindex="0"><code>NAME=&quot;$(uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]')&quot;
 pngpaste &quot;/tmp/${NAME}.png&quot;
 aws s3 cp &quot;/tmp/${NAME}.png&quot; s3://xxx/yyy/ --acl public-read 
 rm &quot;/tmp/${NAME}.png&quot;
 echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
 </code></pre><p>在<code>extension.ts</code>里可以写如下的代码</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">activate</span>(<span style="color:#a6e22e">context</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">vscode</span>.<span style="color:#a6e22e">ExtensionContext</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">activate</span>(<span style="color:#a6e22e">context</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">vscode</span>.<span style="color:#a6e22e">ExtensionContext</span>) {
 
     <span style="color:#75715e">// Use the console to output diagnostic information (console.log) and errors (console.error)
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// This line of code will only be executed once when your extension is activated
@@ -169,7 +169,7 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
         <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">editor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">activeTextEditor</span>;
         <span style="color:#75715e">// 调用js库实现运行脚本
 </span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">child_process</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;child_process&#34;</span>);
-        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">free</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">child_process</span>.<span style="color:#a6e22e">spawnSync</span>(<span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">`/../res/run.sh`</span>, { <span style="color:#a6e22e">shell</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> });
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">free</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">child_process</span>.<span style="color:#a6e22e">spawnSync</span>(<span style="color:#ae81ff">__</span><span style="color:#a6e22e">dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">`/../res/run.sh`</span>, { <span style="color:#a6e22e">shell</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> });
 
         <span style="color:#75715e">//如果有错误 输出
 </span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">free</span>.<span style="color:#a6e22e">stderr</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>) {
@@ -213,9 +213,9 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
 <p>接下来可以调用，也可以在自己源代码上断点调试。</p>
 <h2 id="打包">打包</h2>
 <p>觉得可以打包时，可以安装vsce</p>
-<pre><code>npm install -g vsce
+<pre tabindex="0"><code>npm install -g vsce
 </code></pre><p>这时候先把<code>package.json</code>里添加<code>&quot;publisher&quot;: &quot;xxxx&quot;</code>,之后运行</p>
-<pre><code>vsce package
+<pre tabindex="0"><code>vsce package
 </code></pre><p>这时候就可以生成<code>xxxxx-0.0.1.vsix</code>,可以直接在自己本地vscode里安装</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/56912d13fb0a4eed9b6f66e6448be62d.png" alt=""></p>
 <h2 id="小结">小结</h2>
@@ -284,6 +284,10 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_41/" title="TC分享第 41 期">TC分享第 41 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_40/" title="TC分享第 40 期">TC分享第 40 期</a>
     </li>
     
@@ -317,10 +321,6 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_32/" title="TC分享第 32 期">TC分享第 32 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_31/" title="TC分享第 31 期">TC分享第 31 期</a>
     </li>
     
 </ul>

@@ -142,7 +142,7 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
 <li><a href="https://leetcode.com/problems/increasing-subsequences">491. Increasing Subsequences</a></li>
 </ul>
 <p>对于subset的题目，可以用以下的思路.原因是只有这样才可能遍历所有的，第一dfs可以一直到底，之后再一个个增加。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">dfs<span style="color:#f92672">(){</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">dfs<span style="color:#f92672">(){</span>
     <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>index <span style="color:#f92672">==</span>length<span style="color:#f92672">){</span>
         rs<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>tmp<span style="color:#f92672">);</span>
         <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
@@ -157,13 +157,13 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
 <p>如果题目中存在重复的数字该如何处理呢？首先需要sort，然后就可以在遍历的时候首先看是不是前面两个一致，如果一致的话如果前面的没visited过就跳过。例如<code>1,1,2</code>, 第一个1遍历完了之后，第二个1就不需要作为首位了，所以这时就可以跳过第二个1作为首位的遍历。对于Palindrome的要求可以选定好中间，然后再从两边扩展。</p>
 <p>还有一类题目就是和数学搭配，比如使用列表中的数计算24，可以使用各类运算.基本的思路是相似的，需要我们穷举所有可能的组合，唯一需要注意的就是乘法和除法，需要记录上一个数值的结果，把乘法的结果看作一个整体，一起计算。而算24点的话，首先选两个数，然后进行四则运算，把结果和剩下的数（3个）放到一个数组里，之后就可以递归对这3个数算24点。</p>
 <h2 id="括号问题">括号问题</h2>
-<p>这也是string类的题目中一大类型，题目有判断是否是valid，可以使用stack的思想，只要是出现&rdquo;(&ldquo;之后的反方向括号一定是&rdquo;)&quot;。生成所有括号的思路和上面的dfs差不多，有两个参数记录剩下的括号数量，同时保证左括号比右括号少就可以了。</p>
+<p>这也是string类的题目中一大类型，题目有判断是否是valid，可以使用stack的思想，只要是出现&quot;(&ldquo;之后的反方向括号一定是&rdquo;)&quot;。生成所有括号的思路和上面的dfs差不多，有两个参数记录剩下的括号数量，同时保证左括号比右括号少就可以了。</p>
 <p>找出最长合理括号则可以使用DP来解决，可以把这个问题分成两大类：</p>
 <ul>
 <li>()()</li>
 <li>(())</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;)&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;)&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         dp<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 2 <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&gt;=</span> 2 <span style="color:#f92672">?</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">:</span> 0<span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span> 
@@ -175,7 +175,7 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
 <span style="color:#f92672">}</span>
 </code></pre></div><p>在数字中加括号的题目则是分治算法的典型代表，可以将所有的运算符的地方作为分界点，然后分别计算左右两边所有可能的值，之后再合并，得到最后所有的答案。括号是一个将数学表达式分开最合适的方法。</p>
 <p>301题最简单的思路就是尝试所有的可能性，当出现不合理的情况时就直接舍弃。在尝试的时候测试使用括号和不使用括号两种可能性。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>c <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>c <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         dfs<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> res<span style="color:#f92672">,</span> sb<span style="color:#f92672">,</span> rmL <span style="color:#f92672">-</span> 1<span style="color:#f92672">,</span> rmR<span style="color:#f92672">,</span> open<span style="color:#f92672">);</span>		    <span style="color:#75715e">// not use (
 </span><span style="color:#75715e"></span>    	dfs<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> res<span style="color:#f92672">,</span> sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>c<span style="color:#f92672">),</span> rmL<span style="color:#f92672">,</span> rmR<span style="color:#f92672">,</span> open <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>       <span style="color:#75715e">// use (
 </span><span style="color:#75715e"></span>
@@ -186,7 +186,7 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
     <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
         dfs<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> res<span style="color:#f92672">,</span> sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>c<span style="color:#f92672">),</span> rmL<span style="color:#f92672">,</span> rmR<span style="color:#f92672">,</span> open<span style="color:#f92672">);</span>	
     <span style="color:#f92672">}</span>
-</code></pre></div><p>对于678，则可以使用贪心的思想，计算最小开放的括号以及最多开放的括号，如果不等于&rdquo;)&ldquo;的个数小于&rdquo;)&ldquo;的话，那么就不可能是合理的。思路想清楚了不难，出现*这种就思考最多和最少的情况。</p>
+</code></pre></div><p>对于678，则可以使用贪心的思想，计算最小开放的括号以及最多开放的括号，如果不等于&quot;)&ldquo;的个数小于&rdquo;)&ldquo;的话，那么就不可能是合理的。思路想清楚了不难，出现*这种就思考最多和最少的情况。</p>
 <ul>
 <li><a href="https://leetcode.com/problems/valid-parentheses">20. Valid Parentheses</a></li>
 <li><a href="https://leetcode.com/problems/generate-parentheses">22. Generate Parentheses</a></li>
@@ -226,7 +226,7 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
 </ul>
 <h2 id="trie">Trie</h2>
 <p>Trie是一种特别的数据类型，主要是使用一个树来代表string的前缀。一般的构造如下：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TrieNode</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TrieNode</span>
     <span style="color:#f92672">{</span>
         TrieNode<span style="color:#f92672">[]</span> children <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TrieNode<span style="color:#f92672">[</span>ALPHABET_SIZE<span style="color:#f92672">];</span>
       
@@ -611,6 +611,10 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_41/" title="TC分享第 41 期">TC分享第 41 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_40/" title="TC分享第 40 期">TC分享第 40 期</a>
     </li>
     
@@ -644,10 +648,6 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_32/" title="TC分享第 32 期">TC分享第 32 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_31/" title="TC分享第 31 期">TC分享第 31 期</a>
     </li>
     
 </ul>

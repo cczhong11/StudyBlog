@@ -125,16 +125,16 @@
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/c28c70ca880d468c83191ece2eec1732.png" alt=""></p>
 <h2 id="step-2获得表格和日历id">Step 2：获得表格和日历id</h2>
 <p>第二步就是获取当前的表格和要添加的日历。将如下代码放到function里，之后点击运行，会出现提示给这个脚本授权。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">eventCal</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CalendarApp</span>.<span style="color:#a6e22e">getCalendarById</span>(<span style="color:#a6e22e">xxxxxxx</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">eventCal</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CalendarApp</span>.<span style="color:#a6e22e">getCalendarById</span>(<span style="color:#a6e22e">xxxxxxx</span>);
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">spreadsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSheet</span>();
 </code></pre></div><p>日历id的获取方式如下</p>
 <p><img src="https://storage.googleapis.com/gweb-cloudblog-publish/original_images/image3_AHRutjd.gif" alt=""></p>
 <h2 id="step-3获得表格内的信息">Step 3：获得表格内的信息</h2>
 <p>在获得表格之后，我们就可以通过以下的方法获得表格的数值。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#34;C4&#34;</span>).<span style="color:#a6e22e">getValue</span>();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#34;C4&#34;</span>).<span style="color:#a6e22e">getValue</span>();
 
 </code></pre></div><p>如果需要获得一块区域的数值可以使用如下的for loop。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#34;A2:C4&#34;</span>).<span style="color:#a6e22e">getValues</span>();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#34;A2:C4&#34;</span>).<span style="color:#a6e22e">getValues</span>();
 <span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
     <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">shift</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>[<span style="color:#a6e22e">i</span>]
     <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">startTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">shift</span>[<span style="color:#ae81ff">0</span>];
@@ -143,12 +143,12 @@
 }
 </code></pre></div><h2 id="step-4创建日程">Step 4：创建日程</h2>
 <p>在获得数值后就可以使用<a href="https://developers.google.com/apps-script/reference/calendar/calendar-app#createEvent(String,Date,Date)">api</a>创建日历了。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">eventCal</span>.<span style="color:#a6e22e">createEvent</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">startTime</span>, <span style="color:#a6e22e">endTime</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">eventCal</span>.<span style="color:#a6e22e">createEvent</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">startTime</span>, <span style="color:#a6e22e">endTime</span>);
 </code></pre></div><h2 id="step-5加入ui">Step 5：加入UI</h2>
 <p>接下来如果需要更方便的启动脚本，可以将它加入ui之中。</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/59958da8c23d4639ba110d8b0457b5d7.png" alt=""></p>
 <p>在主function里加入如下的代码即可。这里的<code>schedule</code>就是实际同步日历的function。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ui</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getUi</span>();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ui</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getUi</span>();
 <span style="color:#a6e22e">ui</span>.<span style="color:#a6e22e">createMenu</span>(<span style="color:#e6db74">&#34;Sync to Calendar&#34;</span>)
     .<span style="color:#a6e22e">addItem</span>(<span style="color:#e6db74">&#34;Schedule life&#34;</span>, <span style="color:#e6db74">&#34;schedule&#34;</span>)
     .<span style="color:#a6e22e">addToUi</span>();
@@ -233,6 +233,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_41/" title="TC分享第 41 期">TC分享第 41 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_40/" title="TC分享第 40 期">TC分享第 40 期</a>
     </li>
     
@@ -266,10 +270,6 @@
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_32/" title="TC分享第 32 期">TC分享第 32 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_31/" title="TC分享第 31 期">TC分享第 31 期</a>
     </li>
     
 </ul>

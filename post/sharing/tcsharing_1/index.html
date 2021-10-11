@@ -121,12 +121,12 @@
 <p>这次介绍的是scriptable，这是一款可以在iOS上自己定义小组件的软件</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/c48d1894fb6d48d9988b172d8438d119.png" alt=""></p>
 <p>我们可以利用js进行编程，自己创作小插件。<a href="https://docs.scriptable.app/">这里</a>是他的文档，可以实现各种功能。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lang</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;en&#34;</span> <span style="color:#75715e">//use the language of your choice &#34;en&#34;, &#34;de&#34;, &#34;it&#34;, &#34;fr&#34;, etc.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lang</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;en&#34;</span> <span style="color:#75715e">//use the language of your choice &#34;en&#34;, &#34;de&#34;, &#34;it&#34;, &#34;fr&#34;, etc.
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`https://</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">lang</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.wikipedia.org/api/rest_v1/page/random/summary`</span>
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">req</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Request</span>(<span style="color:#a6e22e">url</span>)
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">loadJSON</span>()
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">loadJSON</span>()
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Request</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">thumbnail</span>.<span style="color:#a6e22e">source</span>);
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">i</span>.<span style="color:#a6e22e">loadImage</span>();
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">i</span>.<span style="color:#a6e22e">loadImage</span>();
 
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">widget</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createWidget</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">img</span>, <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">content_urls</span>.<span style="color:#a6e22e">mobile</span>.<span style="color:#a6e22e">page</span>)
 <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">runsInWidget</span>) {
@@ -293,6 +293,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_41/" title="TC分享第 41 期">TC分享第 41 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_40/" title="TC分享第 40 期">TC分享第 40 期</a>
     </li>
     
@@ -326,10 +330,6 @@
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_32/" title="TC分享第 32 期">TC分享第 32 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_31/" title="TC分享第 31 期">TC分享第 31 期</a>
     </li>
     
 </ul>
