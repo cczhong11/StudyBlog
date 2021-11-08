@@ -6,11 +6,7 @@
     <description>Recent content in 程序员 on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从GoogleSheet同步到GoogleCal</title>
       <link>http://study.tczhong.com/post/tech/%E4%BB%8Egooglesheet%E5%90%8C%E6%AD%A5%E5%88%B0googlecal/</link>

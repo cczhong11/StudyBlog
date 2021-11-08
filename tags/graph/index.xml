@@ -6,11 +6,7 @@
     <description>Recent content in graph on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Aug 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://study.tczhong.com/tags/graph/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 28 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/tags/graph/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Graph算法题的思考</title>
       <link>http://study.tczhong.com/post/algo/graph/</link>
