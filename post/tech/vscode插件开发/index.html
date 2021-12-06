@@ -170,7 +170,7 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
         <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">editor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">activeTextEditor</span>;
         <span style="color:#75715e">// 调用js库实现运行脚本
 </span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">child_process</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;child_process&#34;</span>);
-        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">free</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">child_process</span>.<span style="color:#a6e22e">spawnSync</span>(<span style="color:#ae81ff">__</span><span style="color:#a6e22e">dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">`/../res/run.sh`</span>, { <span style="color:#a6e22e">shell</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> });
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">free</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">child_process</span>.<span style="color:#a6e22e">spawnSync</span>(<span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">`/../res/run.sh`</span>, { <span style="color:#a6e22e">shell</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> });
 
         <span style="color:#75715e">//如果有错误 输出
 </span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">free</span>.<span style="color:#a6e22e">stderr</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>) {
@@ -285,6 +285,10 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_49/" title="TC分享第 49 期">TC分享第 49 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_48/" title="TC分享第 48 期">TC分享第 48 期</a>
     </li>
     
@@ -318,10 +322,6 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_40/" title="TC分享第 40 期">TC分享第 40 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_39/" title="TC分享第 39 期">TC分享第 39 期</a>
     </li>
     
 </ul>
