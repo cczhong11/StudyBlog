@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TC分享第 52 期</title>
+      <link>http://study.tczhong.com/post/sharing/tcsharing_52/</link>
+      <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/sharing/tcsharing_52/</guid>
+      <description>TC分享第 52 期 2021 week 51
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+新闻思考 2021年最后一期！
+这周讲讲已经火出圈的log4j漏洞吧。log4j是一个java最常使用的log库，只要用过java的人都知道。log就是记录程序在运行时的日志，一般可能会记录下用户的输入内容。log4j是一个开源项目由apache开源基金会支持，开源的意思就是所有的代码和改动都是公开的。</description>
+    </item>
+    
     <item>
       <title>TC分享第 51 期</title>
       <link>http://study.tczhong.com/post/sharing/tcsharing_51/</link>
