@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TC分享第 56 期 | Learn More</title>
+    <meta property="og:title" content="TC分享第 56 期 - Learn More">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2022-01-23T00:00:00&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2022-01-23T00:00:00&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="TC分享第 56 期">
+        
+    <meta name="author" content="">
+    <meta property="og:url" content="http://study.tczhong.com/post/sharing/tcsharing_56/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+    
+
+        
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="far fa-envelope"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fab fa-github"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fab fa-linkedin"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://stackoverflow.com/users/7112540/tc-zhong"><i class="fab fa-stack-overflow"></i></a></li>
+                
+            </ul>
+        
+
+  
+
+    </nav>
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://study.tczhong.com/">
+                        Learn More
+                    </a>
+                
+                
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://study.tczhong.com/">首页</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/weekly/" title="每周分享">每周分享</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/love/" title="亲密关系">亲密关系</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/leetcode/" title="Leetcode">Leetcode</a>
+                    
+                    <a  href="http://study.tczhong.com/archives/" title="归档">归档</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#新闻思考">新闻思考</a></li>
+    <li><a href="#科技新闻">科技新闻</a></li>
+    <li><a href="#优秀的项目">优秀的项目</a></li>
+    <li><a href="#优秀的文章">优秀的文章</a></li>
+    <li><a href="#有趣的事情">有趣的事情</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">TC分享第 56 期</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年1月23日
+        </date>
+        
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <h1 id="tc分享第-56-期">TC分享第 56 期</h1>
+<p>2021 week 3</p>
+<p>你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。</p>
+<p><img src="https://my-news-counter.herokuapp.com/total.svg?repo_id=cczhong11.manongsharing_56" alt="Total visitor"></p>
+<h2 id="新闻思考">新闻思考</h2>
+<p>这周讲讲上星期的汤加海底火山爆发和其影响。2022年1月15日下午5时20分左右，位于汤加首都努库阿洛法以北约65公里的洪阿汤加－洪阿哈阿帕伊岛，海底发生的火山喷发。火山灰落在附近的汤加塔布岛上，遮天蔽日。65km外的首都努库阿洛法小石子和灰烬如雨点般落下，可听到巨大的喷发声。</p>
+<p>喷发阶段发生剧烈的闪电活动。维萨拉国家闪电监测网络（英语：Vaisala National Lightning Detection Network）监测到无线电波形式的闪电，喷发前的两周内此系统共记录下数百到上千闪电，1月14至15日又发生上万次闪电。1月15日05:00-06:00 UTC期间共记录下约20万次闪电。<a href="https://www.guokr.com/article/61321/">火山喷发为什么会有闪电？</a></p>
+<p>对于汤加人民来说，喷发在汤加首都努库阿洛法引发了5.8级<strong>地震</strong>和浪高1.2m的<strong>海啸</strong>。城中检潮仪记录到了1.5–2m高的浪。据一名汤加首都居民所述，一开始能听到一系列小型爆炸声，海啸约在15分钟后袭来。努库阿洛法停电，海水倒灌导致主要街道和许多建筑物被洪水淹没。<strong>火山喷发发生后，海底光缆被切断</strong>，整个东加王国处于通信中断状态，火山灰也干扰了当地通信。多个太平洋沿岸国家如斐济、萨摩亚、瓦努阿图、新西兰、澳大利亚、日本、美国、加拿大、墨西哥、智利和厄瓜多尔等纷纷发出海啸警报。</p>
+<p>火山喷发所在的小岛基本已经消失，其他岛屿明显被火山灰覆盖，并有海啸冲刷过的痕迹，水资源也受到了污染。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/230fe0f64dd042f79ec94da462a73a8d.png" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/b984d759e25d48c5a56e7e9499fcd312.png" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/3f81fe0b079843b5af5339d854b8fba5.png" alt=""></p>
+<p>鉴于毁灭性的破坏，以及许多人看到他们的房屋被海啸冲走的景象，这对人们的心理影响是巨大的。政府已经在受影响的村庄部署了医务人员。海水洪泛会破坏农田，可能出现的酸雨同样令人担忧。</p>
+<p>汤加约86%的人口从事农业，初步估计约有1万2千户农业家庭受灾，占总数的85%。火山落灰可对作物和家畜产生重大不利影响，程度主要取决于落灰的厚度、作物类型和生长情况、后续降雨的时间和强度、落灰前牧场和家畜的状况以及未受污染的饲料和水资源的供应情况。</p>
+<p>漏油：1月16日，一艘油船正在将石油运输到秘鲁卡亚俄省的太平洋利马海岸的拉潘皮拉炼油厂，恰逢汤加火山喷发引发海啸，巨大波浪移动了船只，造成了石油泄漏。当局表示，泄漏事件在数小时内得到控制，该地区正在进行清理工作。</p>
+<p>国际援助：</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/18c39d5d9bf044f5a2b708fe7ec4d8a8.png" alt=""></p>
+<p>两艘新西兰海军军舰将于21日抵达汤加，为这个太平洋岛国运送关键的<strong>水资源</strong>，这将是汤加在遭遇火山爆发和海啸重创后接收到的首批国际援助。</p>
+<p>中国红十字会将向东加方提供10万美元紧急人道主义现汇援助。</p>
+<p>新冠影响：</p>
+<p>由于目前汤加没有新冠病例，边境管控严格，所有的援助都要在非接触的前提下进行。联合国官员19日说，为防止新冠病毒传入汤加，对这一南太平洋岛国的援助等大部分行动将以“远程方式”展开，援助人员可能不会登上汤加岛屿。救援机构提供远程协助 - 例如提供专业技能协调 - 但却由当地政府和社区团体来具体执行。</p>
+<p>给我的几个启示</p>
+<ol>
+<li>淡水资源是第一个需要满足的，即使是一个身处太平洋的小岛。</li>
+<li>失去了国际通讯就无法让世界知道他们需要的帮助，修复通讯系统也是最先需要做的</li>
+<li>人类在大自然面前依旧是非常脆弱的。</li>
+</ol>
+<h2 id="科技新闻">科技新闻</h2>
+<p>【1】拼多多回应砍价99.9%称小数点后有6位</p>
+<p>上周，&ldquo;拼多多砍价，但始终差0.9%&ldquo;这一话题再次登上知乎热搜。去年3月，上海律师刘宇航参加了拼多多的&quot;砍价免费拿&quot;活动后，经多人砍价还是0.9%，在质疑数据有问题后，刘以使用虚假数据隐瞒规则已构成欺诈为由，向法院递交了起诉材料。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/90d5f1d5a703418187a843ec39cf3cc0.jpg" alt=""></p>
+<p>【2】华为回应自研浏览器内核</p>
+<p>华为相关人士称，自研浏览器内核不存在，只是在原来的浏览器基础上做了一些算法创新和修正。技术人员透露，研发一款成熟的浏览器内核，代码量在数千万至上亿条之间，而且至少需要1000名熟练工程师，花费5年以上，成本将高达数十亿。（电商报）</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/1fce1e504afa4f768458789b9c753c13.jpg" alt=""></p>
+<p>【3】马斯克称移民火星是避免灭绝唯一办法</p>
+<p>当地时间18日，马斯克表示，移民火星是避免灭绝唯一办法。他称由于“太阳膨胀”，所有物种“100%会灭绝，除非人类进行多行星生活”。马斯克的这条建议是针对一篇报道的回应，这篇报道援引“多位专家称地球毁灭完全是人类行为导致”。马斯克一直将移民火星作为目标，也是他旗下SpaceX公司的核心业务。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/c8a8598f59b64a37951fb1c35f9a57d3.jpg" alt=""></p>
+<p>【4】微软以687亿美元收购动视暴雪</p>
+<p>微软公司1月18日发布声明称，公司将以每股95美元的价格全现金收购动视暴雪，包括动视暴雪的净现金在内，交易价值687亿美元。据悉，者将是微软公司史上最大规模收购。</p>
+<p>微软董事长兼首席执行官Satya Nadella表示，游戏是当今所有平台中最具活力和令人兴奋的娱乐类别，并将在元宇宙平台的发展中发挥关键作用。我们正在对世界一流的内容、社区和云进行深入投资，以开创一个新的游戏时代，将玩家和创作者放在第一位，并使游戏安全、包容并向所有人开放。</p>
+<p>【5】美国航天局：汤加火山喷发不会对全球气候产生太大影响</p>
+<p>美国航天局19日说，该机构科学家分析卫星观测数据后认为，汤加洪阿哈阿帕伊岛近日发生的火山剧烈喷发，不会对全球气候产生太大影响，火山喷发向大气中注入的二氧化硫气体量远未达到对气候产生影响的阈值。美航天局19日发布公报说，多颗地球观测卫星在洪阿哈阿帕伊岛火山喷发期间和喷发后收集了数据，该机构灾害项目科学家正对相关图像和数据进行汇总分析。</p>
+<p>上周日，当国际空间站经过新西兰上空时，宇航员Kayla Barron看到的汤加火山喷发后，火山灰进入地球大气层的画面。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/78b554e08445469284620bf1345f37cd.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/3c17e62d4c5340c4a42189fc2a5a5ad1.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/504cdb7531fa4b50a7c214a4fd84de80.jpg" alt=""></p>
+<p>【6】比特币跌破36000美元 较2021年11月高点回落近50%</p>
+<p>比特币自去年7月以来首次跌破36000美元/枚，较2021年11月高点回落近50%。外媒报道称，白宫希望在美国加密数字货币政策里居中心地位，拜登政府可能会在2月份出台行政命令。2022年以来，比特币仅有6个交易日上涨，累计跌幅已达11.5%，创下2012年以来的最差年度开局表现。有统计数据显示，比特币在2022年大类资产表现中排名倒数第一。而在2021年，比特币收益率的排名为正数第一。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/0ee7f612e7f94bfa967625ae4357b3a5.jpg" alt=""></p>
+<p>【7】德国希望每年从外国引进40万技术工人</p>
+<p>德国新联合政府希望每年从外国引进40万技术工人，以解决人口失衡和关键行业劳动力短缺的问题，避免德国经济从冠病疫情中复苏的进程受到影响。</p>
+<p>【8】新法规生效 法国iPhone不再附送耳机</p>
+<p>据报道，由于法国法律的调整，苹果公司将无需再为iPhone 13提供EarPods耳机。从2020年起，苹果停止为新iPhone手机免费提供耳机和充电器。但此前法国当局却不允许苹果不附送耳机。根据法国相关法律的规定，所有智能手机必须包括一个免提的耳机/配件，以保护14岁以下儿童免受潜在的电磁辐射。</p>
+<p>【9】诺贝尔奖得主迈克尔·扬：晚睡或非习惯使然而是基因突变所致
+晚睡晚起的“夜猫子”或许并非生活习惯所致。诺贝尔生物学或医学奖得主迈克尔·扬的研究发现，夜猫子存在一种遗传性突变基因，导致睡眠相位延迟综合征。
+遗传学家迈克尔·扬（Michael Young）以果蝇做研究，分离出能够控制生物钟的基因，并揭示相关细胞管理的运行机制。他凭此在2017年与迈克尔·罗斯巴什（Michael Rosbash）和杰弗里·霍尔（Jeffrey Hall）共获诺贝尔生理学或医学奖。
+迈克尔·扬昨天在线上接受《联合早报》访问时说，人类和许多生物都有内在节律，帮助他们预测和适应时间变化，从而形成生活规律。睡眠相位延迟综合征（Delayed Sleep Phase Disorder）则是人类常见的一种睡眠紊乱状态，即生物钟异于常人，也就是我们常说的“夜猫子”。
+过去，科学界一直以为夜猫子是主观选择，只是个体差异；然而，迈克尔·扬通过诱导果蝇基因突变，发现其X染色体中存在一种变体的CRY基因，导致它的生物钟发生滞后，使它比正常时间晚歇息。</p>
+<h2 id="优秀的项目">优秀的项目</h2>
+<p>【1】<a href="https://github.com/einaregilsson/Redirector">einaregilsson/Redirector</a></p>
+<p>Browser extension (Firefox, Chrome, Opera, Edge) to redirect urls based on regex patterns, like a client side mod_rewrite.</p>
+<p>【2】<a href="https://github.com/fastlane/fastlane">fastlane/fastlane</a></p>
+<p>The easiest way to automate building and releasing your iOS and Android apps</p>
+<p>【3】<a href="https://github.com/mattermost/focalboard">mattermost/focalboard</a></p>
+<p>Focalboard is an open source, self-hosted alternative to Trello, Notion, and Asana.</p>
+<p>【4】<a href="https://github.com/lima-vm/lima">lima-vm/lima</a></p>
+<p>Linux virtual machines, typically on macOS, for running containerd</p>
+<h2 id="优秀的文章">优秀的文章</h2>
+<p>【1】<a href="https://36kr.com/p/1569626730385033">未来十年，有哪些职业会消失？-36氪</a></p>
+<p>【2】<a href="http://www.antipope.org/charlie/blog-static/2022/01/oh-2022.html">Oh, 2022!</a></p>
+<p>【3】<a href="https://sspai.com/post/70482">注意力使用不完全报告 - 少数派</a></p>
+<p>【4】<a href="https://mp.weixin.qq.com/s/hoZ_MmgyrHr3lexutaQehg">边缘创新：破圈于主流之外</a></p>
+<p>【5】<a href="https://mp.weixin.qq.com/s/UrJs2FSb8o0d522c00ciKw">中国医生，治不了自己的抑郁？</a></p>
+<p>【6】<a href="https://understandlegacycode.com/blog/refactoring-and-defactoring/">Refactoring vs. Defactoring</a></p>
+<p>【7】<a href="https://betterprogramming.pub/how-to-become-a-blockchain-engineer-fa4386a0504f">How to Become a Blockchain Engineer</a></p>
+<h2 id="有趣的事情">有趣的事情</h2>
+<p>【1】笑着笑着就哭了</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/2236fee7eafe42ffac0560e46e0d31f6.jpg" alt=""></p>
+<p>【2】英国5岁小女孩批评约翰逊：坏首相，道歉！</p>
+<p>每日邮报报道，约翰逊疫情期间开派对风波愈演愈烈，一位5岁的小女孩批评约翰逊：他是个坏首相，应该送他去淘气中心接受教育，给所有人道歉。</p>
+<p>【3】预言家</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/24431fd491564522ae67b6a8b8a9b5dd.png" alt=""></p>
+<p>【4】汤加人之前没吃过蔬菜，#三位中国老师在汤加帮助当地居民种蔬菜#</p>
+<p>汤加火山喷发引起网友关注，远在他乡的聊城大学三位老师也牵动不少网友的心。目前，三名教师均平安。他们为什么会在汤加？山东聊城大学宣传部秦老师介绍，三位老师在汤加帮助当地居民种蔬菜，并提供教育援助。秦老师称，“汤加人之前没吃过青菜等蔬菜，现在汤加人餐桌上的蔬菜，都是我们中国、尤其是我们学校老师帮助当地人种出来的。”</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/42ac807a68d0402bad6be698027fab44.jpg" alt=""></p>
+<p>【5】幼儿园的亲子活动，这孙悟空来了也找不到吧..</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/f31b20a671434692b11170cfd3c3ed97.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/9e12cb29c1284a239b81a57db8d952a4.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/94c5107a9ca540b7953600176d4b156e.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/0ea8416b2c3344938ada9115ec67539f.jpg" alt=""></p>
+<p>【6】土耳其将官方名称改为Türkiye</p>
+<p>据《中东观察》（Middle East Monitor）1月18日报道，土耳其总统埃尔多安近日表示，政府计划在未来几周内将其国际公认的英文官方名称由“Turkey”更改为“Türkiye”，并在联合国注册。公报说：“‘Türkiye’这个词以最好的方式代表和表达了土耳其民族的文化、文明和价值观。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/2f4ff56f2c5541ce9211c64ac45d4862.jpg" alt=""></p>
+<p>【7】麦当劳：你想要搞点薯条还是来收购我[doge]
+Xbox：我全都要</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/84af26f4e0c74afdb200950ccd580d3d.jpg" alt=""></p>
+<p>【8】</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/e97efaf14840484a881580bde7937cd9.jpg" alt=""></p>
+<p>这种断章取义的新闻不好吧？我对这个案例有印象。大概是这个男的原本负责一个技术部门，但是领导不喜欢他，所以就把它调到了闲职部门。薪水和以前一样，但是不再重用他。他上不上班也无所谓，相当于就是把他养起来了。不裁员是因为在法国裁员太辛苦了赔偿太高了。而不裁员又导致他不能够去其他公司工作</p>
+<p>【9】
+<img src="https://tczimg.s3.amazonaws.com/2022/3/267f47d5f340432f8da1a7d139611572.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/fbd8b3277d4344d6b58ee34246dddade.jpg" alt=""></p>
+<p>【10】
+<img src="https://tczimg.s3.amazonaws.com/2022/3/d97ed26076154971bc4816134a50b470.jpg" alt=""></p>
+<p>【11】梁建章建议男性接受比自己更强的女性：男的也可以多做家务多照顾小孩</p>
+<p>男性同时也要接受比自己更强的女性，这样的话就不会是传统家庭男主外女主内，男人也可以接受女的赚更多的钱，男的在家里多做家务多照顾小孩，这些都是值得提倡的新的价值观。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/8f2986f77d5d4bff82b3c96d97029e00.jpg" alt=""></p>
+<p>【12】抖人居然能因为这道算术题吵7万楼</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/0314bf012c4d4289853dc8338780ae2e.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/6880fdcc409e4df88c71ce33dd5ecfdb.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/7d837e77d6c34d5b9ddf8271403c8171.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/6ef7848590494f0d9787526b35032497.jpg" alt=""></p>
+<p>【13】两个流调，两个北京</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/3abbf2448c424fbbaa61738ac3477036.jpg" alt=""></p>
+<p>【14】每天看电视4小时血栓风险增三成</p>
+<p>据20日发表在《欧洲预防心脏病学杂志》上的论文，每天看电视4小时或更长时间的人，患血栓的风险高出35%。这项分析包括三项研究，总共有131421名年龄在40岁及以上的参与者，他们预先未患有VTE。通过问卷调查来评估看电视的时间，参与者被分为长时间看电视的人（每天看电视至少4小时）和从不或很少看电视的人（每天看电视少于2.5小时）。</p>
+<p>三项研究的平均随访时间从5.1年到19.8年不等。在此期间，964名参与者患上了VTE。研究人员发现，长时间看电视的人患VTE的可能性是从不或很少看电视的人的1.35倍。</p>
+<p>论文主要作者、英国布里斯托尔大学塞托·库努索尔博士称，“研究结果表明，不管体力活动、体重指数、年龄和性别如何，长时间看电视都是一项危险的活动，会导致血液凝块的形成。”如果想要长时间看电视，就需要学会休息，如每隔30分钟站立伸展一次，也可骑一骑动感单车，同时避免看电视时吃不健康的零食。（科技日报）</p>
+<p>【15】缘来如此</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/5df50bab4135400fa3b4fd1a3e256fa0.jpg" alt=""></p>
+<p>【16】
+<img src="https://tczimg.s3.amazonaws.com/2022/3/de671dbe30074cd9bc0cd1acd0708165.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/8c8d0c7b82304b3dbf9ee8433d099125.jpg" alt=""></p>
+<p>士可口不可辱</p>
+<p>【17】负荆请罪，廉颇背着一位叫荆轲的美女进献给蔺相如请罪</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/3070aa4cf65c4a56b0f8e0d63476ef9f.jpg" alt=""></p>
+<p>【18】热搜之间互相自问自答还是第一次见</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/a836fcae5cbb49298d9d165c4d03405d.jpg" alt=""></p>
+<p>【19】两年了……</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2022/3/b539661ecaa14249bf2d3fdfc7055e76.jpg" alt=""></p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/sharing/tcsharing_55/">TC分享第 55 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_54/">TC分享第 54 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_53/">TC分享第 53 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_52/">TC分享第 52 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_51/">TC分享第 51 期</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://study.tczhong.com/tags/weekly'>weekly</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://study.tczhong.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_56/" title="TC分享第 56 期">TC分享第 56 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_55/" title="TC分享第 55 期">TC分享第 55 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/love/%E7%88%B1%E7%9A%84%E8%89%BA%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" title="《爱的艺术》读书笔记 ">《爱的艺术》读书笔记 </a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_54/" title="TC分享第 54 期">TC分享第 54 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_53/" title="TC分享第 53 期">TC分享第 53 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_52/" title="TC分享第 52 期">TC分享第 52 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_51/" title="TC分享第 51 期">TC分享第 51 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_50/" title="TC分享第 50 期">TC分享第 50 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_49/" title="TC分享第 49 期">TC分享第 49 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_48/" title="TC分享第 48 期">TC分享第 48 期</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (24)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/">程序员 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90/">读书推荐 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://study.tczhong.com/tags/android/">Android</a>
+    
+    <a href="http://study.tczhong.com/tags/array/">array</a>
+    
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
+    
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
+    
+    <a href="http://study.tczhong.com/tags/book/">book</a>
+    
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
+    
+    <a href="http://study.tczhong.com/tags/development/">development</a>
+    
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
+    
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
+    
+    <a href="http://study.tczhong.com/tags/food/">food</a>
+    
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
+    
+    <a href="http://study.tczhong.com/tags/google/">google</a>
+    
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
+    
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
+    
+    <a href="http://study.tczhong.com/tags/health/">health</a>
+    
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
+    
+    <a href="http://study.tczhong.com/tags/life/">life</a>
+    
+    <a href="http://study.tczhong.com/tags/love/">love</a>
+    
+    <a href="http://study.tczhong.com/tags/python/">python</a>
+    
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
+    
+    <a href="http://study.tczhong.com/tags/string/">string</a>
+    
+    <a href="http://study.tczhong.com/tags/study/">study</a>
+    
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
+    
+    <a href="http://study.tczhong.com/tags/time/">time</a>
+    
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
+    
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
+    
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
+    
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://study.tczhong.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2022 <a href="http://study.tczhong.com/">Learn More By </a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-120924697-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+</body>
+
+</html>
