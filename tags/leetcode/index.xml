@@ -26,7 +26,7 @@ x ^= x &amp;gt;&amp;gt; 16 x ^= x &amp;gt;&amp;gt; 8 x ^= x &amp;gt;&amp;gt; 4 x
       <guid>http://study.tczhong.com/post/algo/linkedlist/</guid>
       <description>链表题目的思考 链表是一个比较常见的数据结构，但是leetcode里的题目相对来说不多，题目也不是很难。最重要的思想就是递归的思路。对于每一个节点，都可以看作一个链表的起点。
 merge 这类题目就是用一个递归函数，参数是两个头指针，得到新的指针之后，其中一个向后，然后再递归调用就可以。sort list就是一个merge sort的思想
- 2. Add Two Numbers 21.</description>
+2. Add Two Numbers 21.</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@ merge 这类题目就是用一个递归函数，参数是两个头指针，得�
       
       <guid>http://study.tczhong.com/post/algo/interval/</guid>
       <description>INTERVAL 算法题目的思考 这类题目还是比较常见的。就是给你一些区间，需要你判断重叠之类的。相对来说不难，一些常见的方法是用按start的大小排序，之后end1&amp;lt;start2 就代表有重叠。
- 56. Merge Intervals 57. Insert Interval 436.</description>
+56. Merge Intervals 57. Insert Interval 436.</description>
     </item>
     
     <item>
@@ -47,7 +47,7 @@ merge 这类题目就是用一个递归函数，参数是两个头指针，得�
       <guid>http://study.tczhong.com/post/algo/dp/</guid>
       <description>DP 算法题目的思考 dp全称是动态规划，是一类被人又喜欢又讨厌的题目。喜欢是因为找到递推关系之后题目就变得简单了，讨厌的原因是这类题目常常很难想到递推关系。
 dp的核心思想就是把一个复杂的问题分解成简单的子问题，并且可以利用递推的方式来解决。所有dp题目的核心是：
- 递推公式 deduction formula 初始化 initialization 空间优化 space improvement  路径数量 这类题目就是看有几种方式可以到这个点，然后把这几种方式的路径加起来就可以。这是自下而上的思想，对于青蛙跳的那道题也可以自上而下利用递归的思路解题。只要可以跳到，就可以变成一个子问题，把这个点当做起点来进行。</description>
+递推公式 deduction formula 初始化 initialization 空间优化 space improvement 路径数量 这类题目就是看有几种方式可以到这个点，然后把这几种方式的路径加起来就可以。这是自下而上的思想，对于青蛙跳的那道题也可以自上而下利用递归的思路解题。只要可以跳到，就可以变成一个子问题，把这个点当做起点来进行。</description>
     </item>
     
     <item>
@@ -69,7 +69,7 @@ String 解析类 这类比较多的就是计算器，以及分析括号里的内
       
       <guid>http://study.tczhong.com/post/algo/graph/</guid>
       <description>graph 算法题目思考 Graph算是非常常见的题目，一般会给你一个2d array或一个数组代表联系，你可以使用这个输入来转换成一个图表示的数据结构，之后在图里做搜索。常见的算法：
- BFS，DFS union find A* Floyd and dijkstra  Leetcode里的题目的话主要都是dfs, bfs就可以解决，有些需要思考几个之间的关系的题目可以使用union find来做。少部分计算路径的题目需要使用一些基本的最短路径算法。</description>
+BFS，DFS union find A* Floyd and dijkstra Leetcode里的题目的话主要都是dfs, bfs就可以解决，有些需要思考几个之间的关系的题目可以使用union find来做。少部分计算路径的题目需要使用一些基本的最短路径算法。</description>
     </item>
     
     <item>
@@ -81,7 +81,7 @@ String 解析类 这类比较多的就是计算器，以及分析括号里的内
       <description>Array 算法题的思考 数组类的算法是在我做的题目中是最多的，相对来说也是最好理解的它也可以包罗万象，使用各种各样的算法。用数组可以实现很多基本的数据结构。比如heap。所以这部分需要好好掌握。
 SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说求最大的K个数，这种题目一般都是使用基本的快速排序思想。也就是说，我们把这个数组分成两部分，一部分是比当前这个数字大的，另外一部分是比这个当前数字小的，这样我们可以快速的把一个array分成两部分，然后再分别对这两部分进行处理。
 如果只是需要移动一些数字，比如说移动零或者整个数组只有三个数，那么可以用一些更简单思想，比如说记录下所有非0的数，或者记录下这些数字的个数，然后把前面全换成这些非0数，后面换成零。这样做的好处就是不需要交换。或者一个记录非0的地方，另外一个记录当前位置，如果这个不是零，那么就遇上一个非0的东西交换。所以总体思路都是双指针的思想，一个记录当前遍历的位置，另外一个记录上一次符合条件的位置。
- 27. Remove Element 75.</description>
+27. Remove Element 75. Sort Colors 283.</description>
     </item>
     
     <item>
@@ -93,7 +93,7 @@ SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说
       <description>String 算法思考 String 类型的题目算是leetcode里第二多的题型，其实这个和array的使用方法差不太多，只不过其中有一些特定的使用场景。我在这里会将string分为几类问题，可能不能包括所有的类别，尽量使用较为统一的思路解释遇到的题目。
 数据类型 首先要说清楚一点，在java中String是immutable的，也就是当你创建一个string后是不能修改的，如果你需要给他加内容，java会重新创一个新的实例。这样的问题就是如果使用s+=a,这样时间复杂度是O(n),在java中会重新复制一遍string再给你创建。
 解决办法就是使用StringBuilder，这个的时间复杂度对于增加就是O(1).其中内部实现就是一个char[]
- sb.append(String str) sb.</description>
+sb.append(String str) sb.toString() 组合问题 这类问题就是需要得到某个字符串中包含的所有子集,或者是permutation.</description>
     </item>
     
     <item>
@@ -103,7 +103,8 @@ SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说
       
       <guid>http://study.tczhong.com/post/algo/tree/</guid>
       <description>树形算法题的思考 树形是一大题型，这类题目相对来说比较简单，在我看来掌握树形的最大要点就是递归的思想，这可以说用在了这类题目中的方方面面。主要涉及这些题型：
- 构建树（数组，链表） 遍历，判断是合理的树 找节点（LCA） 树的基本属性（高度），找路径  构建树 这类题目的基本思路就是先找到根结点（root），然后把整个数组或者链表分成左右两个部分。之后，这个根节点的左子树就是递归调用数组的右半部分。右半边子树就是递归调用，这个函数的右半部分。总体还是比较简单的，题目可以参看</description>
+构建树（数组，链表） 遍历，判断是合理的树 找节点（LCA） 树的基本属性（高度），找路径 构建树 这类题目的基本思路就是先找到根结点（root），然后把整个数组或者链表分成左右两个部分。之后，这个根节点的左子树就是递归调用数组的右半部分。右半边子树就是递归调用，这个函数的右半部分。总体还是比较简单的，题目可以参看
+108.Convert Sorted Array to Binary Search Tree 109.</description>
     </item>
     
   </channel>

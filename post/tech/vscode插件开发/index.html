@@ -153,61 +153,61 @@
 3 directories, 10 files
 </code></pre><p>src里是实际的代码，<code>package.json</code>定义了包的信息。</p>
 <p>在这里我们为了简单，将实际上传的逻辑写在脚本里，这里要求在本机有可运行的<code>aws cli</code>。脚本如下，首先通过uuiden生成一个独一无二的文件名，之后利用<code>pngpaste</code> 把mac的剪贴板的内容导出到tmp文件夹里，之后上传到自己的s3 folder里，同时输出网址。将此文件放在根目录下的新建的<code>res</code> folder。</p>
-<pre tabindex="0"><code>NAME=&quot;$(uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]')&quot;
-pngpaste &quot;/tmp/${NAME}.png&quot;
-aws s3 cp &quot;/tmp/${NAME}.png&quot; s3://xxx/yyy/ --acl public-read 
-rm &quot;/tmp/${NAME}.png&quot;
+<pre tabindex="0"><code>NAME=&#34;$(uuidgen | tr -d - | tr -d &#39;\n&#39; | tr &#39;[:upper:]&#39; &#39;[:lower:]&#39;)&#34;
+pngpaste &#34;/tmp/${NAME}.png&#34;
+aws s3 cp &#34;/tmp/${NAME}.png&#34; s3://xxx/yyy/ --acl public-read 
+rm &#34;/tmp/${NAME}.png&#34;
 echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
 </code></pre><p>在<code>extension.ts</code>里可以写如下的代码</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">activate</span>(<span style="color:#a6e22e">context</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">vscode</span>.<span style="color:#a6e22e">ExtensionContext</span>) {
-
-    <span style="color:#75715e">// Use the console to output diagnostic information (console.log) and errors (console.error)
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// This line of code will only be executed once when your extension is activated
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Congratulations, your extension &#34;paste-to-s3&#34; is now active!&#39;</span>);
-    <span style="color:#75715e">// 注册命令
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">disposable</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vscode</span>.<span style="color:#a6e22e">commands</span>.<span style="color:#a6e22e">registerCommand</span>(<span style="color:#e6db74">&#39;paste-to-s3.paste2s3&#39;</span>, () =&gt; {
-        <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">showInformationMessage</span>(<span style="color:#e6db74">&#39;正在上传至s3&#39;</span>);
-        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">editor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">activeTextEditor</span>;
-        <span style="color:#75715e">// 调用js库实现运行脚本
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">child_process</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;child_process&#34;</span>);
-        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">free</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">child_process</span>.<span style="color:#a6e22e">spawnSync</span>(<span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">`/../res/run.sh`</span>, { <span style="color:#a6e22e">shell</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> });
-
-        <span style="color:#75715e">//如果有错误 输出
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">free</span>.<span style="color:#a6e22e">stderr</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>) {
-            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">free</span>.<span style="color:#a6e22e">stderr</span>.<span style="color:#a6e22e">toString</span>();
-            <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
-                <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">showInformationMessage</span>(<span style="color:#e6db74">&#34;错误(error): &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">message</span>);
-            }
-        }
-        <span style="color:#75715e">//读取输出
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">free</span>.<span style="color:#a6e22e">stdout</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>) {
-            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">free</span>.<span style="color:#a6e22e">stdout</span>.<span style="color:#a6e22e">toString</span>();
-            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lines</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;\n&#34;</span>);
-
-            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">line</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">lines</span>) {
-                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">line</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#34;tczimg.s3.amazonaws.com&#34;</span>)) {
-                    <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">showInformationMessage</span>(<span style="color:#e6db74">&#39;已上传至s3...（Uploaded to s3...）&#39;</span>);
-                    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">editor</span>) {
-                        <span style="color:#66d9ef">return</span>;
-                    }
-                    <span style="color:#75715e">//将结果插入
-</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">selection</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">selection</span>;
-                    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">selection</span>) {
-                        <span style="color:#66d9ef">return</span>;
-                    }
-                    <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">edit</span>((<span style="color:#a6e22e">editBuilder</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">vscode</span>.<span style="color:#a6e22e">TextEditorEdit</span>) =&gt; {
-                        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">line</span>;
-                        <span style="color:#a6e22e">editBuilder</span>.<span style="color:#a6e22e">insert</span>(<span style="color:#a6e22e">selection</span>.<span style="color:#a6e22e">active</span>, <span style="color:#a6e22e">img</span>);
-
-                    });
-                }
-            }
-        }
-
-    });
-    <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">subscriptions</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">disposable</span>);
-}
-</code></pre></div><p>代码比较简单。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">activate</span>(<span style="color:#a6e22e">context</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">vscode</span>.<span style="color:#a6e22e">ExtensionContext</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Use the console to output diagnostic information (console.log) and errors (console.error)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// This line of code will only be executed once when your extension is activated
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Congratulations, your extension &#34;paste-to-s3&#34; is now active!&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 注册命令
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">disposable</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vscode</span>.<span style="color:#a6e22e">commands</span>.<span style="color:#a6e22e">registerCommand</span>(<span style="color:#e6db74">&#39;paste-to-s3.paste2s3&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">showInformationMessage</span>(<span style="color:#e6db74">&#39;正在上传至s3&#39;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">editor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">activeTextEditor</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 调用js库实现运行脚本
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">child_process</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;child_process&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">free</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">child_process</span>.<span style="color:#a6e22e">spawnSync</span>(<span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">`/../res/run.sh`</span>, { <span style="color:#a6e22e">shell</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//如果有错误 输出
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">free</span>.<span style="color:#a6e22e">stderr</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">free</span>.<span style="color:#a6e22e">stderr</span>.<span style="color:#a6e22e">toString</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">showInformationMessage</span>(<span style="color:#e6db74">&#34;错误(error): &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">message</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//读取输出
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">free</span>.<span style="color:#a6e22e">stdout</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">free</span>.<span style="color:#a6e22e">stdout</span>.<span style="color:#a6e22e">toString</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lines</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;\n&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">line</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">lines</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">line</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#34;tczimg.s3.amazonaws.com&#34;</span>)) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">showInformationMessage</span>(<span style="color:#e6db74">&#39;已上传至s3...（Uploaded to s3...）&#39;</span>);
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">editor</span>) {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">//将结果插入
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">selection</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">selection</span>;
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">selection</span>) {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">edit</span>((<span style="color:#a6e22e">editBuilder</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">vscode</span>.<span style="color:#a6e22e">TextEditorEdit</span>) =&gt; {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">line</span>;
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">editBuilder</span>.<span style="color:#a6e22e">insert</span>(<span style="color:#a6e22e">selection</span>.<span style="color:#a6e22e">active</span>, <span style="color:#a6e22e">img</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    });
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">subscriptions</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">disposable</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>代码比较简单。</p>
 <h2 id="调试">调试</h2>
 <p>接下来就是调试，可以直接按<code>f5</code>，自动打开一个新的vscode测试环境，这时候打开command palette已经可以看到自己的命令。</p>
 <p><img src="https://tczimg.s3.amazonaws.com/vscode/2b7964ae91ea4c16b48148b25c2754fc.png" alt=""></p>
@@ -245,7 +245,7 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
     
     <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -285,6 +285,10 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_99/" title="TC分享第 99 期">TC分享第 99 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_98/" title="TC分享第 98 期">TC分享第 98 期</a>
     </li>
     
@@ -318,10 +322,6 @@ echo \!\[\]\(https://xxx.s3.amazonaws.com/yyy/$NAME.png\);
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_90/" title="TC分享第 90 期">TC分享第 90 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_89/" title="TC分享第 89 期">TC分享第 89 期</a>
     </li>
     
 </ul>

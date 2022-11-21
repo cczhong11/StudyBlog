@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>模型思维(7)--网络模型 | Learn More</title>
+    <meta property="og:title" content="模型思维(7)--网络模型 - Learn More">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-05-20T00:00:00&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-05-20T00:00:00&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="模型思维(7)--网络模型">
+        
+    <meta name="author" content="">
+    <meta property="og:url" content="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B47--%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+    
+
+        
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="far fa-envelope"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fab fa-github"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fab fa-linkedin"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://stackoverflow.com/users/7112540/tc-zhong"><i class="fab fa-stack-overflow"></i></a></li>
+                
+            </ul>
+        
+
+  
+
+    </nav>
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://study.tczhong.com/">
+                        Learn More
+                    </a>
+                
+                
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://study.tczhong.com/">首页</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/weekly/" title="每周分享">每周分享</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/love/" title="亲密关系">亲密关系</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/leetcode/" title="Leetcode">Leetcode</a>
+                    
+                    <a  href="http://study.tczhong.com/archives/" title="归档">归档</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">模型思维(7)--网络模型</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月20日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="post-content">
+            <p><img src="https://tczimg.s3.amazonaws.com/book/network.png" alt=""></p>
+<p>生活中处处有网络模型的存在，从传染病的传播到网络中站点连接，都可以抽象成一张张网络，将不同的节点连接起来。这篇将走进网络的基本结构，帮助大家理解一些生活中的现象。</p>
+<h2 id="网络的基本术语">网络的基本术语</h2>
+<p>网络是由<strong>节点</strong>和<strong>边</strong>组成的。每一个节点都可以通过边的连接到达另一个节点，这两个节点互为<strong>邻居</strong>。如果从一个节点可以到任意一个节点，我们称之为连接的网络。</p>
+<p>在无向网络中，我们对于每个节点的连接数可以定义为节点的度（degree)。度分布可以告诉我们某个节点是不是比其他的节点连接的更多。</p>
+<p><strong>路径长度</strong>是指两个节点中的最短路径长度，与度成反比。当增加边的时候，就缩短了节点之间的平均长度。<strong>介数</strong>是指通过该节点的最小路径的百分比。在社交网络中，介数得分高的人掌握更多信息并且拥有更多权力。</p>
+<p>最后一个基本术语是聚类系数，这个统计了一个节点的邻居们互相连接的比例。例如，一个人有10个朋友，这些朋友可以组成45个对。如果在这45个对当中，有15个对本身也是朋友，那么这个人的聚类系数就等于1/3。如果所有这45对都是朋友，那么这个人的聚类系数就等于1，这也是最大的聚类系数。整个网络的聚类系数等于各个节点聚类系数的平均值。</p>
+<p>下面用中心辐射网络和地理网络举个例子：</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/ab9bce23b5de43f39552cd3244befe72.png" alt=""></p>
+<p>中心辐射网络是所有节点和中心节点相连，但是都不互相连接。其基本的统计术语也比较好理解。</p>
+<p>地理网络是每个节点都连接到位于它右侧和左侧的两个节点。每个节点具有相同的度，都是4。由于网络是对称的，所以每一个节点的介数也是相同的。这里一共12个节点，可以组成 12*11/2 = 66 个邻居对。其中一个节点是有6对邻居经过其是最短路径，所以介数是1/12。每个节点都有4个邻居，可以构成6个对。在这6个对中，恰好有3对是相互连接的：直接靠着该节点的左右两个节点分别连接到再外一点的节点，并相互连接。因此，聚类系数等于1/2。</p>
+<h2 id="常见的网络结构">常见的网络结构</h2>
+<p>常见的网络结构有以下几种：</p>
+<ul>
+<li>随机网络</li>
+<li>地理网络</li>
+<li>幂律网络</li>
+<li>小世界网络</li>
+</ul>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/3909dd80f9254187bdbf9b17166ebd4e.png" alt=""></p>
+<p>随机网络就是边和节点的连接都是随机的。如果想检验这个网络是不是随机网络，可以通过蒙特卡洛的方法生成很多随机网络之后把这个网络代入，进行标准的统计检验，以确定是否接受随机的假设。</p>
+<p>地理网络就是一个节点和自己的东南西北节点相连接，一个特点就是每个节点的度比较低。</p>
+<p>幂律网络就是度的分布是幂律的。少数节点的度很大，同时大多数节点的连接则很少。</p>
+<p>小世界网络则是结合了地理网络和随机网络的特征。可以从地理网络开始，然后重新安排节点之间的边。如果重新安排边的概率是1，那么就是随机网络，如果概率是0，就是地理网络。如果概率在0和1之间就会得到小世界网络。这是小集群通过随机连接到其他集群的网络，社交网络类似于小世界，每个人都有一些关系紧密的朋友，以及一些关系比较远的随机的朋友。</p>
+<h2 id="网络的应用">网络的应用</h2>
+<p>这里介绍一个友谊悖论：</p>
+<blockquote>
+<p>如果网络中任何两个节点的度不同，那么平均而言，节点的度会低于其相邻节点。换句话说，平均而言，人们的朋友比他们自己更受欢迎。</p>
+</blockquote>
+<p>举个极端一点的例子，在辐射网络中，12个人中的每个人都只有一个朋友，1个人有12个朋友。平均来说，所有人只有不到两个朋友，然而同时每个人的朋友都有超过11个朋友。</p>
+<p>友谊悖论适用于任何网络：电子邮件网络、学术引文网络、银行网络和国际贸易网络等。平均而言，一篇学术论文引用的参考文献被引用的次数比这篇文章本身更多；与一个国家的贸易伙伴进行贸易的国家数量，要比与这个国家进行贸易的国家更多；食物网络中与单一物种相连接的多个物种的连接比该物种自身更多。</p>
+<p>友谊悖论的逻辑可以扩展到任何与朋友数量相关的性质。如果活跃、快乐、聪明、富有和友善的人平均而言会拥有更多的朋友，那么一个人的朋友平均来说会更活跃、更快乐、更聪明、更富有、更友善。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/114a5158c344487d9a086b169c5bb573.png" alt=""></p>
+<p>另外一个应用就是6度分隔理论，也就是地球上的任何两个人都可以通过6个或更少的朋友联系到一起。。这个术语源于美国社会心理学家斯坦利·米尔格兰姆（Stanley Milgram）在20世纪60年代进行的一项实验。米尔格兰姆向内布拉斯加州奥马哈市和堪萨斯州威奇托市的296人寄出了一些包裹，那些包裹最终需要转寄给在马萨诸塞州波士顿市的一个人。收到包裹的人必须遵守相同的规则：所有参与者只能通过邮政系统将包裹寄给他们认识且他们认为更有可能认识那个波士顿人的人，并附上同样的指示。每个参与实验的人都要在一份记录路径的名册上签名，并邮寄明信片给研究者，以便研究者可以跟踪链条上的断点。最终，有64个包裹抵达了波士顿。这些抵达波士顿的包裹所经历的平均路径长度略小于6，因此就有了“六度分隔”这种说法。</p>
+<p>在这里，我们可以构建了一个简化版的小世界网络，以便直观地理解六度分隔理论。这个小世界网络假设每个人都有一个由若干个圈内好友构成的小群体，这些人彼此认识，而且每个人都拥有不属于这些圈内的朋友，我们把这些圈子外的朋友称为“随机朋友”（random friends）。可以看上图，某人（用黑色圆圈表示）有5个圈内好友和两个随机朋友。它还显示了这个节点的朋友（用浅灰色圆圈表示）的部分“朋友圈”。</p>
+<p>这些随机朋友也可以认为是一种弱关系，他们可以将你连接到其他群体的人。我们的弱关系，也就是网络中的随机朋友，由于连接了具有不同兴趣和信息的社区，从而发挥了重要的信息作用。因此，社会学家很强调弱关系的力量。</p>
+<h2 id="小结">小结</h2>
+<p>通过研究网络的一些基本特点，可以帮助我们对于生活中的一些现象进行合理的解释。</p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B46--%E5%90%88%E4%BD%9C%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/">模型思维(6)--合作博弈模型</a></li>
+        
+        <li><a href="/post/book/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90--%E4%B8%96%E7%95%8C%E8%A7%82/">读书推荐--《世界观》</a></li>
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B45--%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/">模型思维(5)--非线性模型</a></li>
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B44--%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/">模型思维(4)--线性模型</a></li>
+        
+        <li><a href="/post/book/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90--%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/">读书推荐--《浪潮之巅》</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://study.tczhong.com/tags/book'>book</a></li>
+                
+                <li><a href='http://study.tczhong.com/tags/tech'>tech</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://study.tczhong.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_99/" title="TC分享第 99 期">TC分享第 99 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_98/" title="TC分享第 98 期">TC分享第 98 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_97/" title="TC分享第 97 期">TC分享第 97 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_96/" title="TC分享第 96 期">TC分享第 96 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_95/" title="TC分享第 95 期">TC分享第 95 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_94/" title="TC分享第 94 期">TC分享第 94 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_93/" title="TC分享第 93 期">TC分享第 93 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_92/" title="TC分享第 92 期">TC分享第 92 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_91/" title="TC分享第 91 期">TC分享第 91 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_90/" title="TC分享第 90 期">TC分享第 90 期</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (24)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/">程序员 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90/">读书推荐 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://study.tczhong.com/tags/android/">Android</a>
+    
+    <a href="http://study.tczhong.com/tags/array/">array</a>
+    
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
+    
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
+    
+    <a href="http://study.tczhong.com/tags/book/">book</a>
+    
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
+    
+    <a href="http://study.tczhong.com/tags/development/">development</a>
+    
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
+    
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
+    
+    <a href="http://study.tczhong.com/tags/food/">food</a>
+    
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
+    
+    <a href="http://study.tczhong.com/tags/google/">google</a>
+    
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
+    
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
+    
+    <a href="http://study.tczhong.com/tags/health/">health</a>
+    
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
+    
+    <a href="http://study.tczhong.com/tags/life/">life</a>
+    
+    <a href="http://study.tczhong.com/tags/love/">love</a>
+    
+    <a href="http://study.tczhong.com/tags/python/">python</a>
+    
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
+    
+    <a href="http://study.tczhong.com/tags/string/">string</a>
+    
+    <a href="http://study.tczhong.com/tags/study/">study</a>
+    
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
+    
+    <a href="http://study.tczhong.com/tags/time/">time</a>
+    
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
+    
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
+    
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
+    
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://study.tczhong.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2022 <a href="http://study.tczhong.com/">Learn More By </a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-120924697-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+</body>
+
+</html>

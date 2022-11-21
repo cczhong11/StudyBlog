@@ -122,18 +122,18 @@
 <li><a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/">109.Convert Sorted List to Binary Search Tree</a></li>
 </ul>
 <p>这里有一道题，关于如何利用链表来构造。其中有一点，它可以使用一个固定的prev linked list node。在每次递归结束的时候都会调用next，这样我们就不需要每次遍历找到中心结点，而是利用之前的结果来找到中间的那个节点。也就是说，在这里我们并不需要一开始就把父节点找到，而是可以先存好左子树，之后再到root。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">	<span style="color:#66d9ef">private</span> ListNode list<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> TreeNode <span style="color:#a6e22e">sortedListToBST</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> start<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> end<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>start <span style="color:#f92672">&gt;</span> end<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>start <span style="color:#f92672">+</span> end<span style="color:#f92672">+</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span>
-        TreeNode leftChild <span style="color:#f92672">=</span> sortedListToBST<span style="color:#f92672">(</span>start<span style="color:#f92672">,</span> mid<span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
-        TreeNode parent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeNode<span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
-        parent<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> leftChild<span style="color:#f92672">;</span>
-        list <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
-        parent<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> sortedListToBST<span style="color:#f92672">(</span>mid<span style="color:#f92672">+</span>1<span style="color:#f92672">,</span> end<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">return</span> parent<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>其他的一些，比如说利用前序遍历和中序遍历来构建。思路是差不多的，因为我们可以知道，前序遍历的第一个必定是根节点，而中续遍历的中间某一个必定是根节点，然后，根据这个就可以确定左右子树的范围，之后递归调用就可以了。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>	<span style="color:#66d9ef">private</span> ListNode list<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> TreeNode <span style="color:#a6e22e">sortedListToBST</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> start<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> end<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>start <span style="color:#f92672">&gt;</span> end<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>start <span style="color:#f92672">+</span> end<span style="color:#f92672">+</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        TreeNode leftChild <span style="color:#f92672">=</span> sortedListToBST<span style="color:#f92672">(</span>start<span style="color:#f92672">,</span> mid<span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        TreeNode parent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeNode<span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        parent<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> leftChild<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        list <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        parent<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> sortedListToBST<span style="color:#f92672">(</span>mid<span style="color:#f92672">+</span>1<span style="color:#f92672">,</span> end<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> parent<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>其他的一些，比如说利用前序遍历和中序遍历来构建。思路是差不多的，因为我们可以知道，前序遍历的第一个必定是根节点，而中续遍历的中间某一个必定是根节点，然后，根据这个就可以确定左右子树的范围，之后递归调用就可以了。</p>
 <ul>
 <li><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">105. Construct Binary Tree from Preorder and Inorder Traversal</a></li>
 <li><a href="https://leetcode.com/problems/construct-string-from-binary-tree/">606.Construct String from Binary Tree</a></li>
@@ -324,7 +324,7 @@
     
     <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -364,6 +364,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_99/" title="TC分享第 99 期">TC分享第 99 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_98/" title="TC分享第 98 期">TC分享第 98 期</a>
     </li>
     
@@ -397,10 +401,6 @@
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_90/" title="TC分享第 90 期">TC分享第 90 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_89/" title="TC分享第 89 期">TC分享第 89 期</a>
     </li>
     
 </ul>

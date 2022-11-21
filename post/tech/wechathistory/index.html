@@ -125,14 +125,14 @@
 <h1 id="获得聊天记录">获得聊天记录</h1>
 <p>聊天记录存在的位置是 <code>/data/data/com.tencent.mm/MicroMsg/xxxxxxx/EnMicroMsg.db</code>。这里的<code>xxxxx</code>是对&quot;mm[uin]&ldquo;进行md5的值。uin的获得可以使用这个命令，<code>cat /data/data/com.tencent.mm/shared_prefs/*.xml | grep uin</code>，记录其中的<code>default_uin</code>。如果是1234567，那么就对<code>mm1234567</code>进行md5操作，之后就可以获得文件下的名字。</p>
 <p>利用以下命令把内容拷贝出来。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp EnMicroMsg.db /mnt/sdcard/
-exit
-adb pull /mnt/sdcard/EnMicroMsg.db .
-</code></pre></div><p>接下来就是要解密这个数据库。密码是手机的imei+uin，利用以下命令可以获得到：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo -n $imei$uin | md5 | cut -c -7
-</code></pre></div><p>打开这个加密的数据库我卡了很久，理论上利用<code>sqlcipher</code>就可以解锁了，但是我尝试了很多办法，结果都是&quot;File is not a database&rdquo;。说明你在解锁数据库用的方法错了，并不代表你的密码不对，在mac下利用<code>brew install sqlcipher</code>安装之后，利用以下命令即可。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sqlcipher EnMicroMsg.db <span style="color:#e6db74">&#39;PRAGMA key = &#34;key&#34;; PRAGMA cipher_migrate; ATTACH DATABASE &#34;decrypted_database.db&#34; AS decrypted_database KEY &#34;&#34;;SELECT sqlcipher_export(&#34;decrypted_database&#34;);DETACH DATABASE decrypted_database;&#39;</span>
-</code></pre></div><p>之后可以直接看<code>decrypted_database.db</code>里面的内容。具体内容在<code>message</code>表格里面。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp EnMicroMsg.db /mnt/sdcard/
+</span></span><span style="display:flex;"><span>exit
+</span></span><span style="display:flex;"><span>adb pull /mnt/sdcard/EnMicroMsg.db .
+</span></span></code></pre></div><p>接下来就是要解密这个数据库。密码是手机的imei+uin，利用以下命令可以获得到：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -n $imei$uin | md5 | cut -c -7
+</span></span></code></pre></div><p>打开这个加密的数据库我卡了很久，理论上利用<code>sqlcipher</code>就可以解锁了，但是我尝试了很多办法，结果都是&quot;File is not a database&rdquo;。说明你在解锁数据库用的方法错了，并不代表你的密码不对，在mac下利用<code>brew install sqlcipher</code>安装之后，利用以下命令即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sqlcipher EnMicroMsg.db <span style="color:#e6db74">&#39;PRAGMA key = &#34;key&#34;; PRAGMA cipher_migrate; ATTACH DATABASE &#34;decrypted_database.db&#34; AS decrypted_database KEY &#34;&#34;;SELECT sqlcipher_export(&#34;decrypted_database&#34;);DETACH DATABASE decrypted_database;&#39;</span>
+</span></span></code></pre></div><p>之后可以直接看<code>decrypted_database.db</code>里面的内容。具体内容在<code>message</code>表格里面。</p>
 <p>逆向微信的过程可以参看以下的博文</p>
 <p><a href="https://www.xukele.com/blog/?p=435">如何破解微信聊天数据库</a></p>
 
@@ -159,7 +159,7 @@ adb pull /mnt/sdcard/EnMicroMsg.db .
     
     <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -199,6 +199,10 @@ adb pull /mnt/sdcard/EnMicroMsg.db .
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_99/" title="TC分享第 99 期">TC分享第 99 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_98/" title="TC分享第 98 期">TC分享第 98 期</a>
     </li>
     
@@ -232,10 +236,6 @@ adb pull /mnt/sdcard/EnMicroMsg.db .
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_90/" title="TC分享第 90 期">TC分享第 90 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_89/" title="TC分享第 89 期">TC分享第 89 期</a>
     </li>
     
 </ul>

@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>模型思维(3)--幂律分布 | Learn More</title>
+    <meta property="og:title" content="模型思维(3)--幂律分布 - Learn More">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-04-22T00:00:00&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-04-22T00:00:00&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="模型思维(3)--幂律分布">
+        
+    <meta name="author" content="">
+    <meta property="og:url" content="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B43--%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+    
+
+        
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="far fa-envelope"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fab fa-github"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fab fa-linkedin"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://stackoverflow.com/users/7112540/tc-zhong"><i class="fab fa-stack-overflow"></i></a></li>
+                
+            </ul>
+        
+
+  
+
+    </nav>
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://study.tczhong.com/">
+                        Learn More
+                    </a>
+                
+                
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://study.tczhong.com/">首页</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/weekly/" title="每周分享">每周分享</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/love/" title="亲密关系">亲密关系</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/leetcode/" title="Leetcode">Leetcode</a>
+                    
+                    <a  href="http://study.tczhong.com/archives/" title="归档">归档</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">模型思维(3)--幂律分布</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月22日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="post-content">
+            <p><img src="https://tczimg.s3.amazonaws.com/book/powerlaw.png" alt=""></p>
+<p>这一篇讨论的是幂律分布(power law distribution)。这个分布在生活中十分常见，如果当我们发现会出现一些极端的情况，视频下载量、书籍销量、学术论文引用数量、战争中的伤亡人数、洪水和地震等等，这就是幂律分布。而这些极端情况就在这长长的尾巴里，也被称为长尾分布。</p>
+<h2 id="幂律分布的定义">幂律分布的定义</h2>
+<p>在正态分布里，我们要求事件是互相独立的，而在幂律分布中，事件则不是互相独立的，而且通常是以正反馈的形式出现的。当一件事情发生之后，也会更频繁地发生类似的事情。</p>
+<p>我们可以用数学公式来定义幂律分布。事件发生的概率与事件大小的负指数成比例。事件越大，发生的可能性越小。</p>
+<p>一个定义在区间 $[x_{min}, \infty]$ 的幂律分布可以写成:</p>
+<p>$$P(x) = C x^{-\alpha}$$</p>
+<p>其中 $\alpha$ &gt; 1决定了尾部的长度， 同时常数项 C = $(\alpha -1)x^{\alpha-1}_{min}$确保了总概率分布，幂律中的指数决定了大事件的可能性。</p>
+<p>这里需要提到长尾分布和正态分布的区别。正态分布的确也存在一部分长尾，但是在正态分布里的大事件概率可以忽略不计，但是幂律分布里则需要考虑。当我们将两个分布利用<a href="https://zh.wikipedia.org/zh-hans/%E5%8F%8C%E5%AF%B9%E6%95%B0%E5%9D%90%E6%A0%87%E7%B3%BB">双对数坐标</a>画出时（见下图），我们可以发现当值比较大的时候，正态分布的下降要比幂律分布快很多，幂律分布则是以固定的斜率下降的。由此可以看出在数量很大的时候，正态分布中事情发生的概率会比幂律分布小很多。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/book/log-log.png" alt=""></p>
+<p>双对数坐标中的幂律分布（黑色）与正态分布（灰色）</p>
+<h3 id="zipf-law">Zipf law</h3>
+<p>这是幂律分布的特殊形式，最初是从自然语言处理里出现。在自然语言的语料库里，一个单词出现的频率与它在频率表里的排名成反比。所以，频率最高的单词出现的频率大约是出现频率第二位的单词的2倍，而出现频率第二位的单词则是出现频率第四位的单词的2倍。<strong>事件的等级排列序号乘以其概率是常数</strong>。以下的图表表现了英语的情况。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/book/zipflaw.png" alt=""></p>
+<p>这个分布不仅存在自然语言中，同时还出现在城市人口分布中。下图是双对数坐标系，在这条线上说明乘积是常数。可以看出美国几大城市是符合zipf law的。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/book/zipflawcity.png" alt=""></p>
+<p>另一个有趣的应用就是《红楼梦》人物出场次数也符合幂律分布。一些详细的分析可以看<a href="https://www.douban.com/note/63203076/">这里</a></p>
+<h2 id="偏好依附模型">偏好依附模型</h2>
+<p>我们通过偏好依附模型（preferential attachment model）来研究幂律分布产生的原因。</p>
+<blockquote>
+<p>偏好依附模型</p>
+<p>一连串物体（人）一个接一个地到达。第一个到达者创建一个实体。后续每次有人到达时都应用以下规则：在概率p（较小）的情况下，新到达者创造一个新的实体；在概率（1-p）的情况下，新到达者加入现有的某个实体。加入某个特定实体的概率等于该实体的大小除以到目前为止所有到达者的数量</p>
+</blockquote>
+<p><img src="https://tczimg.s3.amazonaws.com/book/preferential_attech_model.png" alt=""></p>
+<p>这里可以以大学新生进入大学加入社团举一个例子。第一个来到学校的学生创建了一个新的社团，第二个到达的学生以较小的概率创建了自己的社团，更有可能的是，他会加入第一个学生创建的社团。前10个到达的学生可能会创建3个社团：一个有7个成员，一个有两个成员，一个有一个成员。（注：上图中第三个社团的人数为1，而不是3）第11个到达的学生只会以极小的概率创建第4个社团，如果不创建新的社团，她就加入现有的社团。如果这样做，那么她有70%的可能性加入已有7个学生的社团，有20%的可能性加入已有两个学生的社团，只有10%的可能性加入只有一个学生的社团。</p>
+<p>这个模型可以解释&quot;<strong>马太效应</strong>&quot;: 更多导致更多。一个人的行动会导致更多人选择这个行动，产生幂律分布。在生活中很多事情也可以验证这一点：例如互联网上的视频浏览量，知乎答案的点赞量，有一些答案的点赞数会比其他的答案多很多很多倍。一方面是人们在做选择时会遵循这个模型里所写的，另一方面也是目前推荐算法所产生的结果。这其实也反应出有的时候点赞数量可能并不能反应这个答案的质量，可能只是初始的时候随机因素导致这个答案比别的的多，导致后面的人会选择这个答案。</p>
+<h2 id="自组织临界模型">自组织临界模型</h2>
+<p>这个模型是在系统中各个组件建立了相互依赖的关系，产生了幂律分布，当到达某个临界点状态后，系统状态就会快速变化。这里可以拿沙堆举一个例子，假设有人将沙粒从距桌面几十厘米的地方洒落到桌子上。随着沙粒不断增多，一个沙堆开始形成。最终，沙子的堆积会达到临界状态，此后每加一次沙子都可能导致“沙崩”。在这种临界状态下，多加入的沙子通常要么没有影响，要么最多只会导致一些沙子下滑。这些属于幂律分布中的数量众多的小事件。但有时，只要再加入一粒沙子就会导致大规模的“沙崩”，这就是大事件。同理，雪崩也是同样的道理。</p>
+<p>森林火灾模型（forest fire model）也是自组织临界模型的一种。当树木的密度较低时，由闪电引发的任何火灾的规模都很小，最多只会蔓延到几个格点。当树木密度变得足够高时，再被闪电击中就会导致森林大火。这里的森林密度是存在一个临界点的，当密度低于这个临界点的时候，即使闪电击中任意一棵树，也很难发生整个森林的大火。当超过这个临界点，大火蔓延至整个森林的概率就快速上升。</p>
+<p>利用这个模型也可以解释一部分2008年金融危机。可以把银行看作树木，不同银行因为借贷的关系互相联系精密，当一家因为坏账太多就会牵连他联系紧密的银行，之后就导致整个金融行业的崩溃。</p>
+<p>这个模型告诉我们临界密度的存在，俗称”压倒骆驼的最后一根稻草“。某个重大事情的发生不是因为孤立的事件，而是因为整个系统的状态已经接近崩溃了。</p>
+<h2 id="总结">总结</h2>
+<p>幂律分布还有不少的应用，例如二八法则，做前20%工作占了80%成果，在分布里头部占大多数，尾部虽然很长，但占整体很少。</p>
+<p>在看问题时利用幂律分布的思路可以更好理解极端的大事件的发生原因。</p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B42--%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/">模型思维（2）-- 正态分布</a></li>
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B41--%E5%AF%B9%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%BB%BA%E6%A8%A1/">模型思维（1）--对人类的建模</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://study.tczhong.com/tags/book'>book</a></li>
+                
+                <li><a href='http://study.tczhong.com/tags/tech'>tech</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://study.tczhong.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_99/" title="TC分享第 99 期">TC分享第 99 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_98/" title="TC分享第 98 期">TC分享第 98 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_97/" title="TC分享第 97 期">TC分享第 97 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_96/" title="TC分享第 96 期">TC分享第 96 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_95/" title="TC分享第 95 期">TC分享第 95 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_94/" title="TC分享第 94 期">TC分享第 94 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_93/" title="TC分享第 93 期">TC分享第 93 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_92/" title="TC分享第 92 期">TC分享第 92 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_91/" title="TC分享第 91 期">TC分享第 91 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_90/" title="TC分享第 90 期">TC分享第 90 期</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (24)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/">程序员 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90/">读书推荐 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://study.tczhong.com/tags/android/">Android</a>
+    
+    <a href="http://study.tczhong.com/tags/array/">array</a>
+    
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
+    
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
+    
+    <a href="http://study.tczhong.com/tags/book/">book</a>
+    
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
+    
+    <a href="http://study.tczhong.com/tags/development/">development</a>
+    
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
+    
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
+    
+    <a href="http://study.tczhong.com/tags/food/">food</a>
+    
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
+    
+    <a href="http://study.tczhong.com/tags/google/">google</a>
+    
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
+    
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
+    
+    <a href="http://study.tczhong.com/tags/health/">health</a>
+    
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
+    
+    <a href="http://study.tczhong.com/tags/life/">life</a>
+    
+    <a href="http://study.tczhong.com/tags/love/">love</a>
+    
+    <a href="http://study.tczhong.com/tags/python/">python</a>
+    
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
+    
+    <a href="http://study.tczhong.com/tags/string/">string</a>
+    
+    <a href="http://study.tczhong.com/tags/study/">study</a>
+    
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
+    
+    <a href="http://study.tczhong.com/tags/time/">time</a>
+    
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
+    
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
+    
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
+    
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://study.tczhong.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2022 <a href="http://study.tczhong.com/">Learn More By </a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-120924697-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+</body>
+
+</html>

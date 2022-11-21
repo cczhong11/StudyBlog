@@ -14,7 +14,7 @@
       
       <guid>http://study.tczhong.com/post/algo/graph/</guid>
       <description>graph 算法题目思考 Graph算是非常常见的题目，一般会给你一个2d array或一个数组代表联系，你可以使用这个输入来转换成一个图表示的数据结构，之后在图里做搜索。常见的算法：
- BFS，DFS union find A* Floyd and dijkstra  Leetcode里的题目的话主要都是dfs, bfs就可以解决，有些需要思考几个之间的关系的题目可以使用union find来做。少部分计算路径的题目需要使用一些基本的最短路径算法。</description>
+BFS，DFS union find A* Floyd and dijkstra Leetcode里的题目的话主要都是dfs, bfs就可以解决，有些需要思考几个之间的关系的题目可以使用union find来做。少部分计算路径的题目需要使用一些基本的最短路径算法。</description>
     </item>
     
   </channel>
