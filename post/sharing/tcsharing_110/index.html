@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TC分享第 110 期 | Learn More</title>
+    <meta property="og:title" content="TC分享第 110 期 - Learn More">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2023-02-05T00:00:00&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2023-02-05T00:00:00&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="TC分享第 110 期">
+        
+    <meta name="author" content="">
+    <meta property="og:url" content="http://study.tczhong.com/post/sharing/tcsharing_110/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+    
+
+        
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="far fa-envelope"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fab fa-github"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fab fa-linkedin"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://stackoverflow.com/users/7112540/tc-zhong"><i class="fab fa-stack-overflow"></i></a></li>
+                
+            </ul>
+        
+
+  
+
+    </nav>
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://study.tczhong.com/">
+                        Learn More
+                    </a>
+                
+                
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://study.tczhong.com/">首页</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/weekly/" title="每周分享">每周分享</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/love/" title="亲密关系">亲密关系</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/leetcode/" title="Leetcode">Leetcode</a>
+                    
+                    <a  href="http://study.tczhong.com/archives/" title="归档">归档</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#新闻思考">新闻思考</a></li>
+    <li><a href="#科技新闻">科技新闻</a></li>
+    <li><a href="#优秀的项目">优秀的项目</a></li>
+    <li><a href="#优秀的文章">优秀的文章</a></li>
+    <li><a href="#有趣的事情">有趣的事情</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">TC分享第 110 期</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2023年2月5日
+        </date>
+        
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <h1 id="tc分享第-110-期">TC分享第 110 期</h1>
+<p>2023 week 5</p>
+<p>你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。</p>
+<p><img src="https://badge.tczhong.com/total.svg?repo_id=cczhong11.manongsharing_110" alt="Total visitor"></p>
+<h2 id="新闻思考">新闻思考</h2>
+<p>这周发生了不少事情，先说说延迟退休。</p>
+<p>中信证券这周发布了一个报告题目为《共同富裕系列报告之十六：人口负增长下的养老与生育政策图谱》。报告在“核心观点”部分称，“渐进式延迟退休方案或于2023年公布。党的二十大与2022年底中央经济工作会议均提出明确要求，方案或于2023年公布，并于2025年正式实施，到2055年前后实现65岁男女同龄退休。”</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/9e363e5deb3b42269ec6084dcf7cb660.png" alt=""></p>
+<p>对此大家都很不满，还有人提到现在40岁之后找工作都难，很可能你到不了65岁就找不到工作了，但要到65岁才能领退休金。不过后来这篇文章被删了。</p>
+<p>延迟退休是为了解决因为人口负增长而劳动力不足的问题。另外我国养老金长期有巨大的缺口，延迟退休就可以让更多的人参与到养老金的缴纳中来，缓解养老金的压力。对于普通人来说，延迟退休意味着更多的工作时间，更少的时间享受生活。这必然受到大多数人的反对。</p>
+<p>最近法国在闹百万人的大罢工，原因是最近公布退休制度改革方案，计划将法定退休年龄从目前的62岁延迟至64岁。近期的多份民调仍显示多数法国民众反对延迟退休年龄。法国政府警告称，该国的退休金系统即将出现赤字。这也是为什么法国政府要推动退休制度改革的原因。</p>
+<p>另两件就是胡鑫宇和中国气球事件，两件看似没什么关系，但都反应了对于中国政府的不信任。</p>
+<p>胡鑫宇事件是发生于中国江西省上饶市铅山县的失踪案，以及引起后续争议的事件。就读于当地致远中学高一5班的学生胡鑫宇自2022年10月14日在校内失联。2023年1月28日，在经历了106天的寻找后，当地警方称接获村民通报，发现有一具遗体缢吊于学校附近金鸡山竹林中，死因未知。后经DNA鉴定，遗体为胡鑫宇。官方认定胡鑫宇系自缢死亡，但也有舆论不认可警方结论。</p>
+<p>这件事官方认定是胡鑫宇因为学业压力大以及得不到家人的支持而选择了自杀。但是众多<a href="https://www.rfa.org/mandarin/yataibaodao/renquanfazhi/kw-02022023104241.html">疑点</a>让大家对于事件的一些细节无法理解。所以很多民众无法相信这是一件自杀事件。事情的真相可能永远也不会被揭开，因为胡鑫宇不可能死而复生解释自己究竟是怎么死的。即使是真的自杀这些疑点也不得而知了。</p>
+<p>2023年1月28日至2月4日，一个来自中国的高空气球经阿拉斯加、加拿大西部、美国本土，由西北至东南飞越北美洲。1月28日，该气球进入美国阿拉斯加州领空；经加拿大育空地区和不列颠哥伦比亚省，于2月1日进入蒙大拿州；2月3日到达密苏里州；2月4日下午，在南卡罗来纳州瑟夫赛德海滩临近海域上空被美国空军F22战斗机发射的AIM-9X导弹击毁；美军尝试对残骸进行打捞检测。虽美国国防部宣称此飞行物并未有“实质上的安全危险”，但仍严重影响中美两国外交关系，美国政府因此延后了国务卿布林肯访问中国大陆的计划。</p>
+<p>中国外交部承认该飞行器来自中国，称其为民用的无人飞艇，用于气象等科研，受西风带影响偏离航线，误入美国领空。美国国防部随后驳斥了中方的说法，表示“我们知道这就是一颗侦察气球，还要我说的更明白点吗？”</p>
+<p>此气球状飞行物的大小约相当于二至三辆巴士，直径约27米，而一般气象探空气球的直径只有约2米，该飞行物比气象探空气球大超过10倍，也不同于不能控制的一般气象气球，这类气球使用特殊材质制造，能遥控气球的体积大小来控制飞行方向和高度。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/21ba118393cf400e87f763fb79909147.png" alt=""></p>
+<p>究竟气球是不是民用可能美国可以通过收集残骸进行分析得出。美国认为这是中国入侵美国领空、侵犯美国主权的行为。在美国击落中国气球后，中国外交部和国防部表示强烈不满和抗议，认为“美方执意动用武力，明显反应过度，严重违反国际惯例”。</p>
+<h2 id="科技新闻">科技新闻</h2>
+<p>【1】京东3月关闭印泰电商平台 路透社：无法与对手竞争</p>
+<p>中国电商巨头京东宣布于今年3月关闭在印度尼西亚和泰国经营的电子商务平台。</p>
+<p>京东于2015年在印尼开展电商业务，两年后再将商业版图延伸至泰国。它没有说明关停印尼和泰国子公司的原因，不过路透社报道指，京东无法与较大型的电商如Lazada、Shopee和Tokopedia竞争。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/7d8c7801e3d3469e92c2e40bfeb46d19.jpg" alt=""></p>
+<p>【2】刘强东生子后立即回国工作</p>
+<p>近日，有网友爆料在首都机场看到刘强东。另据接近刘强东的人士表示，刘强东生子后就立即回国工作了。就在不久前，刘强东还发内部全员信，强调要提升快递小哥等基层员工的福利待遇，同时京东计划未来十年投入数百亿元为员工提供购房无息贷款并大幅扩充“员工子女救助基金”的规模。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/c24a68b0db804aaabd94f9d37429952b.jpg" alt=""></p>
+<p>【3】2022全年，特斯拉总收入815亿美元，同比增51%，净利润126亿美元，同比翻倍。以全年交付131万辆车计算，单车利润超过9600美元，汽车行业顶尖水平。百万级交付量和众多降本技术，摊薄了研发制造成本，加上极低的营销投入，特斯拉就算再降价，仍有极强的盈利能力。理想、小鹏等新势力单车利润为负，很难跟特斯拉拼价格。新能源车领域，只有比亚迪单车1500美元的利润水平，立足中国市场，和特斯拉有一战之力。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/100d1b99b91f4db898606826904ddcc9.jpg" alt=""></p>
+<p>【4】嘴上说着要抄微信，马斯克却把Twitter越改越像微博了，最新的调整预告是Twitter将在点开某条推文之后的评论区插广告，而这条广告创造的收入将会和博主一起分成。这和微博的广告共享计划几乎一模一样，唯一的区别是，在Twitter开通这项功能的前提是你需要是蓝勾会员（8美元/月），才有分广告费的资格。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/f3b0134267f04535856459dc8a12dd3b.jpg" alt=""></p>
+<p>【】第1574架交付后停产 波音747珍宝机成绝响</p>
+<p>伴随着全球最后一架波音747飞机的交付，“珍宝飞机”统领天空的时代将迎来告别。</p>
+<p>波音747被誉为“空中女王”，是世界首款双通道宽体喷气式飞机，从设计到制造历经28个月，是民航史上最重要机型之一。</p>
+<p>由于其机舱宽敞、续航里程长，令搭飞机出行变得大众化，一般人也负担得起，大大改变民航业面貌。民航专家更形容，747的出现“打通了全世界”。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/0ea7446451a54b3cbd7275d2d9a8610c.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/a9b2ff0b50e34056a5e2719b4b058fbf.jpg" alt=""></p>
+<p>【】蔚来开启降价促销，2022款ES6和ES8降幅最高超过10万元</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/f391bf45f9ad47cb9c1ee179065911ef.jpg" alt=""></p>
+<p>【】1月ChatGPT月活跃用户有望达1亿，将推出月费20美元的订阅服务
+瑞银集团当地时间周三发布的研究报告称，1月ChatGPT的月活跃用户有望达到1亿，这距离推出只有2个月时间，这款人工智能聊天机器人成为史上增长最快的消费者应用。据《华尔街日报》，OpenAI周三宣布将推出ChatGPT的付费订阅版本，新的订阅服务名为ChatGPT Plus，月费20美元。订阅服务包括在高峰时间访问聊天机器人。目前的免费版本在高峰时间段将限制服务。据悉谷歌也正测试一款类似ChatGPT的聊天机器人“Apprentice Bard”，有消息称百度将于3月推出类似ChatGPT的人工智能聊天机器人。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/83bc91e1015248f4809555b408e1018c.jpg" alt=""></p>
+<p>【】Alphabet旗下谷歌已向人工智能初创公司Anthropic投资近4亿美元，后者正在测试OpenAI热门产品ChatGPT的竞争产品，Anthropic将使用谷歌的云计算服务。
+<a href="https://weibo.com/u/1644684112%7C%E6%9C%A8%E9%81%A5">https://weibo.com/u/1644684112|木遥</a>：推上已经很多人在晒自己刷出来集成了 ChatGPT 的新版 Bing 了</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/b93e05055f8742ff83569bf17db6dc63.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/b6d7e720e2724d1daa65651c33ab8c1e.jpg" alt=""></p>
+<p>以色列总统使用ChatGPT写的演讲稿
+以色列总统艾萨克·赫尔佐格周三发表了部分由人工智能(AI)撰写的演讲，成为首位公开使用ChatGPT的世界领导人。赫尔佐格为网络安全会议“2023特拉维夫全球网络技术“录制了“特别开幕致辞“。他在2万名观众面前透露，开场白是由ChatGPT撰写的，但随后又得出结论称，AI不会取代人类，硬件和软件无法取代人的意志。
+在赫尔佐格的这次演讲中，由AI撰写的部分从这句话开始：“能成为一个拥有如此充满活力和创新力的高科技产业的国家总统，我真的很自豪“。
+赫尔佐格还使用ChatGPT撰写的一段“励志名言“结束了他的演讲。“让我们不要忘记，是我们的人性让我们真正与众不同，“他在演讲最后说道，“决定我们命运的不是机器，而是我们为全人类创造更美好明天的心灵、思想和决心。”
+以色列总统办公室证实，演讲的结尾是ChatGPT通过提示撰写的，他们给出的提示是：“写一段关于人类在超人类科技世界中所扮演角色的励志名言。”</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/3f440fa6458c446aa4e6f333ad86d258.jpg" alt=""></p>
+<h2 id="优秀的项目">优秀的项目</h2>
+<p>【1】<a href="https://labs.kagi.com/ai/sum">Universal Summarizer</a></p>
+<p>【2】<a href="https://github.com/zurawiki/gptcommit">zurawiki/gptcommit</a></p>
+<p>A git prepare-commit-msg hook for authoring commit messages with GPT-3.</p>
+<p><a href="https://zura.wiki/post/never-write-a-commit-message-again-with-the-help-of-gpt-3/">Never write a commit message again (with the help of GPT-3)</a></p>
+<p>【3】<a href="https://github.com/BlinkDL/ChatRWKV">BlinkDL/ChatRWKV</a></p>
+<p>ChatRWKV is like ChatGPT but powered by the RWKV (100% RNN) language model, and open source.</p>
+<p>【4】<a href="https://www.withdiode.com/">Diode — Build, program, and simulate hardware</a></p>
+<p>【5】<a href="https://github.com/Datalux/Osintgram">Datalux/Osintgram</a></p>
+<p>Osintgram is a OSINT tool on Instagram. It offers an interactive shell to perform analysis on Instagram account of any users by its nickname</p>
+<h2 id="优秀的文章">优秀的文章</h2>
+<p>【1】<a href="https://karpathy.ai/zero-to-hero.html">Universal Summarizer</a></p>
+<p>【2】<a href="https://duitan.zhubai.love/posts/2233855874978484224">A16Z创始人Marc Andreessen：一种更结构化的工作方法和人生</a></p>
+<p>【3】<a href="https://review.firstround.com/40-favorite-interview-questions-from-some-of-the-sharpest-folks-we-know">40 Favorite Interview Questions from Some of the Sharpest Folks We Know</a></p>
+<p>【4】<a href="https://1q43.blog/post/766">垄断的困境</a></p>
+<p>【5】<a href="https://mp.weixin.qq.com/s/aRjZNg-UNeM_vD6SjhUKIQ">未来的阅读，与阅读的未来</a></p>
+<p>【6】<a href="https://news.harvard.edu/gazette/story/2017/04/over-nearly-80-years-harvard-study-has-been-showing-how-to-live-a-healthy-and-happy-life/">Over nearly 80 years, Harvard study has been showing how to live a healthy and happy life</a></p>
+<p>【7】<a href="https://waseem.substack.com/p/scalability-is-overrated">Scalability is overrated</a></p>
+<h2 id="有趣的事情">有趣的事情</h2>
+<p>【1】80后对于延迟退休的吐槽</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/c3d90e83ba314e788f99993d62e22cfb.jpg" alt=""></p>
+<p>【2】终于讲出了太多节目上不敢说的内容</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/1a4d5a1848c145e1831583910350c4c0.jpg" alt=""></p>
+<p>【3】美国驻华大使馆定制表情包“鹰小美“首次亮相微信</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/57e0fa5ce275456187ecac4af2321182.jpg" alt=""></p>
+<p>【4】宇航员若田光一：“今天早些时候，我们飞越了喜马拉雅山脉。”</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/57c0a5dad25d4ba2bb7d61169ede2b10.jpg" alt=""></p>
+<p>【5】深圳卫健委！</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/33b45d7a67fd4c22bfc9fa7302e95a05.jpg" alt=""></p>
+<p>【6】帮我说点脏话。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/8d3eb72f2c6d4cf18cba9880e9b0de4a.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/dd71e9aaac4043a08f979d9c541d58f5.jpg" alt=""></p>
+<p>【7】中国好房东，鸟窝也给贴了对联</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/de745fa37a2749539eb18257a02ca253.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/5504595373844f6185d324d513b1d94c.jpg" alt=""></p>
+<p>【8】我一摄影指导朋友去哈尔滨拍戏拍到的。
+深切感受到了右边那家的愤怒。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/17e9e4c3705641b1a90cb309f08b0714.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/759950cb450046188d99623b3a00cff8.jpg" alt=""></p>
+<p>【9】用勺子挖运河</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/83b29b2b16824c4e947e3c936feaf7cf.jpg" alt=""></p>
+<p>【10】【世界首例！宣武医院报道一例19岁的阿尔茨海默病患者】2023年1月31日，宣武医院贾建平团队在《JOURNAL OF ALZHEIMERS DISEASE》杂志在线报道了一位17岁时发生记忆失常，并于19岁诊断为阿尔茨海病（AD）的病例，是迄今为止最年轻的患者，改写了世界上对该病发病年龄的认识，颠覆了“AD专属于老年人”的传统观念，提出关注AD年轻化势在必行，探索青年人AD奥秘可能成为今后最具挑战的科学问题之一。
+阿尔茨海默病是一种多元机制疾病，我国老年人中现有5000多万认知障碍患者，其中阿尔茨海默病有1500多万，每年花费1万多亿元，给国家和社会带来了沉重负担。传统观念认为在青年人中很少发生认知障碍，更不用说是AD。
+本研究报道的结果颠覆了这一观念，在世界AD研究史上首次提出青年人也有发生非遗传性AD，引起了广泛关注。该杂志的主编George Perry教授对本文发表了题为“Alzheimer&rsquo;s Disease:Not Just for the Aged?”的评论。评价这一报道的意义在于AD不再是老年的专属疾病，有年轻化的可能，应该关注青少年人发生AD的可能，掀开了AD研究的新挑战。（认知论坛）</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/79f629992c0b4dc79dbe61379072b1da.jpg" alt=""></p>
+<p>【11】
+呃…这封信确定不会让孩子更想结束生命吗？</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/253db370b71544408dafbbdfb6523709.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/bfd8113b5d71476eaeda0c036fe2235c.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/0391c3e271454135830167d378baeaa7.jpg" alt=""></p>
+<p>随手让CHATGPT写了一段话，CHATGPT写的都比他强……虽然也不好说特别有效而且有点水土不服，但至少比那封信真诚500倍。讽刺。Chatgpt建议寻求“当地心理健康机构”，然后孩子找到原图机构……大讽刺。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/fac0d1abe9d041bca93d65f9501bb60f.jpg" alt=""></p>
+<p>【12】CHATGPT火得一塌糊涂，我第一次看到它的“作品”，是尤瓦尔·赫拉利在给《人类简史》十周年再版写的序里。</p>
+<p>赫拉利先引用了一段GPT3模仿自己写的序。一字未改。确实牛逼 ，这已然不是过去人们经验中的人工智能了 。</p>
+<p>虽然赫拉利说他还不担心GPT在几年内能夺走他的工作，但他也承认，GPT捉刀的这些文字里，它真的提出了论点！“GPT生产的这些文字最令人震惊的地方是它居然言之有理。它不是胡乱拼凑了一堆句子，而是有着连贯的逻辑。”</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/fd1e9016b06f46579601b66712026f6e.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/e5566a826f574d639938cbd8192e2022.jpg" alt=""></p>
+<p>【13】做题的终结</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/864030fec754427ba196fff458e40743.jpg" alt=""></p>
+<p>【14】原来高德的红灯倒数，是依靠大数据算法实现了，这是我想不到的，很牛</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/43df6b22b86f4860b6dee69d62ec0445.jpg" alt=""></p>
+<p>【15】啃老大全</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/3dc3489fa6694b2f818aead201e43e23.jpg" alt=""></p>
+<p>著名话唠员:新型啃老：年年考不上，年年考，就不找工作</p>
+<p>减小艾:我一边工作一边考，不工作心理压力压力太大</p>
+<p>滦汀:顶级啃老：听父母话，出学校就生个孩子，一家三口主父母家花父母钱</p>
+<p>哪吒爱哈里:我月嫂的儿子，学音乐的从高中到大学毕业花了五六十万不止，找了个北京的小姑娘死活要结婚，这个阿姨年轻时做生意攒下三四百万家产，给儿子六七十万买个奥迪，卖掉房子车子铺子，四百多万买了亲家朋友的房子，用作儿子儿媳妇婚房，现在逢年过节都是他们去看儿子儿媳妇，她当月嫂的工资也都补贴儿子了</p>
+<p>甲烷乙醇-:可是家长会掏空家底给孩子买房买车大多数情况都是男孩子啊。[失望]</p>
+<p>PeaceBa:我现在就家里蹲，每次我说要创业我媳妇都吓一激灵，让我好好在家待着就行[苦涩]</p>
+<p>XIII断幺九病人:啃老事小，创业可是败家啊</p>
+<p>_平沙漠漠夜带刀:真的别了 小钱靠运，大钱靠命呐，我爸就是想创业赚大钱 家里直接变成贫困户了，我现在上学都觉得烦愁，其实孩子心里只是想要一个普通的家庭</p>
+<p>iguess-uguess:上天啊，告诉我，我去上海错了嘛[悲伤]</p>
+<p>武汉白曼君:总是要踩在上一辈的肩膀上才能爬得更高，你的下一代也是</p>
+<p>拥抱蓝天_:别打了，别打了，都啃都啃。</p>
+<p>【16】AI真是个绝佳的对话伙伴啊……情绪稳定，逻辑完备，我觉得小学应该开个课，让孩子和AI对话……</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/c789d1763f9a41ce9e0d2aff90f4eea8.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/5/db005b92656a47bfb47227413e2c0049.jpg" alt=""></p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/sharing/tcsharing_109/">TC分享第 109 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_108/">TC分享第 108 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_107/">TC分享第 107 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_106/">TC分享第 106 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_105/">TC分享第 105 期</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://study.tczhong.com/tags/weekly'>weekly</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://study.tczhong.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_110/" title="TC分享第 110 期">TC分享第 110 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_109/" title="TC分享第 109 期">TC分享第 109 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_108/" title="TC分享第 108 期">TC分享第 108 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_107/" title="TC分享第 107 期">TC分享第 107 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_106/" title="TC分享第 106 期">TC分享第 106 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_105/" title="TC分享第 105 期">TC分享第 105 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_104/" title="TC分享第 104 期">TC分享第 104 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_103/" title="TC分享第 103 期">TC分享第 103 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_102/" title="TC分享第 102 期">TC分享第 102 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_101/" title="TC分享第 101 期">TC分享第 101 期</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (24)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/">程序员 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90/">读书推荐 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://study.tczhong.com/tags/android/">Android</a>
+    
+    <a href="http://study.tczhong.com/tags/array/">array</a>
+    
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
+    
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
+    
+    <a href="http://study.tczhong.com/tags/book/">book</a>
+    
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
+    
+    <a href="http://study.tczhong.com/tags/development/">development</a>
+    
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
+    
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
+    
+    <a href="http://study.tczhong.com/tags/food/">food</a>
+    
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
+    
+    <a href="http://study.tczhong.com/tags/google/">google</a>
+    
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
+    
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
+    
+    <a href="http://study.tczhong.com/tags/health/">health</a>
+    
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
+    
+    <a href="http://study.tczhong.com/tags/life/">life</a>
+    
+    <a href="http://study.tczhong.com/tags/love/">love</a>
+    
+    <a href="http://study.tczhong.com/tags/python/">python</a>
+    
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
+    
+    <a href="http://study.tczhong.com/tags/string/">string</a>
+    
+    <a href="http://study.tczhong.com/tags/study/">study</a>
+    
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
+    
+    <a href="http://study.tczhong.com/tags/time/">time</a>
+    
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
+    
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
+    
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
+    
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://study.tczhong.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2023 <a href="http://study.tczhong.com/">Learn More By </a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-120924697-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+</body>
+
+</html>
