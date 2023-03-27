@@ -6,7 +6,18 @@
     <description>Recent content on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TC分享第 117 期</title>
+      <link>http://study.tczhong.com/post/sharing/tcsharing_117/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/sharing/tcsharing_117/</guid>
+      <description>TC分享第 117 期 2023 week 12
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+本周摄影： 新闻思考 这周还是来讲讲AI的新发展，chatGPT宣布引入plugin，实现实时信息检索、订机票、在线点餐、交通导航、企业办公、流程优化等功能。在官网里给出了如何开发plugin的技术文档。我在仔细阅读后，感觉与其说要做新的app store，不如说要做chatgpt希望可以做一切互联网的入口，取代浏览器的地位。</description>
+    </item>
+    
     <item>
       <title>TC分享第 116 期</title>
       <link>http://study.tczhong.com/post/sharing/tcsharing_116/</link>
