@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TC分享第 135 期 | Learn More</title>
+    <meta property="og:title" content="TC分享第 135 期 - Learn More">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2023-07-30T00:00:00&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2023-07-30T00:00:00&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="TC分享第 135 期">
+        
+    <meta name="author" content="">
+    <meta property="og:url" content="http://study.tczhong.com/post/sharing/tcsharing_135/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+    
+
+        
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="far fa-envelope"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fab fa-github"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fab fa-linkedin"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://stackoverflow.com/users/7112540/tc-zhong"><i class="fab fa-stack-overflow"></i></a></li>
+                
+            </ul>
+        
+
+  
+
+    </nav>
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://study.tczhong.com/">
+                        Learn More
+                    </a>
+                
+                
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://study.tczhong.com/">首页</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/weekly/" title="每周分享">每周分享</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/love/" title="亲密关系">亲密关系</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/leetcode/" title="Leetcode">Leetcode</a>
+                    
+                    <a  href="http://study.tczhong.com/archives/" title="归档">归档</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#新闻思考">新闻思考</a></li>
+    <li><a href="#科技新闻">科技新闻</a></li>
+    <li><a href="#优秀的项目">优秀的项目</a></li>
+    <li><a href="#优秀的文章">优秀的文章</a></li>
+    <li><a href="#有趣的事情">有趣的事情</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">TC分享第 135 期</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2023年7月30日
+        </date>
+        
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <h1 id="tc分享第-135-期">TC分享第 135 期</h1>
+<p>2023 week 30</p>
+<p>你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。</p>
+<p><img src="https://badge.tczhong.com/total.svg?repo_id=cczhong11.manongsharing_135" alt="Total visitor"></p>
+<p>本周摄影</p>
+<p><img src="https://tczimg.s3.amazonaws.com/vscode/757c1418426e43a091240607fd128dbc.png" alt=""></p>
+<h2 id="新闻思考">新闻思考</h2>
+<p>这周科技界的一个大新闻就是韩国团队所提出的室温超导研究。至于他们的研究结果是真是假，相信科学家会给出正确的结论，这里写写关于超导现象的一些过去的研究和现在未来的应用。</p>
+<p>超导现象是指材料的电阻变为0的现象。在1911年春，昂内斯在用液氦将汞的温度降到4.15 K时，发现汞的电阻降为零。之前人们都认为超导的条件是低温，BCS 理论（巴丁-库珀-施费尔德理论）就是用来解释低温超导的原因。在某些材料中，当温度降低到某个临界温度以下，电子能够以零电阻的方式流动。</p>
+<p>在一般情况下，电子之间有一种相互排斥的力，就像磁铁的两个北极或两个南极相互排斥一样。这种排斥力会导致电子在材料中移动时碰撞，就像车辆在拥挤的交通路口会互相撞一样。所以当材料很热的时候，电子们会相互碰撞很频繁，导致电阻，也就是我们常说的电流不太容易通过。</p>
+<p>但是，当材料被冷却到特别低的温度时，一种神奇的现象会发生。电子会和材料里的原子之间的振动相互作用，就像我们在弹簧上加力，会有弹簧振动一样。这种振动会导致电子之间产生一种吸引力，就像朋友之间互相吸引一样。这个吸引力让两个电子结成了一对&quot;库珀对&quot;，它们就像黏在一起的伙伴一样，一同在材料中移动。而且这两个电子是相互配对的，就像左手和右手一样。</p>
+<p>这种库珀对的形成是超导现象发生的关键。因为这对电子结成了伙伴，它们能够协调得很好地通过材料，就像在交通路口有人指挥交通一样，电流可以顺利通过而不会频繁碰撞。这就使得材料的电阻变成了零，所以我们称之为超导。</p>
+<p>但是后来人们发现了不同材料的超导材料：</p>
+<ul>
+<li>1953年，科学家发现了合金超导体硅化钒</li>
+<li>1986年1月，发现陶瓷性金属氧化物可以作为超导体，开启了铜基高温超导体的时代</li>
+<li>1987年在钇－钡－铜－氧系材料上把临界超导温度提高到90K以上，液氮的“温度壁垒”（77K）也被突破了</li>
+<li>1987年底，铊－钡－钙－铜－氧系材料又把临界超导温度的记录提高到125K。</li>
+<li>大约1993年，铊－汞－铜－钡－钙－氧系材料又把临界超导温度的记录提高到138K</li>
+<li>2015年，物理学者发现，硫化氢在极度高压的环境下(至少150GPa)，约于温度203K （-70 °C）时会发生超导相变</li>
+</ul>
+<p>从发现的过程发现人类就是在尝试不同的材料来找到超导材料，不断的提升临界温度。</p>
+<p>而这次韩国团队宣称找到的LK-99是由铅磷灰石稍加变动的六方结构，据称可在400 K（127 °C；260 °F）以下作为超导体，究竟结果如何可以拭目以待。</p>
+<p>超导现象其实一家在生活中不少地方都得以应用。比如MRI磁共振成像系统，当人在磁场中，用适当的电磁波照射后，可以改变身体里氢原子的旋转排列方向，使之共振，然后分析它释放的电磁波，由于不同组织产生的信号不同，所以就可以知道身体里的精确立体图像。而为了实现强大的磁场，我们就可以利用上超导现象。</p>
+<p>超导磁体是利用了超导材料在某一温度下电阻降低为零的现象制作而成的磁体，通常采用铌钛合金材料，通过液氦进行冷却（4.2K），当电流通过磁体线圈产生规定的磁场之后，断开电源即可形成稳定均匀的磁场。因为没有电阻，电流也不会衰减，产生的磁场更稳定。</p>
+<p>磁悬浮列车也是一个应用。车辆的两侧有由4个超导线圈组成的超导装置，是由铌钛线材制作的，需要由液氦和液氮冷却至-269度才可以实现超导。列车的车体底部装有超导磁体，这些超导磁体会产生强大的磁场。车辆下方的轨道也嵌入了电磁铁，这些电磁铁产生与车辆超导磁体相互作用的磁场。当超导磁体和轨道上的电磁铁之间的磁场相互作用时，会产生一种浮力，使得列车悬浮在轨道上，实现了列车的无接触悬浮运行。除了悬浮，磁悬浮列车还需要一种推进方式。在磁悬浮列车中，通常使用线圈产生交变电流，这些线圈包裹在列车的车体下方。当线圈通电时，会产生交变磁场。这个磁场与轨道上的电磁铁之间相互作用，产生推进力。通过不断地改变线圈的电流方向和频率，可以控制列车的速度和加速度。</p>
+<p>如果可以实现常温常压超导，我们产生强大的磁场的成本将会变低，从而改变我们的生活。例如电力传输的效率大大提升，电子设备的性能也可以大大提升。</p>
+<h2 id="科技新闻">科技新闻</h2>
+<p>【1】由于GPT出色的AI编程能力，之前最大的程序员社区stackoverflow.com的流量快速下跌，基本迈入死亡。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/c2c6bdfeceed45148add86ad6da33894.jpg" alt=""></p>
+<p>【2】“与所有的鸟告别”，马斯克将把推特商标上的鸟取掉，换成X商标</p>
+<p>马斯克在推特上突然表示，希望将平台颜色改为黑色，并称将告别推特品牌和所有“小鸟”，如果7月24日有足够好的“X”标志，将在全球范围内发布。随后，马斯克发布黑色“小鸟”图标，表示“就像这样，但是是‘X’”。
+自推特于2006年推出以来，蓝白色的“小鸟”便是其专属商标，而推文（Tweet）的名字由来取自一种鸟叫声，创始人认为，鸟的叫声属于短快频率，与平台内涵相符，因此将平台命名为推特（Twitter）</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/b636413b2219466d9aa5e589c0403c83.jpg" alt=""></p>
+<p>Twitter官方账号已经更名为：𝕏</p>
+<p><a href="http://%E5%BA%94%E8%AF%A5%E6%98%AF%E7%AD%89%E5%9F%9F%E5%90%8D%E5%AE%8C%E5%85%A8%E8%BF%87%E5%BA%A6%E5%88%B0x.com%7Cxn--x-t27azxs3dyuhmrge4fie263epy3ckgzb8zj.com">http://应该是等域名完全过度到x.com|xn--x-t27azxs3dyuhmrge4fie263epy3ckgzb8zj.com</a>，就会更换logo</p>
+<p>域名还在迁移中&hellip;</p>
+<p>Twitter总部大楼墙面被投射了𝕏 logo 标志！</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/4136e23c09db4aa99de43cfd8ea5adf0.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/6908ed4b81ee42bfa36b88454605e784.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/0a089d6666484174b6b58e79be7a0196.jpg" alt=""></p>
+<p>【3】安卓版ChatGPT正式上线，但仅限美国、印度、孟加拉国和巴西使用</p>
+<p>当地时间7月25日，OpenAI宣布，安卓版ChatGPT已正式上线，目前美国、印度、孟加拉国和巴西四国的安卓用户可进行下载，并计划在下周拓展到更多地区。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/1edf30500771490ca07826c4c3ca298e.jpg" alt=""></p>
+<p>【4】“一个月多花400~500元，快要充不起电了！”上海、青岛等多地新能源汽车充电费上涨</p>
+<p>#部分地区新能源车充电费高峰涨幅达87%#“快要充不起电了！”进入7月以来，不少来自郑州的新能源车主称，郑州市域内几乎不同品牌的新能源充电站均迎来涨价。与平日最便宜的“深夜阶段”相比，充电费用涨幅接近1倍。一位郑州出租车司机称：“（我）一天下来就要多花15~16元，一个月就得多花400~500元。”另一位出租车司机则表示：“充一次电，大约贵了一包烟钱。”不仅是郑州，上海、青岛、重庆等地也出现了使用充电桩费用上涨的情况，部分地区高峰涨幅甚至达到87%。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/4b707c4ea49949b6b2ed2b19ce5acbeb.jpg" alt=""></p>
+<p>【5】#游戏占中国APP出海份额超6成#， 东南亚为首选区域</p>
+<p>在2023年ChinaJoy期间，AppsFlyer发布了《2023中国游戏App出海驱动力报告》。报告显示，作为中国出海最具代表性的产业，游戏出海在2020年至2023年依然保持着绝对的领航产业地位。在过去4年中，游戏在各类APP出海份额总体保持稳定，高达64.9%。</p>
+<p>从总体安装量看，受全球经济下行影响，中国各类型游戏App出海安装量呈现先上升后下降的趋势。在先扬后抑的趋势中，东南亚市场却走出了一条稳步上升的曲线。报告显示，过去4年中，东南亚凭借着相似的文化背景和优越的地理位置，稳坐中国手游出海目的地的头把交椅，从2020年的17.05%增长至2023年的24.42%，增幅达到43.2%。此外，拉美地区在近年来也逐步成为出海新兴目的地的代表区域。（21财经）</p>
+<p>【6】腾讯收购key社母公司VISUAL ARTS</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/04439b28d37d4e1bbb93efd61f9c15d4.jpg" alt=""></p>
+<p>【7】韩国团队室温超导开启人类新纪元？3小时内提交两篇论文，样品被指有瑕疵</p>
+<p>#韩国版室温常压超导体真突破还是狼来了#美国罗切斯特大学Ranga Dias团队的室温超导研究疑云尚未消散，韩国量子能源研究中心、高丽大学等团队的研究人员再次投下一记“尚未经同行评议”的重磅。研究团队宣布成功合成了世界上第一个室温常压超导体，即在常压条件下，一种改性的铅-磷灰石(命名为LK-99)能够在127℃(Tc≥400k)以下表现为超导体。</p>
+<p>鉴于室温超导研究的挑战性和重要性，此类“重磅”每次都掀起广泛关注和讨论。研究团队自己对该研究评价称，“我们相信，我们的新进展将是开启人类新纪元的全新历史事件”。然而，正如此前Dias团队的研究，此次韩国团队的研究也将经受“时间的考验”。</p>
+<p>让事件更为扑朔迷离的是，上述新研究实际上关联到两篇论文。从时间线上来看，第一篇提交于7月22日7时51分，第二篇则于7月22日10时11分提交，两篇提交时间相差不足2.5小时的论文均发表在预印本系统arXiv，尚未经同行评议。</p>
+<p>两篇文章作者人数不同，但有两位重合。就论文本身内容来看，第二篇更为详尽。其中上述第二篇论文的作者之一、美国威廉与玛丽学院的物理学教授Hyun-Tak Kim在接受采访时则直接表示，第一篇论文里存在“许多缺陷”，并且未经他的允许就被上传了。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/73bbd503375c40bda72eaa4bdf114407.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/14ec5c7644a948fc859c87da39d081ce.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/bce1a0aec7b3425183ba8aa8e0a02331.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/0cd41156b3404c02b83682fbb6d16450.jpg" alt=""></p>
+<p>【8】马斯克终于把推特的iOS图标也从小蓝鸟换成了X</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/cef0fd6509a8419588146bf57f17f6d4.jpg" alt=""></p>
+<p>推特无法在苹果应用商店改名X：命名至少需2个字母</p>
+<p>据The Verge报道，在马斯克的力主之下，Twitter（推特）近日已经全面开启了改名进程，目前iOS、Android客户端已经更名为了X。然而根据一些苹果用户的反馈，目前在苹果App Store应用商店中，Twitter仍然保留了原始名称。</p>
+<p>《华盛顿邮报》记者Taylor Lorenz在Twitter的竞品Threads平台上发文表示，Twitter之所以无法改名，很可能是因为苹果App Store要求应用命名“至少要有2个字母”。他还表示，Twitter目前在应用更新中依然将应用名描述为“Twitter”。</p>
+<p>产品设计师Nick Sheriff在Twitter上表示，在iOS上苹果不允许任何应用使用单个字符作为命名。但是如果Twitter获得特批，将标志着自App Store成立以来某家公司首次获得此类许可。不过，在iOS设备的主屏幕上，应用名称是可以为单个字符的，这也是为何应用在下载/更新后目前名称已经显示为“X”，应用的Logo也已经修改。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/be20ba26ff0241a7a639937709f010cc.jpg" alt=""></p>
+<h2 id="优秀的项目">优秀的项目</h2>
+<p>【1】<a href="https://github.com/huggingface/text-generation-inference">huggingface/text-generation-inference: Large Language Model Text Generation Inference</a></p>
+<p>【2】<a href="https://github.com/geekan/MetaGPT">geekan/MetaGPT</a></p>
+<p>The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo</p>
+<p>【3】<a href="https://github.com/langgenius/dify">langgenius/dify</a></p>
+<p>One API for plugins and datasets, one interface for prompt engineering and visual operation, all for creating powerful AI applications.</p>
+<p>【4】<a href="https://github.com/gmpetrov/databerry">gmpetrov/databerry</a></p>
+<p>The no-code platform for building custom LLM Agents</p>
+<h2 id="优秀的文章">优秀的文章</h2>
+<p>【1】<a href="https://mp.weixin.qq.com/s/MYe1YZ9qqQnhszBpgm7kkg">香港争抢内地精英：一场错位的奔赴｜深氪</a></p>
+<p>【2】<a href="https://mp.weixin.qq.com/s/n3sxzj2xyFk-8n9ZS7UIKA">【索老板荐文】北大人工智能教授朱松纯三读《赤壁赋》</a></p>
+<p>【3】<a href="https://mp.weixin.qq.com/s/j3Tk24siOXbiUiGgRTy8hA">豆瓣8.7，《芭比》一旦觉醒，就不会再回头</a></p>
+<h2 id="有趣的事情">有趣的事情</h2>
+<p>【1】泉州海峡体育中心顶篷被狂风吹走</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/5c13c1c5226e466992a24c725a05c0aa.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/d6447bd1512545bba0d19a31bae09f98.jpg" alt=""></p>
+<p>【2】翻译讲究信、达、雅</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/da134e249652490da142c78c4de44e81.jpg" alt=""></p>
+<p>【3】警察叔叔也辛苦了…</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/d5a4ab50cbee40aa97af6e299cf1d588.jpg" alt=""></p>
+<p>【4】不是p的，是真的。而且好多人都为了拍这个土牌子去的，我月初刚去的。而且喜姐炸串贵得要死</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/1fe2f29fe63a45c6a6dc7194148347b2.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/45fb753002ac498b9ab4c52240358f53.jpg" alt=""></p>
+<p>【5】国际剑联的这一番操作
+体现的是国际拳联之后另一个被俄罗斯人（或资金）控制的国际体育协会的混乱与专横
+国际剑联是最早对俄罗斯和白俄罗斯运动员解禁的单项协会（职业网球性质不同）
+本次击剑世锦赛原本是在波兰举行的，因为波兰拒绝给俄罗斯和白俄罗斯发放签证
+乌克兰运动员接受和俄罗斯对手同场竞技，是网球之外其他项目的第一次
+得益于乌克兰政府的一项新法令，这是国际奥委会努力斡旋的结果
+然而，一桩刻意安排的闹剧等待着乌克兰运动员哈兰。
+哈兰在赛前告诉过国际剑联官员，她不会在赛后和敌国运动员握手
+国际剑联官员答复她说，没问题，这是可以解决的
+处于基本礼节，哈兰在比赛结束以后用剑朝下对对方致意
+这是疫情以来剑坛的标准礼节，碰碰剑梢，也算是哈兰为了维护体育精神做出的一种折衷举动
+相反，俄罗斯女运动员没有以相同的方式回敬
+而是弱弱地伸出一只手
+然后就发生了拿出闹剧：俄罗斯代表团大呼小叫，俄罗斯运动员抬了把椅子坐在那里不离场直接抗议，要求以对方拒绝握手为由判其失利
+国际剑联真的就这样判了……</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/b365eab0f33849a599b33ec69d51a6d5.jpg" alt=""></p>
+<p>【6】美国空军整肃军风，要求将一些常用的口头表达，换一种说法。把这个表反过来，倒是个不错的英语口语教材。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/c333b0a3ddc94d8f9bf754a09f0688fc.jpg" alt=""></p>
+<p>【7】LLM是什么</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/72dd30d2c74945f7a7963271b8e94693.jpg" alt=""></p>
+<p>【8】估计是大妈、地瓜、于丽、沈亿们的粉丝</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/9d674d1efdc74d0d9789ed5d4115e96a.jpg" alt=""></p>
+<p>【9】不知道的，还以为要研发原子弹</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/82bf2befb6414f6d8d96c7a2cbb1f978.jpg" alt=""></p>
+<p>【10】ChatGPT新功能演示</p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/49f27c92d5744d1e8b22e2a5eface95f.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/a9a26d56f8884a09952e214ee9a4d1f9.jpg" alt=""></p>
+<p><img src="https://tczimg.s3.amazonaws.com/2023/30/ff7052f53c3840cab303d0e77a96fb1a.jpg" alt=""></p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/sharing/tcsharing_134/">TC分享第 134 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_133/">TC分享第 133 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_132/">TC分享第 132 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_131/">TC分享第 131 期</a></li>
+        
+        <li><a href="/post/sharing/tcsharing_130/">TC分享第 130 期</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://study.tczhong.com/tags/weekly'>weekly</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://study.tczhong.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_135/" title="TC分享第 135 期">TC分享第 135 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_134/" title="TC分享第 134 期">TC分享第 134 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_133/" title="TC分享第 133 期">TC分享第 133 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_132/" title="TC分享第 132 期">TC分享第 132 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_131/" title="TC分享第 131 期">TC分享第 131 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_130/" title="TC分享第 130 期">TC分享第 130 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_129/" title="TC分享第 129 期">TC分享第 129 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_128/" title="TC分享第 128 期">TC分享第 128 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_127/" title="TC分享第 127 期">TC分享第 127 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_126/" title="TC分享第 126 期">TC分享第 126 期</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (24)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/">程序员 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90/">读书推荐 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://study.tczhong.com/tags/android/">Android</a>
+    
+    <a href="http://study.tczhong.com/tags/array/">array</a>
+    
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
+    
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
+    
+    <a href="http://study.tczhong.com/tags/book/">book</a>
+    
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
+    
+    <a href="http://study.tczhong.com/tags/development/">development</a>
+    
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
+    
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
+    
+    <a href="http://study.tczhong.com/tags/food/">food</a>
+    
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
+    
+    <a href="http://study.tczhong.com/tags/google/">google</a>
+    
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
+    
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
+    
+    <a href="http://study.tczhong.com/tags/health/">health</a>
+    
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
+    
+    <a href="http://study.tczhong.com/tags/life/">life</a>
+    
+    <a href="http://study.tczhong.com/tags/love/">love</a>
+    
+    <a href="http://study.tczhong.com/tags/python/">python</a>
+    
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
+    
+    <a href="http://study.tczhong.com/tags/string/">string</a>
+    
+    <a href="http://study.tczhong.com/tags/study/">study</a>
+    
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
+    
+    <a href="http://study.tczhong.com/tags/time/">time</a>
+    
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
+    
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
+    
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
+    
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://study.tczhong.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2023 <a href="http://study.tczhong.com/">Learn More By </a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-120924697-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+</body>
+
+</html>
