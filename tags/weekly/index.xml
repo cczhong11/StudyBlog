@@ -6,7 +6,19 @@
     <description>Recent content in weekly on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Mar 2024 22:45:21 -0700</lastBuildDate><atom:link href="http://study.tczhong.com/tags/weekly/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 22:49:28 -0700</lastBuildDate><atom:link href="http://study.tczhong.com/tags/weekly/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TC分享第 169 期</title>
+      <link>http://study.tczhong.com/post/sharing/tcsharing_169/</link>
+      <pubDate>Sun, 24 Mar 2024 22:49:28 -0700</pubDate>
+      
+      <guid>http://study.tczhong.com/post/sharing/tcsharing_169/</guid>
+      <description>TC分享第 169 期 2024 week 12
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+本周摄影：
+新闻思考 在本周的GTC大会上，黄仁勋还发布了新一代AI芯片平台Blackwell，该平台的首款芯片GB200被描述为“非常非常强大”，预计将于今年晚些时候上市。GB200 计算托盘基于新的 NVIDIA MGX 设计。它包含两个 Grace CPU 和四个 Blackwell GPU.</description>
+    </item>
+    
     <item>
       <title>TC分享第 168 期</title>
       <link>http://study.tczhong.com/post/sharing/tcsharing_168/</link>
