@@ -6,7 +6,19 @@
     <description>Recent content in weekly on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jul 2024 22:51:17 -0700</lastBuildDate><atom:link href="http://study.tczhong.com/tags/weekly/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Jul 2024 20:59:16 -0700</lastBuildDate><atom:link href="http://study.tczhong.com/tags/weekly/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TC分享第 186 期</title>
+      <link>http://study.tczhong.com/post/sharing/tcsharing_186/</link>
+      <pubDate>Sun, 21 Jul 2024 20:59:16 -0700</pubDate>
+      
+      <guid>http://study.tczhong.com/post/sharing/tcsharing_186/</guid>
+      <description>TC分享第 186 期 2024 week 29
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+本周摄影
+新闻思考 这周有两个大新闻，一个是CrowdStrike 的一次推送导致全球微软电脑全死，让全球的企业和用户都受到了影响，这是一个很大的事故，也让我们看到了软件的脆弱性。CrowdStrike作为知名的网络安全公司，此次推送的驱动更新由于与Windows系统不兼容，导致大量电脑蓝屏死机。这种情况暴露了软件更新过程中的脆弱性，也引发了全球范围内的系统瘫痪，影响了许多企业和用户的正常运作。对于企业而言，许多重要系统如航空、应急系统、股票交易系统等依赖Windows操作系统，一旦这些系统出现问题，可能会导致严重的经济损失和安全风险。对于个人用户而言，日常生活中的很多活动也依赖电脑，蓝屏事件可能导致数据丢失、工作中断等问题。即使我不用windows，也会因为要坐飞机出行而受到影响。</description>
+    </item>
+    
     <item>
       <title>TC分享第 185 期</title>
       <link>http://study.tczhong.com/post/sharing/tcsharing_185/</link>
