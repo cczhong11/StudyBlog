@@ -6,7 +6,19 @@
     <description>Recent content on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Sep 2024 21:56:37 -0700</lastBuildDate><atom:link href="http://study.tczhong.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Sep 2024 21:42:11 -0700</lastBuildDate><atom:link href="http://study.tczhong.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TC分享第 194 期</title>
+      <link>http://study.tczhong.com/post/sharing/tcsharing_194/</link>
+      <pubDate>Sun, 15 Sep 2024 21:42:11 -0700</pubDate>
+      
+      <guid>http://study.tczhong.com/post/sharing/tcsharing_194/</guid>
+      <description>TC分享第 194 期 2024 week 37
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+本周摄影
+新闻思考 这周openai发布了新模型gpt-o1,这个模型推理能力得到了很大的提升，在国际数学奥林匹克（IMO）的资格考试中，GPT-4o 仅正确解决了 13% 的问题，而推理模型的得分率则高达 83%。他们的编码能力在 Codeforces 竞赛中达到了top 89%。这个真的已经非常厉害了，比大多数人在竞赛中获得的成绩都要好。</description>
+    </item>
+    
     <item>
       <title>TC分享第 193 期</title>
       <link>http://study.tczhong.com/post/sharing/tcsharing_193/</link>
