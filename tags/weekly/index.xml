@@ -6,7 +6,19 @@
     <description>Recent content in weekly on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jan 2025 07:12:32 -0800</lastBuildDate><atom:link href="http://study.tczhong.com/tags/weekly/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Feb 2025 17:01:25 -0800</lastBuildDate><atom:link href="http://study.tczhong.com/tags/weekly/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TC分享第 214 期</title>
+      <link>http://study.tczhong.com/post/sharing/tcsharing_214/</link>
+      <pubDate>Sun, 02 Feb 2025 17:01:25 -0800</pubDate>
+      
+      <guid>http://study.tczhong.com/post/sharing/tcsharing_214/</guid>
+      <description>TC分享第 214 期 2025 week 5
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+本周摄影：
+新闻思考 DeepSeek R1 的发布在全球 AI 领域引起了巨大反响，尤其是在技术创新和市场影响方面带来了深远的变化。它的最大突破在于证明了强化学习在大模型训练中的可行性，特别是在降低标注数据成本方面的作用。过去，AI 训练依赖于大量人工标注的数据，而强化学习的引入意味着 AI 未来可能更加依赖自适应优化，从而减少对高质量人工标注数据的需求。这可能改变 AI 训练范式，使模型具备更强的自我学习能力。</description>
+    </item>
+    
     <item>
       <title>TC分享第 213 期</title>
       <link>http://study.tczhong.com/post/sharing/tcsharing_213/</link>
