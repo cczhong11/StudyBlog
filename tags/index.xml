@@ -17,20 +17,29 @@
     </item>
     
     <item>
-      <title>movie</title>
-      <link>http://study.tczhong.com/tags/movie/</link>
-      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <title>ai</title>
+      <link>http://study.tczhong.com/tags/ai/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://study.tczhong.com/tags/movie/</guid>
+      <guid>http://study.tczhong.com/tags/ai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>book</title>
       <link>http://study.tczhong.com/tags/book/</link>
-      <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
       
       <guid>http://study.tczhong.com/tags/book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>movie</title>
+      <link>http://study.tczhong.com/tags/movie/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/tags/movie/</guid>
       <description></description>
     </item>
     
