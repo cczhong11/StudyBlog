@@ -103,6 +103,87 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B412--%E5%B1%80%E9%83%A8%E4%BA%92%E5%8A%A8%E6%A8%A1%E5%9E%8B/">模型思维(12)--局部互动模型</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月25日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a>
+            
+        </div>
+        
+        <div class="post-content">
+            在这一篇我们研究局部和整体相关的模型。当局部一致的时候，整体就会表现出一致吗？我们通过这篇的研究可以对于该问题进行很好的解释。
+局部多数模型 这个模型建立在一个单元格的二维棋盘上，每个单元格有两种状态，0或1。初始时，我们将给每个单元格随机分配初始状态，之后每一个单元格的状态取决于其周围单元格的状态。在一个单元格周围的8个单元格中，有5个及以上的单元格是与之相反的状态时，这个单元格就会改变自己的状态。
+下图展现了一个局部多数模型的均衡状态。虽然均衡状态取决于各个单元格的初始分布，但是对于初始条件并不敏感，改变一个单元格的初始状态导致的最终均衡状态改变的变化很小。
+我们可以利用这个模型来刻画人与人之间的局部协调或一致性。假设每一个单元格都代表一个人的行动。这里的行动可以是任何行为惯例，例如握手或鞠躬，打断或举手。任何一个人都想选择一个与邻居相匹配的行动。棋盘代表社交网络。如果在计算机上对这个模型进行模拟，就会发现它总是能实现斑块状的均衡配置。许多单元格在1的状态下有一些邻居，在0的状态下也有一些邻居。
+在斑块的交界处出现了次优均衡，如果1对应于以握手的方式表示欢迎、0对应于以鞠躬的方式表示欢迎，那么位于“斑块”边界上的人在与他们的邻居互动时可能会碰到一些尴尬的情况：当其他人准备握手时他们却准备鞠躬，或者当其他人准备鞠躬时他们却准备握手。如果每个人都选择了相同的动作，也就是说，如果他们解决了协调博弈问题，那么从整体上看，所有人都会更加开心。由于这种互动只作用于局部，因此出现了次优均衡。如果单元格是根据全局多数原则来匹配的，那么很快所有单元格都会处于相同的状态。这种观点意味着，创建共同行为可能需要影响更加广泛的网络。如果人们只在局部与自己的邻居协调，他们就会创造出各种各样的行为。因此矛盾的是，恰恰与协调产生了多样性。
+生命游戏 这是一个很有意思的模型，有以下的规则：
+方格上的每个单元格都或者是活的（1）或者是死的（0）。每个单元格的邻居由网格上的8个相邻单元格组成。单元格根据如下两个规则同步更新自己的状态：
+活的规则：对于一个死单元格，当恰好有三个活的邻居时，这个死单元格就会变活。 死的规则：对一个活单元格，当活的邻居小于两个时或当有三个以上的活邻居死去时，这个活单元格就会死去。 根据这个规则可以得到一个简单的闪光灯均衡状态：……
+            <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B412--%E5%B1%80%E9%83%A8%E4%BA%92%E5%8A%A8%E6%A8%A1%E5%9E%8B/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B411--%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96/">模型思维(11)--路径依赖</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月18日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a>
+            
+        </div>
+        
+        <div class="post-content">
+            上一篇我们讲到随机走动，这一篇我们将继续延伸这个话题。如果每次的行动与之前的行为结果相关，我们就可以得到路径依赖模型。在生活中，我们穿的衣服、读的书、看的电影，以及任何需要我们付出时间的活动，都可以应用路径依赖来分析。
+波利亚过程 我们利用波利亚过程来刻画正反馈的效应。这里我们依旧使用从瓮里取白球和灰球的实验。一只瓮里面装着一个白球和一个灰球。每一周期，都随机抽取出一个球并将这个球与和它颜色相同的另一个球一起放回到瓮中。抽取出来的球的颜色表示结果。
+波利亚过程可以用来刻画各种社会和经济现象。一个人选择学习打网球，还是打篮球，可能取决于其他人的选择。如果更多的朋友选择学习打网球，那么这个人就更有可能也选择学习打网球，因为这会增加他找到伙伴打比赛的机会。与此类似，一个人决定购买什么类型的软件、学习哪种语言或购买哪款智能手机，也可能取决于他的朋友以前做出的选择。
+波利亚过程可以得到两个性质：
+具有相同数量的白色结果的任何序列都会以相同的概率发生 P(GWWW) = P(WWWG) 白球和灰球的每个分布都以相同的概率发生 P(白球出现1次) = P(白球出现n次) 第二个性质就可以说明极端情况的可能性，白球只出现1%和白球出现50%的可能性是一样的。我们可以通过实验这个结果，初始只有两个球，之后进行100次抽取，统计其中白球的数量。将此实验重复10000次，理论上每一种白球的分布出现次数在100次左右。结果如图，发现每一种可能都是在100次的上下波动。……
+            <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B411--%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B410--%E9%9A%8F%E6%9C%BA%E8%B5%B0%E5%8A%A8/">模型思维(10)--随机走动</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月10日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a>
+            
+        </div>
+        
+        <div class="post-content">
+            我们在这篇研究随机走动(random walk)。想象有一个点，每次可以随机的前进或退后一步，之后记录其与原点的距离。看似这个过程很简单，却可以利用其结论分析一些时间序列，例如销售额，股票价格等等。随机走动最初是用在研究物理学中液体和气体中粒子的运动，后来发现在生活中的很多现象也符合随机走动。
+伯努利瓮模型 我们这里首先利用伯努利瓮模型研究随机走动。假设有一个装了灰球和白球的瓮，其中灰球有G个，白球W个。每一次从中取出一个球，记录抽取出来球的颜色。在下一次抽取之前，球要放回瓮中。每次抽到灰球的概率是 $P = \frac{G}{G + W}$。在抽取N次的情况下，可以计算出抽取出来的灰球的期望数量是$N_G$, 其标准差是 $\sigma_{N_G}$……
+            <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B410--%E9%9A%8F%E6%9C%BA%E8%B5%B0%E5%8A%A8/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B49--%E7%86%B5%E5%AF%B9%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%BB%BA%E6%A8%A1/">模型思维(9)--熵：对不确定性建模</a>
             </h1>
         </header>
@@ -287,89 +368,6 @@ $$y = mx + b$$……
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90--%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/">读书推荐--《浪潮之巅》</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月23日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='http://study.tczhong.com/categories/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90'>读书推荐</a>
-            
-        </div>
-        
-        <div class="post-content">
-            一本好书改变我们的认知。今天给大家推荐吴军的《浪潮之巅》，这是一本值得每一个高科技从业者所阅读的书。
-这本书主要讲了美国高科技公司在这近百年的发展历程，从五十年代的霸主AT&amp;T讲到谷歌，云计算的发展。在这之外还利用了一些章节介绍与这些科技企业创立密不可分的风险投资银行，斯坦福大学，不同公司的商业模式。阅读本书可以帮助读者了解与整个行业相关的方方面面。
-在科技发展史上，总有一些公司很幸运地站在了技术革命的浪尖上，一旦站在那个位置，即使不做任何事情，也可以随着波浪顺顺当当向前飘十年甚至更长时间。他们站在时代的浪潮之巅上，被当时的年轻人所追逐。
-AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯到电话的发明人贝尔。由于它在电信业务的垄断地位，资助了自1925年成立的贝尔实验室，成为历史上最大最成功的私人实验室，在这里诞生了晶体管，unix系统，第一颗商用卫星等等，作者在1997年也在那里实习过。由于公司在20世纪末一系列错误决定，导致AT&amp;T公司的辉煌不再。
-另外，我们所熟知的苹果公司在80年代的个人电脑上也占据了统治地位长达10年之久，直到微软通过多年钻研发布windows 3.0之后才将其打败。微软则靠windows操作系统垄断在科技行业几乎战无不胜，占据老大的地位多年。近些年由于互联网的兴起，谷歌又通过掌握了互联网的入口站在了浪潮之巅。书中还写到了IBM，英特尔，甲骨文，思科这些曾经辉煌目前还存在的公司，也写了例如太阳，网景公司这些与成功失之交臂，最后退出历史舞台的公司。读后让我对于这些公司的发展历程有了更进一步的认识。
-本书不仅讲了科技企业的发展史，还提到了一些科技行业的定理，例如安迪-比尔定律，70-20-10定律。70-20-10定律是说的在科技行业，老大占市场的70%，老二占20%，剩下的占10%。例如个人电脑市场，微软第一，苹果第二；例如处理器市场，英特尔第一，AMD第二。作者也在书中解释了一些可能产生自现象的原因。
-书中也介绍了一些关于投资银行的金融知识，看似与科技史的主题有所偏差，其实这也是科技企业发展的重要一环。在创业早期，没有资金就无法发展壮大。华尔街的投资人为这些创始人的成功带来了最初的启动资金，在企业成功后公司就面临着提升股价和专注技术的冲突。书中的一些公司的失败也正是因为这种冲突产生的短视，虽然有短时的利益，但是长期对于公司则是致命的打击。
-著名的风险投资银行：红杉资本……
-            <p class="readmore"><a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90--%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B43--%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83/">模型思维(3)--幂律分布</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月22日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a>
-            
-        </div>
-        
-        <div class="post-content">
-            这一篇讨论的是幂律分布(power law distribution)。这个分布在生活中十分常见，如果当我们发现会出现一些极端的情况，视频下载量、书籍销量、学术论文引用数量、战争中的伤亡人数、洪水和地震等等，这就是幂律分布。而这些极端情况就在这长长的尾巴里，也被称为长尾分布。
-幂律分布的定义 在正态分布里，我们要求事件是互相独立的，而在幂律分布中，事件则不是互相独立的，而且通常是以正反馈的形式出现的。当一件事情发生之后，也会更频繁地发生类似的事情。
-我们可以用数学公式来定义幂律分布。事件发生的概率与事件大小的负指数成比例。事件越大，发生的可能性越小。
-一个定义在区间 $[x_{min}, \infty]$ 的幂律分布可以写成:……
-            <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B43--%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B42--%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/">模型思维（2）-- 正态分布</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月13日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a>
-            
-        </div>
-        
-        <div class="post-content">
-            这个图片展示了不同的平均值和方差的正态分布，这可以说是生活中最常见的模型了。很多地方都可以看到正态分布的影子，例如大多数生物的高度和重量都可以看到正态分布。那么为什么会出现正态分布呢？在什么情况下可以把分布看作正态分布呢？正态分布有什么应用？这篇文章将回答这些问题。
-为什么存在正态分布 这里首先需要提到中心极限定理：
-在适当的条件下，大量相互独立随机变量的均值经适当标准化后分布收敛于正态分布.
-这里用抛硬币的例子来说明这个问题，每次抛硬币是独立同分布的。如果连续抛10000次硬币，每次抛硬币的正反概率都是1/2，之后计算出现正面的概率。重复做这个实验很多次，得到的正面结果的分布就是一个正态分布。
-中心极限定理的特殊之处在于不管每个独立事件的分布如何，最后都是成立的。经研究发现，当 N &gt; 20 的时候，这些独立事件的均值就服从正态分布。因为N是固定的，所以也可以看作这些独立事件的和是正态分布的。……
-            <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B42--%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -428,6 +426,22 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_225/" title="TC分享第 225 期">TC分享第 225 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/health/%E8%B6%85%E8%B6%8A%E7%99%BE%E5%B2%81%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%B8%89-%E7%99%8C%E7%97%87/" title="《超越百岁》读书笔记三 : 癌症">《超越百岁》读书笔记三 : 癌症</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/health/%E8%B6%85%E8%B6%8A%E7%99%BE%E5%B2%81%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%BA%94-%E8%BF%90%E5%8A%A8/" title="《超越百岁》读书笔记五 : 运动">《超越百岁》读书笔记五 : 运动</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/health/%E8%B6%85%E8%B6%8A%E7%99%BE%E5%B2%81%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%9B%9B-%E8%80%81%E5%B9%B4%E7%97%B4%E5%91%86/" title="《超越百岁》读书笔记四 : 老年痴呆">《超越百岁》读书笔记四 : 老年痴呆</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_224/" title="TC分享第 224 期">TC分享第 224 期</a>
     </li>
     
@@ -448,23 +462,7 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
     </li>
     
     <li>
-        <a href="http://study.tczhong.com/post/health/%E8%B6%85%E8%B6%8A%E7%99%BE%E5%B2%81%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%BA%8C-%E7%B3%96%E5%B0%BF%E7%97%85/" title="《超越百岁》读书笔记二 : 糖尿病">《超越百岁》读书笔记二 : 糖尿病</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_220/" title="TC分享第 220 期">TC分享第 220 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_219/" title="TC分享第 219 期">TC分享第 219 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_218/" title="TC分享第 218 期">TC分享第 218 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/movie/%E6%9C%88%E7%90%83/" title="《月球》影评 ">《月球》影评 </a>
+        <a href="http://study.tczhong.com/post/health/%E8%B6%85%E8%B6%8A%E7%99%BE%E5%B2%81%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%BA%8C-%E7%B3%96%E5%B0%BF%E7%97%85-%E5%BF%83%E8%A1%80%E7%AE%A1%E7%96%BE%E7%97%85/" title="《超越百岁》读书笔记二 : 糖尿病">《超越百岁》读书笔记二 : 糖尿病</a>
     </li>
     
 </ul>
