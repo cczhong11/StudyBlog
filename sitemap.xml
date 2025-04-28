@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://study.tczhong.com/</loc>
+    <lastmod>2025-04-27T22:03:08-07:00</lastmod>
+  </url><url>
+    <loc>http://study.tczhong.com/post/</loc>
+    <lastmod>2025-04-27T22:03:08-07:00</lastmod>
+  </url><url>
+    <loc>http://study.tczhong.com/tags/</loc>
+    <lastmod>2025-04-27T22:03:08-07:00</lastmod>
+  </url><url>
+    <loc>http://study.tczhong.com/post/sharing/tcsharing_226/</loc>
+    <lastmod>2025-04-27T22:03:08-07:00</lastmod>
+  </url><url>
+    <loc>http://study.tczhong.com/tags/weekly/</loc>
+    <lastmod>2025-04-27T22:03:08-07:00</lastmod>
+  </url><url>
+    <loc>http://study.tczhong.com/post/movie/%E9%BB%91%E7%82%AE%E4%BA%8B%E4%BB%B6/</loc>
+    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://study.tczhong.com/categories/</loc>
+    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://study.tczhong.com/tags/movie/</loc>
+    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://study.tczhong.com/categories/%E7%94%B5%E5%BD%B1%E6%8E%A8%E8%8D%90/</loc>
+    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://study.tczhong.com/post/health/%E8%B6%85%E8%B6%8A%E7%99%BE%E5%B2%81%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%85%AD-%E8%90%A5%E5%85%BB/</loc>
     <lastmod>2025-04-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,19 +38,7 @@
     <loc>http://study.tczhong.com/tags/health/</loc>
     <lastmod>2025-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://study.tczhong.com/</loc>
-    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://study.tczhong.com/post/</loc>
-    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://study.tczhong.com/tags/</loc>
-    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://study.tczhong.com/post/sharing/tcsharing_225/</loc>
-    <lastmod>2025-04-20T23:12:23-07:00</lastmod>
-  </url><url>
-    <loc>http://study.tczhong.com/tags/weekly/</loc>
     <lastmod>2025-04-20T23:12:23-07:00</lastmod>
   </url><url>
     <loc>http://study.tczhong.com/post/health/%E8%B6%85%E8%B6%8A%E7%99%BE%E5%B2%81%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%B8%89-%E7%99%8C%E7%97%87/</loc>
@@ -63,15 +78,6 @@
     <lastmod>2025-03-02T22:43:44-08:00</lastmod>
   </url><url>
     <loc>http://study.tczhong.com/post/movie/%E6%9C%88%E7%90%83/</loc>
-    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://study.tczhong.com/categories/</loc>
-    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://study.tczhong.com/tags/movie/</loc>
-    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://study.tczhong.com/categories/%E7%94%B5%E5%BD%B1%E6%8E%A8%E8%8D%90/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://study.tczhong.com/post/sharing/tcsharing_217/</loc>
