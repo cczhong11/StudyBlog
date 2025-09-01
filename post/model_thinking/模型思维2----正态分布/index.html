@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>模型思维（2）-- 正态分布 | Learn More</title>
+    <meta property="og:title" content="模型思维（2）-- 正态分布 - Learn More">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-04-13T00:00:00&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-04-13T00:00:00&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="模型思维（2）-- 正态分布">
+        
+    <meta name="author" content="">
+    <meta property="og:url" content="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B42----%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+    
+
+        
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="far fa-envelope"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fab fa-github"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fab fa-linkedin"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://stackoverflow.com/users/7112540/tc-zhong"><i class="fab fa-stack-overflow"></i></a></li>
+                
+            </ul>
+        
+
+  
+
+    </nav>
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://study.tczhong.com/">
+                        Learn More
+                    </a>
+                
+                
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://study.tczhong.com/">首页</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/weekly/" title="每周分享">每周分享</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/love/" title="亲密关系">亲密关系</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/leetcode/" title="Leetcode">Leetcode</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/health/" title="健康">健康</a>
+                    
+                    <a  href="http://study.tczhong.com/archives/" title="归档">归档</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">模型思维（2）-- 正态分布</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月13日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="post-content">
+            <p><img src="https://tczimg.s3.amazonaws.com/book/normal.svg" alt=""></p>
+<p>这个图片展示了不同的平均值和方差的正态分布，这可以说是生活中最常见的模型了。很多地方都可以看到正态分布的影子，例如大多数生物的高度和重量都可以看到正态分布。那么为什么会出现正态分布呢？在什么情况下可以把分布看作正态分布呢？正态分布有什么应用？这篇文章将回答这些问题。</p>
+<h2 id="为什么存在正态分布">为什么存在正态分布</h2>
+<p>这里首先需要提到中心极限定理：</p>
+<blockquote>
+<p>在适当的条件下，大量相互独立随机变量的均值经适当标准化后分布收敛于正态分布.</p></blockquote>
+<p>这里用抛硬币的例子来说明这个问题，每次抛硬币是独立同分布的。如果连续抛10000次硬币，每次抛硬币的正反概率都是1/2，之后计算出现正面的概率。重复做这个实验很多次，得到的正面结果的分布就是一个正态分布。</p>
+<p>中心极限定理的特殊之处在于<strong>不管每个独立事件的分布如何</strong>，最后都是成立的。经研究发现，当 N &gt; 20 的时候，这些独立事件的均值就服从正态分布。因为N是固定的，所以也可以看作这些独立事件的<strong>和</strong>是正态分布的。</p>
+<p>重要的一点在于，服从正态分布的是许多随机事件的个体的均值或者是和，并不是独立的事件出现的本身。这时候聪明的读者可能就会想，那么为什么每个人的身高是符合正态分布呢？</p>
+<p>人的身高是受到本身的基因和外界坏境影响。经过研究发现，基因的贡献率可能高达80%，所以在这里简化认为人的身高只受到基因的影响。研究发现至少180个基因有助于人的身体长高，这些基因在人类的身体里是共有的，不过表达的程度不同，所以可以把<strong>一个人的身高</strong>看作这些基因的表现之和。由此解释了为什么人的身高符合正态分布。</p>
+<p>而对于一些事情，其实就不应该符合正态分布，例如一次考试的成绩。成绩受到试卷的难度，学生的水平多方面影响，很难看作独立同分布事件之和，所以成绩并不符合正态分布的假设。如果把很多同学成绩的均值进行统计，是符合正态分布的。而在一些地方，会强行要求每个同学的成绩符合正态分布，这无疑是一件很难的事情。<a href="https://www.zhihu.com/question/22481393">大学成绩要求正态分布合理吗？</a></p>
+<h2 id="正态分布的一些应用">正态分布的一些应用</h2>
+<p>我们可以利用正态分布解释为什么罕见结果在规模小的群体里更加常见。随机变量均值的标准差并不等于分布的标准差/N, 同样的，随机变量的和的标准差也不是等于分布的标准差 * N。</p>
+<p>$$\sigma_\mu=\frac{\sigma}{\sqrt{N}}$$
+$$\sigma_\Sigma= \sigma \sqrt{N}$$</p>
+<p>当群体比较大的时候，均值的波动会比较小，但是和的波动就会比较大。当群体小的时候，均值的标准差会比大群体大不少，所以出现极端情况会比较多。<a href="http://m.news.cctv.com/2020/04/09/ARTIXXSWmDvZPgzQfdBcHu4b200409.shtml">美国多州疫情数据显示：非洲裔等少数族裔确诊和死亡病例远高于平均值</a> 我们也可以利用这条应用解释这个新闻。这个现象出现的原因：一方面是本身医疗条件和生活水平的差距，另一点也是受少数族裔本身的影响，其确症和死亡率比大群体 &ndash; 白人是要高一点。</p>
+<p>另一个应用是六西格玛方法，它是由摩托罗拉公司于1980年代提出的，可以利用正态分布来为质量控制提供有效信息。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/book/normal_6.jpg" alt=""></p>
+<p>六西格玛的由来可以看这个图，$\pm 3 \sigma$ 可以包含 接近99.8%的结果。摩托罗拉公司在生产零件的时候要求产品如果出现和均值相比超过2个标准差的误差，那么就是不合格的。两个标准差之外出现的概率大概是5%，对于企业还是太高了。所以通过这种方法可以降低标准差，降低不合格产品的可能性。这里的核心思想就是在六个标准差内可以包含几乎所有的事情。</p>
+<h2 id="对数正态分布">对数正态分布</h2>
+<p>如果事件是互相影响的，那么则不能用普通的正态分布来研究，而要使用对数正态分布。对数正态缺乏对称性，当大于1时，其乘积增长很快，所以会出现长尾效应。当将20个不均匀分布在0到10之间的随机变量相乘，总会出现一些很小的和一些很大的。</p>
+<p><img src="https://tczimg.s3.amazonaws.com/book/normal_duishu.png" alt=""></p>
+<p>人们的工资分布可以用对数分布来解释。在不少公司里，人们是通过百分比加薪的，而不是每次增加固定的薪水。所以人的收入是多次加薪相乘的结果，而不是累加。如果每次都增加一定的薪水，则对于同一工作年限的人来说，其收入更加接近普通的正态分布。</p>
+<h2 id="小结">小结</h2>
+<p>这里我们一起探讨了正态分布的由来和一些应用。正态分布之所以常见是因为中心极限定理的强大，如果一个群体里每个个体是独立的随机事件，群体的均值或者和总是可以看成其符合某种正态分布，对数正态分布则解释了当个体是互动影响的情况。</p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B41--%E5%AF%B9%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%BB%BA%E6%A8%A1/">模型思维（1）--对人类的建模</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://study.tczhong.com/tags/book'>book</a></li>
+                
+                <li><a href='http://study.tczhong.com/tags/tech'>tech</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://study.tczhong.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_243/" title="TC分享第 243 期">TC分享第 243 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_242/" title="TC分享第 242 期">TC分享第 242 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0----%E5%9B%BD%E5%AF%8C%E8%AE%BA2/" title="读书推荐--《国富论》2">读书推荐--《国富论》2</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_241/" title="TC分享第 241 期">TC分享第 241 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_240/" title="TC分享第 240 期">TC分享第 240 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0----%E5%9B%BD%E5%AF%8C%E8%AE%BA1/" title="读书推荐--《国富论》1">读书推荐--《国富论》1</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_239/" title="TC分享第 239 期">TC分享第 239 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/movie/%E6%8A%95%E5%90%8D%E7%8A%B6/" title="《投名状》影评 ">《投名状》影评 </a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_238/" title="TC分享第 238 期">TC分享第 238 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_237/" title="TC分享第 237 期">TC分享第 237 期</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (24)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%94%B5%E5%BD%B1%E6%8E%A8%E8%8D%90/">电影推荐 (6)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/">程序员 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90/">读书推荐 (8)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://study.tczhong.com/tags/ai/">Ai</a>
+    
+    <a href="http://study.tczhong.com/tags/android/">Android</a>
+    
+    <a href="http://study.tczhong.com/tags/array/">Array</a>
+    
+    <a href="http://study.tczhong.com/tags/auto/">Auto</a>
+    
+    <a href="http://study.tczhong.com/tags/bit/">Bit</a>
+    
+    <a href="http://study.tczhong.com/tags/book/">Book</a>
+    
+    <a href="http://study.tczhong.com/tags/cooking/">Cooking</a>
+    
+    <a href="http://study.tczhong.com/tags/development/">Development</a>
+    
+    <a href="http://study.tczhong.com/tags/documentation/">Documentation</a>
+    
+    <a href="http://study.tczhong.com/tags/dp/">Dp</a>
+    
+    <a href="http://study.tczhong.com/tags/food/">Food</a>
+    
+    <a href="http://study.tczhong.com/tags/fun/">Fun</a>
+    
+    <a href="http://study.tczhong.com/tags/google/">Google</a>
+    
+    <a href="http://study.tczhong.com/tags/graph/">Graph</a>
+    
+    <a href="http://study.tczhong.com/tags/growth/">Growth</a>
+    
+    <a href="http://study.tczhong.com/tags/happiness/">Happiness</a>
+    
+    <a href="http://study.tczhong.com/tags/health/">Health</a>
+    
+    <a href="http://study.tczhong.com/tags/leetcode/">Leetcode</a>
+    
+    <a href="http://study.tczhong.com/tags/life/">Life</a>
+    
+    <a href="http://study.tczhong.com/tags/love/">Love</a>
+    
+    <a href="http://study.tczhong.com/tags/money/">Money</a>
+    
+    <a href="http://study.tczhong.com/tags/movie/">Movie</a>
+    
+    <a href="http://study.tczhong.com/tags/politics/">Politics</a>
+    
+    <a href="http://study.tczhong.com/tags/python/">Python</a>
+    
+    <a href="http://study.tczhong.com/tags/stack/">Stack</a>
+    
+    <a href="http://study.tczhong.com/tags/string/">String</a>
+    
+    <a href="http://study.tczhong.com/tags/study/">Study</a>
+    
+    <a href="http://study.tczhong.com/tags/tech/">Tech</a>
+    
+    <a href="http://study.tczhong.com/tags/time/">Time</a>
+    
+    <a href="http://study.tczhong.com/tags/tree/">Tree</a>
+    
+    <a href="http://study.tczhong.com/tags/vscode/">Vscode</a>
+    
+    <a href="http://study.tczhong.com/tags/wechat/">Wechat</a>
+    
+    <a href="http://study.tczhong.com/tags/weekly/">Weekly</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://study.tczhong.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+      &copy; 2025 <a rel="nofollow" href="http://study.tczhong.com/">Learn More</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io">Hugo</a> &amp; <a rel="nofollow noreferer noopener" href="https://github.com/JokerQyou/maupassant-hugo">maupassant theme</a>.
+    </div>
+</footer>
+
+<script type="text/javascript" src="/js/app.js" defer></script>
+
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' defer></script>
+</body>
+
+</html>
