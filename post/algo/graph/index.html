@@ -138,21 +138,21 @@
 <p>在记录状态时可以使用bitmask来判定是不是所有的point已经visit过了，另外在搜索时可以使用heap来只搜索最小cost的，这样有利于快速找到最优解。</p>
 <h2 id="union-find">Union find</h2>
 <p>这类题目一般都是存在多个点属于一个类别的题目，之后可以通过图的关系把这些点合并到一个类别里面。union find 可以用来找无向图中是否有环。基本算法如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DSU</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> parent;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">DSU</span>(<span style="color:#66d9ef">int</span> N) {
-</span></span><span style="display:flex;"><span>        parent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>N<span style="color:#f92672">]</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> N; <span style="color:#f92672">++</span>i)
-</span></span><span style="display:flex;"><span>            parent<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">find</span>(<span style="color:#66d9ef">int</span> x) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> x) parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> find(parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">union</span>(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y) {
-</span></span><span style="display:flex;"><span>        parent<span style="color:#f92672">[</span>find(x)<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> find(y);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DSU</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> parent<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">DSU</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> N<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        parent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>N<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">;</span> <span style="color:#f92672">++</span>i<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            parent<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">find</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> x<span style="color:#f92672">)</span> parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> find<span style="color:#f92672">(</span>parent<span style="color:#f92672">[</span>x<span style="color:#f92672">]);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> parent<span style="color:#f92672">[</span>x<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">union</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> y<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        parent<span style="color:#f92672">[</span>find<span style="color:#f92672">(</span>x<span style="color:#f92672">)]</span> <span style="color:#f92672">=</span> find<span style="color:#f92672">(</span>y<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>其实也不需要每次写个类，只需要把function 定义好即可。</p>
 <ul>
 <li><a href="https://leetcode.com/problems/friend-circles">547. Friend Circles</a></li>
@@ -224,7 +224,7 @@
     </article>
     
     <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     window.disqus_config = function () {
     
     
@@ -265,6 +265,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_245/" title="TC分享第 245 期">TC分享第 245 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_244/" title="TC分享第 244 期">TC分享第 244 期</a>
     </li>
     
@@ -277,7 +281,7 @@
     </li>
     
     <li>
-        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0----%E5%9B%BD%E5%AF%8C%E8%AE%BA2/" title="读书推荐--《国富论》2">读书推荐--《国富论》2</a>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E5%9B%BD%E5%AF%8C%E8%AE%BA2/" title="读书推荐--《国富论》2">读书推荐--《国富论》2</a>
     </li>
     
     <li>
@@ -289,7 +293,7 @@
     </li>
     
     <li>
-        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0----%E5%9B%BD%E5%AF%8C%E8%AE%BA1/" title="读书推荐--《国富论》1">读书推荐--《国富论》1</a>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E5%9B%BD%E5%AF%8C%E8%AE%BA1/" title="读书推荐--《国富论》1">读书推荐--《国富论》1</a>
     </li>
     
     <li>
@@ -298,10 +302,6 @@
     
     <li>
         <a href="http://study.tczhong.com/post/movie/%E6%8A%95%E5%90%8D%E7%8A%B6/" title="《投名状》影评 ">《投名状》影评 </a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_238/" title="TC分享第 238 期">TC分享第 238 期</a>
     </li>
     
 </ul>
@@ -332,71 +332,71 @@
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
-    <a href="http://study.tczhong.com/tags/ai/">Ai</a>
+    <a href="http://study.tczhong.com/tags/ai/">ai</a>
     
     <a href="http://study.tczhong.com/tags/android/">Android</a>
     
-    <a href="http://study.tczhong.com/tags/array/">Array</a>
+    <a href="http://study.tczhong.com/tags/array/">array</a>
     
-    <a href="http://study.tczhong.com/tags/auto/">Auto</a>
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
     
-    <a href="http://study.tczhong.com/tags/bit/">Bit</a>
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
     
-    <a href="http://study.tczhong.com/tags/book/">Book</a>
+    <a href="http://study.tczhong.com/tags/book/">book</a>
     
-    <a href="http://study.tczhong.com/tags/cooking/">Cooking</a>
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
     
-    <a href="http://study.tczhong.com/tags/development/">Development</a>
+    <a href="http://study.tczhong.com/tags/development/">development</a>
     
-    <a href="http://study.tczhong.com/tags/documentation/">Documentation</a>
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
     
-    <a href="http://study.tczhong.com/tags/dp/">Dp</a>
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
     
-    <a href="http://study.tczhong.com/tags/food/">Food</a>
+    <a href="http://study.tczhong.com/tags/food/">food</a>
     
-    <a href="http://study.tczhong.com/tags/fun/">Fun</a>
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
     
-    <a href="http://study.tczhong.com/tags/google/">Google</a>
+    <a href="http://study.tczhong.com/tags/google/">google</a>
     
-    <a href="http://study.tczhong.com/tags/graph/">Graph</a>
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
     
-    <a href="http://study.tczhong.com/tags/growth/">Growth</a>
+    <a href="http://study.tczhong.com/tags/growth/">growth</a>
     
-    <a href="http://study.tczhong.com/tags/happiness/">Happiness</a>
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
     
-    <a href="http://study.tczhong.com/tags/health/">Health</a>
+    <a href="http://study.tczhong.com/tags/health/">health</a>
     
-    <a href="http://study.tczhong.com/tags/leetcode/">Leetcode</a>
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
     
-    <a href="http://study.tczhong.com/tags/life/">Life</a>
+    <a href="http://study.tczhong.com/tags/life/">life</a>
     
-    <a href="http://study.tczhong.com/tags/love/">Love</a>
+    <a href="http://study.tczhong.com/tags/love/">love</a>
     
-    <a href="http://study.tczhong.com/tags/money/">Money</a>
+    <a href="http://study.tczhong.com/tags/money/">money</a>
     
-    <a href="http://study.tczhong.com/tags/movie/">Movie</a>
+    <a href="http://study.tczhong.com/tags/movie/">movie</a>
     
-    <a href="http://study.tczhong.com/tags/politics/">Politics</a>
+    <a href="http://study.tczhong.com/tags/politics/">politics</a>
     
-    <a href="http://study.tczhong.com/tags/python/">Python</a>
+    <a href="http://study.tczhong.com/tags/python/">python</a>
     
-    <a href="http://study.tczhong.com/tags/stack/">Stack</a>
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
     
-    <a href="http://study.tczhong.com/tags/string/">String</a>
+    <a href="http://study.tczhong.com/tags/string/">string</a>
     
-    <a href="http://study.tczhong.com/tags/study/">Study</a>
+    <a href="http://study.tczhong.com/tags/study/">study</a>
     
-    <a href="http://study.tczhong.com/tags/tech/">Tech</a>
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
     
-    <a href="http://study.tczhong.com/tags/time/">Time</a>
+    <a href="http://study.tczhong.com/tags/time/">time</a>
     
-    <a href="http://study.tczhong.com/tags/tree/">Tree</a>
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
     
-    <a href="http://study.tczhong.com/tags/vscode/">Vscode</a>
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
     
-    <a href="http://study.tczhong.com/tags/wechat/">Wechat</a>
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
     
-    <a href="http://study.tczhong.com/tags/weekly/">Weekly</a>
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
     
 </div>
     </section>

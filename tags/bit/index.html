@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bit | Learn More</title>
-    <meta property="og:title" content="Bit - Learn More">
+    <title>bit | Learn More</title>
+    <meta property="og:title" content="bit - Learn More">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="">
-    <meta name="description" content="Bit">
+    <meta name="description" content="bit">
         
     <meta name="author" content="">
     <meta property="og:url" content="http://study.tczhong.com/tags/bit/">
@@ -113,18 +113,9 @@
         </date>
         
         <div class="post-content">
-            <h1 id="bit操作题目思考">bit操作题目思考</h1>
-<p>说实话这类题目比较考验智商，如果之前没有见过的话做出来的难度比较大。基本思路很多都是利用XOR解题</p>
-<h2 id="find-bit-parity">find bit parity</h2>
-<p>这题就是找奇偶校验位的值，有奇数个1就是1，有偶数个1就是0。在513 datalab出现过，现在在思考感觉没那么难了。基本思路就是把所有的1进行XOR，看最后是1还是0.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>x <span style="color:#f92672">^=</span> x <span style="color:#f92672">&gt;&gt;</span> 16 
-</span></span><span style="display:flex;"><span>x <span style="color:#f92672">^=</span> x <span style="color:#f92672">&gt;&gt;</span> 8 
-</span></span><span style="display:flex;"><span>x <span style="color:#f92672">^=</span> x <span style="color:#f92672">&gt;&gt;</span> 4 
-</span></span><span style="display:flex;"><span>x <span style="color:#f92672">^=</span> x <span style="color:#f92672">&gt;&gt;</span> 2 
-</span></span><span style="display:flex;"><span>x <span style="color:#f92672">^=</span> x <span style="color:#f92672">&gt;&gt;</span> 1 
-</span></span><span style="display:flex;"><span>x <span style="color:#f92672">&amp;=</span> 1;
-</span></span></code></pre></div><h2 id="找出2个只出现一次的数值">找出2个只出现一次的数值</h2>
-<p>这个题目可以全部XOR，得到x XOR y。之后取其中一位，然后把数组分成2部分，一半有这位，一半没有，然后用前两题的思路。</p>……
+            bit操作题目思考 说实话这类题目比较考验智商，如果之前没有见过的话做出来的难度比较大。基本思路很多都是利用XOR解题
+find bit parity 这题就是找奇偶校验位的值，有奇数个1就是1，有偶数个1就是0。在513 datalab出现过，现在在思考感觉没那么难了。基本思路就是把所有的1进行XOR，看最后是1还是0.
+x ^= x &gt;&gt; 16 x ^= x &gt;&gt; 8 x ^= x &gt;&gt; 4 x ^= x &gt;&gt; 2 x ^= x &gt;&gt; 1 x &amp;= 1; 找出2个只出现一次的数值 这个题目可以全部XOR，得到x XOR y。之后取其中一位，然后把数组分成2部分，一半有这位，一半没有，然后用前两题的思路。……
             <p class="readmore"><a href="http://study.tczhong.com/post/algo/bit/">阅读全文</a></p>
         </div>
     </article>
@@ -155,6 +146,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_245/" title="TC分享第 245 期">TC分享第 245 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_244/" title="TC分享第 244 期">TC分享第 244 期</a>
     </li>
     
@@ -167,7 +162,7 @@
     </li>
     
     <li>
-        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0----%E5%9B%BD%E5%AF%8C%E8%AE%BA2/" title="读书推荐--《国富论》2">读书推荐--《国富论》2</a>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E5%9B%BD%E5%AF%8C%E8%AE%BA2/" title="读书推荐--《国富论》2">读书推荐--《国富论》2</a>
     </li>
     
     <li>
@@ -179,7 +174,7 @@
     </li>
     
     <li>
-        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0----%E5%9B%BD%E5%AF%8C%E8%AE%BA1/" title="读书推荐--《国富论》1">读书推荐--《国富论》1</a>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E5%9B%BD%E5%AF%8C%E8%AE%BA1/" title="读书推荐--《国富论》1">读书推荐--《国富论》1</a>
     </li>
     
     <li>
@@ -188,10 +183,6 @@
     
     <li>
         <a href="http://study.tczhong.com/post/movie/%E6%8A%95%E5%90%8D%E7%8A%B6/" title="《投名状》影评 ">《投名状》影评 </a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_238/" title="TC分享第 238 期">TC分享第 238 期</a>
     </li>
     
 </ul>
@@ -222,71 +213,71 @@
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
-    <a href="http://study.tczhong.com/tags/ai/">Ai</a>
+    <a href="http://study.tczhong.com/tags/ai/">ai</a>
     
     <a href="http://study.tczhong.com/tags/android/">Android</a>
     
-    <a href="http://study.tczhong.com/tags/array/">Array</a>
+    <a href="http://study.tczhong.com/tags/array/">array</a>
     
-    <a href="http://study.tczhong.com/tags/auto/">Auto</a>
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
     
-    <a href="http://study.tczhong.com/tags/bit/">Bit</a>
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
     
-    <a href="http://study.tczhong.com/tags/book/">Book</a>
+    <a href="http://study.tczhong.com/tags/book/">book</a>
     
-    <a href="http://study.tczhong.com/tags/cooking/">Cooking</a>
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
     
-    <a href="http://study.tczhong.com/tags/development/">Development</a>
+    <a href="http://study.tczhong.com/tags/development/">development</a>
     
-    <a href="http://study.tczhong.com/tags/documentation/">Documentation</a>
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
     
-    <a href="http://study.tczhong.com/tags/dp/">Dp</a>
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
     
-    <a href="http://study.tczhong.com/tags/food/">Food</a>
+    <a href="http://study.tczhong.com/tags/food/">food</a>
     
-    <a href="http://study.tczhong.com/tags/fun/">Fun</a>
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
     
-    <a href="http://study.tczhong.com/tags/google/">Google</a>
+    <a href="http://study.tczhong.com/tags/google/">google</a>
     
-    <a href="http://study.tczhong.com/tags/graph/">Graph</a>
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
     
-    <a href="http://study.tczhong.com/tags/growth/">Growth</a>
+    <a href="http://study.tczhong.com/tags/growth/">growth</a>
     
-    <a href="http://study.tczhong.com/tags/happiness/">Happiness</a>
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
     
-    <a href="http://study.tczhong.com/tags/health/">Health</a>
+    <a href="http://study.tczhong.com/tags/health/">health</a>
     
-    <a href="http://study.tczhong.com/tags/leetcode/">Leetcode</a>
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
     
-    <a href="http://study.tczhong.com/tags/life/">Life</a>
+    <a href="http://study.tczhong.com/tags/life/">life</a>
     
-    <a href="http://study.tczhong.com/tags/love/">Love</a>
+    <a href="http://study.tczhong.com/tags/love/">love</a>
     
-    <a href="http://study.tczhong.com/tags/money/">Money</a>
+    <a href="http://study.tczhong.com/tags/money/">money</a>
     
-    <a href="http://study.tczhong.com/tags/movie/">Movie</a>
+    <a href="http://study.tczhong.com/tags/movie/">movie</a>
     
-    <a href="http://study.tczhong.com/tags/politics/">Politics</a>
+    <a href="http://study.tczhong.com/tags/politics/">politics</a>
     
-    <a href="http://study.tczhong.com/tags/python/">Python</a>
+    <a href="http://study.tczhong.com/tags/python/">python</a>
     
-    <a href="http://study.tczhong.com/tags/stack/">Stack</a>
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
     
-    <a href="http://study.tczhong.com/tags/string/">String</a>
+    <a href="http://study.tczhong.com/tags/string/">string</a>
     
-    <a href="http://study.tczhong.com/tags/study/">Study</a>
+    <a href="http://study.tczhong.com/tags/study/">study</a>
     
-    <a href="http://study.tczhong.com/tags/tech/">Tech</a>
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
     
-    <a href="http://study.tczhong.com/tags/time/">Time</a>
+    <a href="http://study.tczhong.com/tags/time/">time</a>
     
-    <a href="http://study.tczhong.com/tags/tree/">Tree</a>
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
     
-    <a href="http://study.tczhong.com/tags/vscode/">Vscode</a>
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
     
-    <a href="http://study.tczhong.com/tags/wechat/">Wechat</a>
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
     
-    <a href="http://study.tczhong.com/tags/weekly/">Weekly</a>
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
     
 </div>
     </section>

@@ -145,16 +145,16 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
 <li><a href="https://leetcode.com/problems/increasing-subsequences">491. Increasing Subsequences</a></li>
 </ul>
 <p>对于subset的题目，可以用以下的思路.原因是只有这样才可能遍历所有的，第一dfs可以一直到底，之后再一个个增加。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>dfs(){
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(index <span style="color:#f92672">==</span>length){
-</span></span><span style="display:flex;"><span>        rs.<span style="color:#a6e22e">add</span>(tmp);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    dfs(index<span style="color:#f92672">+</span>1,tmp);
-</span></span><span style="display:flex;"><span>    newtmp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>(tmp);
-</span></span><span style="display:flex;"><span>    newtmp.<span style="color:#a6e22e">add</span>(arr<span style="color:#f92672">[</span>index<span style="color:#f92672">]</span>);
-</span></span><span style="display:flex;"><span>    dfs(index<span style="color:#f92672">+</span>1,tmp);
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>dfs<span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>index <span style="color:#f92672">==</span>length<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>        rs<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>tmp<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    dfs<span style="color:#f92672">(</span>index<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span>tmp<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    newtmp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;(</span>tmp<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    newtmp<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>index<span style="color:#f92672">]);</span>
+</span></span><span style="display:flex;"><span>    dfs<span style="color:#f92672">(</span>index<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span>tmp<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>一个注意点是：如果是用list的话，当加入结果的时候，每次需要重新构造一个新的：
 <code>rs.add(new ArrayList&lt;&gt;(cur));</code></p>
 <p>如果题目中存在重复的数字该如何处理呢？首先需要sort，然后就可以在遍历的时候首先看是不是前面两个一致，如果一致的话如果前面的没visited过就跳过。例如<code>1,1,2</code>, 第一个1遍历完了之后，第二个1就不需要作为首位了，所以这时就可以跳过第二个1作为首位的遍历。对于Palindrome的要求可以选定好中间，然后再从两边扩展。</p>
@@ -166,29 +166,29 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
 <li>()()</li>
 <li>(())</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">if</span>(s.<span style="color:#a6e22e">charAt</span>(i) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;)&#39;</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(s.<span style="color:#a6e22e">charAt</span>(i <span style="color:#f92672">-</span> 1) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span>) {
-</span></span><span style="display:flex;"><span>        dp<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 2 <span style="color:#f92672">+</span> (i <span style="color:#f92672">&gt;=</span> 2 <span style="color:#f92672">?</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>2<span style="color:#f92672">]</span> : 0);
-</span></span><span style="display:flex;"><span>    } 
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// s.charAt(i - 1) == )</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(i <span style="color:#f92672">-</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> 0 <span style="color:#f92672">&amp;&amp;</span> s.<span style="color:#a6e22e">charAt</span>(i<span style="color:#f92672">-</span>dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">]-</span>1) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span>) { 
-</span></span><span style="display:flex;"><span>        dp<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 2 <span style="color:#f92672">+</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> ((i <span style="color:#f92672">-</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">]</span>) <span style="color:#f92672">&gt;=</span> 2 <span style="color:#f92672">?</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">]-</span>2<span style="color:#f92672">]</span> : 0);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    max <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(max, dp<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;)&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        dp<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">?</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">]</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// s.charAt(i - 1) == )
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">-</span>dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+</span></span><span style="display:flex;"><span>        dp<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span> <span style="color:#f92672">+</span> <span style="color:#f92672">((</span>i <span style="color:#f92672">-</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">])</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">?</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">]</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    max <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>max<span style="color:#f92672">,</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>在数字中加括号的题目则是分治算法的典型代表，可以将所有的运算符的地方作为分界点，然后分别计算左右两边所有可能的值，之后再合并，得到最后所有的答案。括号是一个将数学表达式分开最合适的方法。</p>
 <p>301题最简单的思路就是尝试所有的可能性，当出现不合理的情况时就直接舍弃。在尝试的时候测试使用括号和不使用括号两种可能性。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (c <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span>) {
-</span></span><span style="display:flex;"><span>        dfs(s, i <span style="color:#f92672">+</span> 1, res, sb, rmL <span style="color:#f92672">-</span> 1, rmR, open);		    <span style="color:#75715e">// not use (</span>
-</span></span><span style="display:flex;"><span>    	dfs(s, i <span style="color:#f92672">+</span> 1, res, sb.<span style="color:#a6e22e">append</span>(c), rmL, rmR, open <span style="color:#f92672">+</span> 1);       <span style="color:#75715e">// use (</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (c <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;)&#39;</span>) {
-</span></span><span style="display:flex;"><span>        dfs(s, i <span style="color:#f92672">+</span> 1, res, sb, rmL, rmR <span style="color:#f92672">-</span> 1, open);	            <span style="color:#75715e">// not use  )</span>
-</span></span><span style="display:flex;"><span>    	dfs(s, i <span style="color:#f92672">+</span> 1, res, sb.<span style="color:#a6e22e">append</span>(c), rmL, rmR, open <span style="color:#f92672">-</span> 1);  	    <span style="color:#75715e">// use )</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        dfs(s, i <span style="color:#f92672">+</span> 1, res, sb.<span style="color:#a6e22e">append</span>(c), rmL, rmR, open);	
-</span></span><span style="display:flex;"><span>    }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>c <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        dfs<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> res<span style="color:#f92672">,</span> sb<span style="color:#f92672">,</span> rmL <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> rmR<span style="color:#f92672">,</span> open<span style="color:#f92672">);</span>		    <span style="color:#75715e">// not use (
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    	dfs<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> res<span style="color:#f92672">,</span> sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>c<span style="color:#f92672">),</span> rmL<span style="color:#f92672">,</span> rmR<span style="color:#f92672">,</span> open <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">);</span>       <span style="color:#75715e">// use (
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>c <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;)&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        dfs<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> res<span style="color:#f92672">,</span> sb<span style="color:#f92672">,</span> rmL<span style="color:#f92672">,</span> rmR <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> open<span style="color:#f92672">);</span>	            <span style="color:#75715e">// not use  )
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    	dfs<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> res<span style="color:#f92672">,</span> sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>c<span style="color:#f92672">),</span> rmL<span style="color:#f92672">,</span> rmR<span style="color:#f92672">,</span> open <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">);</span>  	    <span style="color:#75715e">// use )
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        dfs<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> res<span style="color:#f92672">,</span> sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>c<span style="color:#f92672">),</span> rmL<span style="color:#f92672">,</span> rmR<span style="color:#f92672">,</span> open<span style="color:#f92672">);</span>	
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>对于678，则可以使用贪心的思想，计算最小开放的括号以及最多开放的括号，如果不等于&quot;)&ldquo;的个数小于&rdquo;)&ldquo;的话，那么就不可能是合理的。思路想清楚了不难，出现*这种就思考最多和最少的情况。</p>
 <ul>
 <li><a href="https://leetcode.com/problems/valid-parentheses">20. Valid Parentheses</a></li>
@@ -230,19 +230,19 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
 <h2 id="trie">Trie</h2>
 <p>Trie是一种特别的数据类型，主要是使用一个树来代表string的前缀。一般的构造如下：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TrieNode</span>
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        TrieNode<span style="color:#f92672">[]</span> children <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TrieNode<span style="color:#f92672">[</span>ALPHABET_SIZE<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        TrieNode<span style="color:#f92672">[]</span> children <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TrieNode<span style="color:#f92672">[</span>ALPHABET_SIZE<span style="color:#f92672">];</span>
 </span></span><span style="display:flex;"><span>      
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// isEndOfWord is true if the node represents</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// end of a word</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">boolean</span> isEndOfWord;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// isEndOfWord is true if the node represents
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// end of a word
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">boolean</span> isEndOfWord<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>         
-</span></span><span style="display:flex;"><span>        TrieNode(){
-</span></span><span style="display:flex;"><span>            isEndOfWord <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> ALPHABET_SIZE; i<span style="color:#f92672">++</span>)
-</span></span><span style="display:flex;"><span>                children<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>        TrieNode<span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>            isEndOfWord <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> ALPHABET_SIZE<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+</span></span><span style="display:flex;"><span>                children<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">};</span>
 </span></span></code></pre></div><p>在插入的时候，只需要在数组里新建下一个的TreeNode.在string的搜索上很有帮助。在每个节点都有一个变量来判断是不是一个单词的结束。</p>
 <p>TODO:</p>
 <ul>
@@ -573,7 +573,7 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
     </article>
     
     <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     window.disqus_config = function () {
     
     
@@ -614,6 +614,10 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_245/" title="TC分享第 245 期">TC分享第 245 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_244/" title="TC分享第 244 期">TC分享第 244 期</a>
     </li>
     
@@ -626,7 +630,7 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
     </li>
     
     <li>
-        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0----%E5%9B%BD%E5%AF%8C%E8%AE%BA2/" title="读书推荐--《国富论》2">读书推荐--《国富论》2</a>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E5%9B%BD%E5%AF%8C%E8%AE%BA2/" title="读书推荐--《国富论》2">读书推荐--《国富论》2</a>
     </li>
     
     <li>
@@ -638,7 +642,7 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
     </li>
     
     <li>
-        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0----%E5%9B%BD%E5%AF%8C%E8%AE%BA1/" title="读书推荐--《国富论》1">读书推荐--《国富论》1</a>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E5%9B%BD%E5%AF%8C%E8%AE%BA1/" title="读书推荐--《国富论》1">读书推荐--《国富论》1</a>
     </li>
     
     <li>
@@ -647,10 +651,6 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
     
     <li>
         <a href="http://study.tczhong.com/post/movie/%E6%8A%95%E5%90%8D%E7%8A%B6/" title="《投名状》影评 ">《投名状》影评 </a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_238/" title="TC分享第 238 期">TC分享第 238 期</a>
     </li>
     
 </ul>
@@ -681,71 +681,71 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
-    <a href="http://study.tczhong.com/tags/ai/">Ai</a>
+    <a href="http://study.tczhong.com/tags/ai/">ai</a>
     
     <a href="http://study.tczhong.com/tags/android/">Android</a>
     
-    <a href="http://study.tczhong.com/tags/array/">Array</a>
+    <a href="http://study.tczhong.com/tags/array/">array</a>
     
-    <a href="http://study.tczhong.com/tags/auto/">Auto</a>
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
     
-    <a href="http://study.tczhong.com/tags/bit/">Bit</a>
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
     
-    <a href="http://study.tczhong.com/tags/book/">Book</a>
+    <a href="http://study.tczhong.com/tags/book/">book</a>
     
-    <a href="http://study.tczhong.com/tags/cooking/">Cooking</a>
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
     
-    <a href="http://study.tczhong.com/tags/development/">Development</a>
+    <a href="http://study.tczhong.com/tags/development/">development</a>
     
-    <a href="http://study.tczhong.com/tags/documentation/">Documentation</a>
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
     
-    <a href="http://study.tczhong.com/tags/dp/">Dp</a>
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
     
-    <a href="http://study.tczhong.com/tags/food/">Food</a>
+    <a href="http://study.tczhong.com/tags/food/">food</a>
     
-    <a href="http://study.tczhong.com/tags/fun/">Fun</a>
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
     
-    <a href="http://study.tczhong.com/tags/google/">Google</a>
+    <a href="http://study.tczhong.com/tags/google/">google</a>
     
-    <a href="http://study.tczhong.com/tags/graph/">Graph</a>
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
     
-    <a href="http://study.tczhong.com/tags/growth/">Growth</a>
+    <a href="http://study.tczhong.com/tags/growth/">growth</a>
     
-    <a href="http://study.tczhong.com/tags/happiness/">Happiness</a>
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
     
-    <a href="http://study.tczhong.com/tags/health/">Health</a>
+    <a href="http://study.tczhong.com/tags/health/">health</a>
     
-    <a href="http://study.tczhong.com/tags/leetcode/">Leetcode</a>
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
     
-    <a href="http://study.tczhong.com/tags/life/">Life</a>
+    <a href="http://study.tczhong.com/tags/life/">life</a>
     
-    <a href="http://study.tczhong.com/tags/love/">Love</a>
+    <a href="http://study.tczhong.com/tags/love/">love</a>
     
-    <a href="http://study.tczhong.com/tags/money/">Money</a>
+    <a href="http://study.tczhong.com/tags/money/">money</a>
     
-    <a href="http://study.tczhong.com/tags/movie/">Movie</a>
+    <a href="http://study.tczhong.com/tags/movie/">movie</a>
     
-    <a href="http://study.tczhong.com/tags/politics/">Politics</a>
+    <a href="http://study.tczhong.com/tags/politics/">politics</a>
     
-    <a href="http://study.tczhong.com/tags/python/">Python</a>
+    <a href="http://study.tczhong.com/tags/python/">python</a>
     
-    <a href="http://study.tczhong.com/tags/stack/">Stack</a>
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
     
-    <a href="http://study.tczhong.com/tags/string/">String</a>
+    <a href="http://study.tczhong.com/tags/string/">string</a>
     
-    <a href="http://study.tczhong.com/tags/study/">Study</a>
+    <a href="http://study.tczhong.com/tags/study/">study</a>
     
-    <a href="http://study.tczhong.com/tags/tech/">Tech</a>
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
     
-    <a href="http://study.tczhong.com/tags/time/">Time</a>
+    <a href="http://study.tczhong.com/tags/time/">time</a>
     
-    <a href="http://study.tczhong.com/tags/tree/">Tree</a>
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
     
-    <a href="http://study.tczhong.com/tags/vscode/">Vscode</a>
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
     
-    <a href="http://study.tczhong.com/tags/wechat/">Wechat</a>
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
     
-    <a href="http://study.tczhong.com/tags/weekly/">Weekly</a>
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
     
 </div>
     </section>

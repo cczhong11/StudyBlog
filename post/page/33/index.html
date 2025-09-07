@@ -98,6 +98,32 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B410--%E9%9A%8F%E6%9C%BA%E8%B5%B0%E5%8A%A8/" title="模型思维(10)--随机走动">模型思维(10)--随机走动</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月10日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            我们在这篇研究随机走动(random walk)。想象有一个点，每次可以随机的前进或退后一步，之后记录其与原点的距离。看似这个过程很简单，却可以利用其结论分析一些时间序列，例如销售额，股票价格等等。随机走动最初是用在研究物理学中液体和气体中粒子的运动，后来发现在生活中的很多现象也符合随机走动。
+伯努利瓮模型 我们这里首先利用伯努利瓮模型研究随机走动。假设有一个装了灰球和白球的瓮，其中灰球有G个，白球W个。每一次从中取出一个球，记录抽取出来球的颜色。在下一次抽取之前，球要放回瓮中。每次抽到灰球的概率是 $P = \frac{G}{G + W}$。在抽取N次的情况下，可以计算出抽取出来的灰球的期望数量是$N_G$, 其标准差是 $\sigma_{N_G}$……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B410--%E9%9A%8F%E6%9C%BA%E8%B5%B0%E5%8A%A8/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://study.tczhong.com/post/sharing/sharing_53/" title="每周分享第 53 期">每周分享第 53 期</a>
             </h1>
         </header>
@@ -106,11 +132,9 @@
         </date>
         
         <div class="post-content">
-            <h1 id="每周分享第-53-期">每周分享第 53 期</h1>
-<p>2020 week 23</p>
-<p>你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。</p>
-<p><img src="https://badge.tczhong.com/total.svg?repo_id=cczhong11.sharing_53" alt="Total visitor"></p>
-<p>这里可以回顾第一期的新闻分享：<a href="../sharing_1">每周分享第 1 期</a></p>……
+            每周分享第 53 期 2020 week 23
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+这里可以回顾第一期的新闻分享：每周分享第 1 期……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/sharing/sharing_53/">阅读全文</a></p>
     </article>
@@ -135,11 +159,10 @@
         </div>
         
         <div class="post-content">
-            <p>这一篇我们来讨论“熵”的概念。熵可以用来计算一个系统中的失序现象，即混乱程度。简单来说，一个事件的熵越高，其可能带来的惊喜越大，因为其结果是无序，不可预测的。熵是一个用来描述系统状态的函数，在控制论、概率论、天体物理、生命科学中等领域都有应用。这里我们研究其在信息中的定义和应用。</p>
-<h2 id="信息熵">信息熵</h2>
-<p>熵可以度量与结果概率分布相关的不确定性。我们可以利用抛硬币来进行理解，对于抛硬币的结果，只有正反面两种可能，其概率都是1/2，其不确定性较小，无论怎么猜都有50%的概率回答正确。但如果抛三次硬币，其可能出现的序列就有8种，如果我们想猜对的难度就大大增加。</p>
-<p>给定一个概率分布$(p_1, p_2, p_3, p_4 &hellip; P_N)$,其信息熵H等于:</p>
-<p>$$H(p_1, p_2, p_3, p_4 &hellip; P_N) = - \sum ^N_{i=1} p_i log_2(p_i)$$</p>……
+            这一篇我们来讨论“熵”的概念。熵可以用来计算一个系统中的失序现象，即混乱程度。简单来说，一个事件的熵越高，其可能带来的惊喜越大，因为其结果是无序，不可预测的。熵是一个用来描述系统状态的函数，在控制论、概率论、天体物理、生命科学中等领域都有应用。这里我们研究其在信息中的定义和应用。
+信息熵 熵可以度量与结果概率分布相关的不确定性。我们可以利用抛硬币来进行理解，对于抛硬币的结果，只有正反面两种可能，其概率都是1/2，其不确定性较小，无论怎么猜都有50%的概率回答正确。但如果抛三次硬币，其可能出现的序列就有8种，如果我们想猜对的难度就大大增加。
+给定一个概率分布$(p_1, p_2, p_3, p_4 &hellip; P_N)$,其信息熵H等于:
+$$H(p_1, p_2, p_3, p_4 &hellip; P_N) = - \sum ^N_{i=1} p_i log_2(p_i)$$……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B49--%E7%86%B5%E5%AF%B9%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%BB%BA%E6%A8%A1/">阅读全文</a></p>
     </article>
@@ -157,11 +180,10 @@
         </date>
         
         <div class="post-content">
-            <h1 id="每周分享第-52-期">每周分享第 52 期</h1>
-<p>2020 week 22</p>
-<p>你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。</p>
-<p>这个每周分享我已经做了1年，这一年发生了很多，也见证了这个历史变革时期很多的事情。从贸易战开始，到香港问题和特朗普对中国越来越多的敌对举措。在未来的很长时间内，中美之间的冲突都将持续。这个历史的进程可能会影响到每一个人。</p>
-<p>与此同时，人类首个商业载人航天飞船发射成功，马斯克称希望这是通向火星文明的第一步，人类生活将首次变得星际化，&ldquo;希望未来能有上百万人能做星际旅行，这是我们将来要塑造的生活方式。这个目标很宏远，但今天发生的一切让实现目标变得真切起来。&rdquo; 希望有生可以前往太空！</p>……
+            每周分享第 52 期 2020 week 22
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+这个每周分享我已经做了1年，这一年发生了很多，也见证了这个历史变革时期很多的事情。从贸易战开始，到香港问题和特朗普对中国越来越多的敌对举措。在未来的很长时间内，中美之间的冲突都将持续。这个历史的进程可能会影响到每一个人。
+与此同时，人类首个商业载人航天飞船发射成功，马斯克称希望这是通向火星文明的第一步，人类生活将首次变得星际化，&ldquo;希望未来能有上百万人能做星际旅行，这是我们将来要塑造的生活方式。这个目标很宏远，但今天发生的一切让实现目标变得真切起来。&rdquo; 希望有生可以前往太空！……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/sharing/sharing_52/">阅读全文</a></p>
     </article>
@@ -186,10 +208,9 @@
         </div>
         
         <div class="post-content">
-            <p>这里我们将讨论三种传播模型，和目前世界正在经历的covid-19息息相关。这些模型同时也可以用来研究信息、技术、行为在人群中的传播，模型会将人群分为两部分，分别是知道的（感染的），不知道的（健康的），通过定义一些参数研究其中互相转换的关系。</p>
-<h2 id="广播模型">广播模型</h2>
-<p>我们假定有一个固定人数的群体，其总人数是$N$。我们将$t$时刻知道这个信息的人看作$I_t$,除了这些知道信息的人以外，剩下的人都是可能获取信息的人，我们称作$S_t$。总人数 $N = S_t + I_t$。</p>
-<p>$$ I_{t+1} = I_t + P_{broad} \times S_t$$</p>……
+            这里我们将讨论三种传播模型，和目前世界正在经历的covid-19息息相关。这些模型同时也可以用来研究信息、技术、行为在人群中的传播，模型会将人群分为两部分，分别是知道的（感染的），不知道的（健康的），通过定义一些参数研究其中互相转换的关系。
+广播模型 我们假定有一个固定人数的群体，其总人数是$N$。我们将$t$时刻知道这个信息的人看作$I_t$,除了这些知道信息的人以外，剩下的人都是可能获取信息的人，我们称作$S_t$。总人数 $N = S_t + I_t$。
+$$ I_{t+1} = I_t + P_{broad} \times S_t$$……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B48--%E5%B9%BF%E6%92%AD%E6%A8%A1%E5%9E%8B%E6%89%A9%E6%95%A3%E6%A8%A1%E5%9E%8B%E5%92%8C%E4%BC%A0%E6%9F%93%E6%A8%A1%E5%9E%8B/">阅读全文</a></p>
     </article>
@@ -207,13 +228,9 @@
         </date>
         
         <div class="post-content">
-            <h1 id="每周分享第-51-期">每周分享第 51 期</h1>
-<p>2020 week 21</p>
-<p>你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。</p>
-<p><img src="https://badge.tczhong.com/total.svg?repo_id=cczhong11.sharing_51" alt="Total visitor"></p>
-<h2 id="国内新闻">国内新闻</h2>
-<h3 id="国内政策">国内政策</h3>
-<p>【1】全国政协今日开幕</p>……
+            每周分享第 51 期 2020 week 21
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+国内新闻 国内政策 【1】全国政协今日开幕……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/sharing/sharing_51/">阅读全文</a></p>
     </article>
@@ -238,16 +255,14 @@
         </div>
         
         <div class="post-content">
-            <p><img src="https://tczimg.s3.amazonaws.com/book/network.png" alt=""></p>
-<p>生活中处处有网络模型的存在，从传染病的传播到网络中站点连接，都可以抽象成一张张网络，将不同的节点连接起来。这篇将走进网络的基本结构，帮助大家理解一些生活中的现象。</p>
-<h2 id="网络的基本术语">网络的基本术语</h2>
-<p>网络是由<strong>节点</strong>和<strong>边</strong>组成的。每一个节点都可以通过边的连接到达另一个节点，这两个节点互为<strong>邻居</strong>。如果从一个节点可以到任意一个节点，我们称之为连接的网络。</p>
-<p>在无向网络中，我们对于每个节点的连接数可以定义为节点的度（degree)。度分布可以告诉我们某个节点是不是比其他的节点连接的更多。</p>
-<p><strong>路径长度</strong>是指两个节点中的最短路径长度，与度成反比。当增加边的时候，就缩短了节点之间的平均长度。<strong>介数</strong>是指通过该节点的最小路径的百分比。在社交网络中，介数得分高的人掌握更多信息并且拥有更多权力。</p>
-<p>最后一个基本术语是聚类系数，这个统计了一个节点的邻居们互相连接的比例。例如，一个人有10个朋友，这些朋友可以组成45个对。如果在这45个对当中，有15个对本身也是朋友，那么这个人的聚类系数就等于1/3。如果所有这45对都是朋友，那么这个人的聚类系数就等于1，这也是最大的聚类系数。整个网络的聚类系数等于各个节点聚类系数的平均值。</p>
-<p>下面用中心辐射网络和地理网络举个例子：</p>
-<p><img src="https://tczimg.s3.amazonaws.com/vscode/ab9bce23b5de43f39552cd3244befe72.png" alt=""></p>
-<p>中心辐射网络是所有节点和中心节点相连，但是都不互相连接。其基本的统计术语也比较好理解。</p>……
+            生活中处处有网络模型的存在，从传染病的传播到网络中站点连接，都可以抽象成一张张网络，将不同的节点连接起来。这篇将走进网络的基本结构，帮助大家理解一些生活中的现象。
+网络的基本术语 网络是由节点和边组成的。每一个节点都可以通过边的连接到达另一个节点，这两个节点互为邻居。如果从一个节点可以到任意一个节点，我们称之为连接的网络。
+在无向网络中，我们对于每个节点的连接数可以定义为节点的度（degree)。度分布可以告诉我们某个节点是不是比其他的节点连接的更多。
+路径长度是指两个节点中的最短路径长度，与度成反比。当增加边的时候，就缩短了节点之间的平均长度。介数是指通过该节点的最小路径的百分比。在社交网络中，介数得分高的人掌握更多信息并且拥有更多权力。
+最后一个基本术语是聚类系数，这个统计了一个节点的邻居们互相连接的比例。例如，一个人有10个朋友，这些朋友可以组成45个对。如果在这45个对当中，有15个对本身也是朋友，那么这个人的聚类系数就等于1/3。如果所有这45对都是朋友，那么这个人的聚类系数就等于1，这也是最大的聚类系数。整个网络的聚类系数等于各个节点聚类系数的平均值。
+下面用中心辐射网络和地理网络举个例子：
+中心辐射网络是所有节点和中心节点相连，但是都不互相连接。其基本的统计术语也比较好理解。
+地理网络是每个节点都连接到位于它右侧和左侧的两个节点。每个节点具有相同的度，都是4。由于网络是对称的，所以每一个节点的介数也是相同的。这里一共12个节点，可以组成 12*11/2 = 66 个邻居对。其中一个节点是有6对邻居经过其是最短路径，所以介数是1/12。每个节点都有4个邻居，可以构成6个对。在这6个对中，恰好有3对是相互连接的：直接靠着该节点的左右两个节点分别连接到再外一点的节点，并相互连接。因此，聚类系数等于1/2。……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B47--%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/">阅读全文</a></p>
     </article>
@@ -265,13 +280,9 @@
         </date>
         
         <div class="post-content">
-            <h1 id="每周分享第-50-期">每周分享第 50 期</h1>
-<p>2020 week 20</p>
-<p>你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。</p>
-<p><img src="https://badge.tczhong.com/total.svg?repo_id=cczhong11.sharing_50" alt="Total visitor"></p>
-<h2 id="国内新闻">国内新闻</h2>
-<h3 id="国家政策">国家政策</h3>
-<p>【1】教育部印发#义务教育超标超前培训负面清单#：#不得对一二年级学生培训英语书写#</p>……
+            每周分享第 50 期 2020 week 20
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+国内新闻 国家政策 【1】教育部印发#义务教育超标超前培训负面清单#：#不得对一二年级学生培训英语书写#……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/sharing/sharing_50/">阅读全文</a></p>
     </article>
@@ -296,51 +307,12 @@
         </div>
         
         <div class="post-content">
-            <p>当人们在进行合作的时候，我们需要对于每个人的贡献进行分析，从而知道哪一个人对于群体的贡献最大，哪一个最小，以此可以作为分配奖励的标准。然而量化分析这个并不容易，因为当不同人组合在一起时，可能就会产生不同的结果。我们介绍几个与此相关的概念来解决这个问题。</p>
-<h2 id="合作博弈">合作博弈</h2>
-<p>合作博弈由一组博弈参与者和一个价值函数组成。价值函数是指在一项多人合作的项目中，每个可能的联盟（子集）所产生的价值。</p>
-<p>在合作博弈中，一个参与者的”最后上车者价值“ （last-on-bus-value）是指当他最后一个加入组织所产生的价值。例如，如果一个桌子四个人才能搬动，搬动的价值是10，那么这四个人每个人的最后上车者价值就是10。如果三个人可以搬动，那个第四个人的最后上车者价值就是0。我们可以看出博弈的总价值不是所有参与者的最后上车者价值之和，如果当价值随着参与者增多递减时，最后上车者价值的总和将小于博弈的总价值。</p>
-<p>最后上车者价值并不能很好的刻画每个人的贡献度，夏普利值（Shapley value）则可以。一个博弈参与者的夏普利值，等于他在所有可能加入的联盟的次序下对联盟边际贡献的平均值。对于一个$N$个人参与的博弈,一个有$N!$种可能加入的结果，对于某个参与者$i$, 计算在所有次序中当其加入对于整体的边际贡献的平均值。</p>
-<p>我们可以用3个程序员合作写代码作为一例子，一个项目有500行需要写。以下是一个人单独做，两个人合作，以及三个人合作产生的结果。其中C可以看作程序员鼓励师，当一个做的时候结果不多，但是合作时可以大大提高两人的合作成果。</p>
-<table>
-  <thead>
-      <tr>
-          <th>合作</th>
-          <th>价值</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>A</td>
-          <td>100</td>
-      </tr>
-      <tr>
-          <td>B</td>
-          <td>125</td>
-      </tr>
-      <tr>
-          <td>C</td>
-          <td>50</td>
-      </tr>
-      <tr>
-          <td>AB</td>
-          <td>270</td>
-      </tr>
-      <tr>
-          <td>BC</td>
-          <td>350</td>
-      </tr>
-      <tr>
-          <td>AC</td>
-          <td>375</td>
-      </tr>
-      <tr>
-          <td>ABC</td>
-          <td>500</td>
-      </tr>
-  </tbody>
-</table>
-<p>3个人合作的话有6种可能</p>……
+            当人们在进行合作的时候，我们需要对于每个人的贡献进行分析，从而知道哪一个人对于群体的贡献最大，哪一个最小，以此可以作为分配奖励的标准。然而量化分析这个并不容易，因为当不同人组合在一起时，可能就会产生不同的结果。我们介绍几个与此相关的概念来解决这个问题。
+合作博弈 合作博弈由一组博弈参与者和一个价值函数组成。价值函数是指在一项多人合作的项目中，每个可能的联盟（子集）所产生的价值。
+在合作博弈中，一个参与者的”最后上车者价值“ （last-on-bus-value）是指当他最后一个加入组织所产生的价值。例如，如果一个桌子四个人才能搬动，搬动的价值是10，那么这四个人每个人的最后上车者价值就是10。如果三个人可以搬动，那个第四个人的最后上车者价值就是0。我们可以看出博弈的总价值不是所有参与者的最后上车者价值之和，如果当价值随着参与者增多递减时，最后上车者价值的总和将小于博弈的总价值。
+最后上车者价值并不能很好的刻画每个人的贡献度，夏普利值（Shapley value）则可以。一个博弈参与者的夏普利值，等于他在所有可能加入的联盟的次序下对联盟边际贡献的平均值。对于一个$N$个人参与的博弈,一个有$N!$种可能加入的结果，对于某个参与者$i$, 计算在所有次序中当其加入对于整体的边际贡献的平均值。
+我们可以用3个程序员合作写代码作为一例子，一个项目有500行需要写。以下是一个人单独做，两个人合作，以及三个人合作产生的结果。其中C可以看作程序员鼓励师，当一个做的时候结果不多，但是合作时可以大大提高两人的合作成果。
+合作 价值 A 100 B 125 C 50 AB 270 BC 350 AC 375 ABC 500 3个人合作的话有6种可能……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B46--%E5%90%88%E4%BD%9C%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/">阅读全文</a></p>
     </article>
@@ -365,41 +337,12 @@
         </div>
         
         <div class="post-content">
-            <p>如果你要问我哪一本书改变了我的世界观，我一定会说这本《世界观&ndash;现代人必须要懂的科学哲学和科学史》。看副标题就知道这是一本讲科学史的书，然而其独特之处在于其叙述过程，讲述了整个人类社会对于我们所处的世界的认识的过程。从一开始对于世界粗浅的认识，到后来是如何通过新的证据，不断推翻之前的见解建立起如今对于世界的认知的。</p>
-<p>世界观是什么呢？书中对其的定义就是<strong>每个人对于这个世界的认识的集合</strong>，这些认识就像拼图一样紧密的拼接组一起。他们之间互相依赖紧密，如果中间任意一块不对，那么整个世界观可能就会土崩瓦解。在亚里士多德时期，人们有以下的一些观点：</p>
-<ul>
-<li>地球是禁止不动的。地球位于宇宙中心。</li>
-<li>每种基本元素都有一个基本性质，这一基本性质决定了元素的表现特征。</li>
-</ul>
-<p>这些观点在我们看来是错误的，因为我们知道地球是绕着太阳旋转的，同时也是在自转的。但是我们可以仔细想想，究竟生活中什么现象可以证明这一点呢？我们每天看到太阳东升西落，并不能体会到大地的运动，从我们本身观测到的日常经验很难证明我们脚下的地球是在动的。这个世界观从公元前300年一直持续到公元1600年，都没有人去质疑。直到17世纪，由于望远镜的发明，人们通过更严谨的观测和计算，发现了地球是绕太阳转这个事实。牛顿也通过自己的研究以及总结前人的观点得到了牛顿三大定律，建立了牛顿的世界观体系。</p>
-<p>本书的前十章介绍了一些科学定义，例如真理、事实、推理模式等等。这些概念看似简单，但也不好定义。真理的定义是“被证实的或者不存在争议的事实”，而事实的定义是“被认为为真的事物”。以观察为基础的事实，通常被称为经验事实。但大部分东西并不是你看不到就不存在的。人们深信不疑的一些观点，在很大程度上依赖于对我们所生活的世界的哲学性 / 概念性认识，通常称之为“哲学性 / 概念性事实”。关于经验事实和概念性事实，并不是两个完全区分开的观点，他们很多时候都是相互依存的。这就让我想起了黑客帝国里面的探讨，怎么知道所感知到的就是真实的呢？书中对于这些问题的定义可以帮助我们对于后面的内容进行理解。</p>……
+            如果你要问我哪一本书改变了我的世界观，我一定会说这本《世界观&ndash;现代人必须要懂的科学哲学和科学史》。看副标题就知道这是一本讲科学史的书，然而其独特之处在于其叙述过程，讲述了整个人类社会对于我们所处的世界的认识的过程。从一开始对于世界粗浅的认识，到后来是如何通过新的证据，不断推翻之前的见解建立起如今对于世界的认知的。
+世界观是什么呢？书中对其的定义就是每个人对于这个世界的认识的集合，这些认识就像拼图一样紧密的拼接组一起。他们之间互相依赖紧密，如果中间任意一块不对，那么整个世界观可能就会土崩瓦解。在亚里士多德时期，人们有以下的一些观点：
+地球是禁止不动的。地球位于宇宙中心。 每种基本元素都有一个基本性质，这一基本性质决定了元素的表现特征。 这些观点在我们看来是错误的，因为我们知道地球是绕着太阳旋转的，同时也是在自转的。但是我们可以仔细想想，究竟生活中什么现象可以证明这一点呢？我们每天看到太阳东升西落，并不能体会到大地的运动，从我们本身观测到的日常经验很难证明我们脚下的地球是在动的。这个世界观从公元前300年一直持续到公元1600年，都没有人去质疑。直到17世纪，由于望远镜的发明，人们通过更严谨的观测和计算，发现了地球是绕太阳转这个事实。牛顿也通过自己的研究以及总结前人的观点得到了牛顿三大定律，建立了牛顿的世界观体系。
+本书的前十章介绍了一些科学定义，例如真理、事实、推理模式等等。这些概念看似简单，但也不好定义。真理的定义是“被证实的或者不存在争议的事实”，而事实的定义是“被认为为真的事物”。以观察为基础的事实，通常被称为经验事实。但大部分东西并不是你看不到就不存在的。人们深信不疑的一些观点，在很大程度上依赖于对我们所生活的世界的哲学性 / 概念性认识，通常称之为“哲学性 / 概念性事实”。关于经验事实和概念性事实，并不是两个完全区分开的观点，他们很多时候都是相互依存的。这就让我想起了黑客帝国里面的探讨，怎么知道所感知到的就是真实的呢？书中对于这些问题的定义可以帮助我们对于后面的内容进行理解。……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90--%E4%B8%96%E7%95%8C%E8%A7%82/">阅读全文</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/sharing/sharing_49/" title="每周分享第 49 期">每周分享第 49 期</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月10日
-        </date>
-        
-        <div class="post-content">
-            <h1 id="每周分享第-49-期">每周分享第 49 期</h1>
-<p>2020 week 19</p>
-<p>你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。在家上班太久了，已经想回公司上班了。。。</p>
-<p><img src="https://badge.tczhong.com/total.svg?repo_id=cczhong11.sharing_49" alt="Total visitor"></p>
-<h2 id="国内新闻">国内新闻</h2>
-<h3 id="国内经济">国内经济</h3>
-<p>【1】95后认为今年收入能增长2成？专家：心有多大舞台就有多大！
-要问谁是中国最有信心的人？那肯定是年轻人了！央视财经大数据显示，18-25岁的95后年轻人信心爆棚，认为自己2020年收入能实现增长20%。对此，央视财经评论员、经济学家马光远在云连线中表示，年轻人还是要有一点想法的，有想象力不是盲目乐观，和年轻人在一起听他们谈人生、谈创业、谈未来的可能性，可以看出他们都非常积极乐观。年轻人对未来有很多期望，只要通过他们的努力和付出，最后都能登上属于自己的巅峰！</p>……
-        </div>
-        <p class="readmore"><a href="http://study.tczhong.com/post/sharing/sharing_49/">阅读全文</a></p>
     </article>
     
     
@@ -516,6 +459,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_245/" title="TC分享第 245 期">TC分享第 245 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_244/" title="TC分享第 244 期">TC分享第 244 期</a>
     </li>
     
@@ -528,7 +475,7 @@
     </li>
     
     <li>
-        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0----%E5%9B%BD%E5%AF%8C%E8%AE%BA2/" title="读书推荐--《国富论》2">读书推荐--《国富论》2</a>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E5%9B%BD%E5%AF%8C%E8%AE%BA2/" title="读书推荐--《国富论》2">读书推荐--《国富论》2</a>
     </li>
     
     <li>
@@ -540,7 +487,7 @@
     </li>
     
     <li>
-        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0----%E5%9B%BD%E5%AF%8C%E8%AE%BA1/" title="读书推荐--《国富论》1">读书推荐--《国富论》1</a>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E5%9B%BD%E5%AF%8C%E8%AE%BA1/" title="读书推荐--《国富论》1">读书推荐--《国富论》1</a>
     </li>
     
     <li>
@@ -549,10 +496,6 @@
     
     <li>
         <a href="http://study.tczhong.com/post/movie/%E6%8A%95%E5%90%8D%E7%8A%B6/" title="《投名状》影评 ">《投名状》影评 </a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_238/" title="TC分享第 238 期">TC分享第 238 期</a>
     </li>
     
 </ul>
@@ -583,71 +526,71 @@
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
-    <a href="http://study.tczhong.com/tags/ai/">Ai</a>
+    <a href="http://study.tczhong.com/tags/ai/">ai</a>
     
     <a href="http://study.tczhong.com/tags/android/">Android</a>
     
-    <a href="http://study.tczhong.com/tags/array/">Array</a>
+    <a href="http://study.tczhong.com/tags/array/">array</a>
     
-    <a href="http://study.tczhong.com/tags/auto/">Auto</a>
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
     
-    <a href="http://study.tczhong.com/tags/bit/">Bit</a>
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
     
-    <a href="http://study.tczhong.com/tags/book/">Book</a>
+    <a href="http://study.tczhong.com/tags/book/">book</a>
     
-    <a href="http://study.tczhong.com/tags/cooking/">Cooking</a>
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
     
-    <a href="http://study.tczhong.com/tags/development/">Development</a>
+    <a href="http://study.tczhong.com/tags/development/">development</a>
     
-    <a href="http://study.tczhong.com/tags/documentation/">Documentation</a>
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
     
-    <a href="http://study.tczhong.com/tags/dp/">Dp</a>
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
     
-    <a href="http://study.tczhong.com/tags/food/">Food</a>
+    <a href="http://study.tczhong.com/tags/food/">food</a>
     
-    <a href="http://study.tczhong.com/tags/fun/">Fun</a>
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
     
-    <a href="http://study.tczhong.com/tags/google/">Google</a>
+    <a href="http://study.tczhong.com/tags/google/">google</a>
     
-    <a href="http://study.tczhong.com/tags/graph/">Graph</a>
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
     
-    <a href="http://study.tczhong.com/tags/growth/">Growth</a>
+    <a href="http://study.tczhong.com/tags/growth/">growth</a>
     
-    <a href="http://study.tczhong.com/tags/happiness/">Happiness</a>
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
     
-    <a href="http://study.tczhong.com/tags/health/">Health</a>
+    <a href="http://study.tczhong.com/tags/health/">health</a>
     
-    <a href="http://study.tczhong.com/tags/leetcode/">Leetcode</a>
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
     
-    <a href="http://study.tczhong.com/tags/life/">Life</a>
+    <a href="http://study.tczhong.com/tags/life/">life</a>
     
-    <a href="http://study.tczhong.com/tags/love/">Love</a>
+    <a href="http://study.tczhong.com/tags/love/">love</a>
     
-    <a href="http://study.tczhong.com/tags/money/">Money</a>
+    <a href="http://study.tczhong.com/tags/money/">money</a>
     
-    <a href="http://study.tczhong.com/tags/movie/">Movie</a>
+    <a href="http://study.tczhong.com/tags/movie/">movie</a>
     
-    <a href="http://study.tczhong.com/tags/politics/">Politics</a>
+    <a href="http://study.tczhong.com/tags/politics/">politics</a>
     
-    <a href="http://study.tczhong.com/tags/python/">Python</a>
+    <a href="http://study.tczhong.com/tags/python/">python</a>
     
-    <a href="http://study.tczhong.com/tags/stack/">Stack</a>
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
     
-    <a href="http://study.tczhong.com/tags/string/">String</a>
+    <a href="http://study.tczhong.com/tags/string/">string</a>
     
-    <a href="http://study.tczhong.com/tags/study/">Study</a>
+    <a href="http://study.tczhong.com/tags/study/">study</a>
     
-    <a href="http://study.tczhong.com/tags/tech/">Tech</a>
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
     
-    <a href="http://study.tczhong.com/tags/time/">Time</a>
+    <a href="http://study.tczhong.com/tags/time/">time</a>
     
-    <a href="http://study.tczhong.com/tags/tree/">Tree</a>
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
     
-    <a href="http://study.tczhong.com/tags/vscode/">Vscode</a>
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
     
-    <a href="http://study.tczhong.com/tags/wechat/">Wechat</a>
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
     
-    <a href="http://study.tczhong.com/tags/weekly/">Weekly</a>
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
     
 </div>
     </section>

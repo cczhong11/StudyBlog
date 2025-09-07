@@ -124,17 +124,17 @@
 <li><a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/">109.Convert Sorted List to Binary Search Tree</a></li>
 </ul>
 <p>这里有一道题，关于如何利用链表来构造。其中有一点，它可以使用一个固定的prev linked list node。在每次递归结束的时候都会调用next，这样我们就不需要每次遍历找到中心结点，而是利用之前的结果来找到中间的那个节点。也就是说，在这里我们并不需要一开始就把父节点找到，而是可以先存好左子树，之后再到root。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>	<span style="color:#66d9ef">private</span> ListNode list;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> TreeNode <span style="color:#a6e22e">sortedListToBST</span>(<span style="color:#66d9ef">int</span> start, <span style="color:#66d9ef">int</span> end) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (start <span style="color:#f92672">&gt;</span> end) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> (start <span style="color:#f92672">+</span> end<span style="color:#f92672">+</span>1) <span style="color:#f92672">/</span> 2;
-</span></span><span style="display:flex;"><span>        TreeNode leftChild <span style="color:#f92672">=</span> sortedListToBST(start, mid<span style="color:#f92672">-</span>1);
-</span></span><span style="display:flex;"><span>        TreeNode parent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeNode(list.<span style="color:#a6e22e">val</span>);
-</span></span><span style="display:flex;"><span>        parent.<span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> leftChild;
-</span></span><span style="display:flex;"><span>        list <span style="color:#f92672">=</span> list.<span style="color:#a6e22e">next</span>;
-</span></span><span style="display:flex;"><span>        parent.<span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> sortedListToBST(mid<span style="color:#f92672">+</span>1, end);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> parent;
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>	<span style="color:#66d9ef">private</span> ListNode list<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> TreeNode <span style="color:#a6e22e">sortedListToBST</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> start<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> end<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>start <span style="color:#f92672">&gt;</span> end<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>start <span style="color:#f92672">+</span> end<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        TreeNode leftChild <span style="color:#f92672">=</span> sortedListToBST<span style="color:#f92672">(</span>start<span style="color:#f92672">,</span> mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        TreeNode parent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeNode<span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        parent<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> leftChild<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        list <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        parent<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> sortedListToBST<span style="color:#f92672">(</span>mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> end<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> parent<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>其他的一些，比如说利用前序遍历和中序遍历来构建。思路是差不多的，因为我们可以知道，前序遍历的第一个必定是根节点，而中续遍历的中间某一个必定是根节点，然后，根据这个就可以确定左右子树的范围，之后递归调用就可以了。</p>
 <ul>
 <li><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">105. Construct Binary Tree from Preorder and Inorder Traversal</a></li>
@@ -325,7 +325,7 @@
     </article>
     
     <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     window.disqus_config = function () {
     
     
@@ -366,6 +366,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_245/" title="TC分享第 245 期">TC分享第 245 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_244/" title="TC分享第 244 期">TC分享第 244 期</a>
     </li>
     
@@ -378,7 +382,7 @@
     </li>
     
     <li>
-        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0----%E5%9B%BD%E5%AF%8C%E8%AE%BA2/" title="读书推荐--《国富论》2">读书推荐--《国富论》2</a>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E5%9B%BD%E5%AF%8C%E8%AE%BA2/" title="读书推荐--《国富论》2">读书推荐--《国富论》2</a>
     </li>
     
     <li>
@@ -390,7 +394,7 @@
     </li>
     
     <li>
-        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0----%E5%9B%BD%E5%AF%8C%E8%AE%BA1/" title="读书推荐--《国富论》1">读书推荐--《国富论》1</a>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E5%9B%BD%E5%AF%8C%E8%AE%BA1/" title="读书推荐--《国富论》1">读书推荐--《国富论》1</a>
     </li>
     
     <li>
@@ -399,10 +403,6 @@
     
     <li>
         <a href="http://study.tczhong.com/post/movie/%E6%8A%95%E5%90%8D%E7%8A%B6/" title="《投名状》影评 ">《投名状》影评 </a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_238/" title="TC分享第 238 期">TC分享第 238 期</a>
     </li>
     
 </ul>
@@ -433,71 +433,71 @@
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
-    <a href="http://study.tczhong.com/tags/ai/">Ai</a>
+    <a href="http://study.tczhong.com/tags/ai/">ai</a>
     
     <a href="http://study.tczhong.com/tags/android/">Android</a>
     
-    <a href="http://study.tczhong.com/tags/array/">Array</a>
+    <a href="http://study.tczhong.com/tags/array/">array</a>
     
-    <a href="http://study.tczhong.com/tags/auto/">Auto</a>
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
     
-    <a href="http://study.tczhong.com/tags/bit/">Bit</a>
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
     
-    <a href="http://study.tczhong.com/tags/book/">Book</a>
+    <a href="http://study.tczhong.com/tags/book/">book</a>
     
-    <a href="http://study.tczhong.com/tags/cooking/">Cooking</a>
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
     
-    <a href="http://study.tczhong.com/tags/development/">Development</a>
+    <a href="http://study.tczhong.com/tags/development/">development</a>
     
-    <a href="http://study.tczhong.com/tags/documentation/">Documentation</a>
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
     
-    <a href="http://study.tczhong.com/tags/dp/">Dp</a>
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
     
-    <a href="http://study.tczhong.com/tags/food/">Food</a>
+    <a href="http://study.tczhong.com/tags/food/">food</a>
     
-    <a href="http://study.tczhong.com/tags/fun/">Fun</a>
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
     
-    <a href="http://study.tczhong.com/tags/google/">Google</a>
+    <a href="http://study.tczhong.com/tags/google/">google</a>
     
-    <a href="http://study.tczhong.com/tags/graph/">Graph</a>
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
     
-    <a href="http://study.tczhong.com/tags/growth/">Growth</a>
+    <a href="http://study.tczhong.com/tags/growth/">growth</a>
     
-    <a href="http://study.tczhong.com/tags/happiness/">Happiness</a>
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
     
-    <a href="http://study.tczhong.com/tags/health/">Health</a>
+    <a href="http://study.tczhong.com/tags/health/">health</a>
     
-    <a href="http://study.tczhong.com/tags/leetcode/">Leetcode</a>
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
     
-    <a href="http://study.tczhong.com/tags/life/">Life</a>
+    <a href="http://study.tczhong.com/tags/life/">life</a>
     
-    <a href="http://study.tczhong.com/tags/love/">Love</a>
+    <a href="http://study.tczhong.com/tags/love/">love</a>
     
-    <a href="http://study.tczhong.com/tags/money/">Money</a>
+    <a href="http://study.tczhong.com/tags/money/">money</a>
     
-    <a href="http://study.tczhong.com/tags/movie/">Movie</a>
+    <a href="http://study.tczhong.com/tags/movie/">movie</a>
     
-    <a href="http://study.tczhong.com/tags/politics/">Politics</a>
+    <a href="http://study.tczhong.com/tags/politics/">politics</a>
     
-    <a href="http://study.tczhong.com/tags/python/">Python</a>
+    <a href="http://study.tczhong.com/tags/python/">python</a>
     
-    <a href="http://study.tczhong.com/tags/stack/">Stack</a>
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
     
-    <a href="http://study.tczhong.com/tags/string/">String</a>
+    <a href="http://study.tczhong.com/tags/string/">string</a>
     
-    <a href="http://study.tczhong.com/tags/study/">Study</a>
+    <a href="http://study.tczhong.com/tags/study/">study</a>
     
-    <a href="http://study.tczhong.com/tags/tech/">Tech</a>
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
     
-    <a href="http://study.tczhong.com/tags/time/">Time</a>
+    <a href="http://study.tczhong.com/tags/time/">time</a>
     
-    <a href="http://study.tczhong.com/tags/tree/">Tree</a>
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
     
-    <a href="http://study.tczhong.com/tags/vscode/">Vscode</a>
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
     
-    <a href="http://study.tczhong.com/tags/wechat/">Wechat</a>
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
     
-    <a href="http://study.tczhong.com/tags/weekly/">Weekly</a>
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
     
 </div>
     </section>
