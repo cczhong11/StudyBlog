@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stack on Learn More</title>
+    <title>stack on Learn More</title>
     <link>http://study.tczhong.com/tags/stack/</link>
-    <description>Recent content in Stack on Learn More</description>
-    <generator>Hugo</generator>
+    <description>Recent content in stack on Learn More</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Sep 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://study.tczhong.com/tags/stack/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/tags/stack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stack算法题的思考</title>
       <link>http://study.tczhong.com/post/algo/stack/</link>
       <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/post/algo/stack/</guid>
-      <description>&lt;h1 id=&#34;stack-算法题的思考&#34;&gt;Stack 算法题的思考&lt;/h1&gt;&#xA;&lt;p&gt;这类题目也是比较多的，一般比较繁琐。思路类似DFS，不过可以不使用递归实现。&lt;/p&gt;&#xA;&lt;h2 id=&#34;string-解析类&#34;&gt;String 解析类&lt;/h2&gt;&#xA;&lt;p&gt;这类比较多的就是计算器，以及分析括号里的内容。例如解析 &lt;code&gt;3[a]2[bc]&lt;/code&gt;,这时候就可以在遇到&lt;code&gt;[&lt;/code&gt;的时候把之前的东西都压到栈里，之后当遇到&lt;code&gt;]&lt;/code&gt;的时候把内容再pop出来。&lt;/p&gt;&#xA;&lt;p&gt;对于计算器，如果是后缀表达式的话，可以把结果都压到栈里，遇到运算符再pop出运算。有括号的话还是按括号的方法，主要要注意加法和乘法的区别。&lt;/p&gt;&#xA;&lt;p&gt;计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如&lt;code&gt;(1+2)+(3+4)&lt;/code&gt;, +可以看作是是后一个括号的符号。对于1*2 + 6/3,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。&lt;/p&gt;</description>
+      <description>Stack 算法题的思考 这类题目也是比较多的，一般比较繁琐。思路类似DFS，不过可以不使用递归实现。
+String 解析类 这类比较多的就是计算器，以及分析括号里的内容。例如解析 3[a]2[bc],这时候就可以在遇到[的时候把之前的东西都压到栈里，之后当遇到]的时候把内容再pop出来。
+对于计算器，如果是后缀表达式的话，可以把结果都压到栈里，遇到运算符再pop出运算。有括号的话还是按括号的方法，主要要注意加法和乘法的区别。
+计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如(1+2)+(3+4), +可以看作是是后一个括号的符号。对于1*2 + 6/3,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。</description>
     </item>
+    
   </channel>
 </rss>
