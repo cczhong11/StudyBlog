@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fun on Learn More</title>
+    <title>fun on Learn More</title>
     <link>http://study.tczhong.com/tags/fun/</link>
-    <description>Recent content in Fun on Learn More</description>
-    <generator>Hugo</generator>
+    <description>Recent content in fun on Learn More</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Apr 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://study.tczhong.com/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/tags/fun/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python的彩蛋</title>
       <link>http://study.tczhong.com/post/tech/python%E7%9A%84%E5%BD%A9%E8%9B%8B/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/post/tech/python%E7%9A%84%E5%BD%A9%E8%9B%8B/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://badge.tczhong.com/total.svg?repo_id=cczhong11.python&#34; alt=&#34;Total visitor&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;复活节要到了，美国人有找彩蛋的习俗。我们生活中很多游戏、电影都会隐藏一些东西作为彩蛋，《头号玩家》是一部对于彩蛋文化很好的电影。其实我们天天使用的python也有一个彩蛋。&lt;/p&gt;&#xA;&lt;p&gt;当你在python的命令行里敲出 &lt;code&gt;import this&lt;/code&gt;,  会出现什么？在正常情况下，这个命令是引入一个包，然后就可以利用包里的函数，但是这个特殊的包会打印出&lt;a href=&#34;https://zh.wikipedia.org/wiki/Python%E4%B9%8B%E7%A6%85&#34;&gt;python之禅&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ python&#xA;Python 3.7.3 (default, Mar 27 2019, 16:54:48) &#xA;[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin&#xA;Type &amp;#34;help&amp;#34;, &amp;#34;copyright&amp;#34;, &amp;#34;credits&amp;#34; or &amp;#34;license&amp;#34; for more information.&#xA;&amp;gt;&amp;gt;&amp;gt; import this&#xA;The Zen of Python, by Tim Peters&#xA;&#xA;Beautiful is better than ugly.&#xA;Explicit is better than implicit.&#xA;Simple is better than complex.&#xA;Complex is better than complicated.&#xA;Flat is better than nested.&#xA;Sparse is better than dense.&#xA;Readability counts.&#xA;Special cases aren&amp;#39;t special enough to break the rules.&#xA;Although practicality beats purity.&#xA;Errors should never pass silently.&#xA;Unless explicitly silenced.&#xA;In the face of ambiguity, refuse the temptation to guess.&#xA;There should be one-- and preferably only one --obvious way to do it.&#xA;Although that way may not be obvious at first unless you&amp;#39;re Dutch.&#xA;Now is better than never.&#xA;Although never is often better than *right* now.&#xA;If the implementation is hard to explain, it&amp;#39;s a bad idea.&#xA;If the implementation is easy to explain, it may be a good idea.&#xA;Namespaces are one honking great idea -- let&amp;#39;s do more of those!&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;虽然我从python2的时代就开始使用python，但之前从来不知道这个彩蛋，当我发现的时候还是惊异不已的。这19条表明了python的设计思路以及在实现遵守的守则。&lt;/p&gt;</description>
+      <description>复活节要到了，美国人有找彩蛋的习俗。我们生活中很多游戏、电影都会隐藏一些东西作为彩蛋，《头号玩家》是一部对于彩蛋文化很好的电影。其实我们天天使用的python也有一个彩蛋。
+当你在python的命令行里敲出 import this, 会出现什么？在正常情况下，这个命令是引入一个包，然后就可以利用包里的函数，但是这个特殊的包会打印出python之禅。
+$ python Python 3.7.3 (default, Mar 27 2019, 16:54:48) [Clang 4.</description>
     </item>
+    
   </channel>
 </rss>
