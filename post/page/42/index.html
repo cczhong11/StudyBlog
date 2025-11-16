@@ -98,6 +98,27 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/algo/stack/" title="Stack算法题的思考">Stack算法题的思考</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2018年9月4日
+        </date>
+        
+        <div class="post-content">
+            Stack 算法题的思考 这类题目也是比较多的，一般比较繁琐。思路类似DFS，不过可以不使用递归实现。
+String 解析类 这类比较多的就是计算器，以及分析括号里的内容。例如解析 3[a]2[bc],这时候就可以在遇到[的时候把之前的东西都压到栈里，之后当遇到]的时候把内容再pop出来。
+对于计算器，如果是后缀表达式的话，可以把结果都压到栈里，遇到运算符再pop出运算。有括号的话还是按括号的方法，主要要注意加法和乘法的区别。
+计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如(1+2)+(3+4), +可以看作是是后一个括号的符号。对于1*2 + 6/3,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/algo/stack/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://study.tczhong.com/post/algo/dp/" title="DP算法题的思考">DP算法题的思考</a>
             </h1>
         </header>
@@ -309,31 +330,6 @@ sb.append(String str) sb.toString() 组合问题 这类问题就是需要得到�
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%86%99%E4%BD%9C/" title="文档写作">文档写作</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2015年7月28日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0'>学习</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            技术文档写作 1. 思想的组织 1.1 金字塔原理 结论先行：一篇文章只支持一个中心思想，这个中心思想将概括各级各组的所有观点，必须放在文章最开头。 以上统下： 上一层级的观点必须是对下一层级观点的概括，下一层级的观点是对上一层级观点的解释、支持。 归类分组：把具有共同点的观点归类分组，同一组中的观点都必须属于同一个范畴。 逻辑递进：每组中的观点都必须按照逻辑顺序进行组织。 1.……
-        </div>
-        <p class="readmore"><a href="http://study.tczhong.com/post/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%86%99%E4%BD%9C/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -387,7 +383,20 @@ sb.append(String str) sb.toString() 组合问题 这类问题就是需要得到�
         </li>
         
     
+        
+        
+        <li >
+            <a href="http://study.tczhong.com/post/page/43/">43</a>
+        </li>
+        
+    
 
+    
+    
+
+    <li class="next">
+        <a href="http://study.tczhong.com/post/page/43/">下一页</a>
+    </li>
     
 </ol>
 
@@ -411,6 +420,10 @@ sb.append(String str) sb.toString() 组合问题 这类问题就是需要得到�
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
 <ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/movie/%E5%88%9D%E5%90%BB/" title="《初吻》影评 ">《初吻》影评 </a>
+    </li>
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_254/" title="TC分享第 254 期">TC分享第 254 期</a>
@@ -448,10 +461,6 @@ sb.append(String str) sb.toString() 组合问题 这类问题就是需要得到�
         <a href="http://study.tczhong.com/post/sharing/tcsharing_249/" title="TC分享第 249 期">TC分享第 249 期</a>
     </li>
     
-    <li>
-        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E5%9B%BD%E5%AF%8C%E8%AE%BA3/" title="读书推荐--《国富论》3">读书推荐--《国富论》3</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -469,7 +478,7 @@ sb.append(String str) sb.toString() 组合问题 这类问题就是需要得到�
     
     <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
     
-    <li><a href="http://study.tczhong.com/categories/%E7%94%B5%E5%BD%B1%E6%8E%A8%E8%8D%90/">电影推荐 (6)</a></li>
+    <li><a href="http://study.tczhong.com/categories/%E7%94%B5%E5%BD%B1%E6%8E%A8%E8%8D%90/">电影推荐 (7)</a></li>
     
     <li><a href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/">程序员 (3)</a></li>
     
