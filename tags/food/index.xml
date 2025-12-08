@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Food on Learn More</title>
+    <title>food on Learn More</title>
     <link>http://study.tczhong.com/tags/food/</link>
-    <description>Recent content in Food on Learn More</description>
-    <generator>Hugo</generator>
+    <description>Recent content in food on Learn More</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://study.tczhong.com/tags/food/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Apr 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/tags/food/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何吃饭</title>
       <link>http://study.tczhong.com/post/%E8%86%B3%E9%A3%9F%E8%90%A5%E5%85%BB%E6%8C%87%E5%AF%BC/</link>
       <pubDate>Thu, 28 Apr 2016 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/post/%E8%86%B3%E9%A3%9F%E8%90%A5%E5%85%BB%E6%8C%87%E5%AF%BC/</guid>
-      <description>&lt;h1 id=&#34;营养的种类&#34;&gt;营养的种类&lt;/h1&gt;&#xA;&lt;h2 id=&#34;营养的意义&#34;&gt;营养的意义&lt;/h2&gt;&#xA;&lt;p&gt;营养素在人体内的功能主要分为3个方面：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;供给能量和维持体温&lt;/li&gt;&#xA;&lt;li&gt;作为“建筑”材料构成和修补身体组织&lt;/li&gt;&#xA;&lt;li&gt;作为调节物质，维持机体的正常生命活动，如同机器中的润滑油一样&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;人体所需能量和营养素&#34;&gt;人体所需能量和营养素&lt;/h2&gt;&#xA;&lt;h3 id=&#34;能量&#34;&gt;能量&lt;/h3&gt;&#xA;&lt;p&gt;能量是维持人生命活动必不可少的部分，单位一般为千卡或千焦。1kcal=4.184kJ. 能量的消耗主要由以下4个方面&lt;/p&gt;</description>
+      <description>营养的种类 营养的意义 营养素在人体内的功能主要分为3个方面：
+供给能量和维持体温 作为“建筑”材料构成和修补身体组织 作为调节物质，维持机体的正常生命活动，如同机器中的润滑油一样 人体所需能量和营养素 能量 能量是维持人生命活动必不可少的部分，单位一般为千卡或千焦。1kcal=4.184kJ. 能量的消耗主要由以下4个方面</description>
     </item>
+    
   </channel>
 </rss>

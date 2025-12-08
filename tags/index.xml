@@ -4,254 +4,323 @@
     <title>Tags on Learn More</title>
     <link>http://study.tczhong.com/tags/</link>
     <description>Recent content in Tags on Learn More</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Nov 2025 15:33:33 -0800</lastBuildDate>
-    <atom:link href="http://study.tczhong.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Dec 2025 21:17:11 -0800</lastBuildDate><atom:link href="http://study.tczhong.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Weekly</title>
+      <title>weekly</title>
       <link>http://study.tczhong.com/tags/weekly/</link>
-      <pubDate>Sun, 30 Nov 2025 15:33:33 -0800</pubDate>
+      <pubDate>Sun, 07 Dec 2025 21:17:11 -0800</pubDate>
+      
       <guid>http://study.tczhong.com/tags/weekly/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Movie</title>
+      <title>movie</title>
       <link>http://study.tczhong.com/tags/movie/</link>
       <pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/movie/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Book</title>
+      <title>book</title>
       <link>http://study.tczhong.com/tags/book/</link>
       <pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/book/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>History</title>
+      <title>history</title>
       <link>http://study.tczhong.com/tags/history/</link>
       <pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/history/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Gemini</title>
+      <title>gemini</title>
       <link>http://study.tczhong.com/tags/gemini/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/gemini/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Money</title>
+      <title>money</title>
       <link>http://study.tczhong.com/tags/money/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/money/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Growth</title>
+      <title>growth</title>
       <link>http://study.tczhong.com/tags/growth/</link>
       <pubDate>Sat, 28 Jun 2025 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/growth/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Life</title>
+      <title>life</title>
       <link>http://study.tczhong.com/tags/life/</link>
       <pubDate>Sat, 28 Jun 2025 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/life/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Health</title>
+      <title>health</title>
       <link>http://study.tczhong.com/tags/health/</link>
       <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/health/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Ai</title>
+      <title>ai</title>
       <link>http://study.tczhong.com/tags/ai/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/ai/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Politics</title>
+      <title>politics</title>
       <link>http://study.tczhong.com/tags/politics/</link>
       <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/politics/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Happiness</title>
+      <title>happiness</title>
       <link>http://study.tczhong.com/tags/happiness/</link>
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/happiness/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Love</title>
+      <title>love</title>
       <link>http://study.tczhong.com/tags/love/</link>
       <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/love/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Tech</title>
+      <title>tech</title>
       <link>http://study.tczhong.com/tags/tech/</link>
       <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/tech/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Auto</title>
+      <title>auto</title>
       <link>http://study.tczhong.com/tags/auto/</link>
       <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/auto/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Google</title>
+      <title>google</title>
       <link>http://study.tczhong.com/tags/google/</link>
       <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/google/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Development</title>
+      <title>development</title>
       <link>http://study.tczhong.com/tags/development/</link>
       <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/development/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Vscode</title>
+      <title>vscode</title>
       <link>http://study.tczhong.com/tags/vscode/</link>
       <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/vscode/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Cooking</title>
+      <title>cooking</title>
       <link>http://study.tczhong.com/tags/cooking/</link>
       <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/cooking/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Fun</title>
+      <title>fun</title>
       <link>http://study.tczhong.com/tags/fun/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/fun/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Python</title>
+      <title>python</title>
       <link>http://study.tczhong.com/tags/python/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/python/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Android</title>
       <link>http://study.tczhong.com/tags/android/</link>
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/android/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Wechat</title>
+      <title>wechat</title>
       <link>http://study.tczhong.com/tags/wechat/</link>
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/wechat/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Bit</title>
+      <title>bit</title>
       <link>http://study.tczhong.com/tags/bit/</link>
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/bit/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Leetcode</title>
+      <title>leetcode</title>
       <link>http://study.tczhong.com/tags/leetcode/</link>
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/leetcode/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Dp</title>
+      <title>dp</title>
       <link>http://study.tczhong.com/tags/dp/</link>
       <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/dp/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Stack</title>
+      <title>stack</title>
       <link>http://study.tczhong.com/tags/stack/</link>
       <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/stack/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Graph</title>
+      <title>graph</title>
       <link>http://study.tczhong.com/tags/graph/</link>
       <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/graph/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Array</title>
+      <title>array</title>
       <link>http://study.tczhong.com/tags/array/</link>
       <pubDate>Fri, 24 Aug 2018 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/array/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>String</title>
+      <title>string</title>
       <link>http://study.tczhong.com/tags/string/</link>
       <pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/string/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Tree</title>
+      <title>tree</title>
       <link>http://study.tczhong.com/tags/tree/</link>
       <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/tree/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Study</title>
+      <title>study</title>
       <link>http://study.tczhong.com/tags/study/</link>
       <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/study/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Time</title>
+      <title>time</title>
       <link>http://study.tczhong.com/tags/time/</link>
       <pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/time/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Food</title>
+      <title>food</title>
       <link>http://study.tczhong.com/tags/food/</link>
       <pubDate>Thu, 28 Apr 2016 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/food/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Documentation</title>
+      <title>documentation</title>
       <link>http://study.tczhong.com/tags/documentation/</link>
       <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/tags/documentation/</guid>
       <description></description>
     </item>
+    
   </channel>
 </rss>

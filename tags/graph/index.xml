@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Graph on Learn More</title>
+    <title>graph on Learn More</title>
     <link>http://study.tczhong.com/tags/graph/</link>
-    <description>Recent content in Graph on Learn More</description>
-    <generator>Hugo</generator>
+    <description>Recent content in graph on Learn More</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Aug 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://study.tczhong.com/tags/graph/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/tags/graph/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Graph算法题的思考</title>
       <link>http://study.tczhong.com/post/algo/graph/</link>
       <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
+      
       <guid>http://study.tczhong.com/post/algo/graph/</guid>
-      <description>&lt;h1 id=&#34;graph-算法题目思考&#34;&gt;graph 算法题目思考&lt;/h1&gt;&#xA;&lt;p&gt;Graph算是非常常见的题目，一般会给你一个2d array或一个数组代表联系，你可以使用这个输入来转换成一个图表示的数据结构，之后在图里做搜索。常见的算法：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;BFS，DFS&lt;/li&gt;&#xA;&lt;li&gt;union find&lt;/li&gt;&#xA;&lt;li&gt;A*&lt;/li&gt;&#xA;&lt;li&gt;Floyd and dijkstra&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Leetcode里的题目的话主要都是dfs, bfs就可以解决，有些需要思考几个之间的关系的题目可以使用union find来做。少部分计算路径的题目需要使用一些基本的最短路径算法。&lt;/p&gt;</description>
+      <description>graph 算法题目思考 Graph算是非常常见的题目，一般会给你一个2d array或一个数组代表联系，你可以使用这个输入来转换成一个图表示的数据结构，之后在图里做搜索。常见的算法：
+BFS，DFS union find A* Floyd and dijkstra Leetcode里的题目的话主要都是dfs, bfs就可以解决，有些需要思考几个之间的关系的题目可以使用union find来做。少部分计算路径的题目需要使用一些基本的最短路径算法。</description>
     </item>
+    
   </channel>
 </rss>
