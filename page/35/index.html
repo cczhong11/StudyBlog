@@ -96,6 +96,82 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B412--%E5%B1%80%E9%83%A8%E4%BA%92%E5%8A%A8%E6%A8%A1%E5%9E%8B/" title="模型思维(12)--局部互动模型">模型思维(12)--局部互动模型</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月25日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            在这一篇我们研究局部和整体相关的模型。当局部一致的时候，整体就会表现出一致吗？我们通过这篇的研究可以对于该问题进行很好的解释。
+局部多数模型 这个模型建立在一个单元格的二维棋盘上，每个单元格有两种状态，0或1。初始时，我们将给每个单元格随机分配初始状态，之后每一个单元格的状态取决于其周围单元格的状态。在一个单元格周围的8个单元格中，有5个及以上的单元格是与之相反的状态时，这个单元格就会改变自己的状态。
+下图展现了一个局部多数模型的均衡状态。虽然均衡状态取决于各个单元格的初始分布，但是对于初始条件并不敏感，改变一个单元格的初始状态导致的最终均衡状态改变的变化很小。
+我们可以利用这个模型来刻画人与人之间的局部协调或一致性。假设每一个单元格都代表一个人的行动。这里的行动可以是任何行为惯例，例如握手或鞠躬，打断或举手。任何一个人都想选择一个与邻居相匹配的行动。棋盘代表社交网络。如果在计算机上对这个模型进行模拟，就会发现它总是能实现斑块状的均衡配置。许多单元格在1的状态下有一些邻居，在0的状态下也有一些邻居。
+在斑块的交界处出现了次优均衡，如果1对应于以握手的方式表示欢迎、0对应于以鞠躬的方式表示欢迎，那么位于“斑块”边界上的人在与他们的邻居互动时可能会碰到一些尴尬的情况：当其他人准备握手时他们却准备鞠躬，或者当其他人准备鞠躬时他们却准备握手。如果每个人都选择了相同的动作，也就是说，如果他们解决了协调博弈问题，那么从整体上看，所有人都会更加开心。由于这种互动只作用于局部，因此出现了次优均衡。如果单元格是根据全局多数原则来匹配的，那么很快所有单元格都会处于相同的状态。这种观点意味着，创建共同行为可能需要影响更加广泛的网络。如果人们只在局部与自己的邻居协调，他们就会创造出各种各样的行为。因此矛盾的是，恰恰与协调产生了多样性。
+生命游戏 这是一个很有意思的模型，有以下的规则：
+方格上的每个单元格都或者是活的（1）或者是死的（0）。每个单元格的邻居由网格上的8个相邻单元格组成。单元格根据如下两个规则同步更新自己的状态：
+活的规则：对于一个死单元格，当恰好有三个活的邻居时，这个死单元格就会变活。 死的规则：对一个活单元格，当活的邻居小于两个时或当有三个以上的活邻居死去时，这个活单元格就会死去。 根据这个规则可以得到一个简单的闪光灯均衡状态：……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B412--%E5%B1%80%E9%83%A8%E4%BA%92%E5%8A%A8%E6%A8%A1%E5%9E%8B/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/sharing/sharing_55/" title="每周分享第 55 期">每周分享第 55 期</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月21日
+        </date>
+        
+        <div class="post-content">
+            每周分享第 55 期 2020 week 25
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+疫情在全球各国都出现了反复，只要人们一放开隔离，感染率就会上升，真是防不胜防啊。。。
+国内新闻 北京疫情 【1】丰台区副区长周宇清、丰台区花乡党委书记王华被免职，新发地农产品批发市场总经理张月琳被责令免职……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/sharing/sharing_55/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B411--%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96/" title="模型思维(11)--路径依赖">模型思维(11)--路径依赖</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月18日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            上一篇我们讲到随机走动，这一篇我们将继续延伸这个话题。如果每次的行动与之前的行为结果相关，我们就可以得到路径依赖模型。在生活中，我们穿的衣服、读的书、看的电影，以及任何需要我们付出时间的活动，都可以应用路径依赖来分析。
+波利亚过程 我们利用波利亚过程来刻画正反馈的效应。这里我们依旧使用从瓮里取白球和灰球的实验。一只瓮里面装着一个白球和一个灰球。每一周期，都随机抽取出一个球并将这个球与和它颜色相同的另一个球一起放回到瓮中。抽取出来的球的颜色表示结果。
+波利亚过程可以用来刻画各种社会和经济现象。一个人选择学习打网球，还是打篮球，可能取决于其他人的选择。如果更多的朋友选择学习打网球，那么这个人就更有可能也选择学习打网球，因为这会增加他找到伙伴打比赛的机会。与此类似，一个人决定购买什么类型的软件、学习哪种语言或购买哪款智能手机，也可能取决于他的朋友以前做出的选择。
+波利亚过程可以得到两个性质：
+具有相同数量的白色结果的任何序列都会以相同的概率发生 P(GWWW) = P(WWWG) 白球和灰球的每个分布都以相同的概率发生 P(白球出现1次) = P(白球出现n次) 第二个性质就可以说明极端情况的可能性，白球只出现1%和白球出现50%的可能性是一样的。我们可以通过实验这个结果，初始只有两个球，之后进行100次抽取，统计其中白球的数量。将此实验重复10000次，理论上每一种白球的分布出现次数在100次左右。结果如图，发现每一种可能都是在100次的上下波动。……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B411--%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://study.tczhong.com/post/sharing/sharing_54/" title="每周分享第 54 期">每周分享第 54 期</a>
             </h1>
         </header>
@@ -241,82 +317,6 @@ $$ I_{t+1} = I_t + P_{broad} \times S_t$$……
         <p class="readmore"><a href="http://study.tczhong.com/post/sharing/sharing_51/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B47--%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="模型思维(7)--网络模型">模型思维(7)--网络模型</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月20日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            生活中处处有网络模型的存在，从传染病的传播到网络中站点连接，都可以抽象成一张张网络，将不同的节点连接起来。这篇将走进网络的基本结构，帮助大家理解一些生活中的现象。
-网络的基本术语 网络是由节点和边组成的。每一个节点都可以通过边的连接到达另一个节点，这两个节点互为邻居。如果从一个节点可以到任意一个节点，我们称之为连接的网络。
-在无向网络中，我们对于每个节点的连接数可以定义为节点的度（degree)。度分布可以告诉我们某个节点是不是比其他的节点连接的更多。
-路径长度是指两个节点中的最短路径长度，与度成反比。当增加边的时候，就缩短了节点之间的平均长度。介数是指通过该节点的最小路径的百分比。在社交网络中，介数得分高的人掌握更多信息并且拥有更多权力。
-最后一个基本术语是聚类系数，这个统计了一个节点的邻居们互相连接的比例。例如，一个人有10个朋友，这些朋友可以组成45个对。如果在这45个对当中，有15个对本身也是朋友，那么这个人的聚类系数就等于1/3。如果所有这45对都是朋友，那么这个人的聚类系数就等于1，这也是最大的聚类系数。整个网络的聚类系数等于各个节点聚类系数的平均值。
-下面用中心辐射网络和地理网络举个例子：
-中心辐射网络是所有节点和中心节点相连，但是都不互相连接。其基本的统计术语也比较好理解。
-地理网络是每个节点都连接到位于它右侧和左侧的两个节点。每个节点具有相同的度，都是4。由于网络是对称的，所以每一个节点的介数也是相同的。这里一共12个节点，可以组成 12*11/2 = 66 个邻居对。其中一个节点是有6对邻居经过其是最短路径，所以介数是1/12。每个节点都有4个邻居，可以构成6个对。在这6个对中，恰好有3对是相互连接的：直接靠着该节点的左右两个节点分别连接到再外一点的节点，并相互连接。因此，聚类系数等于1/2。……
-        </div>
-        <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B47--%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/sharing/sharing_50/" title="每周分享第 50 期">每周分享第 50 期</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月17日
-        </date>
-        
-        <div class="post-content">
-            每周分享第 50 期 2020 week 20
-你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
-国内新闻 国家政策 【1】教育部印发#义务教育超标超前培训负面清单#：#不得对一二年级学生培训英语书写#……
-        </div>
-        <p class="readmore"><a href="http://study.tczhong.com/post/sharing/sharing_50/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B46--%E5%90%88%E4%BD%9C%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/" title="模型思维(6)--合作博弈模型">模型思维(6)--合作博弈模型</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月13日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            当人们在进行合作的时候，我们需要对于每个人的贡献进行分析，从而知道哪一个人对于群体的贡献最大，哪一个最小，以此可以作为分配奖励的标准。然而量化分析这个并不容易，因为当不同人组合在一起时，可能就会产生不同的结果。我们介绍几个与此相关的概念来解决这个问题。
-合作博弈 合作博弈由一组博弈参与者和一个价值函数组成。价值函数是指在一项多人合作的项目中，每个可能的联盟（子集）所产生的价值。
-在合作博弈中，一个参与者的”最后上车者价值“ （last-on-bus-value）是指当他最后一个加入组织所产生的价值。例如，如果一个桌子四个人才能搬动，搬动的价值是10，那么这四个人每个人的最后上车者价值就是10。如果三个人可以搬动，那个第四个人的最后上车者价值就是0。我们可以看出博弈的总价值不是所有参与者的最后上车者价值之和，如果当价值随着参与者增多递减时，最后上车者价值的总和将小于博弈的总价值。
-最后上车者价值并不能很好的刻画每个人的贡献度，夏普利值（Shapley value）则可以。一个博弈参与者的夏普利值，等于他在所有可能加入的联盟的次序下对联盟边际贡献的平均值。对于一个$N$个人参与的博弈,一个有$N!$种可能加入的结果，对于某个参与者$i$, 计算在所有次序中当其加入对于整体的边际贡献的平均值。
-我们可以用3个程序员合作写代码作为一例子，一个项目有500行需要写。以下是一个人单独做，两个人合作，以及三个人合作产生的结果。其中C可以看作程序员鼓励师，当一个做的时候结果不多，但是合作时可以大大提高两人的合作成果。
-合作 价值 A 100 B 125 C 50 AB 270 BC 350 AC 375 ABC 500 3个人合作的话有6种可能……
-        </div>
-        <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B46--%E5%90%88%E4%BD%9C%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -394,7 +394,7 @@ $$ I_{t+1} = I_t + P_{broad} \times S_t$$……
         
         
         <li >
-            <a href="http://study.tczhong.com/page/43/">43</a>
+            <a href="http://study.tczhong.com/page/44/">44</a>
         </li>
         
     
@@ -430,6 +430,18 @@ $$ I_{t+1} = I_t + P_{broad} \times S_t$$……
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_263/" title="TC分享第 263 期">TC分享第 263 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_2631/" title="TC分享第 263 期">TC分享第 263 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_262/" title="TC分享第 262 期">TC分享第 262 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_261/" title="TC分享第 261 期">TC分享第 261 期</a>
     </li>
     
@@ -455,18 +467,6 @@ $$ I_{t+1} = I_t + P_{broad} \times S_t$$……
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_255/" title="TC分享第 255 期">TC分享第 255 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/movie/%E5%88%9D%E5%90%BB/" title="《初吻》影评 ">《初吻》影评 </a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_254/" title="TC分享第 254 期">TC分享第 254 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_253/" title="TC分享第 253 期">TC分享第 253 期</a>
     </li>
     
 </ul>
@@ -586,7 +586,7 @@ $$ I_{t+1} = I_t + P_{broad} \times S_t$$……
     </div>
     <footer id="footer">
     <div class="container">
-      &copy; 2025 <a rel="nofollow" href="http://study.tczhong.com/">Learn More</a>.
+      &copy; 2026 <a rel="nofollow" href="http://study.tczhong.com/">Learn More</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io">Hugo</a> &amp; <a rel="nofollow noreferer noopener" href="https://github.com/JokerQyou/maupassant-hugo">maupassant theme</a>.
     </div>
 </footer>

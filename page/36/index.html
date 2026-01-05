@@ -96,6 +96,82 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B47--%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="模型思维(7)--网络模型">模型思维(7)--网络模型</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月20日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            生活中处处有网络模型的存在，从传染病的传播到网络中站点连接，都可以抽象成一张张网络，将不同的节点连接起来。这篇将走进网络的基本结构，帮助大家理解一些生活中的现象。
+网络的基本术语 网络是由节点和边组成的。每一个节点都可以通过边的连接到达另一个节点，这两个节点互为邻居。如果从一个节点可以到任意一个节点，我们称之为连接的网络。
+在无向网络中，我们对于每个节点的连接数可以定义为节点的度（degree)。度分布可以告诉我们某个节点是不是比其他的节点连接的更多。
+路径长度是指两个节点中的最短路径长度，与度成反比。当增加边的时候，就缩短了节点之间的平均长度。介数是指通过该节点的最小路径的百分比。在社交网络中，介数得分高的人掌握更多信息并且拥有更多权力。
+最后一个基本术语是聚类系数，这个统计了一个节点的邻居们互相连接的比例。例如，一个人有10个朋友，这些朋友可以组成45个对。如果在这45个对当中，有15个对本身也是朋友，那么这个人的聚类系数就等于1/3。如果所有这45对都是朋友，那么这个人的聚类系数就等于1，这也是最大的聚类系数。整个网络的聚类系数等于各个节点聚类系数的平均值。
+下面用中心辐射网络和地理网络举个例子：
+中心辐射网络是所有节点和中心节点相连，但是都不互相连接。其基本的统计术语也比较好理解。
+地理网络是每个节点都连接到位于它右侧和左侧的两个节点。每个节点具有相同的度，都是4。由于网络是对称的，所以每一个节点的介数也是相同的。这里一共12个节点，可以组成 12*11/2 = 66 个邻居对。其中一个节点是有6对邻居经过其是最短路径，所以介数是1/12。每个节点都有4个邻居，可以构成6个对。在这6个对中，恰好有3对是相互连接的：直接靠着该节点的左右两个节点分别连接到再外一点的节点，并相互连接。因此，聚类系数等于1/2。……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B47--%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/sharing/sharing_50/" title="每周分享第 50 期">每周分享第 50 期</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月17日
+        </date>
+        
+        <div class="post-content">
+            每周分享第 50 期 2020 week 20
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+国内新闻 国家政策 【1】教育部印发#义务教育超标超前培训负面清单#：#不得对一二年级学生培训英语书写#……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/sharing/sharing_50/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B46--%E5%90%88%E4%BD%9C%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/" title="模型思维(6)--合作博弈模型">模型思维(6)--合作博弈模型</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月13日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            当人们在进行合作的时候，我们需要对于每个人的贡献进行分析，从而知道哪一个人对于群体的贡献最大，哪一个最小，以此可以作为分配奖励的标准。然而量化分析这个并不容易，因为当不同人组合在一起时，可能就会产生不同的结果。我们介绍几个与此相关的概念来解决这个问题。
+合作博弈 合作博弈由一组博弈参与者和一个价值函数组成。价值函数是指在一项多人合作的项目中，每个可能的联盟（子集）所产生的价值。
+在合作博弈中，一个参与者的”最后上车者价值“ （last-on-bus-value）是指当他最后一个加入组织所产生的价值。例如，如果一个桌子四个人才能搬动，搬动的价值是10，那么这四个人每个人的最后上车者价值就是10。如果三个人可以搬动，那个第四个人的最后上车者价值就是0。我们可以看出博弈的总价值不是所有参与者的最后上车者价值之和，如果当价值随着参与者增多递减时，最后上车者价值的总和将小于博弈的总价值。
+最后上车者价值并不能很好的刻画每个人的贡献度，夏普利值（Shapley value）则可以。一个博弈参与者的夏普利值，等于他在所有可能加入的联盟的次序下对联盟边际贡献的平均值。对于一个$N$个人参与的博弈,一个有$N!$种可能加入的结果，对于某个参与者$i$, 计算在所有次序中当其加入对于整体的边际贡献的平均值。
+我们可以用3个程序员合作写代码作为一例子，一个项目有500行需要写。以下是一个人单独做，两个人合作，以及三个人合作产生的结果。其中C可以看作程序员鼓励师，当一个做的时候结果不多，但是合作时可以大大提高两人的合作成果。
+合作 价值 A 100 B 125 C 50 AB 270 BC 350 AC 375 ABC 500 3个人合作的话有6种可能……
+        </div>
+        <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B46--%E5%90%88%E4%BD%9C%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://study.tczhong.com/post/sharing/sharing_49/" title="每周分享第 49 期">每周分享第 49 期</a>
             </h1>
         </header>
@@ -255,77 +331,6 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
         <p class="readmore"><a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90--%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B43--%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83/" title="模型思维(3)--幂律分布">模型思维(3)--幂律分布</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月22日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            这一篇讨论的是幂律分布(power law distribution)。这个分布在生活中十分常见，如果当我们发现会出现一些极端的情况，视频下载量、书籍销量、学术论文引用数量、战争中的伤亡人数、洪水和地震等等，这就是幂律分布。而这些极端情况就在这长长的尾巴里，也被称为长尾分布。
-幂律分布的定义 在正态分布里，我们要求事件是互相独立的，而在幂律分布中，事件则不是互相独立的，而且通常是以正反馈的形式出现的。当一件事情发生之后，也会更频繁地发生类似的事情。
-我们可以用数学公式来定义幂律分布。事件发生的概率与事件大小的负指数成比例。事件越大，发生的可能性越小。
-一个定义在区间 $[x_{min}, \infty]$ 的幂律分布可以写成:……
-        </div>
-        <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B43--%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/sharing/sharing_46/" title="每周分享第 46 期">每周分享第 46 期</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月19日
-        </date>
-        
-        <div class="post-content">
-            每周分享第 46 期 2020 week 16
-你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
-国内新闻 国内政策 【1】国家卫生健康委：将分餐制形成制度推广……
-        </div>
-        <p class="readmore"><a href="http://study.tczhong.com/post/sharing/sharing_46/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B42--%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/" title="模型思维（2）-- 正态分布">模型思维（2）-- 正态分布</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月13日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4'>模型思维</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            这个图片展示了不同的平均值和方差的正态分布，这可以说是生活中最常见的模型了。很多地方都可以看到正态分布的影子，例如大多数生物的高度和重量都可以看到正态分布。那么为什么会出现正态分布呢？在什么情况下可以把分布看作正态分布呢？正态分布有什么应用？这篇文章将回答这些问题。
-为什么存在正态分布 这里首先需要提到中心极限定理：
-在适当的条件下，大量相互独立随机变量的均值经适当标准化后分布收敛于正态分布.
-这里用抛硬币的例子来说明这个问题，每次抛硬币是独立同分布的。如果连续抛10000次硬币，每次抛硬币的正反概率都是1/2，之后计算出现正面的概率。重复做这个实验很多次，得到的正面结果的分布就是一个正态分布。
-中心极限定理的特殊之处在于不管每个独立事件的分布如何，最后都是成立的。经研究发现，当 N &gt; 20 的时候，这些独立事件的均值就服从正态分布。因为N是固定的，所以也可以看作这些独立事件的和是正态分布的。……
-        </div>
-        <p class="readmore"><a href="http://study.tczhong.com/post/model_thinking/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B42--%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -403,7 +408,7 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
         
         
         <li >
-            <a href="http://study.tczhong.com/page/43/">43</a>
+            <a href="http://study.tczhong.com/page/44/">44</a>
         </li>
         
     
@@ -439,6 +444,18 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
 <ul class="widget-list">
     
     <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_263/" title="TC分享第 263 期">TC分享第 263 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_2631/" title="TC分享第 263 期">TC分享第 263 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_262/" title="TC分享第 262 期">TC分享第 262 期</a>
+    </li>
+    
+    <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_261/" title="TC分享第 261 期">TC分享第 261 期</a>
     </li>
     
@@ -464,18 +481,6 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
     
     <li>
         <a href="http://study.tczhong.com/post/sharing/tcsharing_255/" title="TC分享第 255 期">TC分享第 255 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/movie/%E5%88%9D%E5%90%BB/" title="《初吻》影评 ">《初吻》影评 </a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_254/" title="TC分享第 254 期">TC分享第 254 期</a>
-    </li>
-    
-    <li>
-        <a href="http://study.tczhong.com/post/sharing/tcsharing_253/" title="TC分享第 253 期">TC分享第 253 期</a>
     </li>
     
 </ul>
@@ -595,7 +600,7 @@ AT&amp;T虽然现在只是一个电信运行商，但是他的历史可以追溯
     </div>
     <footer id="footer">
     <div class="container">
-      &copy; 2025 <a rel="nofollow" href="http://study.tczhong.com/">Learn More</a>.
+      &copy; 2026 <a rel="nofollow" href="http://study.tczhong.com/">Learn More</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io">Hugo</a> &amp; <a rel="nofollow noreferer noopener" href="https://github.com/JokerQyou/maupassant-hugo">maupassant theme</a>.
     </div>
 </footer>
