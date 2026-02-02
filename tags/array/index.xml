@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>array on Learn More</title>
+    <title>Array on Learn More</title>
     <link>http://study.tczhong.com/tags/array/</link>
-    <description>Recent content in array on Learn More</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Array on Learn More</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/tags/array/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://study.tczhong.com/tags/array/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Array算法题的思考</title>
       <link>http://study.tczhong.com/post/algo/array/</link>
       <pubDate>Fri, 24 Aug 2018 00:00:00 +0000</pubDate>
-      
       <guid>http://study.tczhong.com/post/algo/array/</guid>
-      <description>Array 算法题的思考 数组类的算法是在我做的题目中是最多的，相对来说也是最好理解的它也可以包罗万象，使用各种各样的算法。用数组可以实现很多基本的数据结构。比如heap。所以这部分需要好好掌握。
-SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说求最大的K个数，这种题目一般都是使用基本的快速排序思想。也就是说，我们把这个数组分成两部分，一部分是比当前这个数字大的，另外一部分是比这个当前数字小的，这样我们可以快速的把一个array分成两部分，然后再分别对这两部分进行处理。
-如果只是需要移动一些数字，比如说移动零或者整个数组只有三个数，那么可以用一些更简单思想，比如说记录下所有非0的数，或者记录下这些数字的个数，然后把前面全换成这些非0数，后面换成零。这样做的好处就是不需要交换。或者一个记录非0的地方，另外一个记录当前位置，如果这个不是零，那么就遇上一个非0的东西交换。所以总体思路都是双指针的思想，一个记录当前遍历的位置，另外一个记录上一次符合条件的位置。
-27. Remove Element 75. Sort Colors 283.</description>
+      <description>&lt;h1 id=&#34;array-算法题的思考&#34;&gt;Array 算法题的思考&lt;/h1&gt;&#xA;&lt;p&gt;数组类的算法是在我做的题目中是最多的，相对来说也是最好理解的它也可以包罗万象，使用各种各样的算法。用数组可以实现很多基本的数据结构。比如heap。所以这部分需要好好掌握。&lt;/p&gt;&#xA;&lt;h2 id=&#34;swap&#34;&gt;SWAP&lt;/h2&gt;&#xA;&lt;p&gt;需要应用到数组元素交换是一类非常常见的题目，比如说求最大的K个数，这种题目一般都是使用基本的快速排序思想。也就是说，我们把这个数组分成两部分，一部分是比当前这个数字大的，另外一部分是比这个当前数字小的，这样我们可以快速的把一个array分成两部分，然后再分别对这两部分进行处理。&lt;/p&gt;&#xA;&lt;p&gt;如果只是需要移动一些数字，比如说移动零或者整个数组只有三个数，那么可以用一些更简单思想，比如说记录下所有非0的数，或者记录下这些数字的个数，然后把前面全换成这些非0数，后面换成零。这样做的好处就是不需要交换。或者一个记录非0的地方，另外一个记录当前位置，如果这个不是零，那么就遇上一个非0的东西交换。所以总体思路都是双指针的思想，一个记录当前遍历的位置，另外一个记录上一次符合条件的位置。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://leetcode.com/problems/remove-element&#34;&gt;27. Remove Element&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://leetcode.com/problems/sort-colors&#34;&gt;75. Sort Colors&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://leetcode.com/problems/move-zeroes&#34;&gt;283. Move Zeroes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://leetcode.com/problems/kth-largest-element-in-an-array&#34;&gt;215. Kth Largest Element in an Array&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;subarray&#34;&gt;subarray&lt;/h2&gt;&#xA;&lt;p&gt;这又是一大类数组常遇到的题目，比如说求子数组的和，或者判断这个子数组是否符合某些规律等等。与字符串处理substring有异曲同工之妙，一般也都是双指针，如果发现和大于某个值的时候，那么就把起始值增大。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,41 +4,30 @@
     <title>程序员 on Learn More</title>
     <link>http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/</link>
     <description>Recent content in 程序员 on Learn More</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从GoogleSheet同步到GoogleCal</title>
       <link>http://study.tczhong.com/post/tech/%E4%BB%8Egooglesheet%E5%90%8C%E6%AD%A5%E5%88%B0googlecal/</link>
       <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://study.tczhong.com/post/tech/%E4%BB%8Egooglesheet%E5%90%8C%E6%AD%A5%E5%88%B0googlecal/</guid>
-      <description>这篇主要介绍如何Google sheet里批量创建日历项目并同步到Google calendar的方法。
-启发 在本科的时候我就研究了各种办法希望可以快速的创建各种日程，先后尝试过生成csv上传，使用Python API等等，但都比较麻烦。知道了Google sheet可以运行app script就一直想试试。在看了Google官方的博文后，决定实现一下，发现还是比较容易实现的，下面给大家介绍一下。
-Step 1：新建脚本 初始表格如下：</description>
+      <description>&lt;p&gt;这篇主要介绍如何Google sheet里批量创建日历项目并同步到Google calendar的方法。&lt;/p&gt;&#xA;&lt;h2 id=&#34;启发&#34;&gt;启发&lt;/h2&gt;&#xA;&lt;p&gt;在本科的时候我就研究了各种办法希望可以快速的创建各种日程，先后尝试过生成csv上传，使用Python API等等，但都比较麻烦。知道了Google sheet可以运行app script就一直想试试。在看了Google官方的&lt;a href=&#34;https://cloud.google.com/blog/products/g-suite/g-suite-pro-tip-how-to-automatically-add-a-schedule-from-google-sheets-into-calendar&#34;&gt;博文&lt;/a&gt;后，决定实现一下，发现还是比较容易实现的，下面给大家介绍一下。&lt;/p&gt;&#xA;&lt;h2 id=&#34;step-1新建脚本&#34;&gt;Step 1：新建脚本&lt;/h2&gt;&#xA;&lt;p&gt;初始表格如下：&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>vscode插件开发</title>
       <link>http://study.tczhong.com/post/tech/vscode%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
       <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://study.tczhong.com/post/tech/vscode%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
-      <description>vscode是我日常所使用的编辑器，包括在写这篇文章的时候。在编辑markdown文档的时候，总会遇到插入图片的问题。所以我就想实现一个简单的vscode插件，在运行时，可以将剪贴板里的图片上传到aws s3上之后把文件的url插入到vscode里。这样在写文章的时候就会提高效率。
-准备工作 首先确认自己的环境有nodejs和npm，之后安装
-yeoman npm install -g yo generator-code npm install -g generator-code 实现 首先运行,创建一个新的项目, 选择typescript，之后回答几个问题，就会新建一个项目。</description>
+      <description>&lt;p&gt;vscode是我日常所使用的编辑器，包括在写这篇文章的时候。在编辑markdown文档的时候，总会遇到插入图片的问题。所以我就想实现一个简单的vscode插件，在运行时，可以将剪贴板里的图片上传到aws s3上之后把文件的url插入到vscode里。这样在写文章的时候就会提高效率。&lt;/p&gt;&#xA;&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;&#xA;&lt;p&gt;首先确认自己的环境有nodejs和npm，之后安装&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;yeoman&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;npm install -g yo&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;generator-code&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;npm install -g generator-code&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;实现&#34;&gt;实现&lt;/h2&gt;&#xA;&lt;p&gt;首先运行,创建一个新的项目, 选择typescript，之后回答几个问题，就会新建一个项目。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>python的彩蛋</title>
       <link>http://study.tczhong.com/post/tech/python%E7%9A%84%E5%BD%A9%E8%9B%8B/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://study.tczhong.com/post/tech/python%E7%9A%84%E5%BD%A9%E8%9B%8B/</guid>
-      <description>复活节要到了，美国人有找彩蛋的习俗。我们生活中很多游戏、电影都会隐藏一些东西作为彩蛋，《头号玩家》是一部对于彩蛋文化很好的电影。其实我们天天使用的python也有一个彩蛋。
-当你在python的命令行里敲出 import this, 会出现什么？在正常情况下，这个命令是引入一个包，然后就可以利用包里的函数，但是这个特殊的包会打印出python之禅。
-$ python Python 3.7.3 (default, Mar 27 2019, 16:54:48) [Clang 4.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://badge.tczhong.com/total.svg?repo_id=cczhong11.python&#34; alt=&#34;Total visitor&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;复活节要到了，美国人有找彩蛋的习俗。我们生活中很多游戏、电影都会隐藏一些东西作为彩蛋，《头号玩家》是一部对于彩蛋文化很好的电影。其实我们天天使用的python也有一个彩蛋。&lt;/p&gt;&#xA;&lt;p&gt;当你在python的命令行里敲出 &lt;code&gt;import this&lt;/code&gt;,  会出现什么？在正常情况下，这个命令是引入一个包，然后就可以利用包里的函数，但是这个特殊的包会打印出&lt;a href=&#34;https://zh.wikipedia.org/wiki/Python%E4%B9%8B%E7%A6%85&#34;&gt;python之禅&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ python&#xA;Python 3.7.3 (default, Mar 27 2019, 16:54:48) &#xA;[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin&#xA;Type &amp;#34;help&amp;#34;, &amp;#34;copyright&amp;#34;, &amp;#34;credits&amp;#34; or &amp;#34;license&amp;#34; for more information.&#xA;&amp;gt;&amp;gt;&amp;gt; import this&#xA;The Zen of Python, by Tim Peters&#xA;&#xA;Beautiful is better than ugly.&#xA;Explicit is better than implicit.&#xA;Simple is better than complex.&#xA;Complex is better than complicated.&#xA;Flat is better than nested.&#xA;Sparse is better than dense.&#xA;Readability counts.&#xA;Special cases aren&amp;#39;t special enough to break the rules.&#xA;Although practicality beats purity.&#xA;Errors should never pass silently.&#xA;Unless explicitly silenced.&#xA;In the face of ambiguity, refuse the temptation to guess.&#xA;There should be one-- and preferably only one --obvious way to do it.&#xA;Although that way may not be obvious at first unless you&amp;#39;re Dutch.&#xA;Now is better than never.&#xA;Although never is often better than *right* now.&#xA;If the implementation is hard to explain, it&amp;#39;s a bad idea.&#xA;If the implementation is easy to explain, it may be a good idea.&#xA;Namespaces are one honking great idea -- let&amp;#39;s do more of those!&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;虽然我从python2的时代就开始使用python，但之前从来不知道这个彩蛋，当我发现的时候还是惊异不已的。这19条表明了python的设计思路以及在实现遵守的守则。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
