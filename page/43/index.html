@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.140.2">
+	<meta name="generator" content="Hugo 0.115.2">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -104,18 +104,9 @@
         </date>
         
         <div class="post-content">
-            <h1 id="链表题目的思考">链表题目的思考</h1>
-<p>链表是一个比较常见的数据结构，但是leetcode里的题目相对来说不多，题目也不是很难。最重要的思想就是递归的思路。对于每一个节点，都可以看作一个链表的起点。</p>
-<h2 id="merge">merge</h2>
-<p>这类题目就是用一个递归函数，参数是两个头指针，得到新的指针之后，其中一个向后，然后再递归调用就可以。sort list就是一个merge sort的思想</p>
-<ul>
-<li><a href="https://leetcode.com/problems/add-two-numbers">2. Add Two Numbers</a></li>
-<li><a href="https://leetcode.com/problems/merge-two-sorted-lists">21. Merge Two Sorted Lists</a></li>
-<li><a href="https://leetcode.com/problems/merge-k-sorted-lists">23. Merge k Sorted Lists</a></li>
-<li><a href="https://leetcode.com/problems/sort-list">148. Sort List</a></li>
-</ul>
-<h2 id="cycle-two-pointers">cycle, two pointers</h2>
-<p>判断有没有环的题目可以使用快慢指针，当两个指针重新相遇的时候可以判断出现环。</p>……
+            链表题目的思考 链表是一个比较常见的数据结构，但是leetcode里的题目相对来说不多，题目也不是很难。最重要的思想就是递归的思路。对于每一个节点，都可以看作一个链表的起点。
+merge 这类题目就是用一个递归函数，参数是两个头指针，得到新的指针之后，其中一个向后，然后再递归调用就可以。sort list就是一个merge sort的思想
+2. Add Two Numbers 21.……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/algo/linkedlist/">阅读全文</a></p>
     </article>
@@ -131,17 +122,8 @@
         </date>
         
         <div class="post-content">
-            <h1 id="interval-算法题目的思考">INTERVAL 算法题目的思考</h1>
-<p>这类题目还是比较常见的。就是给你一些区间，需要你判断重叠之类的。相对来说不难，一些常见的方法是用按start的大小排序，之后end1&lt;start2 就代表有重叠。</p>
-<ul>
-<li><a href="https://leetcode.com/problems/merge-intervals">56. Merge Intervals</a></li>
-<li><a href="https://leetcode.com/problems/insert-interval">57. Insert Interval</a></li>
-<li><a href="https://leetcode.com/problems/find-right-interval">436. Find Right Interval</a></li>
-<li><a href="https://leetcode.com/problems/my-calendar-i">729. My Calendar I</a></li>
-<li><a href="https://leetcode.com/problems/my-calendar-ii">731. My Calendar II</a></li>
-<li><a href="https://leetcode.com/problems/my-calendar-iii">732. My Calendar III</a></li>
-<li><a href="https://leetcode.com/problems/meeting-rooms-ii">253. Meeting Rooms II</a></li>
-</ul>……
+            INTERVAL 算法题目的思考 这类题目还是比较常见的。就是给你一些区间，需要你判断重叠之类的。相对来说不难，一些常见的方法是用按start的大小排序，之后end1&lt;start2 就代表有重叠。
+56. Merge Intervals 57. Insert Interval 436.……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/algo/interval/">阅读全文</a></p>
     </article>
@@ -157,16 +139,9 @@
         </date>
         
         <div class="post-content">
-            <h1 id="dp-算法题目的思考">DP 算法题目的思考</h1>
-<p>dp全称是动态规划，是一类被人又喜欢又讨厌的题目。喜欢是因为找到递推关系之后题目就变得简单了，讨厌的原因是这类题目常常很难想到递推关系。</p>
-<p>dp的核心思想就是把一个复杂的问题分解成简单的子问题，并且可以利用递推的方式来解决。所有dp题目的核心是：</p>
-<ol>
-<li>递推公式 deduction formula</li>
-<li>初始化 initialization</li>
-<li>空间优化 space improvement</li>
-</ol>
-<h2 id="路径数量">路径数量</h2>
-<p>这类题目就是看有几种方式可以到这个点，然后把这几种方式的路径加起来就可以。这是自下而上的思想，对于青蛙跳的那道题也可以自上而下利用递归的思路解题。只要可以跳到，就可以变成一个子问题，把这个点当做起点来进行。</p>……
+            DP 算法题目的思考 dp全称是动态规划，是一类被人又喜欢又讨厌的题目。喜欢是因为找到递推关系之后题目就变得简单了，讨厌的原因是这类题目常常很难想到递推关系。
+dp的核心思想就是把一个复杂的问题分解成简单的子问题，并且可以利用递推的方式来解决。所有dp题目的核心是：
+递推公式 deduction formula 初始化 initialization 空间优化 space improvement 路径数量 这类题目就是看有几种方式可以到这个点，然后把这几种方式的路径加起来就可以。这是自下而上的思想，对于青蛙跳的那道题也可以自上而下利用递归的思路解题。只要可以跳到，就可以变成一个子问题，把这个点当做起点来进行。……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/algo/dp/">阅读全文</a></p>
     </article>
@@ -182,12 +157,10 @@
         </date>
         
         <div class="post-content">
-            <h1 id="stack-算法题的思考">Stack 算法题的思考</h1>
-<p>这类题目也是比较多的，一般比较繁琐。思路类似DFS，不过可以不使用递归实现。</p>
-<h2 id="string-解析类">String 解析类</h2>
-<p>这类比较多的就是计算器，以及分析括号里的内容。例如解析 <code>3[a]2[bc]</code>,这时候就可以在遇到<code>[</code>的时候把之前的东西都压到栈里，之后当遇到<code>]</code>的时候把内容再pop出来。</p>
-<p>对于计算器，如果是后缀表达式的话，可以把结果都压到栈里，遇到运算符再pop出运算。有括号的话还是按括号的方法，主要要注意加法和乘法的区别。</p>
-<p>计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如<code>(1+2)+(3+4)</code>, +可以看作是是后一个括号的符号。对于1*2 + 6/3,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。</p>……
+            Stack 算法题的思考 这类题目也是比较多的，一般比较繁琐。思路类似DFS，不过可以不使用递归实现。
+String 解析类 这类比较多的就是计算器，以及分析括号里的内容。例如解析 3[a]2[bc],这时候就可以在遇到[的时候把之前的东西都压到栈里，之后当遇到]的时候把内容再pop出来。
+对于计算器，如果是后缀表达式的话，可以把结果都压到栈里，遇到运算符再pop出运算。有括号的话还是按括号的方法，主要要注意加法和乘法的区别。
+计算器系列最重要的思想就是前一个符号看作大小的指示，之后那个才用来做计算。例如(1+2)+(3+4), +可以看作是是后一个括号的符号。对于1*2 + 6/3,原理相同。在进行+6/3的时候，先把sign变成+6，并进行除法标记。之后再用除法。……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/algo/stack/">阅读全文</a></p>
     </article>
@@ -203,15 +176,8 @@
         </date>
         
         <div class="post-content">
-            <h1 id="graph-算法题目思考">graph 算法题目思考</h1>
-<p>Graph算是非常常见的题目，一般会给你一个2d array或一个数组代表联系，你可以使用这个输入来转换成一个图表示的数据结构，之后在图里做搜索。常见的算法：</p>
-<ul>
-<li>BFS，DFS</li>
-<li>union find</li>
-<li>A*</li>
-<li>Floyd and dijkstra</li>
-</ul>
-<p>Leetcode里的题目的话主要都是dfs, bfs就可以解决，有些需要思考几个之间的关系的题目可以使用union find来做。少部分计算路径的题目需要使用一些基本的最短路径算法。</p>……
+            graph 算法题目思考 Graph算是非常常见的题目，一般会给你一个2d array或一个数组代表联系，你可以使用这个输入来转换成一个图表示的数据结构，之后在图里做搜索。常见的算法：
+BFS，DFS union find A* Floyd and dijkstra Leetcode里的题目的话主要都是dfs, bfs就可以解决，有些需要思考几个之间的关系的题目可以使用union find来做。少部分计算路径的题目需要使用一些基本的最短路径算法。……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/algo/graph/">阅读全文</a></p>
     </article>
@@ -227,19 +193,10 @@
         </date>
         
         <div class="post-content">
-            <h1 id="array-算法题的思考">Array 算法题的思考</h1>
-<p>数组类的算法是在我做的题目中是最多的，相对来说也是最好理解的它也可以包罗万象，使用各种各样的算法。用数组可以实现很多基本的数据结构。比如heap。所以这部分需要好好掌握。</p>
-<h2 id="swap">SWAP</h2>
-<p>需要应用到数组元素交换是一类非常常见的题目，比如说求最大的K个数，这种题目一般都是使用基本的快速排序思想。也就是说，我们把这个数组分成两部分，一部分是比当前这个数字大的，另外一部分是比这个当前数字小的，这样我们可以快速的把一个array分成两部分，然后再分别对这两部分进行处理。</p>
-<p>如果只是需要移动一些数字，比如说移动零或者整个数组只有三个数，那么可以用一些更简单思想，比如说记录下所有非0的数，或者记录下这些数字的个数，然后把前面全换成这些非0数，后面换成零。这样做的好处就是不需要交换。或者一个记录非0的地方，另外一个记录当前位置，如果这个不是零，那么就遇上一个非0的东西交换。所以总体思路都是双指针的思想，一个记录当前遍历的位置，另外一个记录上一次符合条件的位置。</p>
-<ul>
-<li><a href="https://leetcode.com/problems/remove-element">27. Remove Element</a></li>
-<li><a href="https://leetcode.com/problems/sort-colors">75. Sort Colors</a></li>
-<li><a href="https://leetcode.com/problems/move-zeroes">283. Move Zeroes</a></li>
-<li><a href="https://leetcode.com/problems/kth-largest-element-in-an-array">215. Kth Largest Element in an Array</a></li>
-</ul>
-<h2 id="subarray">subarray</h2>
-<p>这又是一大类数组常遇到的题目，比如说求子数组的和，或者判断这个子数组是否符合某些规律等等。与字符串处理substring有异曲同工之妙，一般也都是双指针，如果发现和大于某个值的时候，那么就把起始值增大。</p>……
+            Array 算法题的思考 数组类的算法是在我做的题目中是最多的，相对来说也是最好理解的它也可以包罗万象，使用各种各样的算法。用数组可以实现很多基本的数据结构。比如heap。所以这部分需要好好掌握。
+SWAP 需要应用到数组元素交换是一类非常常见的题目，比如说求最大的K个数，这种题目一般都是使用基本的快速排序思想。也就是说，我们把这个数组分成两部分，一部分是比当前这个数字大的，另外一部分是比这个当前数字小的，这样我们可以快速的把一个array分成两部分，然后再分别对这两部分进行处理。
+如果只是需要移动一些数字，比如说移动零或者整个数组只有三个数，那么可以用一些更简单思想，比如说记录下所有非0的数，或者记录下这些数字的个数，然后把前面全换成这些非0数，后面换成零。这样做的好处就是不需要交换。或者一个记录非0的地方，另外一个记录当前位置，如果这个不是零，那么就遇上一个非0的东西交换。所以总体思路都是双指针的思想，一个记录当前遍历的位置，另外一个记录上一次符合条件的位置。
+27. Remove Element 75. Sort Colors 283.……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/algo/array/">阅读全文</a></p>
     </article>
@@ -255,18 +212,10 @@
         </date>
         
         <div class="post-content">
-            <h1 id="string-算法思考">String 算法思考</h1>
-<p>String 类型的题目算是leetcode里第二多的题型，其实这个和array的使用方法差不太多，只不过其中有一些特定的使用场景。我在这里会将string分为几类问题，可能不能包括所有的类别，尽量使用较为统一的思路解释遇到的题目。</p>
-<h2 id="数据类型">数据类型</h2>
-<p>首先要说清楚一点，在java中String是immutable的，也就是当你创建一个string后是不能修改的，如果你需要给他加内容，java会重新创一个新的实例。这样的问题就是如果使用<code>s+=a</code>,这样时间复杂度是O(n),在java中会重新复制一遍string再给你创建。</p>
-<p>解决办法就是使用StringBuilder，这个的时间复杂度对于增加就是O(1).其中内部实现就是一个char[]</p>
-<ul>
-<li>sb.append(String str)</li>
-<li>sb.toString()</li>
-</ul>
-<h2 id="组合问题">组合问题</h2>
-<p>这类问题就是需要得到某个字符串中包含的所有子集,或者是permutation.这类题日非常相似，需要找出符合条件的所有组合。基本思路是样的，可以使用DFS与backtrack实现。例如
-Combination Sum,可以把这题变成一个子问题选择了数字n后，求解sum-n的子问题的解答。所以可以先排序选择第一个元素，然后在函数中记录以下这些：</p>……
+            String 算法思考 String 类型的题目算是leetcode里第二多的题型，其实这个和array的使用方法差不太多，只不过其中有一些特定的使用场景。我在这里会将string分为几类问题，可能不能包括所有的类别，尽量使用较为统一的思路解释遇到的题目。
+数据类型 首先要说清楚一点，在java中String是immutable的，也就是当你创建一个string后是不能修改的，如果你需要给他加内容，java会重新创一个新的实例。这样的问题就是如果使用s+=a,这样时间复杂度是O(n),在java中会重新复制一遍string再给你创建。
+解决办法就是使用StringBuilder，这个的时间复杂度对于增加就是O(1).其中内部实现就是一个char[]
+sb.append(String str) sb.toString() 组合问题 这类问题就是需要得到某个字符串中包含的所有子集,或者是permutation.……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/algo/string/">阅读全文</a></p>
     </article>
@@ -282,21 +231,9 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
         </date>
         
         <div class="post-content">
-            <h1 id="树形算法题的思考">树形算法题的思考</h1>
-<p>树形是一大题型，这类题目相对来说比较简单，在我看来掌握树形的最大要点就是递归的思想，这可以说用在了这类题目中的方方面面。主要涉及这些题型：</p>
-<ul>
-<li>构建树（数组，链表）</li>
-<li>遍历，判断是合理的树</li>
-<li>找节点（LCA）</li>
-<li>树的基本属性（高度），找路径</li>
-</ul>
-<h2 id="构建树">构建树</h2>
-<p>这类题目的基本思路就是先找到根结点（root），然后把整个数组或者链表分成左右两个部分。之后，这个根节点的左子树就是递归调用数组的右半部分。右半边子树就是递归调用，这个函数的右半部分。总体还是比较简单的，题目可以参看</p>
-<ul>
-<li><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/">108.Convert Sorted Array to Binary Search Tree</a></li>
-<li><a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/">109.Convert Sorted List to Binary Search Tree</a></li>
-</ul>
-<p>这里有一道题，关于如何利用链表来构造。其中有一点，它可以使用一个固定的prev linked list node。在每次递归结束的时候都会调用next，这样我们就不需要每次遍历找到中心结点，而是利用之前的结果来找到中间的那个节点。也就是说，在这里我们并不需要一开始就把父节点找到，而是可以先存好左子树，之后再到root。</p>……
+            树形算法题的思考 树形是一大题型，这类题目相对来说比较简单，在我看来掌握树形的最大要点就是递归的思想，这可以说用在了这类题目中的方方面面。主要涉及这些题型：
+构建树（数组，链表） 遍历，判断是合理的树 找节点（LCA） 树的基本属性（高度），找路径 构建树 这类题目的基本思路就是先找到根结点（root），然后把整个数组或者链表分成左右两个部分。之后，这个根节点的左子树就是递归调用数组的右半部分。右半边子树就是递归调用，这个函数的右半部分。总体还是比较简单的，题目可以参看
+108.Convert Sorted Array to Binary Search Tree 109.……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/algo/tree/">阅读全文</a></p>
     </article>
@@ -319,24 +256,11 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
         </div>
         
         <div class="post-content">
-            <h1 id="学习方法">学习方法</h1>
-<h2 id="学习的原因">学习的原因</h2>
-<p>人学习的原因是为了获得更多的知识，更加了解这个世界，并将它们使用在生活中使自己过得更好。所以对于我来说学习知识的意义就在于应用它们。透过学习，我们能够做到从未能做到的事情，重新认知这个世界及我们跟它的关系，以及扩展创造未来的能量。人们可以把认知过程分为6个阶段，即知识、理解、应用、分析、综合、评价。面对不同的学习领域，所需要达到的认知程度也是不同。对于某领域的专家那么就可以评价，而这个知识对于自己的生活关系不大时，只需达到第一个阶段即可。</p>
-<p>另外<a href="http://helenysli.com/ch/2013/11/manual-in-progress-for-growth-mindset/">成长型心智</a>的人也会更加乐于学习。他们倾向于超越自己，往往会以自身进步为标准，常常处于尝试或探索状态，最终是自我解放，在不断学习中不断成长。</p>
-<p>当今世界的发展速度太快，新的知识层出不穷，如果不持续学习，一直使用以前的方法，那么很有可能被他人淘汰。没有个人核心竞争力的话那终将被他人取代，这就是社会的残酷。而找寻个人特长的方法就是不断学习，走在他人的前面。</p>
-<h2 id="学习能力">学习能力</h2>
-<h3 id="学习能力的定义">学习能力的定义</h3>
-<p><a href="https://www.zhihu.com/question/20107788">学习能力</a>或称专家精神的概括性行为表现：紧跟本专业内新知识、新技术动态，并运用到实际问题解决，能在本领域的研究项目中发挥主要作用，乐于分享知识经验。</p>
-<ul>
-<li>动机 (motives)：从动机上，学习能力强的人，必定是一个认知需求水平比较高的个体。一个认知需求高的个体，肯定是格物致知的人，必定在某些领域掌握更加精深或偏向原理性的基础知识，所以也许他的方向很偏，但总能分享一些这样的知识点，而且这些知识点不应该是松散的，而应该是聚焦莫一或某几个领域的。</li>
-<li>个性特质 (traits)：从个性特质上，学习能力强的个体和一般的个体也是有差异的，比如爱钻研、爱看书。学习本身对他来说会比较容易，但更应看到的是，学习过程本身对这类人也是一种享受。</li>
-<li>自我形象 (self-image)：学习能力好的人，绝对不是学过什么就扔一边的人， 他们优秀的学习动机和能力能使得他们成为一个领域的专家</li>
-<li>社会角色 (social role, values)：一个学习能力强的人，是不会自己憋在肚子里“财不外露”的，而且大部分学习能力强的人遇到同一领域的共同爱好者，会倾囊相倒。因此，知识的分享，也是学习能力强的人的一种表现</li>
-<li>经验 (experience)：你曾经成功迅速学习过哪门知识，掌握过什么能力与技巧？分享一下你之前所需的知识与技能吧（这块跟上面分享心得是有差异的）。这块实际上你就不用听内容，你就看他表情和语气语调以及呼吸频率等非语言线索，真正学习能力强并通过学习对工作有过帮助的人，会自如地侃侃而谈，看他讲话的感觉，肯定特享受。换句话说，这时候他的自我效能感爆棚，感觉这一亩三分地，自己就是真正的主人。</li>
-<li>知识 (knowledge)：你知道你所从事职业的新兴思想潮流吗？你知道最新崛起的几位大家是谁吗？你能说说你最喜欢的职业领域几位大牛吗，能比较一下他们的成就和思想吗？作为面试官，那怕你面试的是个土木工程师而你对土木一窍不通也没关系，如果他在编，你就让他编，放心吧，一个人讲的时候的流畅程度和自信程度是装不出来的，如果没有点实在货，三句话就露怯。</li>
-</ul>
-<h3 id="学习知识的来源">学习知识的来源</h3>
-<p>我的学习的知识分为以下几大块：</p>……
+            学习方法 学习的原因 人学习的原因是为了获得更多的知识，更加了解这个世界，并将它们使用在生活中使自己过得更好。所以对于我来说学习知识的意义就在于应用它们。透过学习，我们能够做到从未能做到的事情，重新认知这个世界及我们跟它的关系，以及扩展创造未来的能量。人们可以把认知过程分为6个阶段，即知识、理解、应用、分析、综合、评价。面对不同的学习领域，所需要达到的认知程度也是不同。对于某领域的专家那么就可以评价，而这个知识对于自己的生活关系不大时，只需达到第一个阶段即可。
+另外成长型心智的人也会更加乐于学习。他们倾向于超越自己，往往会以自身进步为标准，常常处于尝试或探索状态，最终是自我解放，在不断学习中不断成长。
+当今世界的发展速度太快，新的知识层出不穷，如果不持续学习，一直使用以前的方法，那么很有可能被他人淘汰。没有个人核心竞争力的话那终将被他人取代，这就是社会的残酷。而找寻个人特长的方法就是不断学习，走在他人的前面。
+学习能力 学习能力的定义 学习能力或称专家精神的概括性行为表现：紧跟本专业内新知识、新技术动态，并运用到实际问题解决，能在本领域的研究项目中发挥主要作用，乐于分享知识经验。
+动机 (motives)：从动机上，学习能力强的人，必定是一个认知需求水平比较高的个体。一个认知需求高的个体，肯定是格物致知的人，必定在某些领域掌握更加精深或偏向原理性的基础知识，所以也许他的方向很偏，但总能分享一些这样的知识点，而且这些知识点不应该是松散的，而应该是聚焦莫一或某几个领域的。 个性特质 (traits)：从个性特质上，学习能力强的个体和一般的个体也是有差异的，比如爱钻研、爱看书。学习本身对他来说会比较容易，但更应看到的是，学习过程本身对这类人也是一种享受。 自我形象 (self-image)：学习能力好的人，绝对不是学过什么就扔一边的人， 他们优秀的学习动机和能力能使得他们成为一个领域的专家 社会角色 (social role, values)：一个学习能力强的人，是不会自己憋在肚子里“财不外露”的，而且大部分学习能力强的人遇到同一领域的共同爱好者，会倾囊相倒。因此，知识的分享，也是学习能力强的人的一种表现 经验 (experience)：你曾经成功迅速学习过哪门知识，掌握过什么能力与技巧？分享一下你之前所需的知识与技能吧（这块跟上面分享心得是有差异的）。这块实际上你就不用听内容，你就看他表情和语气语调以及呼吸频率等非语言线索，真正学习能力强并通过学习对工作有过帮助的人，会自如地侃侃而谈，看他讲话的感觉，肯定特享受。换句话说，这时候他的自我效能感爆棚，感觉这一亩三分地，自己就是真正的主人。 知识 (knowledge)：你知道你所从事职业的新兴思想潮流吗？你知道最新崛起的几位大家是谁吗？你能说说你最喜欢的职业领域几位大牛吗，能比较一下他们的成就和思想吗？作为面试官，那怕你面试的是个土木工程师而你对土木一窍不通也没关系，如果他在编，你就让他编，放心吧，一个人讲的时候的流畅程度和自信程度是装不出来的，如果没有点实在货，三句话就露怯。 学习知识的来源 我的学习的知识分为以下几大块：……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">阅读全文</a></p>
     </article>
@@ -359,19 +283,9 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
         </div>
         
         <div class="post-content">
-            <h1 id="运动">运动</h1>
-<h2 id="运动的意义">运动的意义</h2>
-<p>运动对于人的各个方面都有一定的好处。从科学的角度来说，可以促进血液循环，增强心肺功能，提高身体免疫力。运动也可以帮助睡眠，保持好心情。当今社会，由于生产方式的改变，导致人们运动越来越少。但是从人的天性来说，有一定的运动量才符合人们的生物规律。一个好的身体也是工作的本钱，如果生一场大病那么你将无法完成任何事情。所以说适当的运动，对于人的各个方面都非常有用，你一定需要在日程中安排固定的时间来运动</p>
-<h2 id="运动的目标">运动的目标</h2>
-<p>运动的目标多种多样，我认为有以下几种目的：</p>
-<ol>
-<li>增加肌肉</li>
-<li>减少脂肪</li>
-<li>训练耐力</li>
-<li>训练力量</li>
-<li>塑造形体</li>
-</ol>
-<p>每一种运动的目的都可以产生不同的运动计划和方法，弄清楚自己的训练目标非常重要。<a href="https://read.douban.com/ebook/4079439/">可以从以下三个方面来思考</a></p>……
+            运动 运动的意义 运动对于人的各个方面都有一定的好处。从科学的角度来说，可以促进血液循环，增强心肺功能，提高身体免疫力。运动也可以帮助睡眠，保持好心情。当今社会，由于生产方式的改变，导致人们运动越来越少。但是从人的天性来说，有一定的运动量才符合人们的生物规律。一个好的身体也是工作的本钱，如果生一场大病那么你将无法完成任何事情。所以说适当的运动，对于人的各个方面都非常有用，你一定需要在日程中安排固定的时间来运动
+运动的目标 运动的目标多种多样，我认为有以下几种目的：
+增加肌肉 减少脂肪 训练耐力 训练力量 塑造形体 每一种运动的目的都可以产生不同的运动计划和方法，弄清楚自己的训练目标非常重要。可以从以下三个方面来思考……
         </div>
         <p class="readmore"><a href="http://study.tczhong.com/post/%E8%BF%90%E5%8A%A8/">阅读全文</a></p>
     </article>
@@ -517,7 +431,7 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><a href="http://study.tczhong.com/categories/deep_research/">Deep_research (1)</a></li>
+    <li><a href="http://study.tczhong.com/categories/deep_research/">deep_research (1)</a></li>
     
     <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
     
@@ -538,75 +452,75 @@ Combination Sum,可以把这题变成一个子问题选择了数字n后，求解
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
-    <a href="http://study.tczhong.com/tags/ai/">Ai</a>
+    <a href="http://study.tczhong.com/tags/ai/">ai</a>
     
     <a href="http://study.tczhong.com/tags/android/">Android</a>
     
-    <a href="http://study.tczhong.com/tags/array/">Array</a>
+    <a href="http://study.tczhong.com/tags/array/">array</a>
     
-    <a href="http://study.tczhong.com/tags/auto/">Auto</a>
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
     
-    <a href="http://study.tczhong.com/tags/bit/">Bit</a>
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
     
-    <a href="http://study.tczhong.com/tags/book/">Book</a>
+    <a href="http://study.tczhong.com/tags/book/">book</a>
     
-    <a href="http://study.tczhong.com/tags/cooking/">Cooking</a>
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
     
-    <a href="http://study.tczhong.com/tags/development/">Development</a>
+    <a href="http://study.tczhong.com/tags/development/">development</a>
     
-    <a href="http://study.tczhong.com/tags/documentation/">Documentation</a>
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
     
-    <a href="http://study.tczhong.com/tags/dp/">Dp</a>
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
     
-    <a href="http://study.tczhong.com/tags/food/">Food</a>
+    <a href="http://study.tczhong.com/tags/food/">food</a>
     
-    <a href="http://study.tczhong.com/tags/fun/">Fun</a>
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
     
-    <a href="http://study.tczhong.com/tags/gemini/">Gemini</a>
+    <a href="http://study.tczhong.com/tags/gemini/">gemini</a>
     
-    <a href="http://study.tczhong.com/tags/google/">Google</a>
+    <a href="http://study.tczhong.com/tags/google/">google</a>
     
-    <a href="http://study.tczhong.com/tags/graph/">Graph</a>
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
     
-    <a href="http://study.tczhong.com/tags/growth/">Growth</a>
+    <a href="http://study.tczhong.com/tags/growth/">growth</a>
     
-    <a href="http://study.tczhong.com/tags/happiness/">Happiness</a>
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
     
-    <a href="http://study.tczhong.com/tags/health/">Health</a>
+    <a href="http://study.tczhong.com/tags/health/">health</a>
     
-    <a href="http://study.tczhong.com/tags/history/">History</a>
+    <a href="http://study.tczhong.com/tags/history/">history</a>
     
-    <a href="http://study.tczhong.com/tags/leetcode/">Leetcode</a>
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
     
-    <a href="http://study.tczhong.com/tags/life/">Life</a>
+    <a href="http://study.tczhong.com/tags/life/">life</a>
     
-    <a href="http://study.tczhong.com/tags/love/">Love</a>
+    <a href="http://study.tczhong.com/tags/love/">love</a>
     
-    <a href="http://study.tczhong.com/tags/money/">Money</a>
+    <a href="http://study.tczhong.com/tags/money/">money</a>
     
-    <a href="http://study.tczhong.com/tags/movie/">Movie</a>
+    <a href="http://study.tczhong.com/tags/movie/">movie</a>
     
-    <a href="http://study.tczhong.com/tags/politics/">Politics</a>
+    <a href="http://study.tczhong.com/tags/politics/">politics</a>
     
-    <a href="http://study.tczhong.com/tags/python/">Python</a>
+    <a href="http://study.tczhong.com/tags/python/">python</a>
     
-    <a href="http://study.tczhong.com/tags/stack/">Stack</a>
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
     
-    <a href="http://study.tczhong.com/tags/string/">String</a>
+    <a href="http://study.tczhong.com/tags/string/">string</a>
     
-    <a href="http://study.tczhong.com/tags/study/">Study</a>
+    <a href="http://study.tczhong.com/tags/study/">study</a>
     
-    <a href="http://study.tczhong.com/tags/tech/">Tech</a>
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
     
-    <a href="http://study.tczhong.com/tags/time/">Time</a>
+    <a href="http://study.tczhong.com/tags/time/">time</a>
     
-    <a href="http://study.tczhong.com/tags/tree/">Tree</a>
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
     
-    <a href="http://study.tczhong.com/tags/vscode/">Vscode</a>
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
     
-    <a href="http://study.tczhong.com/tags/wechat/">Wechat</a>
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
     
-    <a href="http://study.tczhong.com/tags/weekly/">Weekly</a>
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
     
 </div>
     </section>
