@@ -6,7 +6,19 @@
     <description>Recent content in weekly on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Mar 2026 03:35:23 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/tags/weekly/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Mar 2026 06:22:03 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/tags/weekly/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TC分享第 273 期</title>
+      <link>http://study.tczhong.com/post/sharing/tcsharing_273/</link>
+      <pubDate>Mon, 23 Mar 2026 06:22:03 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/sharing/tcsharing_273/</guid>
+      <description>TC分享第 273 期 2026 week 12
+你永远会低估你一周可以做的事情，在这里记录一下我这周看到的好东西。有些链接可能需要科学上网。
+本周摄影：
+新闻思考 这次 NVIDIA GTC 2026 释放出的信号其实非常清晰：AI 正在从“训练更大的模型”，进一步走向“部署更完整的基础设施”和“服务更真实的大规模需求”。无论是 Vera Rubin、Feynman 路线图，还是桌面到数据中心一体化的 DGX Spark、DGX Station，再到对推理、Agent、机器人和物理 AI 的持续押注，都说明 NVIDIA 想讲的已经不只是下一代芯片，而是未来整个 AI 计算平台会如何扩张。市场对这次大会的反应没有特别狂热，也很正常，因为很多预期本来就已经提前反映在股价里了。但从产业角度看，GTC 传递出的重点并不是“有没有短线惊喜”，而是 AI 基础设施仍然在持续升级，而且升级速度并没有放慢。</description>
+    </item>
+    
     <item>
       <title>TC分享第 272 期</title>
       <link>http://study.tczhong.com/post/sharing/tcsharing_272/</link>
