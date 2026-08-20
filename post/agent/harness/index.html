@@ -804,6 +804,27 @@
 <script type="text/javascript" src="/js/app.js" defer></script>
 
 <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' defer></script>
+    <script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.12.1/dist/mermaid.esm.min.mjs";
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const diagrams = document.querySelectorAll(
+      ".post-content pre code.language-mermaid, .post-content pre code[data-lang='mermaid']"
+    );
+
+    diagrams.forEach((code) => {
+      const diagram = document.createElement("div");
+      diagram.className = "mermaid";
+      diagram.textContent = code.textContent;
+      (code.closest(".highlight") || code.closest("pre")).replaceWith(diagram);
+    });
+
+    if (diagrams.length) {
+      mermaid.initialize({ startOnLoad: false });
+      await mermaid.run({ nodes: document.querySelectorAll(".mermaid") });
+    }
+  });
+</script>
 </body>
 
 </html>

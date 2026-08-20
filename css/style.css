@@ -375,6 +375,15 @@ textarea {
 .post-content pre{
     padding: 1em;
 }
+.post-content .mermaid {
+    margin: 1.5em 0;
+    overflow-x: auto;
+    text-align: center;
+}
+.post-content .mermaid svg {
+    max-width: 100%;
+    height: auto;
+}
 .post-content code{
     display:inline;
 }
