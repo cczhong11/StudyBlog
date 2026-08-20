@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Harness Engineering for Self-Improvement</title>
+      <link>http://study.tczhong.com/post/agent/harness/</link>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/agent/harness/</guid>
+      <description>Harness Engineering for Self-Improvement learn from https://lilianweng.github.io/posts/2026-07-04-harness/
+核心概念：Harness 是模型外面的“运行系统” Harness 指包围在 base model 外面、决定模型如何运行的一整套系统。它控制模型如何观察环境、构造 context、规划、调用工具、执行 action、保存 state、调用 sub-agent，以及如何验证结果。因此今天讲 Harness Engineering，已经不太像传统 Prompt Engineering，而更接近 runtime / software system design。</description>
+    </item>
+    
+    <item>
       <title>读书笔记--《不开玩笑》</title>
       <link>http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E4%B8%8D%E5%BC%80%E7%8E%A9%E7%AC%91/</link>
       <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>

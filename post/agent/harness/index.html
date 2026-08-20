@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Harness Engineering for Self-Improvement | Learn More</title>
+    <meta property="og:title" content="Harness Engineering for Self-Improvement - Learn More">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2026-08-19T00:00:00&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2026-08-19T00:00:00&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="Harness Engineering for Self-Improvement">
+        
+    <meta name="author" content="">
+    <meta property="og:url" content="http://study.tczhong.com/post/agent/harness/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+    
+
+        
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="navbar-icon"><a href="mailto:me@tczhong.com"><i class="far fa-envelope"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://github.com/cczhong11/"><i class="fab fa-github"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://www.linkedin.com/in/tianchen-zhong/"><i class="fab fa-linkedin"></i></a></li>
+                
+                    <li class="navbar-icon"><a href="https://stackoverflow.com/users/7112540/tc-zhong"><i class="fab fa-stack-overflow"></i></a></li>
+                
+            </ul>
+        
+
+  
+
+    </nav>
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://study.tczhong.com/">
+                        Learn More
+                    </a>
+                
+                
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://study.tczhong.com/">首页</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/weekly/" title="每周分享">每周分享</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/love/" title="亲密关系">亲密关系</a>
+                    
+                    <a  href="http://study.tczhong.com/tags/health/" title="健康">健康</a>
+                    
+                    <a  href="http://study.tczhong.com/archives/" title="归档">归档</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">Harness Engineering for Self-Improvement</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2026年8月19日
+        </date>
+        
+        
+        
+        <div class="post-content">
+            <h1 id="harness-engineering-for-self-improvement">Harness Engineering for Self-Improvement</h1>
+<p>learn from <a href="https://lilianweng.github.io/posts/2026-07-04-harness/">https://lilianweng.github.io/posts/2026-07-04-harness/</a></p>
+<h2 id="核心概念harness-是模型外面的运行系统">核心概念：Harness 是模型外面的“运行系统”</h2>
+<p>Harness 指包围在 base model 外面、决定模型如何运行的一整套系统。它控制模型如何观察环境、构造 context、规划、调用工具、执行 action、保存 state、调用 sub-agent，以及如何验证结果。因此今天讲 Harness Engineering，已经不太像传统 Prompt Engineering，而更接近 runtime / software system design。</p>
+<p>传统 Agent 经常被概括为：</p>
+<p><code>Agent = LLM + Memory + Tools + Planning + Action</code></p>
+<p>但 Harness 还进一步加入了 workflow design、evaluation、permission control、persistent state management 等系统组件。原文用了一个很好的类比：<strong>Harness 和 Model 的关系有点像 Operating System 和 CPU。</strong> OS 不负责制造 CPU 的核心算力，但它决定算力如何接触文件、进程、外设和其他程序；类似地，Harness 不直接增加模型参数，但决定模型如何利用 context、tools、memory 和 computation。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
+    M[Base Model&lt;br/&gt;Core Intelligence]
+    H[Harness&lt;br/&gt;Runtime System]
+    C[Context]
+    T[Tools]
+    F[File System / Memory]
+    S[Sub-agents]
+    E[Evaluator / Verifier]
+    W[Workflow / Control Flow]
+
+    H --&gt; M
+    C --&gt; H
+    T --&gt; H
+    F --&gt; H
+    S --&gt; H
+    E --&gt; H
+    W --&gt; H
+</code></pre><p>这也解释了为什么 Harness 会和 Recursive Self-Improvement（RSI）联系起来。RSI 不一定意味着“模型直接修改自己的 weights”。更现实的近期路径可能是：模型先学会改进包围自己的 Harness；更好的 Harness 又让模型能够进行更好的自动研究、实验和系统优化；这些研究最终又帮助产生更强的模型。作者因此认为，近阶段的 RSI 很可能首先发生在 deployment system，而不是直接发生在 weights 上。</p>
+<hr>
+<h2 id="harness-design-patterns">Harness Design Patterns</h2>
+<p>文章开头先总结了三个目前非常通用的 Harness Design Pattern：Workflow Automation、File System as Persistent Memory，以及 Sub-agent + Backend Jobs。它们看起来很简单，但实际上构成了很多现代 Coding Agent 的基础。</p>
+<h3 id="1-workflow-automation从一次-prompt-变成持续-runtime">1. Workflow Automation：从一次 Prompt 变成持续 Runtime</h3>
+<p>最重要的变化是 Agent 不再执行一次 <code>Prompt → Answer</code>，而是在环境里持续运行。一个典型循环是：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    G[Goal] --&gt; P[Plan]
+    P --&gt; X[Execute]
+    X --&gt; O[Observe / Test]
+    O --&gt; D{Goal reached?}
+    D -- No --&gt; I[Analyze failure&lt;br/&gt;Improve]
+    I --&gt; P
+    D -- Yes --&gt; R[Result]
+</code></pre><p>也就是说，Agent 的 intelligence 不只是体现在某一次 generation 上，还体现在它是否可以根据 tool response、test result、error log 和 execution trajectory 调整下一步行为。传统 Prompt Engineering 优化的是“第一次回答得好不好”，而 Agent Harness 优化的是“整个 trajectory 最后能不能成功”。</p>
+<p>Coding Agent 特别适合这种结构。例如 Agent 修改代码以后，可以直接运行测试；测试失败以后读取 stack trace，再修改代码；而不是让模型凭语言推理一次性猜出最终 patch。这里环境反馈相当于给模型增加了一个外部 correction channel。</p>
+<p>所以从系统角度看：</p>
+<p><code>LLM reasoning + environment feedback + iteration</code></p>
+<p>往往比：</p>
+<p><code>LLM reasoning alone</code></p>
+<p>强很多。</p>
+<hr>
+<h3 id="2-file-system-as-persistent-memorycontext-window-只是-working-memory">2. File System as Persistent Memory：Context Window 只是 Working Memory</h3>
+<p>Long-horizon Agent 一个非常实际的问题是：trajectory 会越来越长。experiment log、code diff、paper summary、error trace、过去尝试过的方案，很快会超过 context window。最直接的解决方法反而不是复杂的 vector DB，而是普通 File System。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD
+    A[Agent Working Context&lt;br/&gt;small + relevant]
+    FS[(Persistent File System)]
+
+    LOG[Experiment logs] --&gt; FS
+    CODE[Code / Diff] --&gt; FS
+    TRACE[Past trajectories] --&gt; FS
+    NOTE[Research notes] --&gt; FS
+
+    FS --&gt;|grep / glob / read| A
+    A --&gt;|write / edit| FS
+</code></pre><p>这里非常值得记一个原则：</p>
+<p><strong>Context ≠ Memory。</strong></p>
+<p>Context 是当前 inference step 需要看到的 working set；Memory 是长期存在、未来可以重新检索的 state。Harness 不应该把“Agent 曾经见过的所有东西”持续 append 到 prompt，而应该把大量状态外置，只在需要时通过 <code>grep / glob / read / bash</code> 拉回来。</p>
+<p>这其实和操作系统里的 RAM / Disk 很像：</p>
+<p><code>Context Window ≈ RAM</code></p>
+<p><code>File System ≈ Disk / Persistent State</code></p>
+<p>而且 File System 有一个很现实的优势：LLM 在 pretraining 里已经见过大量 shell、filesystem、code，因此 <code>ls / grep / cat / edit</code> 是一个模型天然比较熟悉的 interface，不需要为了 Memory 再发明一个复杂 abstraction。</p>
+<hr>
+<h3 id="3-sub-agent--backend-jobs显式并行而不是把所有推理塞进一个-context">3. Sub-agent + Backend Jobs：显式并行，而不是把所有推理塞进一个 Context</h3>
+<p>主 Agent 可以把彼此独立的任务拆出去，例如同时探索多个 hypothesis、运行多个 experiment、检索不同来源，之后再汇总。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+    P[Parent Agent]
+    P --&gt; A1[Sub-agent 1&lt;br/&gt;Hypothesis A]
+    P --&gt; A2[Sub-agent 2&lt;br/&gt;Hypothesis B]
+    P --&gt; A3[Sub-agent 3&lt;br/&gt;Hypothesis C]
+
+    A1 --&gt; F[(Files / Logs)]
+    A2 --&gt; F
+    A3 --&gt; F
+
+    F --&gt; P
+    P --&gt; M[Merge / Compare / Decide]
+</code></pre><p>这里作者强调的其实不只是 Multi-Agent，而是 <strong>parallelism must be explicit and inspectable</strong>。如果 sub-agent 的输出只存在于一次临时 chat response 中，parent 很难恢复状态；如果结果存在 file、log、status record 里，parent agent 就可以之后重新检查、比较甚至恢复 interrupted task。</p>
+<p>所以一个成熟的 parent agent 实际上还需要一个很轻量的 process manager：<code>spawn → inspect logs → wait → cancel failed jobs → merge outputs</code>。</p>
+<p>这也是为什么今天 Coding Agent 的 interface 正在逐渐标准化。主流系统基本都包含 File System、Shell、Git/LSP、Web/MCP、Artifact、Background Process 和 Agent Delegation。这种标准化很像早期操作系统逐渐形成统一的 filesystem/process/network abstractions。</p>
+<hr>
+<h1 id="harness-optimization到底在优化什么">Harness Optimization：到底在优化什么？</h1>
+<p>我觉得整篇文章最重要的一条主线是 optimization target 不断向外扩张：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    P[Instruction Prompt]
+    --&gt; C[Structured Context]
+    --&gt; W[Workflow]
+    --&gt; H[Harness Code]
+    --&gt; O[Optimizer Code]
+</code></pre><p>早期我们问的是：“Prompt 怎么写得更好？”之后变成：“模型应该看到什么 context？”然后变成：“模型应该按照什么 workflow 工作？”进一步变成：“整个 Harness code 应该如何组织？”最后甚至可以问：“负责优化 Harness 的 optimizer 本身能不能继续优化？”</p>
+<p>这个 progression 是理解后面所有 paper 的最好框架。</p>
+<hr>
+<h2 id="context-engineering不只是放什么-context而是怎么生产-context">Context Engineering：不只是放什么 Context，而是怎么生产 Context</h2>
+<p>普通 Agent 很容易采用一个 naive strategy：把所有 tool response、所有过去 generation 一直 append 进去。但随着 task horizon 增长，这种方式会让 context 越来越长、噪声越来越多。</p>
+<p>因此 Context Engineering 的核心问题其实是：</p>
+<blockquote>
+<p>在当前这一步，哪些信息应该进入模型的 working context？</p>
+</blockquote>
+<h3 id="acecontext-是不断成长的-playbook">ACE：Context 是不断成长的 Playbook</h3>
+<p>Agentic Context Engineering（ACE）把 context 看成一个 evolving playbook，而不是一个越来越长的大 Prompt。它包含 Generator、Reflector 和 Curator 三个角色：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    C[(Context Playbook)]
+    --&gt; G[Generator&lt;br/&gt;Run task]
+    G --&gt; T[Trajectory]
+    T --&gt; R[Reflector&lt;br/&gt;Extract lessons]
+    R --&gt; U[Curator&lt;br/&gt;Update items]
+    U --&gt; C
+</code></pre><p>Generator 根据当前 playbook 执行任务；Reflector 从成功与失败 trajectory 中总结 insight；Curator 再把 insight 更新进 context。</p>
+<p>ACE 一个很聪明的设计是：Curator 不反复 rewrite 整个 Prompt，而是维护类似 <code>(identifier, description)</code> 的 structured items。原因是反复让模型“重新总结整个 prompt”很容易产生 <strong>context collapse / brevity bias</strong>：每次 rewrite 都会丢掉一些细节，最后 context 越来越短但信息也越来越少。</p>
+<p>所以 ACE 做的是 incremental update，而不是 full rewrite。这一点很像数据库：</p>
+<p><code>append / update structured records</code></p>
+<p>比：</p>
+<p><code>每次重新生成整张 database</code></p>
+<p>可靠得多。</p>
+<p>不过 ACE 仍然有一个限制：<strong>如何更新 Context 的规则本身还是人工设计的。</strong> Generator / Reflector / Curator 这些结构都是人为规定的。于是下一步自然变成：能不能连“Context Engineering 的方法”也自动学习？</p>
+<hr>
+<h2 id="meta-context-engineering优化产生-context-的函数">Meta Context Engineering：优化“产生 Context 的函数”</h2>
+<p>Meta Context Engineering（MCE）把问题拆成两个层次。Base level 优化具体任务需要什么 Context；Meta level 优化“应该采用什么 Context Engineering strategy”。</p>
+<p>一个 skill (s) 定义一个 context function：</p>
+<p>$c = F_s(x; ρ_s)$</p>
+<p>其中 $ρ_s$ 是 static components，例如 prompt、knowledge base、code library；$F_s$ 是 dynamic operators，例如 search、selection、filtering、formatting。</p>
+<p>所以一个 Skill 可以理解成：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
+    X[Task Input x]
+    R[Static Resources ρ&lt;br/&gt;Prompt / KB / Code]
+    F[Dynamic Operators F&lt;br/&gt;Search / Select / Filter / Format]
+    C[Generated Context c]
+
+    X --&gt; F
+    R --&gt; F
+    F --&gt; C
+</code></pre><p>真正有意思的是它的 bi-level optimization：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+    MA[Meta Agent]
+    --&gt;|evolve skill| S[Skill / Context Strategy]
+    S --&gt; BA[Base Context Engineer]
+    BA --&gt;|construct context| C[Task Context]
+    C --&gt; E[Run + Evaluate]
+    E --&gt; H[(History:&lt;br/&gt;skill, context, train score, val score)]
+    H --&gt; MA
+</code></pre><p>Inner loop 问：“给定一个 skill，当前任务的 context 应该怎么优化？”</p>
+<p>Outer loop 问：“什么 skill 才是一种更好的 Context Engineering 方法？”</p>
+<p>也就是说优化对象已经从 <strong>context artifact</strong> 提升到了 <strong>context-generation mechanism</strong>。</p>
+<p>这是一个非常关键的 abstraction shift：</p>
+<p><code>What context should I use?</code></p>
+<p>→</p>
+<p><code>What function should generate my context?</code></p>
+<p>而且 MCE 的 context function 实际上也被实现成 files，包括静态 <code>skill.md</code> 和动态 rollout/context data。这样 Agent 就可以直接通过 Read/Write/Edit/Bash/Glob/Grep 修改自己的 context engineering machinery。</p>
+<hr>
+<h2 id="meta-harness直接把-harness-code-变成-search-space">Meta-Harness：直接把 Harness Code 变成 Search Space</h2>
+<p>Meta-Harness 又往外走了一层：现在优化的不再只是 Context Function，而是 <strong>决定信息如何存储、检索和呈现的 Harness Code 本身</strong>。</p>
+<p>这里最重要的思想其实非常工程化：</p>
+<blockquote>
+<p>一旦 Harness 可以表示成 executable code，它就成为一个可以自动搜索的 program space。</p>
+</blockquote>
+<p>流程大概是：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+    H0[Existing Harnesses]
+    --&gt; P[Coding Agent Proposer]
+    P --&gt; H1[New Harness Code]
+    H1 --&gt; R[Run Benchmark]
+    R --&gt; S[Score + Trajectory + State]
+    S --&gt; Q{Qualified?}
+    Q -- Yes --&gt; A[(Harness Archive)]
+    Q -- No --&gt; X[Reject]
+    A --&gt; P
+</code></pre><p>每个 candidate harness 自己就是一个 directory，里面包含 source code、scores、rollout trajectories 和 state updates。整个 execution history 也在 filesystem 中，因此 coding agent 不需要把所有历史塞进 prompt，而可以通过 <code>grep/cat</code> 自己浏览过去实验。</p>
+<p>最终 Meta-Harness 不一定只留下“一个最好的 Harness”，而是可能得到 Pareto frontier 上的一组 candidates，因为 Harness 可能存在不同 trade-off，例如 accuracy、latency、token cost、complexity。</p>
+<p>这其实已经非常像 AutoML，只不过 AutoML 搜的是 model architecture / hyperparameters，而 Meta-Harness 搜的是 <strong>agent runtime programs</strong>。</p>
+<hr>
+<h1 id="workflow-design把-agent-architecture-也当成可搜索对象">Workflow Design：把 Agent Architecture 也当成可搜索对象</h1>
+<p>Workflow 本身也是 Harness 的一部分。最初 workflow 可以人工设计，例如 AI Scientist 会把研究拆成 idea generation、coding、experiments、analysis、paper writing、review 等步骤。但 workflow design space 非常巨大，于是自然会产生一个问题：</p>
+<blockquote>
+<p>为什么一定要由 human engineer 手工设计 workflow？</p>
+</blockquote>
+<hr>
+<h2 id="autodata自动寻找恰好有学习价值的数据">Autodata：自动寻找“恰好有学习价值”的数据</h2>
+<p>Autodata 的目标是生成 synthetic training/evaluation data。它包含 Challenger、Weak Solver、Strong Solver 和 Verifier。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    C[Challenger&lt;br/&gt;Generate Problem]
+    --&gt; W[Weak Solver]
+    C --&gt; S[Strong Solver]
+
+    W --&gt; V[Verifier]
+    S --&gt; V
+
+    V --&gt; D{Difficulty}
+    D --&gt;|Weak ✅ Strong ✅| EASY[Too Easy]
+    D --&gt;|Weak ❌ Strong ❌| HARD[Too Hard]
+    D --&gt;|Weak ❌ Strong ✅| GOOD[Useful Training Data]
+
+    GOOD --&gt; C
+</code></pre><p>最有价值的是 <strong>Strong Solver 能解、Weak Solver 解不了</strong> 的题，因为它刚好落在 weak model 的 learning frontier 上。太容易的数据没有 learning signal；太难的数据又没有可靠 teacher signal。</p>
+<p>Challenger 会根据 Solver + Verifier 的反馈继续更新自己的 prompt，从而逐渐生成更合适的数据分布。</p>
+<p>不过作者也提醒：Autodata 生成的数据最终用于 fine-tune weak solver，但 strong solver 没有在这个 loop 里持续增强，所以它更像一种自动化 distillation，而不是最纯粹的 recursive self-improvement。</p>
+<hr>
+<h2 id="adas让-meta-agent-直接写新的-agent-workflow">ADAS：让 Meta-Agent 直接写新的 Agent Workflow</h2>
+<p>Automated Design of Agentic Systems（ADAS）进一步把 agent design 本身定义成 optimization problem。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+    A[(Archive&lt;br/&gt;Existing Agents)]
+    --&gt; M[Meta-Agent]
+    M --&gt; D[Describe New Workflow]
+    D --&gt; C[Implement Workflow in Code]
+    C --&gt; R1[Self-Refine]
+    R1 --&gt; R2[Self-Refine Again]
+    R2 --&gt; E[Evaluate]
+    E --&gt; Q{Good Candidate?}
+    Q -- Yes --&gt; A
+    Q -- No --&gt; X[Discard]
+</code></pre><p>开始时 archive 里面只有一些简单 agent，例如 CoT、Self-Refine。Meta-agent 会读取已有方案，先写一个新的 high-level workflow description，再实现为 code，然后执行两轮 self-refine，检查并修改设计，最后进行 benchmark。</p>
+<p>这里最值得注意的是 <strong>Archive</strong>。系统不是 hill climbing：只维护“当前最优 agent”。它保留了一组过去成功的 agent design，新的设计可以从不同 parent 获取 inspiration。因此它更像 evolutionary search，而不是单一路径优化。</p>
+<hr>
+<h2 id="aflow把-workflow-optimization-显式变成-mcts">AFlow：把 Workflow Optimization 显式变成 MCTS</h2>
+<p>AFlow 又更明确一步：它把 agentic workflow 表示成 Graph，其中 node 是调用 LLM 的 action，edge 是 code 实现的 logic/control flow。然后直接使用 Monte Carlo Tree Search 搜索 workflow。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD
+    W0[Workflow W0]
+    W0 --&gt; W1[Variant W1]
+    W0 --&gt; W2[Variant W2]
+    W1 --&gt; W3[Variant W3]
+    W1 --&gt; W4[Variant W4]
+    W2 --&gt; W5[Variant W5]
+
+    W3:::best
+    classDef best stroke-width:4px
+</code></pre><p>每次 iteration 做的事情本质上是：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    S[Select Workflow]
+    --&gt; E[Expand&lt;br/&gt;LLM proposes modification]
+    --&gt; R[Run]
+    --&gt; V[Evaluate]
+    --&gt; K{Improved?}
+    K -- Yes --&gt; T[Add to Search Tree]
+    K -- No --&gt; X[Discard]
+    T --&gt; S
+</code></pre><p>Selection 不单纯选 score 最高的 node，而是在 exploitation 和 exploration 之间做 soft mixture。否则很容易一直围绕当前 best workflow 做局部修改，错过完全不同的 architecture。</p>
+<p>停止条件通常是 top-k average score plateau，或者 search budget 用完。</p>
+<p>这让我觉得很有意思的一点是：过去 MCTS 搜的是 Chess/Go action，现在搜索对象直接变成了 <strong>Programs that control LLMs</strong>。</p>
+<hr>
+<h1 id="self-improving-harness从优化一部分变成优化整个-runtime">Self-Improving Harness：从优化一部分变成优化整个 Runtime</h1>
+<p>Context Engineering 只是 Harness 的一部分，Workflow Design 也只是其中一部分。完整 Harness 还包括 tool interfaces、permissions、memory、middleware、sub-agent config 等。既然这些最后都可以表示成 code，那么理论上 Coding Agent 就可以修改整个 Harness。</p>
+<p>所以这里发生了一个重要变化：</p>
+<p><code>LLM solves task</code></p>
+<p>变成：</p>
+<p><code>LLM modifies the program that determines how LLM solves tasks</code></p>
+<p>这就是为什么 Harness Engineering 开始接近 RSI。</p>
+<hr>
+<h2 id="stop不是-improve-solution而是-improve-the-improver">STOP：不是 Improve Solution，而是 Improve the Improver</h2>
+<p>Self-Taught Optimizer（STOP）是一个很早的 recursive scaffolding improvement 例子。</p>
+<p>普通 optimizer：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    I[Improver I]
+    --&gt; S[Solution]
+    S --&gt; U[Utility]
+</code></pre><p>STOP 做的是：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+    I0[Improver I₀]
+    --&gt; S0[Improve Solutions]
+    S0 --&gt; U0[Measure Meta-Utility]
+    U0 --&gt; I1[Improve Improver → I₁]
+    I1 --&gt; S1[Improve Solutions Better]
+    S1 --&gt; U1[Measure Again]
+    U1 --&gt; I2[Improve Improver → I₂]
+</code></pre><p>定义一个 improver：</p>
+<p><code>I(u, s; M) → s'</code></p>
+<p>输入 utility function <code>u</code>、initial solution <code>s</code> 和 model <code>M</code>，得到新的 solution。STOP 不直接优化 <code>s</code>，而是定义一个 meta-utility，衡量“这个 improver 在一组 downstream tasks 上平均能把 solution 改好多少”，然后再让 improver 去修改自己。</p>
+<p>实验里比较有趣的一点是，它自己发现了一些经典 optimization strategies：genetic algorithm、beam/tree search、simulated annealing、multi-armed bandit、temperature variation、decompose-and-improve。这说明 LLM 不一定需要人显式告诉它“使用某某搜索算法”；当 optimization objective 足够明确时，它有可能重新发现这些 structure。</p>
+<p>但这里有一个非常关键的 negative result：GPT-4 可以随着 iteration 改进 improver，而 GPT-3.5、Mixtral 等更弱模型反而可能退化。</p>
+<p>所以：</p>
+<p><strong>Recursion ≠ Intelligence。</strong></p>
+<p>Self-improvement loop 本身不会凭空产生 intelligence。Base model 必须已经足够聪明，才能可靠地修改“让自己变聪明的方法”。</p>
+<hr>
+<h2 id="harness-updating-和-harness-benefit-是两个不同能力">Harness Updating 和 Harness Benefit 是两个不同能力</h2>
+<p>后续研究进一步把这个问题拆成两个 axis：</p>
+<p><code>Harness Updating Capability</code>：模型能不能提出好的 Harness 修改。</p>
+<p><code>Harness Benefit Capability</code>：模型能不能正确利用这个修改后的 Harness。</p>
+<p>它们并不是同一个能力。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">quadrantChart
+    title Harness Capability
+    x-axis Weak Updating --&gt; Strong Updating
+    y-axis Weak Utilization --&gt; Strong Utilization
+    quadrant-1 Ideal Harness User + Builder
+    quadrant-2 Good User / Poor Builder
+    quadrant-3 Weak on Both
+    quadrant-4 Good Builder / Poor User
+</code></pre><p>一个模型可能能写出很好的 skill/tool instructions，但自己不擅长在正确时机调用这些 skill；反过来，也可能自己非常擅长按照复杂 Harness 执行，却不善于设计 Harness。</p>
+<p>实验甚至发现 Harness Benefit 并不是随着模型 intelligence 单调增加：中间档模型有时获得最大收益。一个合理解释是：弱模型连 Harness 都不会正确执行；最强模型本身已经能解决大量问题，Harness 的 marginal gain 反而比较小；中间模型正好处于“能力足够使用 Harness，但又仍有大量 weakness 可以被 Harness 补偿”的区域。</p>
+<hr>
+<h1 id="self-harnessweakness-mining--proposal--validation">Self-Harness：Weakness Mining → Proposal → Validation</h1>
+<p>Self-Harness 的设计非常像自动化 Software Engineering。它不是让 Agent 泛泛地问“我怎么才能更好”，而是严格执行：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    H[Current Harness h_t]
+    --&gt; R[Run Tasks]
+    R --&gt; T[Collect Traces]
+    T --&gt; W[Weakness Mining]
+    W --&gt; P[Harness Proposals]
+    P --&gt; V[Regression Validation]
+    V --&gt; A{Accept?}
+    A -- Yes --&gt; H2[New Harness h_t+1]
+    A -- No --&gt; L[Log Rejected Edit]
+    H2 --&gt; R
+</code></pre><h3 id="weakness-mining">Weakness Mining</h3>
+<p>这是我觉得非常值得记住的一点：<strong>Verifier Outcome 不等于 Root Cause。</strong></p>
+<p>两个 task 可能都显示：</p>
+<p><code>timeout</code></p>
+<p>但一个可能是 Agent 陷入无限 debug loop；另一个可能是某个 backend job 没有被正确 monitor。</p>
+<p>也可能都显示：</p>
+<p><code>missing artifact</code></p>
+<p>但一个是 Agent 忘了 save；另一个是 tool output path 错了。</p>
+<p>因此 failure record 必须包含多层信息：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    E[Verifier Error]
+    --&gt; B[Relevant Agent Behavior]
+    --&gt; M[Underlying Mechanism]
+    --&gt; R[Root Cause]
+</code></pre><p>这跟普通软件 debugging 非常像：exception type 只是 symptom，不是 root cause。</p>
+<h3 id="harness-proposal">Harness Proposal</h3>
+<p>Proposer 看到的也不是无限 context，而是一个 bounded proposal context，包括：当前允许修改的 Harness surfaces、已经归纳的 failure patterns、必须保留的 passing behaviors，以及以前尝试过但失败的 edits。</p>
+<p>这样可以防止 proposal 变成“大改整个系统”。好的 candidate 应该优先处理：</p>
+<p><code>recurrent + addressable + narrow</code></p>
+<p>的问题，而不是偶发 error 或纯粹因为 task 太难导致的 failure。</p>
+<h3 id="proposal-validation">Proposal Validation</h3>
+<p>候选修改必须同时跑两类测试：</p>
+<p><code>Held-in</code>：原来发现的 weakness 是否真的修好了？</p>
+<p><code>Held-out</code>：有没有引入新的 regression？</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+    P[Candidate Harness Edit]
+    --&gt; IN[Held-in Eval]
+    --&gt; OUT[Held-out Eval]
+    OUT --&gt; Q{Fixes weakness&lt;br/&gt;AND no regression?}
+    Q -- Yes --&gt; M[Merge]
+    Q -- No --&gt; R[Reject + Record]
+</code></pre><p>这实际上已经完全变成：</p>
+<p><code>Bug → Root Cause → Patch → Regression Test → Merge</code></p>
+<p>只不过“Bug”来自 Agent trajectory，“Patch”修改的是 Harness。</p>
+<p>还有一个非常重要的 safety boundary：作者提醒，允许 Agent 修改自己的 Harness 有点像“程序可以修改 OS”。因此 editable surface 必须严格限制，permission/security layer 不能放在 self-edit loop 里面，否则 Agent 很容易通过关闭 verifier、修改 model、增加 reasoning budget 等方式 reward hack。</p>
+<hr>
+<h1 id="agentic-harness-engineering真正的瓶颈可能是-observability">Agentic Harness Engineering：真正的瓶颈可能是 Observability</h1>
+<p>AHE 的观点我觉得是目前这部分最成熟的：<strong>Harness evolution 最大的问题也许不是 Agent 不会改 Harness，而是我们不知道应该改哪里。</strong></p>
+<p>它把 Observability 拆成三个层级：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD
+    O[Harness Observability]
+    --&gt; C[Component Observability&lt;br/&gt;哪里出了问题？]
+    --&gt; E[Experience Observability&lt;br/&gt;什么 evidence 支持？]
+    --&gt; D[Decision Observability&lt;br/&gt;为什么改？预测什么？]
+</code></pre><h2 id="1-component-observability">1. Component Observability</h2>
+<p>AHE 把 Harness 明确拆成 7 个 editable components：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">mindmap
+  root((Harness))
+    System Prompt
+    Tool Description
+    Tool Implementation
+    Middleware
+    Skill
+    Sub-agent Configuration
+    Long-term Memory
+</code></pre><p>每一个 failure pattern 都应该 map 到一个具体 component。这样 edit 才能 targeted，而不是“模型失败了，所以重写整个 system prompt”。</p>
+<p>举个简单例子：如果 Agent 总是选择错误工具，问题可能是 <code>Tool Description</code>；如果选择正确工具但调用结果不正确，可能是 <code>Tool Implementation</code>；如果它知道什么时候调用工具但长期任务忘记过去 state，可能是 <code>Long-Term Memory</code>；如果 task decomposition 一直不好，可能是 <code>Sub-agent Configuration</code> 或 System Prompt。</p>
+<p>这种 decomposition 的价值就是把一个模糊的：</p>
+<blockquote>
+<p>Agent 不够好</p>
+</blockquote>
+<p>变成：</p>
+<blockquote>
+<p>哪个 runtime component 导致什么 observable failure？</p>
+</blockquote>
+<hr>
+<h2 id="2-experience-observability">2. Experience Observability</h2>
+<p>真正的 Agent benchmark 可能产生几百甚至几千条 trajectory，不可能全部塞进 context。因此 AHE 把 evidence 做成 hierarchy：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+    T1[Raw Trace 1]
+    T2[Raw Trace 2]
+    T3[Raw Trace ...]
+    T1 --&gt; D1[Per-task Debug Report]
+    T2 --&gt; D2[Per-task Debug Report]
+    T3 --&gt; D3[Per-task Debug Report]
+
+    D1 --&gt; B[Benchmark-level Overview]
+    D2 --&gt; B
+    D3 --&gt; B
+
+    B --&gt; E[Evolve Agent]
+    E -. drill down if needed .-&gt; T1
+</code></pre><p>Agent Debugger 先对每个 task trajectory 做 root-cause analysis，产生 per-task report；然后再把所有 report 聚合成 benchmark overview。Evolve Agent 默认只看 overview，需要证据时才 drill down 到 raw trace。</p>
+<p>这个结构同时解决两个问题：Observability 和 Token Efficiency。</p>
+<p>本质上非常像 production debugging：</p>
+<p><code>logs → traces → incident summaries → aggregate dashboard</code></p>
+<p>而不是让 engineer 直接从几十 GB logs 开始读。</p>
+<hr>
+<h2 id="3-decision-observability">3. Decision Observability</h2>
+<p>最后一个层次我觉得最好：<strong>每次 Harness Edit 必须是一个 falsifiable hypothesis。</strong></p>
+<p>每个 edit 都要附带类似 manifesto：</p>
+<p><code>Evidence → Root Cause → Targeted Fix → Predicted Impact → Regression Risk</code></p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    E[Observed Evidence]
+    --&gt; R[Root Cause Hypothesis]
+    --&gt; F[Targeted Harness Fix]
+    --&gt; P[Predicted Impact]
+    --&gt; X[Next-round Evaluation]
+    --&gt; C{Prediction confirmed?}
+</code></pre><p>这样下一轮 evaluation 的意义就不是单纯看 score 有没有涨，而是在检验：</p>
+<blockquote>
+<p>我们对 failure mechanism 的理解到底对不对？</p>
+</blockquote>
+<p>这使 Harness Engineering 很接近 Scientific Method：</p>
+<p><code>Observation → Hypothesis → Intervention → Experiment → Evidence</code></p>
+<p>而不是：</p>
+<p><code>Try random prompt → score up/down → try another prompt</code></p>
+<p>而且 AHE 把一些关键部分设置成 read-only，例如 verifier、runs directory、tracer、LLM config。这样如果 performance 变好了，我们才能归因于 Harness edit，而不是 Agent 偷偷把 evaluator 关掉、换更强 model 或增加 inference budget。</p>
+<hr>
+<h1 id="到目前为止我对整篇文章的核心理解">到目前为止，我对整篇文章的核心理解</h1>
+<p>真正值得记的其实不是十几个 paper 名字，而是一条连续的 abstraction ladder：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+    A[Prompt Engineering&lt;br/&gt;改 instruction]
+    --&gt; B[Context Engineering&lt;br/&gt;改模型看到的信息]
+    --&gt; C[Workflow Engineering&lt;br/&gt;改模型工作的流程]
+    --&gt; D[Harness Engineering&lt;br/&gt;改完整 runtime]
+    --&gt; E[Meta-Harness&lt;br/&gt;搜索 Harness programs]
+    --&gt; F[Self-Improving Harness&lt;br/&gt;Harness 改自己]
+    --&gt; G[Optimizer Evolution&lt;br/&gt;改“如何改自己”的方法]
+</code></pre><p>这背后的共同趋势是：<strong>随着 Base Model 变强，人类手写 heuristic 的比例越来越低，而更多系统结构本身开始成为 optimization target。</strong></p>
+<p>所以 Agent Engineering 的重点正在从：</p>
+<blockquote>
+<p>“我要写什么 Prompt 才能让模型聪明一点？”</p>
+</blockquote>
+<p>转向：</p>
+<blockquote>
+<p>“我要构造一个什么 runtime，让模型能够观察、实验、记忆、并行、验证和修改自己？”</p>
+</blockquote>
+<p>再进一步：</p>
+<blockquote>
+<p>“这个 runtime 本身能不能通过 evaluation 自动搜索和进化？”</p>
+</blockquote>
+<p>这也是 Harness 和传统 Prompt Engineering 最大的区别。Prompt Engineering 把模型看成一个 function：</p>
+<p><code>output = LLM(prompt)</code></p>
+<p>Harness Engineering 更像是在设计一个 dynamical system：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    S[State_t]
+    --&gt; C[Construct Context]
+    --&gt; M[Model Decision]
+    --&gt; A[Action]
+    --&gt; ENV[Environment]
+    --&gt; O[Observation]
+    --&gt; V[Evaluation]
+    --&gt; S2[State_t+1]
+    --&gt; C
+</code></pre><p>最后真正决定 Agent performance 的，不只是一次 generation 的 intelligence，而是这个长期 closed loop 有没有把模型已有的 intelligence 有效地转化成可靠行为。</p>
+<p>我现在最想记住的一句话是：</p>
+<blockquote>
+<p><strong>Harness Engineering 的目标不是让模型“一次想得更聪明”，而是设计一个系统，让模型能够在长期执行中不断获得正确的信息、执行正确的动作、保存有价值的状态、发现错误，并根据反馈改变自己的行为。</strong></p>
+</blockquote>
+<p>而 Self-Improving Harness 又进一步把这个闭环往外套了一层：Agent 不仅优化 task state，还开始优化产生这些行为的 runtime 本身。</p>
+
+        </div>
+
+        
+
+
+        
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://study.tczhong.com/tags/agent'>agent</a></li>
+                
+                <li><a href='http://study.tczhong.com/tags/harness'>harness</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tczhong" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://study.tczhong.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://study.tczhong.com/post/agent/harness/" title="Harness Engineering for Self-Improvement">Harness Engineering for Self-Improvement</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E4%B8%8D%E5%BC%80%E7%8E%A9%E7%AC%91/" title="读书笔记--《不开玩笑》">读书笔记--《不开玩笑》</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/book/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0--%E5%9B%BD%E5%AE%B6%E4%B8%BA%E4%BB%80%E4%B9%88%E7%A0%B4%E4%BA%A71/" title="读书笔记--《国家为什么破产》">读书笔记--《国家为什么破产》</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_294/" title="TC分享第 294 期">TC分享第 294 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_293/" title="TC分享第 293 期">TC分享第 293 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_292/" title="TC分享第 292 期">TC分享第 292 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_291/" title="TC分享第 291 期">TC分享第 291 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_290/" title="TC分享第 290 期">TC分享第 290 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_289/" title="TC分享第 289 期">TC分享第 289 期</a>
+    </li>
+    
+    <li>
+        <a href="http://study.tczhong.com/post/sharing/tcsharing_288/" title="TC分享第 288 期">TC分享第 288 期</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="http://study.tczhong.com/categories/deep_research/">deep_research (1)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E5%AD%A6%E4%B9%A0/">学习 (2)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E6%A8%A1%E5%9E%8B%E6%80%9D%E7%BB%B4/">模型思维 (24)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%94%9F%E6%B4%BB/">生活 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%94%B5%E5%BD%B1%E6%8E%A8%E8%8D%90/">电影推荐 (7)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/">程序员 (3)</a></li>
+    
+    <li><a href="http://study.tczhong.com/categories/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90/">读书推荐 (15)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://study.tczhong.com/tags/agent/">agent</a>
+    
+    <a href="http://study.tczhong.com/tags/ai/">ai</a>
+    
+    <a href="http://study.tczhong.com/tags/android/">Android</a>
+    
+    <a href="http://study.tczhong.com/tags/array/">array</a>
+    
+    <a href="http://study.tczhong.com/tags/auto/">auto</a>
+    
+    <a href="http://study.tczhong.com/tags/bit/">bit</a>
+    
+    <a href="http://study.tczhong.com/tags/book/">book</a>
+    
+    <a href="http://study.tczhong.com/tags/comedy/">comedy</a>
+    
+    <a href="http://study.tczhong.com/tags/cooking/">cooking</a>
+    
+    <a href="http://study.tczhong.com/tags/debt/">debt</a>
+    
+    <a href="http://study.tczhong.com/tags/development/">development</a>
+    
+    <a href="http://study.tczhong.com/tags/documentation/">documentation</a>
+    
+    <a href="http://study.tczhong.com/tags/dp/">dp</a>
+    
+    <a href="http://study.tczhong.com/tags/economics/">economics</a>
+    
+    <a href="http://study.tczhong.com/tags/food/">food</a>
+    
+    <a href="http://study.tczhong.com/tags/fun/">fun</a>
+    
+    <a href="http://study.tczhong.com/tags/gemini/">gemini</a>
+    
+    <a href="http://study.tczhong.com/tags/google/">google</a>
+    
+    <a href="http://study.tczhong.com/tags/graph/">graph</a>
+    
+    <a href="http://study.tczhong.com/tags/growth/">growth</a>
+    
+    <a href="http://study.tczhong.com/tags/happiness/">happiness</a>
+    
+    <a href="http://study.tczhong.com/tags/harness/">harness</a>
+    
+    <a href="http://study.tczhong.com/tags/health/">health</a>
+    
+    <a href="http://study.tczhong.com/tags/history/">history</a>
+    
+    <a href="http://study.tczhong.com/tags/leetcode/">leetcode</a>
+    
+    <a href="http://study.tczhong.com/tags/life/">life</a>
+    
+    <a href="http://study.tczhong.com/tags/love/">love</a>
+    
+    <a href="http://study.tczhong.com/tags/money/">money</a>
+    
+    <a href="http://study.tczhong.com/tags/movie/">movie</a>
+    
+    <a href="http://study.tczhong.com/tags/politics/">politics</a>
+    
+    <a href="http://study.tczhong.com/tags/psychology/">psychology</a>
+    
+    <a href="http://study.tczhong.com/tags/python/">python</a>
+    
+    <a href="http://study.tczhong.com/tags/stack/">stack</a>
+    
+    <a href="http://study.tczhong.com/tags/stand-up/">stand-up</a>
+    
+    <a href="http://study.tczhong.com/tags/string/">string</a>
+    
+    <a href="http://study.tczhong.com/tags/study/">study</a>
+    
+    <a href="http://study.tczhong.com/tags/tech/">tech</a>
+    
+    <a href="http://study.tczhong.com/tags/time/">time</a>
+    
+    <a href="http://study.tczhong.com/tags/tree/">tree</a>
+    
+    <a href="http://study.tczhong.com/tags/vscode/">vscode</a>
+    
+    <a href="http://study.tczhong.com/tags/wechat/">wechat</a>
+    
+    <a href="http://study.tczhong.com/tags/weekly/">weekly</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://study.tczhong.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+      &copy; 2026 <a rel="nofollow" href="http://study.tczhong.com/">Learn More</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io">Hugo</a> &amp; <a rel="nofollow noreferer noopener" href="https://github.com/JokerQyou/maupassant-hugo">maupassant theme</a>.
+    </div>
+</footer>
+
+<script type="text/javascript" src="/js/app.js" defer></script>
+
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' defer></script>
+</body>
+
+</html>
