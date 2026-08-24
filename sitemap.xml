@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://study.tczhong.com/</loc>
+    <lastmod>2026-08-24T05:38:37+00:00</lastmod>
+  </url><url>
+    <loc>http://study.tczhong.com/post/</loc>
+    <lastmod>2026-08-24T05:38:37+00:00</lastmod>
+  </url><url>
+    <loc>http://study.tczhong.com/tags/</loc>
+    <lastmod>2026-08-24T05:38:37+00:00</lastmod>
+  </url><url>
+    <loc>http://study.tczhong.com/post/sharing/tcsharing_295/</loc>
+    <lastmod>2026-08-24T05:38:37+00:00</lastmod>
+  </url><url>
+    <loc>http://study.tczhong.com/tags/weekly/</loc>
+    <lastmod>2026-08-24T05:38:37+00:00</lastmod>
+  </url><url>
     <loc>http://study.tczhong.com/tags/agent/</loc>
     <lastmod>2026-08-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -26,16 +41,7 @@
     <loc>http://study.tczhong.com/post/agent/harness/</loc>
     <lastmod>2026-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://study.tczhong.com/</loc>
-    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://study.tczhong.com/post/</loc>
-    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://study.tczhong.com/tags/stand-up/</loc>
-    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://study.tczhong.com/tags/</loc>
     <lastmod>2026-08-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://study.tczhong.com/categories/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90/</loc>
@@ -48,9 +54,6 @@
     <lastmod>2026-08-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://study.tczhong.com/post/sharing/tcsharing_294/</loc>
-    <lastmod>2026-08-17T06:00:20+00:00</lastmod>
-  </url><url>
-    <loc>http://study.tczhong.com/tags/weekly/</loc>
     <lastmod>2026-08-17T06:00:20+00:00</lastmod>
   </url><url>
     <loc>http://study.tczhong.com/post/sharing/tcsharing_293/</loc>
