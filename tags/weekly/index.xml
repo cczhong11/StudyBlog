@@ -6,7 +6,18 @@
     <description>Recent content in weekly on Learn More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Oct 2026 02:00:04 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/tags/weekly/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Oct 2026 05:32:53 +0000</lastBuildDate><atom:link href="http://study.tczhong.com/tags/weekly/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TC分享第 302 期</title>
+      <link>http://study.tczhong.com/post/sharing/tcsharing_302/</link>
+      <pubDate>Mon, 12 Oct 2026 05:32:53 +0000</pubDate>
+      
+      <guid>http://study.tczhong.com/post/sharing/tcsharing_302/</guid>
+      <description>TC分享第 302 期 2026 week 41
+本周摄影：
+新闻思考 这周，OpenAI 在 GitHub 上发布了一个名为 ⁠Math 的项目，一口气公开了 722 篇由 AI 生成的数学论文，涉及 372 组研究成果，涵盖数论、几何、代数等多个领域，其中不乏困扰数学家多年的世界级难题。这件事迅速震动了数学界，但也引发了巨大争议。菲尔兹奖得主陶哲轩的博客转载了人类数学协会（AHM）的公开声明，批评 OpenAI 一次性发布数百篇论文，却没有充分考虑数学界的验证成本，甚至呼吁数学家停止与 OpenAI 合作。而这些论文的质量也确实参差不齐：目前只有约 42% 的主要结果完成了 Lean 形式化验证，发布仅一天后，OpenAI 就因为证明错误撤回了其中 3 篇论文，并对另外多篇进行了修订。需要注意的是，700 多篇论文并不意味着解决了 700 多个独立难题，更不代表所有成果都已经得到数学界认可。</description>
+    </item>
+    
     <item>
       <title>TC分享第 301 期</title>
       <link>http://study.tczhong.com/post/sharing/tcsharing_301/</link>
